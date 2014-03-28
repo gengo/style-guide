@@ -1,0 +1,26 @@
+$navbar-background-color: #fff;
+
+.navbar {
+  border-bottom: 1px solid $table-border-color;
+  background-color: $navbar-background-color;
+
+  .nav a {
+    padding-top: 14px;
+    padding-bottom: 10px;
+    border-bottom: solid 3px $navbar-background-color;
+    color: $base-text-color;
+    transition: border-bottom 0.3s ease;
+
+    &:hover {
+      border-bottom: solid 3px $customer-base-color;
+      background-color: transparent;
+    }
+  }
+
+  .nav .active a { border-bottom: solid 3px $customer-base-color; }
+}
+
+
+.ge-navbar .navbar-toggle .icon-bar {
+  background-color: $customer-base-color;
+}
