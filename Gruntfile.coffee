@@ -116,8 +116,11 @@ module.exports = (grunt) ->
         dest: 'dist/'
       css:
         expand: true,
-        cwd: './dist'
-        src: 'css/*.*'
+        cwd: 'dist/<%= assets.style %>'
+        src: [
+          '{,*/}*.css'
+          '!{,*/}*.min.css'
+        ]
         dest: 'docs/assets'
       docs:
         expand: true,
