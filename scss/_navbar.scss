@@ -15,16 +15,76 @@ $navbar-background-color: #fff;
       transition: border-bottom 0.3s ease;
 
       &:hover {
-        border-bottom: solid 3px $customer-base-color;
+        border-bottom: solid 3px $brand-customer;
         background-color: transparent;
       }
     }
 
-    .active a { border-bottom: solid 3px $customer-base-color; }
+    .active a { border-bottom: solid 3px $brand-customer; }
   }
 
   .navbar-brand,
   .navbar-toggle .icon-bar {
-    background-color: $customer-base-color;
+    background-color: $brand-customer;
+  }
+}
+
+.translator .ge-navbar {
+  .nav  {
+    a:hover,
+    .active a {
+      border-bottom-color: $brand-translator;
+    }
+  }
+
+  .navbar-brand,
+  .navbar-toggle .icon-bar {
+    background-color: $brand-translator;
+  }
+}
+
+.developer .ge-navbar {
+  .nav  {
+    a:hover,
+    .active a {
+      border-bottom-color: $brand-developer;
+    }
+  }
+
+  .navbar-brand,
+  .navbar-toggle .icon-bar {
+    background-color: $brand-developer;
+  }
+}
+
+.admin .ge-navbar {
+  .nav  {
+    a:hover,
+    .active a {
+      border-bottom-color: $brand-admin;
+    }
+  }
+
+  .navbar-brand,
+  .navbar-toggle .icon-bar {
+    background-color: $brand-admin;
+  }
+}
+
+.workbench .ge-navbar {
+  background-color: $brand-admin;
+
+  .nav {
+    a { color: #fff; }
+
+    a,
+    a:hover,
+    .active a {
+      border-bottom-color: $brand-admin;
+    }
+  }
+
+  .navbar-brand {
+    background-color: $brand-admin;
   }
 }
