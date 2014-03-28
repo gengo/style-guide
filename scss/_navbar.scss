@@ -5,82 +5,119 @@ $navbar-background-color: #fff;
   background-color: $navbar-background-color;
 
   .nav {
-    li:first-child { margin-left: 17px; }
+    // li:first-child { margin-left: 17px; }
 
     a {
       margin: 0 17px;
       padding: 14px 0 10px 0;
       border-bottom: solid 3px $navbar-background-color;
       color: $text-color;
-      transition: border-bottom 0.3s ease;
+      transition: border-bottom-color 0.3s ease;
 
       &:hover {
-        border-bottom: solid 3px $brand-customer;
         background-color: transparent;
       }
-    }
 
-    .active a { border-bottom: solid 3px $brand-customer; }
+      @media (max-width: $grid-float-breakpoint) {
+        margin: 0 13px;
+        padding-right: 13px;
+        padding-left: 13px;
+        border-bottom: 0;
+        border-radius: 3px;
+        color: #fff;
+        transition: none;
+      }
+    }
   }
 
-  .navbar-brand,
   .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+}
+
+.customer .ge-navbar {
+  background-color: $brand-customer;
+
+  @media (min-width: $grid-float-breakpoint) {
+    background-color: $navbar-background-color;
+  }
+
+  .nav {
+    a:hover,
+    .active a {
+      border-bottom-color: $brand-customer;
+
+      @media (max-width: $grid-float-breakpoint) {
+        background-color: #199B71;
+      }
+    }
+  }
+
+  .navbar-brand {
     background-color: $brand-customer;
   }
 }
 
 .translator .ge-navbar {
-  .nav  {
+  background-color: $brand-translator;
+
+  @media (min-width: $grid-float-breakpoint) {
+    background-color: $navbar-background-color;
+  }
+
+  .nav {
     a:hover,
     .active a {
       border-bottom-color: $brand-translator;
+
+      @media (max-width: $grid-float-breakpoint) {
+        background-color: #89C1B7;
+      }
     }
   }
 
-  .navbar-brand,
-  .navbar-toggle .icon-bar {
+  .navbar-brand {
     background-color: $brand-translator;
   }
 }
 
 .developer .ge-navbar {
-  .nav  {
+  background-color: $brand-developer;
+
+  @media (min-width: $grid-float-breakpoint) {
+    background-color: $navbar-background-color;
+  }
+  .nav {
     a:hover,
     .active a {
       border-bottom-color: $brand-developer;
+
+      @media (max-width: $grid-float-breakpoint) {
+        background-color: #D25440;
+      }
     }
   }
 
-  .navbar-brand,
-  .navbar-toggle .icon-bar {
+  .navbar-brand {
     background-color: $brand-developer;
   }
 }
 
 .admin .ge-navbar {
+  background-color: $brand-admin;
+
+  @media (min-width: $grid-float-breakpoint) {
+    background-color: $navbar-background-color;
+  }
+
   .nav  {
     a:hover,
     .active a {
       border-bottom-color: $brand-admin;
-    }
-  }
 
-  .navbar-brand,
-  .navbar-toggle .icon-bar {
-    background-color: $brand-admin;
-  }
-}
-
-.workbench .ge-navbar {
-  background-color: $brand-admin;
-
-  .nav {
-    a { color: #fff; }
-
-    a,
-    a:hover,
-    .active a {
-      border-bottom-color: $brand-admin;
+      @media (max-width: $grid-float-breakpoint) {
+        background-color: #413C38;
+      }
     }
   }
 
