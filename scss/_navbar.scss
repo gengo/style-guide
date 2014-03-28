@@ -36,10 +36,8 @@ $navbar-background-color: #fff;
 }
 
 .customer .ge-navbar {
-  background-color: $brand-customer;
-
-  @media (min-width: $grid-float-breakpoint) {
-    background-color: $navbar-background-color;
+  @media (max-width: $grid-float-breakpoint) {
+    background-color: $brand-customer;
   }
 
   .nav {
@@ -59,10 +57,8 @@ $navbar-background-color: #fff;
 }
 
 .translator .ge-navbar {
-  background-color: $brand-translator;
-
-  @media (min-width: $grid-float-breakpoint) {
-    background-color: $navbar-background-color;
+  @media (max-width: $grid-float-breakpoint) {
+    background-color: $brand-translator;
   }
 
   .nav {
@@ -82,10 +78,8 @@ $navbar-background-color: #fff;
 }
 
 .developer .ge-navbar {
-  background-color: $brand-developer;
-
-  @media (min-width: $grid-float-breakpoint) {
-    background-color: $navbar-background-color;
+  @media (max-width: $grid-float-breakpoint) {
+    background-color: $brand-developer;
   }
   .nav {
     a:hover,
@@ -104,10 +98,8 @@ $navbar-background-color: #fff;
 }
 
 .admin .ge-navbar {
-  background-color: $brand-admin;
-
-  @media (min-width: $grid-float-breakpoint) {
-    background-color: $navbar-background-color;
+  @media (max-width: $grid-float-breakpoint) {
+    background-color: $brand-admin;
   }
 
   .nav  {
