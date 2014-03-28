@@ -4,7 +4,9 @@
 module.exports = (grunt) ->
 
   # load all grunt tasks
-  require('jit-grunt')(grunt)
+  require('jit-grunt')(grunt, {
+    usebanner: 'grunt-banner'
+  })
 
   #path configuration
   assetsConfig =
@@ -49,14 +51,8 @@ module.exports = (grunt) ->
         imagesDir: '<%= assets.images %>'
         cssDir   : 'dist/<%= assets.style %>'
         relativeAssets: true
-      dev:
-        options:
-          debugInfo: false
-          outputStyle: 'expanded'
-          noLineComments: true
       prod:
         options:
-          force: true
           debugInfo: false
           outputStyle: 'expanded'
           noLineComments: true
@@ -75,6 +71,18 @@ module.exports = (grunt) ->
           ]
           dest: 'dist/<%= assets.style %>'
         }]
+
+    csscomb:
+      options:
+        config: '<%= assets.sass %>/.csscomb.json'
+      dist:
+        expand: true,
+        cwd: 'dist/<%= assets.style %>'
+        src: [
+          '*.css'
+          '!*.min.css'
+        ]
+        dest: 'dist/<%= assets.style %>'
 
     csslint:
       options:
@@ -121,7 +129,7 @@ module.exports = (grunt) ->
           '{,*/}*.css'
           '!{,*/}*.min.css'
         ]
-        dest: 'docs/assets'
+        dest: 'docs/assets/<%= assets.style %>'
       docs:
         expand: true,
         cwd: './dist'
@@ -138,20 +146,23 @@ module.exports = (grunt) ->
         '<%= assets.sass %>/third_party'
       ]
 
+  grunt.registerTask 'css', [
+    'compass'
+    'autoprefixer'
+    'csscomb'
+    'usebanner'
+    'cssmin'
+  ]
+
   grunt.registerTask 'default', [
     'clean'
     'copy'
-    'compass:prod'
-    'autoprefixer'
-    'csslint'
-    'usebanner'
-    'cssmin'
+    'css'
   ]
 
   grunt.registerTask 'dev', [
     'clean'
     'copy'
-    'compass:dev'
-    'connect'
+    'css'
     'watch'
   ]
