@@ -4,7 +4,7 @@
 module.exports = (grunt) ->
 
   # load all grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  require('jit-grunt')(grunt)
 
   #path configuration
   assetsConfig =
@@ -37,13 +37,8 @@ module.exports = (grunt) ->
       options:
         livereload: true
       sass:
-        options:
-          livereload: false
         files: '<%= assets.sass %>/{,*/}*.{scss,sass}'
-        tasks: [ 'compass:dev' ]
-      css:
-        files: ['<%= assets.style %>/{,*/}*.css']
-        tasks: []
+        tasks: [ 'compass:dev', 'csslint', 'copy:css' ]
       html_files:
         files: 'docs/{,*/}*.html'
 
@@ -119,6 +114,11 @@ module.exports = (grunt) ->
         expand: true
         src: 'fonts/*'
         dest: 'dist/'
+      css:
+        expand: true,
+        cwd: './dist'
+        src: 'css/*.*'
+        dest: 'docs/assets'
       docs:
         expand: true,
         cwd: './dist'
