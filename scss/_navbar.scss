@@ -1,26 +1,30 @@
 $navbar-background-color: #fff;
 
-.navbar {
+.ge-navbar {
   border-bottom: 1px solid $table-border-color;
   background-color: $navbar-background-color;
 
-  .nav a {
-    margin: 0 15px;
-    padding: 14px 0 10px 0;
-    border-bottom: solid 3px $navbar-background-color;
-    color: $base-text-color;
-    transition: border-bottom 0.3s ease;
+  .nav {
+    li:first-child { margin-left: 17px; }
 
-    &:hover {
-      border-bottom: solid 3px $customer-base-color;
-      background-color: transparent;
+    a {
+      margin: 0 17px;
+      padding: 14px 0 10px 0;
+      border-bottom: solid 3px $navbar-background-color;
+      color: $text-color;
+      transition: border-bottom 0.3s ease;
+
+      &:hover {
+        border-bottom: solid 3px $customer-base-color;
+        background-color: transparent;
+      }
     }
+
+    .active a { border-bottom: solid 3px $customer-base-color; }
   }
 
-  .nav .active a { border-bottom: solid 3px $customer-base-color; }
-}
-
-
-.ge-navbar .navbar-toggle .icon-bar {
-  background-color: $customer-base-color;
+  .navbar-brand,
+  .navbar-toggle .icon-bar {
+    background-color: $customer-base-color;
+  }
 }
