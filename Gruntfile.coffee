@@ -40,7 +40,7 @@ module.exports = (grunt) ->
         livereload: true
       sass:
         files: '<%= assets.sass %>/{,*/}*.{scss,sass}'
-        tasks: [ 'compass', 'newer:csslint', 'newer:copy:css' ]
+        tasks: [ 'css-dev' ]
       html_files:
         files: 'docs/{,*/}*.html'
 
@@ -146,24 +146,28 @@ module.exports = (grunt) ->
         '<%= assets.sass %>/third_party'
       ]
 
-  grunt.registerTask 'build-css', [
-    'compass'
-    'autoprefixer'
-    'csscomb'
+  grunt.registerTask 'css-build', [
+    'css-dev'
     'usebanner'
     'cssmin'
+  ]
+  grunt.registerTask 'css-dev', [
+    'compass'
+    'newer:csslint'
+    'autoprefixer'
+    'newer:copy:css'
   ]
 
   grunt.registerTask 'default', [
     'clean'
     'newer:copy'
-    'build-css'
+    'css-build'
   ]
 
   grunt.registerTask 'dev', [
     'clean'
     'newer:copy'
-    'build-css'
+    'css-dev'
     'connect'
     'watch'
   ]
