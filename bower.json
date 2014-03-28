@@ -1,0 +1,9 @@
+{
+  "name": "gengo-style-guide",
+  "version": "0.0.1",
+  "description": "Gengo style guide",
+  "dependencies": {
+    "jquery": ">= 1.9.0"
+  },
+  "devDependencies": {}
+}
