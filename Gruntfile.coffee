@@ -12,15 +12,18 @@ module.exports = (grunt) ->
     scripts: 'js'
     sass   : 'scss'
     style  : 'css'
-    vendor : 'third_party'
+    bower  : 'bower_components'
 
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
     assets: assetsConfig
     banner: '/*!\n' +
-            ' * <%= pkg.description => v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+            ' *'+
+            ' * Licensed under the Apache License, Version 2.0 (the "License");\n' +
+            ' * you may not use this file except in compliance with the License.\n' +
+            ' * You may obtain a copy of the License at :\n' +
+            ' * http://www.apache.org/licenses/LICENSE-2.0\n' +
             ' */\n'
 
     connect:
@@ -104,12 +107,12 @@ module.exports = (grunt) ->
         position: 'top'
         banner: '<%= banner %>'
       files:
-        src: 'dist/assets/css/*.css'
+        src: ['dist/<%= assets.style %>/{,*/}*.css']
 
     copy:
       bootstrap:
         expand: true
-        cwd: '<%= assets.vendor %>/bootstrap-sass/vendor/assets/stylesheets'
+        cwd: '<%= assets.bower %>/bootstrap-sass/vendor/assets/stylesheets'
         src: '{,*/}*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party'
       fonts:
@@ -128,7 +131,7 @@ module.exports = (grunt) ->
     clean:
       dist: [
         # 'dist'
-        'docs'
+        'docs/assets'
         '<%= assets.sass %>/third_party'
       ]
 
@@ -136,8 +139,10 @@ module.exports = (grunt) ->
     'clean'
     'copy'
     'compass:prod'
-    # 'usebanner'
-    # 'cssmin'
+    'autoprefixer'
+    'csslint'
+    'usebanner'
+    'cssmin'
   ]
 
   grunt.registerTask 'dev', [
