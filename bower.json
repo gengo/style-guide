@@ -4,5 +4,10 @@
   "description": "Gengo style guide",
   "dependencies": {
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
 }
