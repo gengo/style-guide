@@ -16,6 +16,7 @@ $navbar-background-color: #fff;
 
       &:hover {
         background-color: transparent;
+        border-bottom-color: $brand-customer;
       }
 
       @media (max-width: $grid-float-breakpoint) {
@@ -28,6 +29,14 @@ $navbar-background-color: #fff;
         transition: none;
       }
     }
+
+    .active a {
+      border-bottom-color: $brand-customer;
+    }
+  }
+
+  .navbar-brand {
+    background-color: $brand-customer;
   }
 
   .navbar-toggle .icon-bar {
