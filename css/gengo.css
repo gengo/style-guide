@@ -128,15 +128,18 @@
 .workbench .navbar .nav .navbar-text {
   padding: 0 12px;
 }
+.workbench .navbar .nav a,
+.workbench .navbar .nav a:hover,
+.workbench .navbar .nav .active a {
+  border-bottom: 0;
+}
 .workbench .navbar .nav a {
   margin: 0;
-  padding: 14px 17px 10px;
-  border-bottom-color: transparent;
+  padding: 14px 17px 13px;
   color: #A6A4A1;
 }
 .workbench .navbar .nav a:hover,
 .workbench .navbar .nav .active a {
-  border-bottom-color: transparent;
   background-color: #413C38;
 }
 .workbench .navbar .nav .btn {
