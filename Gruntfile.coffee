@@ -49,7 +49,7 @@ module.exports = (grunt) ->
         specify  : '<%= assets.sass %>/*.{scss,sass}'
         sassDir  : '<%= assets.sass %>'
         imagesDir: '<%= assets.images %>'
-        cssDir   : 'dist/<%= assets.style %>'
+        cssDir   : '<%= assets.style %>'
         relativeAssets: true
       prod:
         options:
@@ -64,12 +64,12 @@ module.exports = (grunt) ->
       build:
         files: [{
           expand: true
-          cwd: 'dist/<%= assets.style %>'
+          cwd: '<%= assets.style %>'
           src: [
             '{,*/}*.css'
             '!{,*/}*.min.css'
           ]
-          dest: 'dist/<%= assets.style %>'
+          dest: '<%= assets.style %>'
         }]
 
     csscomb:
@@ -77,18 +77,18 @@ module.exports = (grunt) ->
         config: '<%= assets.sass %>/.csscomb.json'
       dist:
         expand: true,
-        cwd: 'dist/<%= assets.style %>'
+        cwd: '<%= assets.style %>'
         src: [
           '*.css'
           '!*.min.css'
         ]
-        dest: 'dist/<%= assets.style %>'
+        dest: '<%= assets.style %>'
 
     csslint:
       options:
         csslintrc: '<%= assets.sass %>/.csslintrc'
       src:
-        'dist/css/<%= pkg.name %>.css'
+        '<%= assets.style %>/<%= pkg.name %>.css'
 
     cssmin:
       options:
@@ -97,12 +97,12 @@ module.exports = (grunt) ->
         noAdvanced: true # turn advanced optimizations off until the issue is fixed in clean-css
       minify:
         expand: true
-        cwd: 'dist/<%= assets.style %>'
+        cwd: '<%= assets.style %>'
         src: [
           '{,*/}*.css'
           '!{,*/}*.min.css'
         ]
-        dest: 'dist/<%= assets.style %>'
+        dest: '<%= assets.style %>'
         ext: '.min.css'
 
     usebanner:
@@ -110,7 +110,7 @@ module.exports = (grunt) ->
         position: 'top'
         banner: '<%= banner %>'
       files:
-        src: ['dist/<%= assets.style %>/{,*/}*.css']
+        src: ['<%= assets.style %>/{,*/}*.css']
 
     copy:
       bootstrap:
@@ -118,30 +118,19 @@ module.exports = (grunt) ->
         cwd: '<%= assets.bower %>/bootstrap-sass/vendor/assets/stylesheets'
         src: '{,*/}*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party'
-      fonts:
-        expand: true
-        src: 'fonts/*'
-        dest: 'dist/'
-      css:
-        expand: true,
-        cwd: 'dist/<%= assets.style %>'
-        src: [
-          '{,*/}*.css'
-        ]
-        dest: 'css'
       docs:
         expand: true,
-        cwd: './dist'
+        cwd: ''
         src: [
-          '{css,js}/*.*'
+          '<%= assets.style %>/*'
           'fonts/*'
         ],
         dest: 'docs/assets'
       docassets:
         expand: true,
-        cwd: './dist'
+        cwd: '<%= assets.style %>'
         src: [
-          '{css,js}/*.*'
+          '{,*}/*.css'
         ],
         dest: 'docs/assets'
 
@@ -149,13 +138,15 @@ module.exports = (grunt) ->
       dist: [
         # 'dist'
         'docs/assets'
-        '<%= assets.sass %>/third_party'
+        '<%= assets.style %>/third_party'
       ]
 
   grunt.registerTask 'css-build', [
-    'css-dev'
-    'usebanner'
+    'compass'
+    'newer:csslint'
+    'autoprefixer'
     'cssmin'
+    'usebanner'
   ]
   grunt.registerTask 'css-dev', [
     'compass'
@@ -166,9 +157,9 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', [
     'clean'
-    'newer:copy'
+    'newer:copy:bootstrap'
     'css-build'
-    'newer:copy:css'
+    'newer:copy:docs'
   ]
 
   grunt.registerTask 'dev', [
