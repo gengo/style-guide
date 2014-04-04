@@ -4,6 +4,15 @@ $navbar-background-color: #fff;
   border-bottom: 1px solid $table-border-color;
   background-color: $navbar-background-color;
 
+  > .container-fluid {
+    padding-left: 0;
+
+    .navbar-brand {
+      margin: 0;
+    }
+  }
+
+
   .nav {
     // li:first-child { margin-left: 17px; }
 
@@ -132,7 +141,13 @@ $navbar-background-color: #fff;
   color: #A6A4A1;
   font-size: 13px;
 
+  .border-left {
+    border-left: 1px solid #716D69;
+  }
+
   .nav  {
+    padding: 0 22px;
+
     .navbar-text {
       padding: 0 12px;
     }
@@ -145,7 +160,7 @@ $navbar-background-color: #fff;
 
     a {
       margin: 0;
-      padding: 14px 17px 13px;
+      padding: 14px 8px 13px;
       color: #A6A4A1;
     }
 
@@ -158,6 +173,7 @@ $navbar-background-color: #fff;
       font-size: 13px;
     }
   }
+
 
   .navbar-brand {
     background-color: $brand-admin;
