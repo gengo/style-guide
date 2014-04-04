@@ -9,6 +9,16 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "components"
-  ]
+    "components",
+    "*.md",
+    "Gruntfile.coffee",
+    "package.json"
+  ],
+  "exportsOverride": {
+    "css": {
+      "": [
+        "**/*.css"
+      ]
+    }
+  }
 }
