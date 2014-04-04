@@ -1,6 +1,6 @@
 $navbar-background-color: #fff;
 
-.ge-navbar {
+.navbar {
   border-bottom: 1px solid $table-border-color;
   background-color: $navbar-background-color;
 
@@ -44,7 +44,7 @@ $navbar-background-color: #fff;
   }
 }
 
-.customer .ge-navbar {
+.customer .navbar {
   @media (max-width: $grid-float-breakpoint) {
     background-color: $brand-customer;
   }
@@ -65,7 +65,7 @@ $navbar-background-color: #fff;
   }
 }
 
-.translator .ge-navbar {
+.translator .navbar {
   @media (max-width: $grid-float-breakpoint) {
     background-color: $brand-translator;
   }
@@ -86,7 +86,7 @@ $navbar-background-color: #fff;
   }
 }
 
-.developer .ge-navbar {
+.developer .navbar {
   @media (max-width: $grid-float-breakpoint) {
     background-color: $brand-developer;
   }
@@ -106,7 +106,7 @@ $navbar-background-color: #fff;
   }
 }
 
-.admin .ge-navbar {
+.admin .navbar {
   @media (max-width: $grid-float-breakpoint) {
     background-color: $brand-admin;
   }
