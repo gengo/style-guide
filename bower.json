@@ -3,7 +3,6 @@
   "version": "0.0.2",
   "description": "Gengo style guide",
   "dependencies": {
-    "twbs/bootstrap-sass": "latest"
   },
   "devDependencies": {},
   "ignore": [
