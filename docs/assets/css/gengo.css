@@ -1,8 +1,8 @@
-.ge-navbar {
+.navbar {
   border-bottom: 1px solid #dddddd;
   background-color: white;
 }
-.ge-navbar .nav a {
+.navbar .nav a {
   margin: 0 17px;
   padding: 14px 0 10px 0;
   border-bottom: solid 3px white;
@@ -10,12 +10,12 @@
   -webkit-transition: border-bottom-color 0.3s ease;
           transition: border-bottom-color 0.3s ease;
 }
-.ge-navbar .nav a:hover {
+.navbar .nav a:hover {
   background-color: transparent;
   border-bottom-color: #1cad7e;
 }
 @media (max-width: 768px) {
-  .ge-navbar .nav a {
+  .navbar .nav a {
     margin: 0 13px;
     padding-right: 13px;
     padding-left: 13px;
@@ -26,88 +26,88 @@
             transition: none;
   }
 }
-.ge-navbar .nav .active a {
+.navbar .nav .active a {
   border-bottom-color: #1cad7e;
 }
-.ge-navbar .navbar-brand {
+.navbar .navbar-brand {
   background-color: #1cad7e;
 }
-.ge-navbar .navbar-toggle .icon-bar {
+.navbar .navbar-toggle .icon-bar {
   background-color: #fff;
 }
 
 @media (max-width: 768px) {
-  .customer .ge-navbar {
+  .customer .navbar {
     background-color: #1cad7e;
   }
 }
-.customer .ge-navbar .nav a:hover,
-.customer .ge-navbar .nav .active a {
+.customer .navbar .nav a:hover,
+.customer .navbar .nav .active a {
   border-bottom-color: #1cad7e;
 }
 @media (max-width: 768px) {
-  .customer .ge-navbar .nav a:hover,
-  .customer .ge-navbar .nav .active a {
+  .customer .navbar .nav a:hover,
+  .customer .navbar .nav .active a {
     background-color: #199B71;
   }
 }
-.customer .ge-navbar .navbar-brand {
+.customer .navbar .navbar-brand {
   background-color: #1cad7e;
 }
 
 @media (max-width: 768px) {
-  .translator .ge-navbar {
+  .translator .navbar {
     background-color: #98d7cc;
   }
 }
-.translator .ge-navbar .nav a:hover,
-.translator .ge-navbar .nav .active a {
+.translator .navbar .nav a:hover,
+.translator .navbar .nav .active a {
   border-bottom-color: #98d7cc;
 }
 @media (max-width: 768px) {
-  .translator .ge-navbar .nav a:hover,
-  .translator .ge-navbar .nav .active a {
+  .translator .navbar .nav a:hover,
+  .translator .navbar .nav .active a {
     background-color: #89C1B7;
   }
 }
-.translator .ge-navbar .navbar-brand {
+.translator .navbar .navbar-brand {
   background-color: #98d7cc;
 }
 
 @media (max-width: 768px) {
-  .developer .ge-navbar {
+  .developer .navbar {
     background-color: #ea5e47;
   }
 }
-.developer .ge-navbar .nav a:hover,
-.developer .ge-navbar .nav .active a {
+.developer .navbar .nav a:hover,
+.developer .navbar .nav .active a {
   border-bottom-color: #ea5e47;
 }
 @media (max-width: 768px) {
-  .developer .ge-navbar .nav a:hover,
-  .developer .ge-navbar .nav .active a {
+  .developer .navbar .nav a:hover,
+  .developer .navbar .nav .active a {
     background-color: #D25440;
   }
 }
-.developer .ge-navbar .navbar-brand {
+.developer .navbar .navbar-brand {
   background-color: #ea5e47;
 }
 
 @media (max-width: 768px) {
-  .admin .ge-navbar {
+  .admin .navbar {
     background-color: #4d4843;
   }
 }
-.admin .ge-navbar .nav a:hover,
-.admin .ge-navbar .nav .active a {
+.admin .navbar .nav a:hover,
+.admin .navbar .nav .active a {
   border-bottom-color: #4d4843;
 }
 @media (max-width: 768px) {
-  .admin .ge-navbar .nav a:hover,
-  .admin .ge-navbar .nav .active a {
+  .admin .navbar .nav a:hover,
+  .admin .navbar .nav .active a {
     background-color: #413C38;
   }
 }
-.admin .ge-navbar .navbar-brand {
+.admin .navbar .navbar-brand {
   background-color: #4d4843;
 }
