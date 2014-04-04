@@ -10,14 +10,7 @@
     "node_modules",
     "components",
     "*.md",
-    "Gruntfile.coffee",
+    "Gruntfile.*",
     "package.json"
-  ],
-  "exportsOverride": {
-    "css": {
-      "": [
-        "**/*.css"
-      ]
-    }
-  }
+  ]
 }
