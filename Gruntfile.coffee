@@ -127,15 +127,21 @@ module.exports = (grunt) ->
         cwd: 'dist/<%= assets.style %>'
         src: [
           '{,*/}*.css'
-          '!{,*/}*.min.css'
         ]
-        dest: 'docs/assets/<%= assets.style %>'
+        dest: 'css'
       docs:
         expand: true,
         cwd: './dist'
         src: [
           '{css,js}/*.*'
           'fonts/*'
+        ],
+        dest: 'docs/assets'
+      docassets:
+        expand: true,
+        cwd: './dist'
+        src: [
+          '{css,js}/*.*'
         ],
         dest: 'docs/assets'
 
@@ -155,13 +161,14 @@ module.exports = (grunt) ->
     'compass'
     'newer:csslint'
     'autoprefixer'
-    'newer:copy:css'
+    'newer:copy:docassets'
   ]
 
   grunt.registerTask 'default', [
     'clean'
     'newer:copy'
     'css-build'
+    'newer:copy:css'
   ]
 
   grunt.registerTask 'dev', [
