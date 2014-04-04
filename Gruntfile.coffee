@@ -126,11 +126,11 @@ module.exports = (grunt) ->
           'fonts/*'
         ],
         dest: 'docs/assets'
-      docassets:
+      docstyle:
         expand: true,
-        cwd: '<%= assets.style %>'
+        cwd: ''
         src: [
-          '{,*}/*.css'
+          '<%= assets.style %>/*'
         ],
         dest: 'docs/assets'
 
@@ -152,7 +152,7 @@ module.exports = (grunt) ->
     'compass'
     'newer:csslint'
     'autoprefixer'
-    'newer:copy:docassets'
+    'newer:copy:docstyle'
   ]
 
   grunt.registerTask 'default', [
