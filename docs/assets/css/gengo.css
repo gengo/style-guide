@@ -11,8 +11,8 @@
           transition: border-bottom-color 0.3s ease;
 }
 .navbar .nav a:hover {
-  background-color: transparent;
   border-bottom-color: #1cad7e;
+  background-color: transparent;
 }
 @media (max-width: 768px) {
   .navbar .nav a {
@@ -110,4 +110,33 @@
 }
 .admin .navbar .navbar-brand {
   background-color: #4d4843;
+}
+
+.workbench .navbar {
+  background-color: #4d4843;
+  color: #A6A4A1;
+  font-size: 13px;
+}
+.workbench .navbar .nav .navbar-text {
+  padding: 0 12px;
+}
+.workbench .navbar .nav a {
+  margin: 0;
+  padding: 14px 17px 10px;
+  border-bottom-color: transparent;
+  color: #A6A4A1;
+}
+.workbench .navbar .nav a:hover,
+.workbench .navbar .nav .active a {
+  border-bottom-color: transparent;
+  background-color: #413C38;
+}
+.workbench .navbar .nav .btn {
+  font-size: 13px;
+}
+.workbench .navbar .navbar-brand {
+  background-color: #4d4843;
+}
+.workbench .navbar .navbar-right {
+  margin-right: 0;
 }
