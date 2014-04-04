@@ -15,8 +15,8 @@ $navbar-background-color: #fff;
       transition: border-bottom-color 0.3s ease;
 
       &:hover {
-        background-color: transparent;
         border-bottom-color: $brand-customer;
+        background-color: transparent;
       }
 
       @media (max-width: $grid-float-breakpoint) {
@@ -125,4 +125,39 @@ $navbar-background-color: #fff;
   .navbar-brand {
     background-color: $brand-admin;
   }
+}
+
+.workbench .navbar {
+  background-color: $brand-admin;
+  color: #A6A4A1;
+  font-size: 13px;
+
+  .nav  {
+    .navbar-text {
+      padding: 0 12px;
+    }
+
+    a {
+      margin: 0;
+      padding: 14px 17px 10px;
+      border-bottom-color: transparent;
+      color: #A6A4A1;
+    }
+
+    a:hover,
+    .active a {
+      border-bottom-color: transparent;
+      background-color: #413C38;
+    }
+
+    .btn {
+      font-size: 13px;
+    }
+  }
+
+  .navbar-brand {
+    background-color: $brand-admin;
+  }
+
+  .navbar-right { margin-right: 0; }
 }
