@@ -137,16 +137,20 @@ $navbar-background-color: #fff;
       padding: 0 12px;
     }
 
+    a,
+    a:hover,
+    .active a {
+      border-bottom: 0;
+    }
+
     a {
       margin: 0;
-      padding: 14px 17px 10px;
-      border-bottom-color: transparent;
+      padding: 14px 17px 13px;
       color: #A6A4A1;
     }
 
     a:hover,
     .active a {
-      border-bottom-color: transparent;
       background-color: #413C38;
     }
 
