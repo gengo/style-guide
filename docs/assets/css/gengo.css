@@ -1,3 +1,11 @@
+/*!
+ * Copyright 2011-2014 Gengo, Inc.
+ * * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at :
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+
 .navbar {
   border-bottom: 1px solid #dddddd;
   background-color: white;
@@ -168,14 +176,14 @@
   margin-right: 0;
 }
 .workbench .navbar .dropdown-menu {
-  margin-top: 0;
-  padding: 5px 0;
-  min-width: 190px;
-  border: 1px solid #433F3B;
   border-top-left-radius: 1px;
   border-top-right-radius: 1px;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
+  margin-top: 0;
+  padding: 5px 0;
+  min-width: 190px;
+  border: 1px solid #433F3B;
   background-color: #4d4843;
   -webkit-box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
@@ -189,7 +197,6 @@
 .workbench .navbar .dropdown-menu > li > a {
   position: relative;
   padding: 0 17px;
-  min-width: 220px;
   color: #fff;
   line-height: 36px;
 }
@@ -198,7 +205,12 @@
   background-color: #322E2A;
 }
 .workbench .navbar .dropdown-menu > li > a .text {
-  padding-left: 24px;
+  margin: 0 40px 0 24px;
+  text-align: right;
+}
+.workbench .navbar .dropdown-menu > li > a .count {
+  position: absolute;
+  right: 24px;
 }
 .workbench .navbar .dropdown-menu .section-text {
   padding: 0 24px;
