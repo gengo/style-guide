@@ -155,7 +155,33 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Gengo</a>
+        <!-- <a class="navbar-brand" href="#">Gengo</a> -->
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="navbar-brand dropdown-toggle" data-toggle="dropdown">Gengo</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" id="menu-job-save" class="save-translation">
+                  Save
+                  <span class="shortcut pull-right">⌘ + S</span>
+                </a>
+                <a href="#" id="menu-job-submit">
+                  Submit
+                  <span class="shortcut pull-right">⌘ + enter</span>
+                </a>
+                <a href="#" id="menu-job-support">
+                  Support
+                  <span class="shortcut pull-right">⌘ + H</span>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#decline-modal" class="confirm-decline" role="button" data-toggle="modal" id="menu-job-quit">Decline Job</a>
+                <a href="#" id="menu-job-close">Save and Close</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
       <nav class="collapse navbar-collapse ge-navbar-collapse" role="navigation">
         <ul class="nav navbar-nav border-left">
@@ -167,6 +193,40 @@
           </li>
           <li>
             <a href="#">Components</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li class="section-text">FILTER VIEW</li>
+              <li>
+                <a href="#" class="filter-change" data-type="0">
+                  <i class="navbar-icon-empty"></i>
+                  <span class="text">Empty</span>
+                  <span class="no-translation-count pull-right">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="filter-change" data-type="1">
+                  <i class="navbar-icon-translated"></i>
+                  <span class="text">Translated</span>
+                  <span class="translation-count pull-right">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="filter-change" data-type="2">
+                  <i class="navbar-icon-reviewable"></i>
+                  <span class="text">Reviewable</span>
+                  <span class="submitted-count pull-right">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="filter-change" data-type="3">
+                  <i class="navbar-icon-approved"></i>
+                  <span class="text">Approved</span>
+                  <span class="approved-count pull-right">0</span>
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
         <ul class="nav navbar-nav border-left">
