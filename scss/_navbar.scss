@@ -1,4 +1,5 @@
 $navbar-background-color: #fff;
+$hover-dark-gray: #413C38;
 
 .navbar {
   border-bottom: 1px solid $table-border-color;
@@ -11,7 +12,6 @@ $navbar-background-color: #fff;
       margin: 0;
     }
   }
-
 
   .nav {
     // li:first-child { margin-left: 17px; }
@@ -126,7 +126,7 @@ $navbar-background-color: #fff;
       border-bottom-color: $brand-admin;
 
       @media (max-width: $grid-float-breakpoint) {
-        background-color: #413C38;
+        background-color: $hover-dark-gray;
       }
     }
   }
@@ -136,9 +136,15 @@ $navbar-background-color: #fff;
   }
 }
 
+
+//
+// WORKBENCH
+//
+$workbecnh-text-color: #A6A4A1;
+
 .workbench .navbar {
   background-color: $brand-admin;
-  color: #A6A4A1;
+  color: $workbecnh-text-color;
   font-size: 13px;
 
   .border-left {
@@ -161,12 +167,15 @@ $navbar-background-color: #fff;
     a {
       margin: 0;
       padding: 14px 8px 13px;
-      color: #A6A4A1;
+      background-color: $brand-admin;
+      color: $workbecnh-text-color;
     }
 
-    a:hover,
-    .active a {
-      background-color: #413C38;
+    > a:hover,
+    .active > a,
+    .open > a,
+    .open > a:hover {
+      background-color: $hover-dark-gray;
     }
 
     .btn {
@@ -174,10 +183,65 @@ $navbar-background-color: #fff;
     }
   }
 
+  .navbar-header .nav {
+    padding: 0 12px;
+  }
 
   .navbar-brand {
+    margin: 0 12px;
+    padding-right: 18px;
+    padding-left: 18px;
     background-color: $brand-admin;
+
+    &:hover {
+      background-color: $hover-dark-gray;
+    }
   }
 
   .navbar-right { margin-right: 0; }
+
+  .dropdown-menu {
+    margin-top: 0;
+    padding: 5px 0;
+    min-width: 190px;
+    border: 1px solid #433F3B;
+    @include border-top-radius(1px);
+    @include border-bottom-radius(2px);
+    background-color: $brand-admin;
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
+
+    &:before,
+    &:after {
+      border-color: transparent;
+    }
+
+    .divider {
+      background-color: #635E5A;
+    }
+
+    > li > a {
+      position: relative;
+      padding:0 24px;
+      min-width: 130px;
+      color: #fff;
+      line-height: 36px;
+
+      &:hover{
+        padding-bottom: 0;
+        background-color: #322E2A;
+      }
+
+      .text {
+        padding-left: 18px;
+      }
+    }
+
+    .section-text {
+      padding: 0 24px;
+      color: $workbecnh-text-color;
+      font-size: 10px;
+      line-height: 21px;
+    }
+  }
+
 }
