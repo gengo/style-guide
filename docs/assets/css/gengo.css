@@ -119,7 +119,7 @@
 @media (max-width: 768px) {
   .admin .navbar .nav a:hover,
   .admin .navbar .nav .active a {
-    background-color: #413C38;
+    background-color: #413c38;
   }
 }
 .admin .navbar .navbar-brand {
@@ -128,7 +128,7 @@
 
 .workbench .navbar {
   background-color: #4d4843;
-  color: #A6A4A1;
+  color: #a6a4a1;
   font-size: 13px;
 }
 .workbench .navbar .border-left {
@@ -148,18 +148,69 @@
 .workbench .navbar .nav a {
   margin: 0;
   padding: 14px 8px 13px;
-  color: #A6A4A1;
+  background-color: #4d4843;
+  color: #a6a4a1;
 }
-.workbench .navbar .nav a:hover,
-.workbench .navbar .nav .active a {
-  background-color: #413C38;
+.workbench .navbar .nav > li > a:hover,
+.workbench .navbar .nav .active > a,
+.workbench .navbar .nav .open > a,
+.workbench .navbar .nav .open > a:hover {
+  background-color: #413c38;
 }
 .workbench .navbar .nav .btn {
   font-size: 13px;
 }
+.workbench .navbar .navbar-header .nav {
+  padding: 0 12px;
+}
 .workbench .navbar .navbar-brand {
+  margin: 0 12px;
+  padding-right: 18px;
+  padding-left: 18px;
   background-color: #4d4843;
+}
+.workbench .navbar .navbar-brand:hover {
+  background-color: #413c38;
 }
 .workbench .navbar .navbar-right {
   margin-right: 0;
+}
+.workbench .navbar .dropdown-menu {
+  margin-top: 0;
+  padding: 5px 0;
+  min-width: 190px;
+  border: 1px solid #433F3B;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #4d4843;
+  -webkit-box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
+}
+.workbench .navbar .dropdown-menu:before, .workbench .navbar .dropdown-menu:after {
+  border-color: transparent;
+}
+.workbench .navbar .dropdown-menu .divider {
+  background-color: #635E5A;
+}
+.workbench .navbar .dropdown-menu > li > a {
+  position: relative;
+  padding: 0 24px;
+  min-width: 130px;
+  color: #fff;
+  line-height: 36px;
+}
+.workbench .navbar .dropdown-menu > li > a:hover {
+  padding-bottom: 0;
+  background-color: #322E2A;
+}
+.workbench .navbar .dropdown-menu > li > a .text {
+  padding-left: 18px;
+}
+.workbench .navbar .dropdown-menu .section-text {
+  padding: 0 24px;
+  color: #a6a4a1;
+  font-size: 10px;
+  line-height: 21px;
 }
