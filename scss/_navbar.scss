@@ -201,12 +201,12 @@ $workbecnh-text-color: #A6A4A1;
   .navbar-right { margin-right: 0; }
 
   .dropdown-menu {
+    @include border-top-radius(1px);
+    @include border-bottom-radius(2px);
     margin-top: 0;
     padding: 5px 0;
     min-width: 190px;
     border: 1px solid #433F3B;
-    @include border-top-radius(1px);
-    @include border-bottom-radius(2px);
     background-color: $brand-admin;
     box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
 
@@ -222,7 +222,6 @@ $workbecnh-text-color: #A6A4A1;
     > li > a {
       position: relative;
       padding:0 17px;
-      min-width: 220px;
       color: #fff;
       line-height: 36px;
 
@@ -232,7 +231,13 @@ $workbecnh-text-color: #A6A4A1;
       }
 
       .text {
-        padding-left: 24px;
+        margin: 0 40px 0 24px;
+        text-align: right;
+      }
+
+      .count {
+        position: absolute;
+        right: 24px;
       }
     }
 
