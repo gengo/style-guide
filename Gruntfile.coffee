@@ -2,7 +2,7 @@
 
 # Build configurations.
 module.exports = (grunt) ->
-
+  require('time-grunt')(grunt)
   # load all grunt tasks
   require('jit-grunt')(grunt, {
     usebanner: 'grunt-banner'
@@ -37,7 +37,7 @@ module.exports = (grunt) ->
 
     watch:
       options:
-        livereload: true
+        livereload: 9002
       sass:
         files: '<%= assets.sass %>/{,*/}*.{scss,sass}'
         tasks: [ 'css-dev' ]
