@@ -141,6 +141,11 @@ module.exports = (grunt) ->
         '<%= assets.style %>/third_party'
       ]
 
+    styleguide:
+      dist:
+        files:
+          'docs/core': '<%= assets.sass %>/*.{scss,sass}'
+
   grunt.registerTask 'css-build', [
     'compass'
     'newer:csslint'
@@ -160,6 +165,7 @@ module.exports = (grunt) ->
     'newer:copy:bootstrap'
     'css-build'
     'newer:copy:docs'
+    'styleguide'
   ]
 
   grunt.registerTask 'dev', [

@@ -20,7 +20,8 @@
     "grunt-notify": "~0.2.20",
     "grunt-banner": "~0.2.2",
     "grunt-newer": "~0.7.0",
-    "time-grunt": "^0.3.1"
+    "time-grunt": "^0.3.1",
+    "grunt-styleguide": "^0.2.15"
   },
   "engines": {
     "node": ">=0.8.0"
