@@ -8,9 +8,11 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "components",
+    "bower_components",
+    "docs",
     "*.md",
     "Gruntfile.*",
-    "package.json"
+    "package.json",
+    "setup.sh"
   ]
 }
