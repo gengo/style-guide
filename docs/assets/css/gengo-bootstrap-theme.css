@@ -6337,3 +6337,116 @@ button.close {
     display: none !important;
   }
 }
+.btn:active, .btn.active {
+  background-image: none;
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.btn-default {
+  background-image: -webkit-linear-gradient(top, white 0%, #f0f0f0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0f0));
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF0F0F0', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #dbdbdb;
+  border-color: #ccc;
+}
+.btn-default:hover, .btn-default:focus {
+  background-color: #f0f0f0;
+  background-position: 0 -15px;
+}
+.btn-default:active, .btn-default.active {
+  background-color: #e0e0e0;
+  border-color: #d6d6d6;
+  background-image: none;
+  -webkit-box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
+}
+.btn-default:active, .btn-default.active {
+  border-color: #a3a3a3;
+}
+.btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default {
+  border-color: #ccc;
+}
+
+.btn-primary {
+  background-image: -webkit-linear-gradient(top, #1cad7e 0%, #18936b 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1cad7e), to(#18936b));
+  background-image: linear-gradient(to bottom, #1cad7e 0%, #18936b 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1CAD7E', endColorstr='#FF18936B', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #127051;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #18936b;
+  background-position: 0 -15px;
+}
+.btn-primary:active, .btn-primary.active {
+  background-color: #137858;
+  border-color: #11674b;
+  background-image: none;
+  -webkit-box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
+}
+
+a, .btn-link {
+  color: #1BAC7E;
+}
+
+.translator .btn-primary {
+  background-image: -webkit-linear-gradient(top, #91d1c7 0%, #7bc8bc 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#91d1c7), to(#7bc8bc));
+  background-image: linear-gradient(to bottom, #91d1c7 0%, #7bc8bc 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF91D1C7', endColorstr='#FF7BC8BC', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #5fbcad;
+}
+.translator .btn-primary:hover, .translator .btn-primary:focus {
+  background-color: #7bc8bc;
+  background-position: 0 -15px;
+}
+.translator .btn-primary:active, .translator .btn-primary.active {
+  background-color: #66bfb1;
+  border-color: #57b9aa;
+  background-image: none;
+  -webkit-box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
+}
+.translator a, .translator .btn-link {
+  color: #79B1A5;
+}
+
+.developer .btn-primary {
+  background-image: -webkit-linear-gradient(top, #ea5e47 0%, #e7462c 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ea5e47), to(#e7462c));
+  background-image: linear-gradient(to bottom, #ea5e47 0%, #e7462c 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEA5E47', endColorstr='#FFE7462C', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #d23218;
+}
+.developer .btn-primary:hover, .developer .btn-primary:focus {
+  background-color: #e7462c;
+  background-position: 0 -15px;
+}
+.developer .btn-primary:active, .developer .btn-primary.active {
+  background-color: #db3419;
+  border-color: #c93017;
+  background-image: none;
+  -webkit-box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
+}
+.developer a, .developer .btn-link {
+  color: #EA5E46;
+}
