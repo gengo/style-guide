@@ -6,6 +6,211 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'gicons';
+  src: url("../fonts/gicons.eot?-3uz68h");
+  src: url("../fonts/gicons.eot?#iefix-3uz68h") format("embedded-opentype"), url("../fonts/gicons.woff?-3uz68h") format("woff"), url("../fonts/gicons.ttf?-3uz68h") format("truetype"), url("../fonts/gicons.svg?-3uz68h#gicons") format("svg");
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-family: 'gicons';
+  line-height: 1;
+  speak: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-funnel:before {
+  content: "\79";
+}
+
+.icon-filter:before {
+  content: "\79";
+}
+
+.icon-menu:before {
+  content: "\6d";
+}
+
+.icon-success:before {
+  content: "\73";
+}
+
+.icon-error:before {
+  content: "\65";
+}
+
+.icon-fullscreen:before {
+  content: "\2b";
+}
+
+.icon-vertical:before {
+  content: "\76";
+}
+
+.icon-user:before {
+  content: "\75";
+}
+
+.icon-memory:before {
+  content: "\4d";
+}
+
+.icon-preferences:before {
+  content: "\70";
+}
+
+.icon-settings:before {
+  content: "\70";
+}
+
+.icon-refresh:before {
+  content: "\72";
+}
+
+.icon-tooltip:before {
+  content: "\74";
+}
+
+.icon-previous:before {
+  content: "\3e";
+}
+
+.icon-check:before {
+  content: "\63";
+}
+
+.icon-close:before {
+  content: "\43";
+}
+
+.icon-messages:before {
+  content: "\e60d";
+}
+
+.icon-comments:before {
+  content: "\e60d";
+}
+
+.icon-global:before {
+  content: "\67";
+}
+
+.icon-next:before {
+  content: "\e60f";
+}
+
+.icon-minimize:before {
+  content: "\2d";
+}
+
+.icon-info:before {
+  content: "\69";
+}
+
+.icon-horizontal:before {
+  content: "\68";
+}
+
+.icon-trash:before {
+  content: "\54";
+}
+
+.icon-delete:before {
+  content: "\54";
+}
+
+.icon-funnel2:before {
+  content: "\66";
+}
+
+.icon-search:before {
+  content: "\53";
+}
+
+.icon-share:before {
+  content: "\2f";
+}
+
+.icon-flag:before {
+  content: "\46";
+}
+
+.icon-create:before {
+  content: "\6e";
+}
+
+.icon-news:before {
+  content: "\4e";
+}
+
+.icon-activity:before {
+  content: "\61";
+}
+
+.icon-unlocked:before {
+  content: "\4c";
+}
+
+.icon-locked:before {
+  content: "\6c";
+}
+
+.icon-database:before {
+  content: "\62";
+}
+
+.icon-transfer:before {
+  content: "\23";
+}
+
+.icon-start:before {
+  content: "\47";
+}
+
+.icon-play:before {
+  content: "\50";
+}
+
+.icon-file:before {
+  content: "\64";
+}
+
+.icon-doc:before {
+  content: "\64";
+}
+
+.icon-download:before {
+  content: "\44";
+}
+
+.icon-star:before {
+  content: "\2a";
+}
+
+.icon-print:before {
+  content: "\5f";
+}
+
+.icon-email:before {
+  content: "\45";
+}
+
+.icon-archive:before {
+  content: "\41";
+}
+
+.icon-edit:before {
+  content: "\3a";
+}
+
 .navbar {
   border-bottom: 1px solid #dddddd;
   background-color: white;
@@ -127,6 +332,7 @@
 }
 
 .workbench .navbar {
+  border: transparent;
   background-color: #4d4843;
   color: #a6a4a1;
   font-size: 13px;
@@ -159,6 +365,41 @@
 }
 .workbench .navbar .nav .btn {
   font-size: 13px;
+}
+.workbench .navbar .nav li > [class^="icon-"],
+.workbench .navbar .nav li > [class*=" icon-"] {
+  color: #837F7C;
+}
+.workbench .navbar .nav li > [class^="icon-"]:hover, .workbench .navbar .nav li > [class^="icon-"].selected,
+.workbench .navbar .nav li > [class*=" icon-"]:hover,
+.workbench .navbar .nav li > [class*=" icon-"].selected {
+  color: #fff;
+}
+.workbench .navbar .nav li > .icon-vertical,
+.workbench .navbar .nav li > .icon-horizontal,
+.workbench .navbar .nav li > .icon-fullscreen {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 12px;
+  line-height: 12px;
+}
+.workbench .navbar .nav li > .icon-filter {
+  padding-top: 17.5px;
+  padding-bottom: 17.5px;
+  font-size: 13px;
+  line-height: 13px;
+}
+.workbench .navbar .nav li > .icon-comments {
+  padding-top: 16.5px;
+  padding-bottom: 16.5px;
+  font-size: 15px;
+  line-height: 15px;
+}
+.workbench .navbar .nav li > .icon-success {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  line-height: 16px;
 }
 .workbench .navbar .navbar-header .nav {
   padding: 0 12px;
@@ -205,12 +446,17 @@
   background-color: #322E2A;
 }
 .workbench .navbar .dropdown-menu > li > a .text {
-  margin: 0 40px 0 24px;
+  margin-right: 40px;
   text-align: right;
 }
 .workbench .navbar .dropdown-menu > li > a .count {
   position: absolute;
   right: 24px;
+}
+.workbench .navbar .dropdown-menu > li > a > i {
+  margin-right: 12px;
+  font-size: 12px;
+  line-height: inherit;
 }
 .workbench .navbar .dropdown-menu .section-text {
   padding: 0 24px;

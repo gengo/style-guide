@@ -142,7 +142,9 @@ $hover-dark-gray: #413C38;
 //
 $workbecnh-text-color: #A6A4A1;
 
+
 .workbench .navbar {
+  border: transparent;
   background-color: $brand-admin;
   color: $workbecnh-text-color;
   font-size: 13px;
@@ -180,6 +182,40 @@ $workbecnh-text-color: #A6A4A1;
 
     .btn {
       font-size: 13px;
+    }
+
+    li > {
+      [class^="icon-"],
+      [class*=" icon-"] {
+        color: #837F7C;
+
+        &:hover,
+        &.selected {
+          color: #fff;
+        }
+      }
+
+      @mixin navbar-icon($size, $navbar-height: 48px) {
+        padding-top: ($navbar-height - $size) * .5;
+        padding-bottom: ($navbar-height - $size) * .5;
+        font-size: $size;
+        line-height: $size;
+      }
+
+      .icon-vertical,
+      .icon-horizontal,
+      .icon-fullscreen {
+        @include navbar-icon(12px);
+      }
+      .icon-filter {
+        @include navbar-icon(13px);
+      }
+      .icon-comments {
+        @include navbar-icon(15px);
+      }
+      .icon-success {
+        @include navbar-icon(16px);
+      }
     }
   }
 
@@ -231,13 +267,19 @@ $workbecnh-text-color: #A6A4A1;
       }
 
       .text {
-        margin: 0 40px 0 24px;
+        margin-right: 40px;
         text-align: right;
       }
 
       .count {
         position: absolute;
         right: 24px;
+      }
+
+      > i {
+        margin-right: 12px;
+        font-size: 12px;
+        line-height: inherit;
       }
     }
 
