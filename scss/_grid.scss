@@ -1,10 +1,23 @@
 .box {
-  padding-left:  $grid-gutter-width;
-  padding-right: $grid-gutter-width;
+  padding-left:  ($grid-gutter-width / 3);
+  padding-right: ($grid-gutter-width / 3);
   background-color: $box-bg;
   border: 1px solid #DBDBDB;
   border-radius: 3px;
   @include box-shadow(0 0 6px rgba(0, 0, 0, 0.075));
+
+  @media (min-width: $screen-sm-min) {
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+  }
+  @media (min-width: $screen-md-min) {
+    padding-left:  $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+  @media (min-width: $screen-lg-min) {
+    padding-left:  $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
 }
 
 .sidebar-nav {
