@@ -176,13 +176,13 @@ $workbench-icon-active-color: #fff !default;
 
       .icon-vertical,
       .icon-horizontal,
-      .icon-fullscreen {
+      .icon-expand {
         @include navbar-icon(12px);
       }
-      .icon-filter {
+      .icon-funnel {
         @include navbar-icon(13px);
       }
-      .icon-comments {
+      .icon-comment {
         @include navbar-icon(15px);
       }
       .icon-success {
