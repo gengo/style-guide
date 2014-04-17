@@ -23,6 +23,7 @@ $brand-customer:        #1CAD7E !default;
 $brand-translator:      #98D7CC !default;
 $brand-developer:       #EA5E47 !default;
 $brand-admin:           #4D4843 !default;
+$brand-workbench:       #4D4843 !default;
 
 
 //== Scaffolding
@@ -143,7 +144,7 @@ $table-border-color:            #ddd !default;
 
 $btn-font-weight:                normal !default;
 
-$btn-default-color:              #333 !default;
+$btn-default-color:              $text-color !default;
 $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
