@@ -712,23 +712,23 @@ a, .btn-link {
 }
 .developer .navbar .nav .active a,
 .developer .navbar .nav a:hover {
-  border-bottom-color: #1cad7e;
+  border-bottom-color: #ea5e47;
   background-color: white;
 }
 .developer .navbar .navbar-brand {
-  background-color: #1cad7e;
+  background-color: #ea5e47;
 }
 .developer .navbar .navbar-toggle .icon-bar {
   background-color: #fff;
 }
 @media (max-width: 768px) {
   .developer .customer .navbar {
-    background-color: #1cad7e;
+    background-color: #ea5e47;
   }
 }
 .developer .customer .navbar .nav a:hover,
 .developer .customer .navbar .nav .active a {
-  border-bottom-color: #1cad7e;
+  border-bottom-color: #ea5e47;
 }
 @media (max-width: 768px) {
   .developer .customer .navbar .nav a:hover,
@@ -737,7 +737,7 @@ a, .btn-link {
   }
 }
 .developer .customer .navbar .navbar-brand {
-  background-color: #1cad7e;
+  background-color: #ea5e47;
 }
 @media (max-width: 768px) {
   .developer .translator .navbar {
@@ -959,23 +959,23 @@ a, .btn-link {
 }
 .translator .navbar .nav .active a,
 .translator .navbar .nav a:hover {
-  border-bottom-color: #1cad7e;
+  border-bottom-color: #98d7cc;
   background-color: white;
 }
 .translator .navbar .navbar-brand {
-  background-color: #1cad7e;
+  background-color: #98d7cc;
 }
 .translator .navbar .navbar-toggle .icon-bar {
   background-color: #fff;
 }
 @media (max-width: 768px) {
   .translator .customer .navbar {
-    background-color: #1cad7e;
+    background-color: #98d7cc;
   }
 }
 .translator .customer .navbar .nav a:hover,
 .translator .customer .navbar .nav .active a {
-  border-bottom-color: #1cad7e;
+  border-bottom-color: #98d7cc;
 }
 @media (max-width: 768px) {
   .translator .customer .navbar .nav a:hover,
@@ -984,7 +984,7 @@ a, .btn-link {
   }
 }
 .translator .customer .navbar .navbar-brand {
-  background-color: #1cad7e;
+  background-color: #98d7cc;
 }
 @media (max-width: 768px) {
   .translator .translator .navbar {
@@ -1206,23 +1206,23 @@ a, .btn-link {
 }
 .admin .navbar .nav .active a,
 .admin .navbar .nav a:hover {
-  border-bottom-color: #1cad7e;
+  border-bottom-color: #4d4843;
   background-color: white;
 }
 .admin .navbar .navbar-brand {
-  background-color: #1cad7e;
+  background-color: #4d4843;
 }
 .admin .navbar .navbar-toggle .icon-bar {
   background-color: #fff;
 }
 @media (max-width: 768px) {
   .admin .customer .navbar {
-    background-color: #1cad7e;
+    background-color: #4d4843;
   }
 }
 .admin .customer .navbar .nav a:hover,
 .admin .customer .navbar .nav .active a {
-  border-bottom-color: #1cad7e;
+  border-bottom-color: #4d4843;
 }
 @media (max-width: 768px) {
   .admin .customer .navbar .nav a:hover,
@@ -1231,7 +1231,7 @@ a, .btn-link {
   }
 }
 .admin .customer .navbar .navbar-brand {
-  background-color: #1cad7e;
+  background-color: #4d4843;
 }
 @media (max-width: 768px) {
   .admin .translator .navbar {

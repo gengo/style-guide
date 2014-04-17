@@ -7,23 +7,23 @@
 @import "icons";
 @import "grid";
 
-// customer
+// customer & default
 $brand-color: $brand-customer;
 @import "navbar";
 
-// developer
+// Designs for Developer pages
 .developer {
   $brand-color: $brand-developer;
   @import "navbar";
 }
 
-// translator
+// Styles for Translator pages
 .translator {
   $brand-color: $brand-translator;
   @import "navbar";
 }
 
-// translator
+// Styles for Admin pages
 .admin {
   $brand-color: $brand-admin;
   @import "navbar";
