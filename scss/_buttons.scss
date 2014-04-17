@@ -1,4 +1,10 @@
 //
+// Variables
+// --------------------------------------------------
+
+$btn-darken-percent: 7%;
+
+//
 // Mixins
 // --------------------------------------------------
 
@@ -41,6 +47,15 @@ a, .btn-link { color: #1BAC7E; }
   border-bottom-color: #D4D4D4;
   border-left-color: #D8D8D8;
 
+  &:hover {
+    @include gradient-vertical($start-color: darken(#FFFFFF, $btn-darken-percent), $end-color: darken(#F7F7F7, $btn-darken-percent));
+    @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+    border-top-color: darken(#DCDCDC, $btn-darken-percent);
+    border-right-color: darken(#D8D8D8, $btn-darken-percent);
+    border-bottom-color: darken(#D4D4D4, $btn-darken-percent);
+    border-left-color: darken(#D8D8D8, $btn-darken-percent);
+  }
+
   &:active,
   &.active {
     border-color: #B7B7B7;
@@ -66,6 +81,25 @@ a, .btn-link { color: #1BAC7E; }
   border-right-color: #219973;
   border-bottom-color: #18906B;
   border-left-color: #219973;
+
+  &:hover {
+    @include gradient-vertical($start-color: darken(#29B285, $btn-darken-percent), $end-color: darken(#1BA377, $btn-darken-percent));
+    @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+    border-top-color: darken(#279F79, $btn-darken-percent);
+    border-right-color: darken(#219973, $btn-darken-percent);
+    border-bottom-color: darken(#18906B, $btn-darken-percent);
+    border-left-color: darken(#219973, $btn-darken-percent);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include opacity(.6);
+    border-top-color: #279F79;
+    border-right-color: #219973;
+    border-bottom-color: #18906B;
+    border-left-color: #219973;
+  }
 }
 
 //
@@ -81,6 +115,21 @@ a, .btn-link { color: #1BAC7E; }
     border-right-color: #83BBB2;
     border-bottom-color: #7CB3AB;
     border-left-color: #83BBB2;
+
+    &:hover {
+      @include gradient-vertical($start-color: darken(#97D3CA, $btn-darken-percent), $end-color: darken(#7CB3AB, $btn-darken-percent));
+      @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+      border-top-color: darken(#8AC2B9, $btn-darken-percent);
+      border-right-color: darken(#83BBB2, $btn-darken-percent);
+      border-bottom-color: darken(#7CB3AB, $btn-darken-percent);
+      border-left-color: darken(#83BBB2, $btn-darken-percent);
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      @include opacity(.6);
+    }
   }
 
   a, .btn-link { color: #79B1A5; }
@@ -99,6 +148,21 @@ a, .btn-link { color: #1BAC7E; }
     border-right-color: #C65340;
     border-bottom-color: #BE4C39;
     border-left-color: #C65340;
+
+    &:hover {
+      @include gradient-vertical($start-color: darken(#EB6752, $btn-darken-percent), $end-color: darken(#DD5943, $btn-darken-percent));
+      @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+      border-top-color: darken(#CD5A47, $btn-darken-percent);
+      border-right-color: darken(#C65340, $btn-darken-percent);
+      border-bottom-color: darken(#BE4C39, $btn-darken-percent);
+      border-left-color: darken(#C65340, $btn-darken-percent);
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      @include opacity(.6);
+    }
   }
 
   a, .btn-link { color: #EA5E46; }
