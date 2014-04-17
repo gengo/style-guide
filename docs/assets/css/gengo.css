@@ -381,8 +381,6 @@ a, .btn-link {
 }
 
 .box {
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.075);
-          box-shadow: 0 0 6px rgba(0, 0, 0, 0.075);
   padding-right: 24px;
   padding-left: 24px;
   border: 1px solid #DBDBDB;
