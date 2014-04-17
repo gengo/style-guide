@@ -8,4 +8,9 @@
 @import "navbar";
 @import "grid";
 
-body {}
+body { }
+
+.radio, .checkbox {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
