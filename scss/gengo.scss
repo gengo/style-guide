@@ -4,7 +4,28 @@
 
 // @import "fonts";
 @import "icons";
-@import "navbar";
 @import "grid";
+
+// customer
+$brand-color: $brand-customer;
+@import "navbar";
+
+// developer
+.developer {
+  $brand-color: $brand-developer;
+  @import "navbar";
+}
+
+// translator
+.translator {
+  $brand-color: $brand-translator;
+  @import "navbar";
+}
+
+// translator
+.admin {
+  $brand-color: $brand-admin;
+  @import "navbar";
+}
 
 body {}
