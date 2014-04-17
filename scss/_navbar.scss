@@ -20,6 +20,13 @@
   .navbar-brand { background-color: $bg-color; }
 }
 
+@mixin vertical-align ($height, $parent-height: $navbar-height) {
+  padding-top   : ($parent-height - $height) * .5 + .5 !important;
+  padding-bottom: ($parent-height - $height) * .5 - .5 !important;
+  font-size: $height;
+  line-height: $height;
+}
+
 //
 // Navbar common
 // --------------------------------------------------
@@ -67,6 +74,18 @@ $hover-dark-gray:         #413C38 !default;
 
   .navbar-brand {
     background-color: $brand-customer;
+    @include vertical-align(20px);
+
+    &:before {
+      display: block;
+      content: '';
+      width: 59px;
+      height: 20px;
+      background-image: url(../images/logo_gengo.svg);
+      background-repeat: no-repeat;
+      background-size: 59px 20px;
+      background-size: contain;
+    }
   }
 
   .navbar-toggle .icon-bar {
@@ -88,6 +107,17 @@ $hover-dark-gray:         #413C38 !default;
 
 .translator .navbar {
   @include navbar-base($brand-translator, #89C1B7);
+
+  .navbar-brand {
+    @include vertical-align(26px);
+
+    &:before {
+      width: 26px;
+      height: 26px;
+      background-image: url(../images/logo_translator.svg);
+      background-size: 26px 26px;
+    }
+  }
 }
 
 //
@@ -96,6 +126,17 @@ $hover-dark-gray:         #413C38 !default;
 
 .developer .navbar {
   @include navbar-base($brand-developer, #D25440);
+
+  .navbar-brand {
+    @include vertical-align(24px);
+
+    &:before {
+      width: 26px;
+      height: 24px;
+      background-image: url(../images/logo_developer.svg);
+      background-size: 26px 26px;
+    }
+  }
 }
 
 //
@@ -104,6 +145,17 @@ $hover-dark-gray:         #413C38 !default;
 
 .admin .navbar {
   @include navbar-base($brand-admin, $hover-dark-gray);
+
+  .navbar-brand {
+    @include vertical-align(27px);
+
+    &:before {
+      width: 27px;
+      height: 27px;
+      background-image: url(../images/logo_admin.svg);
+      background-size: 27px 27px;
+    }
+  }
 }
 
 //
@@ -167,26 +219,19 @@ $workbench-icon-active-color: #fff !default;
         }
       }
 
-      @mixin navbar-icon($size, $navbar-height: $navbar-height) {
-        padding-top: ($navbar-height - $size) * .5 + .5;
-        padding-bottom: ($navbar-height - $size) * .5 - .5;
-        font-size: $size;
-        line-height: $size;
-      }
-
       .icon-vertical,
       .icon-horizontal,
       .icon-expand {
-        @include navbar-icon(12px);
+        @include vertical-align(12px);
       }
       .icon-funnel {
-        @include navbar-icon(13px);
+        @include vertical-align(13px);
       }
       .icon-comment {
-        @include navbar-icon(15px);
+        @include vertical-align(15px);
       }
       .icon-success {
-        @include navbar-icon(16px);
+        @include vertical-align(16px);
       }
     }
   }
@@ -197,8 +242,6 @@ $workbench-icon-active-color: #fff !default;
 
   .navbar-brand {
     margin: 0 12px;
-    padding-right: 18px;
-    padding-left: 18px;
     background-color: $brand-workbench;
 
     &:hover {
