@@ -464,3 +464,52 @@
   font-size: 10px;
   line-height: 21px;
 }
+
+.box {
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: white;
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.075);
+}
+@media (min-width: 768px) {
+  .box {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .box {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media (min-width: 1200px) {
+  .box {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[class*="col-"] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media (min-width: 768px) {
+  [class*="col-"] {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}

@@ -115,7 +115,7 @@ module.exports = (grunt) ->
     copy:
       bootstrap:
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-sass/vendor/assets/stylesheets'
+        cwd: '<%= assets.bower %>/bootstrap-sass-official/vendor/assets/stylesheets'
         src: '{,*/}*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party'
       docs:
