@@ -1,0 +1,17 @@
+.box {
+  padding-left:  $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+  background-color: $box-bg;
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  @include box-shadow(0 0 6px rgba(0, 0, 0, 0.075));
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

@@ -34,7 +34,7 @@
             <a href="#">Components</a>
           </li>
           <li>
-            <a href="#">Layout</a>
+            <a href="./grid.html">Layout</a>
           </li>
           <li>
             <a href="#">Examples</a>
@@ -155,7 +155,6 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <!-- <a class="navbar-brand" href="#">Gengo</a> -->
         <ul class="nav navbar-nav">
           <li class="dropdown">
             <a href="#" class="navbar-brand dropdown-toggle" data-toggle="dropdown">Gengo</a>
@@ -170,7 +169,7 @@
               </li>
               <li class="divider"></li>
               <li>
-                <a href="#decline-modal" class="confirm-decline" role="button" data-toggle="modal" id="menu-job-quit">Decline Job...</a>
+                <a href="#decline-modal" id="menu-job-quit" class="confirm-decline" data-toggle="modal" data-target="#declineModal">Decline Job...</a>
                 <a href="#" id="menu-job-close">Save and Close</a>
               </li>
             </ul>
@@ -179,20 +178,17 @@
       </div>
       <nav class="collapse navbar-collapse ge-navbar-collapse" role="navigation">
         <ul class="nav navbar-nav border-left">
-          <li class="active">
-            <a href="#">Style</a>
-          </li>
           <li>
-            <a href="#">Voice</a>
+            <a href="#" id="btn-vertical" class="icon-vertical selected"></a>
           </li>
-          <li>
-            <a href="#">Components</a>
-          </li>
+          <li><a href="#" id="btn-horizontal" class="icon-horizontal"></a></li>
+          <li><a href="#" id="btn-focus-mode" class="icon-fullscreen"></a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle icon-filter" data-toggle="dropdown"></a>
             <ul class="dropdown-menu">
               <li>
                 <a href="#" class="filter-change" data-type="0">
+                  <i class="navbar-icon-empty"></i>
                   <span class="text">All</span>
                   <span class="count no-translation-count">0</span>
                 </a>
@@ -213,7 +209,7 @@
               </li>
               <li>
                 <a href="#" class="filter-change" data-type="2">
-                  <i class="navbar-icon-reviewable"></i>
+                  <i class="icon-success"></i>
                   <span class="text">Submitted</span>
                   <span class="count submitted-count">0</span>
                 </a>
@@ -229,12 +225,10 @@
           </li>
         </ul>
         <ul class="nav navbar-nav border-left">
-          <li>
-            <a href="#">Layout</a>
-          </li>
-          <li>
-            <a href="#">Examples</a>
-          </li>
+          <li><a href="#" id="btn-messages" class="icon-comments"></a></li>
+        </ul>
+        <ul class="nav navbar-nav border-left">
+          <li><a href="#" id="btn-validate" class="icon-success"></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>

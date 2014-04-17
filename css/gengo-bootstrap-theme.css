@@ -856,7 +856,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1176px;
+    width: 1080px;
   }
 }
 
@@ -6367,6 +6367,12 @@ button.close {
   background-image: none;
   -webkit-box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
           box-shadow: inset 0 0 14px 14px rgba(0, 0, 0, 0.15);
+}
+.btn-default:active, .btn-default.active {
+  border-color: #a3a3a3;
+}
+.btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default {
+  border-color: #ccc;
 }
 
 .btn-primary {

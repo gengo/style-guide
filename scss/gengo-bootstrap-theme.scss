@@ -47,7 +47,22 @@
 }
 
 // Apply the mixin to the buttons
-.btn-default { @include btn-styles($btn-default-bg); border-color: #ccc; }
+.btn-default {
+  @include btn-styles($btn-default-bg);
+  border-color: #ccc;
+
+  &:active,
+  &.active {
+    border-color: darken(#ccc, 16%);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    border-color: #ccc;
+  }
+}
+
 .btn-primary { @include btn-styles(#1CAD7E); }
 a, .btn-link { color: #1BAC7E; }
 

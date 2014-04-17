@@ -31,6 +31,7 @@ $brand-admin:           #4D4843 !default;
 
 //** Background color for `<body>`.
 $body-bg:               #F4F4F4 !default;
+$box-bg:                #FFFFFF !default;
 //** Global text color on `<body>`.
 $text-color:            #4D4843 !default;
 
@@ -321,7 +322,7 @@ $container-desktop:            ((940px + $grid-gutter-width)) !default;
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
+$container-large-desktop:      ((1044px + $grid-gutter-width)) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
