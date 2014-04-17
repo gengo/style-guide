@@ -1,3 +1,11 @@
+/*!
+ * Copyright 2011-2014 Gengo, Inc.
+ * * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at :
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+
 .btn:active, .btn.active {
   background-image: none;
 }
@@ -375,8 +383,8 @@ a, .btn-link {
 .box {
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.075);
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.075);
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 24px;
+  padding-left: 24px;
   border: 1px solid #DBDBDB;
   border-radius: 3px;
   background-color: white;
@@ -385,18 +393,6 @@ a, .btn-link {
   .box {
     padding-right: 18px;
     padding-left: 18px;
-  }
-}
-@media (min-width: 992px) {
-  .box {
-    padding-right: 36px;
-    padding-left: 36px;
-  }
-}
-@media (min-width: 1200px) {
-  .box {
-    padding-right: 36px;
-    padding-left: 36px;
   }
 }
 

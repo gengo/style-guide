@@ -1,7 +1,7 @@
 .box {
   @include box-shadow(0 0 6px rgba(0, 0, 0, 0.075));
-  padding-right: ($grid-gutter-width / 3);
-  padding-left:  ($grid-gutter-width / 3);
+  padding-right: 24px;
+  padding-left:  24px;
   border: 1px solid #DBDBDB;
   border-radius: 3px;
   background-color: $box-bg;
@@ -9,14 +9,6 @@
   @media (min-width: $screen-sm-min) {
     padding-right: ($grid-gutter-width / 2);
     padding-left:  ($grid-gutter-width / 2);
-  }
-  @media (min-width: $screen-md-min) {
-    padding-right: $grid-gutter-width;
-    padding-left:  $grid-gutter-width;
-  }
-  @media (min-width: $screen-lg-min) {
-    padding-right: $grid-gutter-width;
-    padding-left:  $grid-gutter-width;
   }
 }
 
