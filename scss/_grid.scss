@@ -28,3 +28,15 @@
   margin: 0;
   padding: 0;
 }
+
+// Grid colum customise
+[class*="col-"] {
+  padding-left:  12px;
+  padding-right: 12px;
+}
+@media (min-width: $screen-sm-min) {
+  [class*="col-"] {
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+  }
+}

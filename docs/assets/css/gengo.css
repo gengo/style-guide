@@ -501,3 +501,15 @@
   margin: 0;
   padding: 0;
 }
+
+[class*="col-"] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media (min-width: 768px) {
+  [class*="col-"] {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
