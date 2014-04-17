@@ -5,6 +5,7 @@
 // @import "fonts";
 @import "buttons";
 @import "icons";
+@import "forms";
 @import "grid";
 
 // customer & default
@@ -12,21 +13,21 @@ $brand-color: $brand-customer;
 @import "navbar";
 
 // Designs for Developer pages
-.developer {
-  $brand-color: $brand-developer;
-  @import "navbar";
-}
+// .developer {
+//   $brand-color: $brand-developer;
+//   @import "navbar";
+// }
 
 // Styles for Translator pages
-.translator {
-  $brand-color: $brand-translator;
-  @import "navbar";
-}
+// .translator {
+//   $brand-color: $brand-translator;
+//   @import "navbar";
+// }
 
 // Styles for Admin pages
-.admin {
-  $brand-color: $brand-admin;
-  @import "navbar";
-}
+// .admin {
+//   $brand-color: $brand-admin;
+//   @import "navbar";
+// }
 
 body {}
