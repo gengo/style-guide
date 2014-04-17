@@ -1,3 +1,29 @@
+//
+// Mixins
+// --------------------------------------------------
+
+@mixin navbar-base($bg-color, $hove-clolr) {
+  @media (max-width: $grid-float-breakpoint) {
+    background-color: $bg-color;
+  }
+
+  .nav {
+    a:hover,
+    .active a {
+      border-bottom-color: $bg-color;
+
+      @media (max-width: $grid-float-breakpoint) {
+        background-color: $hove-clolr;
+      }
+    }
+  }
+  .navbar-brand { background-color: $bg-color; }
+}
+
+//
+// Navbar common
+// --------------------------------------------------
+
 $navbar-background-color: #fff !default;
 $hover-dark-gray:         #413C38 !default;
 
@@ -48,53 +74,50 @@ $hover-dark-gray:         #413C38 !default;
   }
 }
 
-@mixin navbar-base($bg-color, $hove-clolr) {
-  @media (max-width: $grid-float-breakpoint) {
-    background-color: $bg-color;
-  }
-
-  .nav {
-    a:hover,
-    .active a {
-      border-bottom-color: $bg-color;
-
-      @media (max-width: $grid-float-breakpoint) {
-        background-color: $hove-clolr;
-      }
-    }
-  }
-  .navbar-brand { background-color: $bg-color; }
-}
-
+//
+// Customer
+// --------------------------------------------------
 
 .customer .navbar {
   @include navbar-base($brand-customer, #199B71);
 }
 
+//
+// Translator
+// --------------------------------------------------
+
 .translator .navbar {
   @include navbar-base($brand-translator, #89C1B7);
 }
+
+//
+// Developer
+// --------------------------------------------------
 
 .developer .navbar {
   @include navbar-base($brand-developer, #D25440);
 }
 
+//
+// Admin
+// --------------------------------------------------
+
 .admin .navbar {
   @include navbar-base($brand-admin, $hover-dark-gray);
 }
 
+//
+// Workbench
+// --------------------------------------------------
 
-//
-// WORKBENCH
-//
 $workbench-text-color:        #A6A4A1 !default;
 $workbench-border-color:      #716D69 !default;
 $workbench-icon-color:        #837F7C !default;
 $workbench-icon-active-color: #fff !default;
 
 .workbench .navbar {
-  border: transparent;
-  background-color: $brand-admin;
+  border-bottom-color: $brand-workbench;
+  background-color: $brand-workbench;
   color: $workbench-text-color;
   font-size: 13px;
 
@@ -118,7 +141,7 @@ $workbench-icon-active-color: #fff !default;
     a {
       margin: 0;
       padding: 14px 8px 13px;
-      background-color: $brand-admin;
+      background-color: $brand-workbench;
       color: $workbench-text-color;
     }
 
@@ -144,7 +167,7 @@ $workbench-icon-active-color: #fff !default;
         }
       }
 
-      @mixin navbar-icon($size, $navbar-height: 48px) {
+      @mixin navbar-icon($size, $navbar-height: $navbar-height) {
         padding-top: ($navbar-height - $size) * .5;
         padding-bottom: ($navbar-height - $size) * .5;
         font-size: $size;
@@ -176,7 +199,7 @@ $workbench-icon-active-color: #fff !default;
     margin: 0 12px;
     padding-right: 18px;
     padding-left: 18px;
-    background-color: $brand-admin;
+    background-color: $brand-workbench;
 
     &:hover {
       background-color: $hover-dark-gray;
@@ -192,7 +215,7 @@ $workbench-icon-active-color: #fff !default;
     padding: 5px 0;
     min-width: 190px;
     border: 1px solid #433F3B;
-    background-color: $brand-admin;
+    background-color: $brand-workbench;
     box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
 
     &:before,
