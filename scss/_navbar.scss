@@ -168,8 +168,8 @@ $workbench-icon-active-color: #fff !default;
       }
 
       @mixin navbar-icon($size, $navbar-height: $navbar-height) {
-        padding-top: ($navbar-height - $size) * .5;
-        padding-bottom: ($navbar-height - $size) * .5;
+        padding-top: ($navbar-height - $size) * .5 + .5;
+        padding-bottom: ($navbar-height - $size) * .5 - .5;
         font-size: $size;
         line-height: $size;
       }
