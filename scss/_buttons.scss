@@ -1,0 +1,105 @@
+//
+// Mixins
+// --------------------------------------------------
+
+@mixin add-active($color) {
+  &:active,
+  &.active {
+    border-color: $color;
+    background-color: $color;
+    background-image: none;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.12);
+  }
+}
+
+//
+// Buttons
+// --------------------------------------------------
+
+// Common styles
+.btn {
+  // Remove the gradient for the pressed/active state
+  &:active,
+  &.active {
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include opacity(.6);
+  }
+}
+
+a, .btn-link { color: #1BAC7E; }
+
+.btn-default {
+  @include gradient-vertical($start-color: #FFFFFF, $end-color: #F7F7F7);
+  @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+  border-top-color: #DCDCDC;
+  border-right-color: #D8D8D8;
+  border-bottom-color: #D4D4D4;
+  border-left-color: #D8D8D8;
+
+  &:active,
+  &.active {
+    border-color: #B7B7B7;
+    background-color: #E5E5E5;
+    background-image: none;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.12);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include opacity(1);
+    border-color: #D9D9D9;
+    color: #A4A1A0;
+  }
+}
+
+.btn-primary {
+  @include gradient-vertical($start-color: #29B285, $end-color: #1BA377);
+  @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+  @include add-active(#058A65);
+  border-top-color: #279F79;
+  border-right-color: #219973;
+  border-bottom-color: #18906B;
+  border-left-color: #219973;
+}
+
+//
+// Translator
+// --------------------------------------------------
+
+.translator {
+  .btn-primary {
+    @include gradient-vertical($start-color: #97D3CA, $end-color: #7CB3AB);
+    @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+    @include add-active(#78ACA4);
+    border-top-color: #8AC2B9;
+    border-right-color: #83BBB2;
+    border-bottom-color: #7CB3AB;
+    border-left-color: #83BBB2;
+  }
+
+  a, .btn-link { color: #79B1A5; }
+}
+
+//
+// Developer
+// --------------------------------------------------
+
+.developer {
+  .btn-primary {
+    @include gradient-vertical($start-color: #EB6752, $end-color: #DD5943);
+    @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+    @include add-active(#C14B38);
+    border-top-color: #CD5A47;
+    border-right-color: #C65340;
+    border-bottom-color: #BE4C39;
+    border-left-color: #C65340;
+  }
+
+  a, .btn-link { color: #EA5E46; }
+}
