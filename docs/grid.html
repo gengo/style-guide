@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gengo Style Guide</title>
   <!-- CSS -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
@@ -23,6 +24,11 @@
     .box .show-grid p {
       background-color: #CDE496;
     }
+    @media (max-width: 720px) {
+      .mobile-disable {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -36,24 +42,33 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Gengo</a>
+        <a class="navbar-brand" href="./index.html">Gengo</a>
       </div>
       <nav class="collapse navbar-collapse ge-navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
-          <li class="active">
-            <a href="#">Style</a>
+          <li>
+            <a href="./style.html">Style</a>
           </li>
           <li>
             <a href="#">Voice</a>
           </li>
           <li>
-            <a href="#">Components</a>
+            <a href="./components.html">Components</a>
           </li>
-          <li>
-            <a href="#">Layout</a>
+          <li class="active">
+            <a href="./grid.html">Layout</a>
           </li>
           <li>
             <a href="#">Examples</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brand <b class="caret"></b></a>
+            <ul class="change-brand dropdown-menu">
+              <li><a class='customer' href="#">Customer</a></li>
+              <li><a class='translator' href="#">Translator</a></li>
+              <li><a class='developer' href="#">Developer</a></li>
+              <li><a class='admin' href="#">Admin</a></li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -88,7 +103,7 @@
       <div class="col-xs-2"><p>1/6</p></div>
       <div class="col-xs-2"><p>1/6</p></div>
     </div>
-    <div class="row show-grid">
+    <div class="row show-grid mobile-disable">
       <div class="col-xs-1"><p>1/12</p></div>
       <div class="col-xs-1"><p>1/12</p></div>
       <div class="col-xs-1"><p>1/12</p></div>
@@ -125,7 +140,7 @@
         <div class="col-xs-3"><p>1/4</p></div>
         <div class="col-xs-3"><p>1/4</p></div>
       </div>
-      <div class="row show-grid">
+      <div class="row show-grid mobile-disable">
         <div class="col-xs-2"><p>1/6</p></div>
         <div class="col-xs-2"><p>1/6</p></div>
         <div class="col-xs-2"><p>1/6</p></div>
@@ -133,7 +148,7 @@
         <div class="col-xs-2"><p>1/6</p></div>
         <div class="col-xs-2"><p>1/6</p></div>
       </div>
-      <div class="row show-grid">
+      <div class="row show-grid mobile-disable">
         <div class="col-xs-1"><p>1/12</p></div>
         <div class="col-xs-1"><p>1/12</p></div>
         <div class="col-xs-1"><p>1/12</p></div>
@@ -153,8 +168,8 @@
   <div class='container'>
     <div class='row'>
       <div class='col-xs-2'>
-        <h2>ACTIVE TRANSLATIONS</h2>
-        <ul>
+        <p>ACTIVE TRANSLATIONS</p>
+        <ul class='nav'>
           <li><a>Logo</a></li>
           <li><a>Color</a></li>
           <li><a>Typography</a></li>
@@ -182,7 +197,7 @@
             <div class="col-xs-3"><p>1/4</p></div>
             <div class="col-xs-3"><p>1/4</p></div>
           </div>
-          <div class="row show-grid">
+          <div class="row show-grid mobile-disable">
             <div class="col-xs-2"><p>1/6</p></div>
             <div class="col-xs-2"><p>1/6</p></div>
             <div class="col-xs-2"><p>1/6</p></div>
@@ -195,7 +210,7 @@
     </div>
   </div>
 
-  <div class='container'>
+  <div class='container mobile-disable'>
     <div class="row show-grid">
       <div class="col-xs-1"><p>1/12</p></div>
       <div class="col-xs-1"><p>1/12</p></div>
@@ -213,8 +228,9 @@
   </div>
 
   <!-- JS -->
-  <script src="//code.jquery.com/jquery-1.9.0.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="./assets/js/main.js"></script>
 
 </body>
 </html>

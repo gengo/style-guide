@@ -137,7 +137,6 @@ module.exports = (grunt) ->
     clean:
       dist: [
         # 'dist'
-        'docs/assets'
         '<%= assets.style %>/third_party'
       ]
 

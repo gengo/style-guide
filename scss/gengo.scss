@@ -5,12 +5,29 @@
 // @import "fonts";
 @import "buttons";
 @import "icons";
-@import "navbar";
+@import "forms";
 @import "grid";
 
-body { }
+// customer & default
+$brand-color: $brand-customer;
+@import "navbar";
 
-.radio, .checkbox {
-  margin-top: 14px;
-  margin-bottom: 14px;
+// Designs for Developer pages
+.developer {
+  $brand-color: $brand-developer;
+  @import "navbar";
 }
+
+// Styles for Translator pages
+.translator {
+  $brand-color: $brand-translator;
+  @import "navbar";
+}
+
+// Styles for Admin pages
+.admin {
+  $brand-color: $brand-admin;
+  @import "navbar";
+}
+
+body {}
