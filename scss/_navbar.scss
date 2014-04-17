@@ -87,19 +87,19 @@ $hover-dark-gray:         #413C38 !default;
 //
 // WORKBENCH
 //
-$workbecnh-text-color:        #A6A4A1 !default;
-$workbecnh-border-color:      #716D69 !default;
-$workbecnh-icon-color:        #837F7C !default;
-$workbecnh-icon-active-color: #fff !default;
+$workbench-text-color:        #A6A4A1 !default;
+$workbench-border-color:      #716D69 !default;
+$workbench-icon-color:        #837F7C !default;
+$workbench-icon-active-color: #fff !default;
 
 .workbench .navbar {
   border: transparent;
   background-color: $brand-admin;
-  color: $workbecnh-text-color;
+  color: $workbench-text-color;
   font-size: 13px;
 
   .border-left {
-    border-left: 1px solid $workbecnh-border-color;
+    border-left: 1px solid $workbench-border-color;
   }
 
   .nav  {
@@ -119,7 +119,7 @@ $workbecnh-icon-active-color: #fff !default;
       margin: 0;
       padding: 14px 8px 13px;
       background-color: $brand-admin;
-      color: $workbecnh-text-color;
+      color: $workbench-text-color;
     }
 
     > li > a:hover,
@@ -140,7 +140,7 @@ $workbecnh-icon-active-color: #fff !default;
 
         &:hover,
         &.selected {
-          color: $workbecnh-icon-active-color;
+          color: $workbench-icon-active-color;
         }
       }
 
@@ -234,7 +234,7 @@ $workbecnh-icon-active-color: #fff !default;
 
     .section-text {
       padding: 0 24px;
-      color: $workbecnh-text-color;
+      color: $workbench-text-color;
       font-size: 10px;
       line-height: 21px;
     }
