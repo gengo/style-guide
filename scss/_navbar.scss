@@ -1,5 +1,5 @@
-$navbar-background-color: #fff;
-$hover-dark-gray: #413C38;
+$navbar-background-color: #fff !default;
+$hover-dark-gray:         #413C38 !default;
 
 .navbar {
   border-bottom: 1px solid $table-border-color;
@@ -14,19 +14,12 @@ $hover-dark-gray: #413C38;
   }
 
   .nav {
-    // li:first-child { margin-left: 17px; }
-
     a {
       margin: 0 17px;
       padding: 14px 0 10px 0;
       border-bottom: solid 3px $navbar-background-color;
       color: $text-color;
       transition: border-bottom-color 0.3s ease;
-
-      &:hover {
-        border-bottom-color: $brand-customer;
-        background-color: transparent;
-      }
 
       @media (max-width: $grid-float-breakpoint) {
         margin: 0 13px;
@@ -39,8 +32,10 @@ $hover-dark-gray: #413C38;
       }
     }
 
-    .active a {
+    .active a,
+    a:hover {
       border-bottom-color: $brand-customer;
+      background-color: $navbar-background-color;
     }
   }
 
@@ -53,95 +48,49 @@ $hover-dark-gray: #413C38;
   }
 }
 
-.customer .navbar {
+@mixin navbar-base($bg-color, $hove-clolr) {
   @media (max-width: $grid-float-breakpoint) {
-    background-color: $brand-customer;
+    background-color: $bg-color;
   }
 
   .nav {
     a:hover,
     .active a {
-      border-bottom-color: $brand-customer;
+      border-bottom-color: $bg-color;
 
       @media (max-width: $grid-float-breakpoint) {
-        background-color: #199B71;
+        background-color: $hove-clolr;
       }
     }
   }
+  .navbar-brand { background-color: $bg-color; }
+}
 
-  .navbar-brand {
-    background-color: $brand-customer;
-  }
+
+.customer .navbar {
+  @include navbar-base($brand-customer, #199B71);
 }
 
 .translator .navbar {
-  @media (max-width: $grid-float-breakpoint) {
-    background-color: $brand-translator;
-  }
-
-  .nav {
-    a:hover,
-    .active a {
-      border-bottom-color: $brand-translator;
-
-      @media (max-width: $grid-float-breakpoint) {
-        background-color: #89C1B7;
-      }
-    }
-  }
-
-  .navbar-brand {
-    background-color: $brand-translator;
-  }
+  @include navbar-base($brand-translator, #89C1B7);
 }
 
 .developer .navbar {
-  @media (max-width: $grid-float-breakpoint) {
-    background-color: $brand-developer;
-  }
-  .nav {
-    a:hover,
-    .active a {
-      border-bottom-color: $brand-developer;
-
-      @media (max-width: $grid-float-breakpoint) {
-        background-color: #D25440;
-      }
-    }
-  }
-
-  .navbar-brand {
-    background-color: $brand-developer;
-  }
+  @include navbar-base($brand-developer, #D25440);
 }
 
 .admin .navbar {
-  @media (max-width: $grid-float-breakpoint) {
-    background-color: $brand-admin;
-  }
-
-  .nav  {
-    a:hover,
-    .active a {
-      border-bottom-color: $brand-admin;
-
-      @media (max-width: $grid-float-breakpoint) {
-        background-color: $hover-dark-gray;
-      }
-    }
-  }
-
-  .navbar-brand {
-    background-color: $brand-admin;
-  }
+  @include navbar-base($brand-admin, $hover-dark-gray);
 }
 
 
 //
 // WORKBENCH
 //
-$workbecnh-text-color: #A6A4A1;
-
+$workbecnh-text-color:        #A6A4A1 !default;
+$workbecnh-border-color:      #716D69 !default;
+$workbecnh-icon-color:        #837F7C !default;
+$workbecnh-icon-active-color: #fff !default;
 
 .workbench .navbar {
   border: transparent;
@@ -150,7 +99,7 @@ $workbecnh-text-color: #A6A4A1;
   font-size: 13px;
 
   .border-left {
-    border-left: 1px solid #716D69;
+    border-left: 1px solid $workbecnh-border-color;
   }
 
   .nav  {
@@ -191,7 +140,7 @@ $workbecnh-text-color: #A6A4A1;
 
         &:hover,
         &.selected {
-          color: #fff;
+          color: $workbecnh-icon-active-color;
         }
       }
 
