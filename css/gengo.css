@@ -443,23 +443,23 @@ a, .btn-link {
   background-color: white;
 }
 .navbar .navbar-brand {
-  background-color: #1cad7e;
   padding-top: 14px !important;
   padding-bottom: 13px !important;
   font-size: 20px;
   line-height: 20px;
+  background-color: #1cad7e;
 }
 .navbar .navbar-brand:before {
   display: block;
-  content: '';
   width: 59px;
   height: 20px;
   background-image: url(../images/logo_gengo.svg);
-  background-repeat: no-repeat;
   -webkit-background-size: 59px 20px;
           background-size: 59px 20px;
   -webkit-background-size: contain;
           background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
 }
 .navbar .navbar-toggle .icon-bar {
   background-color: #fff;
@@ -595,6 +595,14 @@ a, .btn-link {
 .workbench .navbar .nav .navbar-text {
   padding: 0 12px;
 }
+.workbench .navbar .nav .navbar-brand {
+  padding-right: 18px;
+  padding-left: 18px;
+  background-color: #4d4843;
+}
+.workbench .navbar .nav .navbar-brand:hover {
+  background-color: #413c38;
+}
 .workbench .navbar .nav a,
 .workbench .navbar .nav a:hover,
 .workbench .navbar .nav .active a {
@@ -648,13 +656,6 @@ a, .btn-link {
 }
 .workbench .navbar .navbar-header .nav {
   padding: 0 12px;
-}
-.workbench .navbar .navbar-brand {
-  margin: 0 12px;
-  background-color: #4d4843;
-}
-.workbench .navbar .navbar-brand:hover {
-  background-color: #413c38;
 }
 .workbench .navbar .navbar-right {
   margin-right: 0;
