@@ -1,0 +1,24 @@
+.translating .status-icon {
+  color: $gengo-blue;
+}
+.translated .status-icon {
+  color: $gengo-blue;
+}
+.submitted .status-icon {
+  @extend .icon-success;
+  color: $gengo-lime-green;
+}
+.error .status-icon {
+  color: $gengo-red;
+}
+.revising .status-icon {
+  color: $gengo-yellow;
+}
+.approved .status-icon {
+  @extend .icon-success;
+  color: $gengo-green;
+}
+.rejected .status-icon {
+  @extend .icon-error;
+  color: $gengo-red;
+}
