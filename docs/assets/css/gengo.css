@@ -6,6 +6,40 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+.box {
+  padding-right: 24px;
+  padding-left: 24px;
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .box {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  list-style: none;
+}
+
+[class*="col-"] {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+@media (min-width: 768px) {
+  [class*="col-"] {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
 .btn:active, .btn.active {
   background-image: none;
 }
@@ -373,40 +407,41 @@ a, .btn-link {
   margin-bottom: 14px;
 }
 
-.box {
-  padding-right: 24px;
-  padding-left: 24px;
-  border: 1px solid #DBDBDB;
-  border-radius: 3px;
-  background-color: white;
+.modal-content {
+  padding: 32px 36px 36px;
+  border: 0;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
-@media (min-width: 768px) {
-  .box {
-    padding-right: 18px;
-    padding-left: 18px;
-  }
-}
-
-.sidebar-nav {
+.modal-content .close {
   position: absolute;
-  top: 0;
-  margin: 0;
+  top: 13px;
+  right: 13px;
+}
+.modal-content .modal-header {
+  margin: 0 0 12px 0;
   padding: 0;
-  width: 250px;
-  list-style: none;
+  border: 0;
+}
+.modal-content .modal-header .modal-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+}
+.modal-content .modal-body {
+  margin-bottom: 20px;
+  padding: 0;
+  line-height: 21px;
+}
+.modal-content .modal-body textarea {
+  margin-top: 18px;
+}
+.modal-content .modal-footer {
+  padding: 0;
+  border: 0;
 }
 
-[class*="col-"] {
-  padding-right: 12px;
-  padding-left: 12px;
-}
-
-@media (min-width: 768px) {
-  [class*="col-"] {
-    padding-right: 18px;
-    padding-left: 18px;
-  }
-}
 .navbar {
   border-bottom: 1px solid #dddddd;
   background-color: white;
