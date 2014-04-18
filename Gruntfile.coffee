@@ -124,6 +124,7 @@ module.exports = (grunt) ->
         src: [
           '<%= assets.style %>/*'
           'fonts/*'
+          'images/*'
         ],
         dest: 'docs/assets'
       docstyle:
