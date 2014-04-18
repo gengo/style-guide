@@ -19,11 +19,19 @@ $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 //## Gengo related colors
-$brand-customer:        #1CAD7E !default;
-$brand-translator:      #98D7CC !default;
-$brand-developer:       #EA5E47 !default;
-$brand-admin:           #4D4843 !default;
-$brand-workbench:       #4D4843 !default;
+$gengo-gray:            #4D4843 !default;
+$gengo-gray-light:      #A6A3A1 !default;
+$gengo-blue:            #98D7CC !default;
+$gengo-green:           #1CAD7E !default;
+$gengo-lime-green:      #B0D482 !default;
+$gengo-yellow:          #E0DA79 !default;
+$gengo-red:             #EA5E47 !default;
+
+$brand-customer:        $gengo-green !default;
+$brand-translator:      $gengo-blue !default;
+$brand-developer:       $gengo-red !default;
+$brand-admin:           $gengo-gray !default;
+$brand-workbench:       $gengo-gray !default;
 
 
 //== Scaffolding
@@ -34,7 +42,7 @@ $brand-workbench:       #4D4843 !default;
 $body-bg:               #F4F4F4 !default;
 $box-bg:                #FFFFFF !default;
 //** Global text color on `<body>`.
-$text-color:            #4D4843 !default;
+$text-color:            $gengo-gray !default;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
