@@ -73,18 +73,18 @@ $hover-dark-gray:         #413C38 !default;
   }
 
   .navbar-brand {
-    background-color: $brand-customer;
     @include vertical-align(20px);
+    background-color: $brand-customer;
 
     &:before {
       display: block;
-      content: '';
       width: 59px;
       height: 20px;
       background-image: url(../images/logo_gengo.svg);
-      background-repeat: no-repeat;
       background-size: 59px 20px;
       background-size: contain;
+      background-repeat: no-repeat;
+      content: '';
     }
   }
 
@@ -184,6 +184,16 @@ $workbench-icon-active-color: #fff !default;
       padding: 0 12px;
     }
 
+    .navbar-brand {
+      padding-right: 18px;
+      padding-left: 18px;
+      background-color: $brand-workbench;
+
+      &:hover {
+        background-color: $hover-dark-gray;
+      }
+    }
+
     a,
     a:hover,
     .active a {
@@ -237,15 +247,6 @@ $workbench-icon-active-color: #fff !default;
 
   .navbar-header .nav {
     padding: 0 12px;
-  }
-
-  .navbar-brand {
-    margin: 0 12px;
-    background-color: $brand-workbench;
-
-    &:hover {
-      background-color: $hover-dark-gray;
-    }
   }
 
   .navbar-right { margin-right: 0; }
