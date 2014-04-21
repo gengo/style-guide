@@ -340,7 +340,7 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #4d4843;
+  color: #4c4643;
   background-color: #f4f4f4;
 }
 
@@ -2298,7 +2298,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #90887f;
+  color: #8f8580;
 }
 
 @media (min-width: 768px) {
@@ -2401,7 +2401,7 @@ select[multiple].input-lg,
   outline-offset: -2px;
 }
 .btn:hover, .btn:focus {
-  color: #4d4843;
+  color: #4c4643;
   text-decoration: none;
 }
 .btn:active, .btn.active {
@@ -2420,17 +2420,17 @@ select[multiple].input-lg,
 }
 
 .btn-default {
-  color: #4d4843;
+  color: #4c4643;
   background-color: white;
   border-color: #cccccc;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
-  color: #4d4843;
+  color: #4c4643;
   background-color: #ebebeb;
   border-color: #adadad;
 }
 .open .btn-default.dropdown-toggle {
-  color: #4d4843;
+  color: #4c4643;
   background-color: #ebebeb;
   border-color: #adadad;
 }
@@ -2446,7 +2446,7 @@ select[multiple].input-lg,
 }
 .btn-default .badge {
   color: white;
-  background-color: #4d4843;
+  background-color: #4c4643;
 }
 
 .btn-primary {
@@ -4897,7 +4897,7 @@ a.list-group-item.active > .badge,
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #4d4843;
+  color: #4c4643;
 }
 
 a.thumbnail:hover,

@@ -246,11 +246,11 @@ a, .btn-link {
   content: "\4e";
 }
 
-.icon-success:before, .submitted .status-icon:before, .approved .status-icon:before {
+.icon-success:before, .submitted .icon-status:before, .approved .icon-status:before {
   content: "\73";
 }
 
-.icon-error:before, .rejected .status-icon:before {
+.icon-error:before, .rejected .icon-status:before {
   content: "\65";
 }
 
@@ -442,31 +442,31 @@ a, .btn-link {
   border: 0;
 }
 
-.translating .status-icon {
+.translating .icon-status {
   color: #98d7cc;
 }
 
-.translated .status-icon {
+.translated .icon-status {
   color: #98d7cc;
 }
 
-.submitted .status-icon {
+.submitted .icon-status {
   color: #b0d482;
 }
 
-.error .status-icon {
+.error .icon-status {
   color: #ea5e47;
 }
 
-.revising .status-icon {
+.revising .icon-status {
   color: #e0da79;
 }
 
-.approved .status-icon {
+.approved .icon-status {
   color: #1cad7e;
 }
 
-.rejected .status-icon {
+.rejected .icon-status {
   color: #ea5e47;
 }
 
@@ -484,7 +484,7 @@ a, .btn-link {
   margin: 0 17px;
   padding: 14px 0 10px 0;
   border-bottom: solid 3px white;
-  color: #4d4843;
+  color: #4c4643;
   -webkit-transition: border-bottom-color 0.3s ease;
           transition: border-bottom-color 0.3s ease;
 }
