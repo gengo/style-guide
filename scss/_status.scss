@@ -1,24 +1,24 @@
-.translating .status-icon {
+.translating .icon-status {
   color: $gengo-blue;
 }
-.translated .status-icon {
+.translated .icon-status {
   color: $gengo-blue;
 }
-.submitted .status-icon {
+.submitted .icon-status {
   @extend .icon-success;
   color: $gengo-lime-green;
 }
-.error .status-icon {
+.error .icon-status {
   color: $gengo-red;
 }
-.revising .status-icon {
+.revising .icon-status {
   color: $gengo-yellow;
 }
-.approved .status-icon {
+.approved .icon-status {
   @extend .icon-success;
   color: $gengo-green;
 }
-.rejected .status-icon {
+.rejected .icon-status {
   @extend .icon-error;
   color: $gengo-red;
 }
