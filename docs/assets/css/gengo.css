@@ -234,11 +234,11 @@ a, .btn-link {
   content: "\77";
 }
 
-.icon-half:before {
+.icon-half:before, .translating .icon-status:before {
   content: "\48";
 }
 
-.icon-circle:before {
+.icon-circle:before, .translated .icon-status:before, .error .icon-status:before, .revising .icon-status:before {
   content: "\6f";
 }
 
