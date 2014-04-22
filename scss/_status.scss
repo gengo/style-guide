@@ -1,7 +1,9 @@
 .translating .icon-status {
+  @extend .icon-half;
   color: $gengo-blue;
 }
 .translated .icon-status {
+  @extend .icon-circle;
   color: $gengo-blue;
 }
 .submitted .icon-status {
@@ -9,9 +11,11 @@
   color: $gengo-lime-green;
 }
 .error .icon-status {
+  @extend .icon-circle;
   color: $gengo-red;
 }
 .revising .icon-status {
+  @extend .icon-circle;
   color: $gengo-yellow;
 }
 .approved .icon-status {
