@@ -24,9 +24,17 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
+.icon-warning:before {
+  content: "\77";
+}
+.icon-half:before {
+  content: "\48";
+}
+.icon-circle:before {
+  content: "\6f";
+}
 .icon-funnel:before {
   content: "\59";
 }
