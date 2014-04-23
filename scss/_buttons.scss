@@ -10,7 +10,8 @@ $btn-darken-percent: 7%;
 
 @mixin add-active($color) {
   &:active,
-  &.active {
+  &.active,
+  &.active:hover {
     border-color: $color;
     background-color: $color;
     background-image: none;

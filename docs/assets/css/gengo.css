@@ -127,7 +127,7 @@ a:hover, .btn-link:hover {
   border-bottom-color: #18906B;
   border-left-color: #219973;
 }
-.btn-primary:active, .btn-primary.active {
+.btn-primary:active, .btn-primary.active, .btn-primary.active:hover {
   border-color: #058a65;
   background-color: #058a65;
   background-image: none;
@@ -167,7 +167,7 @@ a:hover, .btn-link:hover {
   border-bottom-color: #7CB3AB;
   border-left-color: #83BBB2;
 }
-.translator .btn-primary:active, .translator .btn-primary.active {
+.translator .btn-primary:active, .translator .btn-primary.active, .translator .btn-primary.active:hover {
   border-color: #78aca4;
   background-color: #78aca4;
   background-image: none;
@@ -206,7 +206,7 @@ a:hover, .btn-link:hover {
   border-bottom-color: #BE4C39;
   border-left-color: #C65340;
 }
-.developer .btn-primary:active, .developer .btn-primary.active {
+.developer .btn-primary:active, .developer .btn-primary.active, .developer .btn-primary.active:hover {
   border-color: #c14b38;
   background-color: #c14b38;
   background-image: none;
