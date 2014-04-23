@@ -131,7 +131,7 @@ a, .btn-link {
 
 .translator {
   .btn-primary {
-    @include gradient-vertical($start-color: #97D3CA, $end-color: #7CB3AB);
+    @include gradient-vertical($start-color: #97D3CA, $end-color: #89C5BC);
     @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
     @include add-active(#78ACA4);
     border-top-color: #8AC2B9;
@@ -140,7 +140,7 @@ a, .btn-link {
     border-left-color: #83BBB2;
 
     &:hover {
-      @include gradient-vertical($start-color: darken(#97D3CA, $btn-darken-percent), $end-color: darken(#7CB3AB, $btn-darken-percent));
+      @include gradient-vertical($start-color: darken(#97D3CA, $btn-darken-percent), $end-color: darken(#89C5BC, $btn-darken-percent));
       @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
       border-top-color: darken(#8AC2B9, $btn-darken-percent);
       border-right-color: darken(#83BBB2, $btn-darken-percent);
