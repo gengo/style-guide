@@ -40,12 +40,33 @@
     padding-left: 18px;
   }
 }
+.btn {
+  padding: 7px 14px;
+}
 .btn:active, .btn.active {
   background-image: none;
 }
 .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
+}
+
+.btn-lg {
+  padding: 10px 16px;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.btn-sm {
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.btn-xs {
+  padding: 1px 8px;
+  border-radius: 3px;
+  font-size: 13px;
 }
 
 a, .btn-link {
