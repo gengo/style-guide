@@ -3,10 +3,12 @@
 @import "variables";
 
 // @import "fonts";
+@import "grid";
 @import "buttons";
 @import "icons";
 @import "forms";
-@import "grid";
+@import "modals";
+@import "status";
 
 // customer & default
 $brand-color: $brand-customer;

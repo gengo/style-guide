@@ -6,6 +6,40 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+.box {
+  padding-right: 24px;
+  padding-left: 24px;
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .box {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  list-style: none;
+}
+
+[class*="col-"] {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+@media (min-width: 768px) {
+  [class*="col-"] {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
 .btn:active, .btn.active {
   background-image: none;
 }
@@ -196,6 +230,18 @@ a, .btn-link {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-warning:before {
+  content: "\77";
+}
+
+.icon-half:before, .translating .icon-status:before {
+  content: "\48";
+}
+
+.icon-circle:before, .translated .icon-status:before, .error .icon-status:before, .revising .icon-status:before {
+  content: "\6f";
+}
+
 .icon-funnel:before {
   content: "\59";
 }
@@ -212,11 +258,11 @@ a, .btn-link {
   content: "\4e";
 }
 
-.icon-success:before {
+.icon-success:before, .submitted .icon-status:before, .approved .icon-status:before {
   content: "\73";
 }
 
-.icon-error:before {
+.icon-error:before, .rejected .icon-status:before {
   content: "\65";
 }
 
@@ -373,40 +419,69 @@ a, .btn-link {
   margin-bottom: 14px;
 }
 
-.box {
-  padding-right: 24px;
-  padding-left: 24px;
-  border: 1px solid #DBDBDB;
-  border-radius: 3px;
-  background-color: white;
+.modal-content {
+  padding: 32px 36px 36px;
+  border: 0;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
-@media (min-width: 768px) {
-  .box {
-    padding-right: 18px;
-    padding-left: 18px;
-  }
-}
-
-.sidebar-nav {
+.modal-content .close {
   position: absolute;
-  top: 0;
-  margin: 0;
+  top: 13px;
+  right: 13px;
+}
+.modal-content .modal-header {
+  margin: 0 0 12px 0;
   padding: 0;
-  width: 250px;
-  list-style: none;
+  border: 0;
+}
+.modal-content .modal-header .modal-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+}
+.modal-content .modal-body {
+  margin-bottom: 20px;
+  padding: 0;
+  line-height: 21px;
+}
+.modal-content .modal-body textarea {
+  margin-top: 18px;
+}
+.modal-content .modal-footer {
+  padding: 0;
+  border: 0;
 }
 
-[class*="col-"] {
-  padding-right: 12px;
-  padding-left: 12px;
+.translating .icon-status {
+  color: #98d7cc;
 }
 
-@media (min-width: 768px) {
-  [class*="col-"] {
-    padding-right: 18px;
-    padding-left: 18px;
-  }
+.translated .icon-status {
+  color: #98d7cc;
 }
+
+.submitted .icon-status {
+  color: #b0d482;
+}
+
+.error .icon-status {
+  color: #ea5e47;
+}
+
+.revising .icon-status {
+  color: #e0da79;
+}
+
+.approved .icon-status {
+  color: #1cad7e;
+}
+
+.rejected .icon-status {
+  color: #ea5e47;
+}
+
 .navbar {
   border-bottom: 1px solid #dddddd;
   background-color: white;
@@ -421,7 +496,7 @@ a, .btn-link {
   margin: 0 17px;
   padding: 14px 0 10px 0;
   border-bottom: solid 3px white;
-  color: #4d4843;
+  color: #4c4643;
   -webkit-transition: border-bottom-color 0.3s ease;
           transition: border-bottom-color 0.3s ease;
 }
@@ -443,23 +518,23 @@ a, .btn-link {
   background-color: white;
 }
 .navbar .navbar-brand {
-  background-color: #1cad7e;
   padding-top: 14px !important;
   padding-bottom: 13px !important;
   font-size: 20px;
   line-height: 20px;
+  background-color: #1cad7e;
 }
 .navbar .navbar-brand:before {
   display: block;
-  content: '';
   width: 59px;
   height: 20px;
   background-image: url(../images/logo_gengo.svg);
-  background-repeat: no-repeat;
   -webkit-background-size: 59px 20px;
           background-size: 59px 20px;
   -webkit-background-size: contain;
           background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
 }
 .navbar .navbar-toggle .icon-bar {
   background-color: #fff;
@@ -595,6 +670,14 @@ a, .btn-link {
 .workbench .navbar .nav .navbar-text {
   padding: 0 12px;
 }
+.workbench .navbar .nav .navbar-brand {
+  padding-right: 18px;
+  padding-left: 18px;
+  background-color: #4d4843;
+}
+.workbench .navbar .nav .navbar-brand:hover {
+  background-color: #413c38;
+}
 .workbench .navbar .nav a,
 .workbench .navbar .nav a:hover,
 .workbench .navbar .nav .active a {
@@ -632,19 +715,15 @@ a, .btn-link {
   font-size: 12px;
   line-height: 12px;
 }
-.workbench .navbar .nav li > .icon-funnel {
-  padding-top: 17.5px !important;
-  padding-bottom: 16.5px !important;
-  font-size: 13px;
-  line-height: 13px;
-}
+.workbench .navbar .nav li > .icon-funnel,
 .workbench .navbar .nav li > .icon-comment {
-  padding-top: 16.5px !important;
-  padding-bottom: 15.5px !important;
-  font-size: 15px;
-  line-height: 15px;
+  padding-top: 17px !important;
+  padding-bottom: 16px !important;
+  font-size: 14px;
+  line-height: 14px;
 }
-.workbench .navbar .nav li > .icon-success {
+.workbench .navbar .nav li > .icon-validation,
+.workbench .navbar .nav li > .icon-memory {
   padding-top: 16px !important;
   padding-bottom: 15px !important;
   font-size: 16px;
@@ -652,13 +731,6 @@ a, .btn-link {
 }
 .workbench .navbar .navbar-header .nav {
   padding: 0 12px;
-}
-.workbench .navbar .navbar-brand {
-  margin: 0 12px;
-  background-color: #4d4843;
-}
-.workbench .navbar .navbar-brand:hover {
-  background-color: #413c38;
 }
 .workbench .navbar .navbar-right {
   margin-right: 0;
