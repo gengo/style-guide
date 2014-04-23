@@ -57,7 +57,10 @@ $btn-darken-percent: 7%;
 }
 
 
-a, .btn-link { color: #1BAC7E; }
+a, .btn-link {
+  color: #1BAC7E;
+  &:hover { color: #1BAC7E; }
+}
 
 .btn-default {
   @include gradient-vertical($start-color: #FFFFFF, $end-color: #F7F7F7);
