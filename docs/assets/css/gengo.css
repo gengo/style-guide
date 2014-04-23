@@ -72,6 +72,9 @@
 a, .btn-link {
   color: #1BAC7E;
 }
+a:hover, .btn-link:hover {
+  color: #1BAC7E;
+}
 
 .btn-default {
   background-image: -webkit-linear-gradient(top, white 0%, #f7f7f7 100%);
