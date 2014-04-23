@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gengo Style Guide</title>
   <!-- CSS -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets/css/gengo-bootstrap-theme.css">
   <link rel="stylesheet" href="assets/css/gengo.css">
   <style>
@@ -45,16 +45,16 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a class='' href="http://gengo.github.io/html-prototypes/workbench_twbs3/">Translator workbench</a></li>
+              <li><a class="" href="http://gengo.github.io/html-prototypes/workbench_twbs3/">Translator workbench</a></li>
             </ul>
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brand <b class="caret"></b></a>
             <ul class="change-brand dropdown-menu">
-              <li><a class='customer' href="#">Customer</a></li>
-              <li><a class='translator' href="#">Translator</a></li>
-              <li><a class='developer' href="#">Developer</a></li>
-              <li><a class='admin' href="#">Admin</a></li>
+              <li><a class="customer" href="#">Customer</a></li>
+              <li><a class="translator" href="#">Translator</a></li>
+              <li><a class="developer" href="#">Developer</a></li>
+              <li><a class="admin" href="#">Admin</a></li>
             </ul>
           </li>
         </ul>
@@ -63,120 +63,214 @@
   </header>
 
 
-  <div class='container'>
-    <div class='row'>
-      <div class='col-xs-2'>
-        <ul class='nav'>
-          <li><a href='#navs'>Navs</a></li>
-          <li><a href='#navbar'>Navbar</a></li>
-          <li><a href='#breadcrumb'>Breadcrumb</a></li>
-          <li><a href='#pagination'>Pagination</a></li>
-          <li><a href='#dropdowns'>Dropdowns</a></li>
-          <li><a href='#buttons'>Buttons</a></li>
-          <li><a href='#buttons-groups'>Buttons Groups</a></li>
-          <li><a href='#buttons-dropdowns'>Buttons Dropdowns</a></li>
-          <li><a href='#tables'>Tables</a></li>
-          <li><a href='#forms'>Forms</a></li>
-          <li><a href='#supported-controls'>Supported Controls</a></li>
-          <li><a href='#validation-states'>Validation States</a></li>
-          <li><a href='#control-sizing'>Control Sizing</a></li>
-          <li><a href='#labels'>Labels</a></li>
-          <li><a href='#badges'>Badges</a></li>
-          <li><a href='#alerts'>Alerts</a></li>
-          <li><a href='#progress-bar'>Progress Bar</a></li>
-          <li><a href='#helper-classes'>Helper Classes</a></li>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2">
+        <ul class="nav">
+          <li><a href="#navs">Navs</a></li>
+          <li><a href="#navbar">Navbar</a></li>
+          <li><a href="#breadcrumb">Breadcrumb</a></li>
+          <li><a href="#pagination">Pagination</a></li>
+          <li><a href="#dropdowns">Dropdowns</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#buttons-groups">Buttons Groups</a></li>
+          <li><a href="#buttons-dropdowns">Buttons Dropdowns</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#supported-controls">Supported Controls</a></li>
+          <li><a href="#validation-states">Validation States</a></li>
+          <li><a href="#control-sizing">Control Sizing</a></li>
+          <li><a href="#labels">Labels</a></li>
+          <li><a href="#badges">Badges</a></li>
+          <li><a href="#alerts">Alerts</a></li>
+          <li><a href="#progress-bar">Progress Bar</a></li>
+          <li><a href="#helper-classes">Helper Classes</a></li>
         </ul>
       </div>
 
-      <div class='col-xs-10'>
-        <div class='box'>
-          <h2 id='navs'>Navs</h2>
+      <div class="col-xs-10">
+        <div class="box">
+          <h2 id="navs">Navs</h2>
           <hr/>
           <h3>Tabs</h3>
         </div>
 
-        <div class='box'>
-          <h2 id='navbar'>Navbar</h2>
+        <div class="box">
+          <h2 id="navbar">Navbar</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='breadcrumb'>Breadcrumb</h2>
+        <div class="box">
+          <h2 id="breadcrumb">Breadcrumb</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='pagination'>Pagination</h2>
+        <div class="box">
+          <h2 id="pagination">Pagination</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='dropdowns'>Dropdowns</h2>
+        <div class="box">
+          <h2 id="dropdowns">Dropdowns</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='buttons'>Buttons</h2>
+        <div class="box">
+          <h2 id="buttons">Buttons</h2>
+          <hr/>
+          <h3>Options</h3>
+          <div class="style-example">
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <span class="translator">
+              <button type="button" class="btn btn-primary">Translator</button>
+            </span>
+            <span class="developer">
+              <button type="button" class="btn btn-primary">Developer</button>
+            </span>
+            <button type="button" class="btn btn-link">Link</button>
+            <span class="translator">
+              <button type="button" class="btn btn-link">Translators</button>
+            </span>
+            <span class="developer">
+              <button type="button" class="btn btn-link">Developers</button>
+            </span>
+          </div>
+
+          <h3>Sizes</h3>
+          <div class="style-example">
+            <p>
+              <button type="button" class="btn btn-default btn-lg">Large Button</button>
+              <button type="button" class="btn btn-primary btn-lg">Large Button</button>
+              <span class="translator">
+                <button type="button" class="btn btn-primary btn-lg">Large Button</button>
+              </span>
+              <span class="developer">
+                <button type="button" class="btn btn-primary btn-lg">Large Button</button>
+              </span>
+            </p>
+            <p>
+              <button type="button" class="btn btn-default">Medium Button</button>
+              <button type="button" class="btn btn-primary">Medium Button</button>
+              <span class="translator">
+                <button type="button" class="btn btn-primary">Medium Button</button>
+              </span>
+              <span class="developer">
+                <button type="button" class="btn btn-primary">Medium Button</button>
+              </span>
+            </p>
+            <p>
+              <button type="button" class="btn btn-default btn-sm">Small Button</button>
+              <button type="button" class="btn btn-primary btn-sm">Small Button</button>
+              <span class="translator">
+                <button type="button" class="btn btn-primary btn-sm">Small Button</button>
+              </span>
+              <span class="developer">
+                <button type="button" class="btn btn-primary btn-sm">Small Button</button>
+              </span>
+            </p>
+            <p>
+              <button type="button" class="btn btn-default btn-xs">Small Button</button>
+              <button type="button" class="btn btn-primary btn-xs">Small Button</button>
+              <span class="translator">
+                <button type="button" class="btn btn-primary btn-xs">Small Button</button>
+              </span>
+              <span class="developer">
+                <button type="button" class="btn btn-primary btn-xs">Small Button</button>
+              </span>
+            </p>
+          </div>
+
+          <h3>Block level</h3>
+          <div class="style-example row">
+            <div class="col-xs-4">
+              <button type="button" class="btn btn-default btn-block">Medium Button</button>
+              <button type="button" class="btn btn-primary btn-block">Medium Button</button>
+            </div>
+          </div>
+
+          <h3>Activated state</h3>
+          <div class="style-example">
+            <button type="button" class="btn btn-default active">Default</button>
+            <button type="button" class="btn btn-primary active">Primary</button>
+            <span class="translator">
+              <button type="button" class="btn btn-primary active">Translator</button>
+            </span>
+            <span class="developer">
+              <button type="button" class="btn btn-primary active">Developer</button>
+            </span>
+          </div>
+
+          <h3>Disabled state</h3>
+          <div class="style-example">
+            <button type="button" class="btn btn-default disabled">Default</button>
+            <button type="button" class="btn btn-primary disabled">Primary</button>
+            <span class="translator">
+              <button type="button" class="btn btn-primary disabled">Translator</button>
+            </span>
+            <span class="developer">
+              <button type="button" class="btn btn-primary disabled">Developer</button>
+            </span>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2 id="buttons-groups">Buttons Groups</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='buttons-groups'>Buttons Groups</h2>
+        <div class="box">
+          <h2 id="buttons-dropdowns">Buttons Dropdowns</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='buttons-dropdowns'>Buttons Dropdowns</h2>
+        <div class="box">
+          <h2 id="tables">Tables</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='tables'>Tables</h2>
+        <div class="box">
+          <h2 id="forms">Forms</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='forms'>Forms</h2>
+        <div class="box">
+          <h2 id="supported-controls">Supported Controls</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='supported-controls'>Supported Controls</h2>
+        <div class="box">
+          <h2 id="validation-states">Validation States</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='validation-states'>Validation States</h2>
+        <div class="box">
+          <h2 id="control-sizing">Control Sizing</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='control-sizing'>Control Sizing</h2>
+        <div class="box">
+          <h2 id="labels">Labels</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='labels'>Labels</h2>
+        <div class="box">
+          <h2 id="badges">Badges</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='badges'>Badges</h2>
+        <div class="box">
+          <h2 id="alerts">Alerts</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='alerts'>Alerts</h2>
+        <div class="box">
+          <h2 id="progress-bar">Progress Bar</h2>
           <hr/>
         </div>
 
-        <div class='box'>
-          <h2 id='progress-bar'>Progress Bar</h2>
-          <hr/>
-        </div>
-
-        <div class='box'>
-          <h2 id='helper-classes'>Helper Classes</h2>
+        <div class="box">
+          <h2 id="helper-classes">Helper Classes</h2>
         </div>
       </div>
     </div>
