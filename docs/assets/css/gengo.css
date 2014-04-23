@@ -194,6 +194,7 @@ a:hover, .btn-link:hover {
   color: #79B1A5;
 }
 
+.btn-danger,
 .developer .btn-primary {
   background-image: -webkit-linear-gradient(top, #eb6752 0%, #dd5943 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#eb6752), to(#dd5943));
@@ -206,13 +207,17 @@ a:hover, .btn-link:hover {
   border-bottom-color: #BE4C39;
   border-left-color: #C65340;
 }
-.developer .btn-primary:active, .developer .btn-primary.active, .developer .btn-primary.active:hover {
+.btn-danger:active, .btn-danger.active, .btn-danger.active:hover,
+.developer .btn-primary:active,
+.developer .btn-primary.active,
+.developer .btn-primary.active:hover {
   border-color: #c14b38;
   background-color: #c14b38;
   background-image: none;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.12);
           box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.12);
 }
+.btn-danger:hover,
 .developer .btn-primary:hover {
   background-image: -webkit-linear-gradient(top, #e74b32 0%, #d64027 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e74b32), to(#d64027));
@@ -225,6 +230,14 @@ a:hover, .btn-link:hover {
   border-bottom-color: #a34131;
   border-left-color: #ae4534;
 }
+.btn-danger.disabled, .btn-danger[disabled], fieldset[disabled] .btn-danger,
+.developer .btn-primary.disabled,
+.developer .btn-primary[disabled], fieldset[disabled]
+.developer .btn-primary {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+}
+
 .developer .btn-primary.disabled, .developer .btn-primary[disabled], fieldset[disabled] .developer .btn-primary {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
