@@ -162,26 +162,34 @@ a, .btn-link {
 //
 // Developer
 // --------------------------------------------------
+.btn-danger,
+.developer .btn-primary {
+  @include gradient-vertical($start-color: #EB6752, $end-color: #DD5943);
+  @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+  @include add-active(#C14B38);
+  border-top-color: #CD5A47;
+  border-right-color: #C65340;
+  border-bottom-color: #BE4C39;
+  border-left-color: #C65340;
+
+  &:hover {
+    @include gradient-vertical($start-color: darken(#EB6752, $btn-darken-percent), $end-color: darken(#DD5943, $btn-darken-percent));
+    @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+    border-top-color: darken(#CD5A47, $btn-darken-percent);
+    border-right-color: darken(#C65340, $btn-darken-percent);
+    border-bottom-color: darken(#BE4C39, $btn-darken-percent);
+    border-left-color: darken(#C65340, $btn-darken-percent);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include opacity(.6);
+  }
+}
 
 .developer {
   .btn-primary {
-    @include gradient-vertical($start-color: #EB6752, $end-color: #DD5943);
-    @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
-    @include add-active(#C14B38);
-    border-top-color: #CD5A47;
-    border-right-color: #C65340;
-    border-bottom-color: #BE4C39;
-    border-left-color: #C65340;
-
-    &:hover {
-      @include gradient-vertical($start-color: darken(#EB6752, $btn-darken-percent), $end-color: darken(#DD5943, $btn-darken-percent));
-      @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
-      border-top-color: darken(#CD5A47, $btn-darken-percent);
-      border-right-color: darken(#C65340, $btn-darken-percent);
-      border-bottom-color: darken(#BE4C39, $btn-darken-percent);
-      border-left-color: darken(#C65340, $btn-darken-percent);
-    }
-
     &.disabled,
     &[disabled],
     fieldset[disabled] & {
