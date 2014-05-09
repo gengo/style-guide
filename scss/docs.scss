@@ -1,0 +1,34 @@
+@import "third_party/bootstrap/mixins";
+@import "compass";
+@import "variables";
+
+
+.box {
+  margin-bottom: 26px;
+  padding-bottom: 21px;
+}
+
+.colors {
+  font-size: $font-size-small;
+
+  .color-box {
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+    height: 96px;
+    border-radius: 3px;
+
+    &.gengo-green { background-color: $gengo-green; }
+    &.translator-blue { background-color: $gengo-blue; }
+    &.developer-red { background-color: $gengo-red; }
+    &.gengo-lemon { background-color: $gengo-lemon; }
+    &.gengo-lgreen { background-color: $gengo-lgreen; }
+    &.gengo-beige { background-color: $gengo-beige; }
+    &.gengo-gray { background-color: $gengo-gray; }
+    &.gengo-bg { background-color: $body-bg; }
+    &.gengo-white { background-color: #fff; }
+
+    &.gengo-bg,
+    &.gengo-white { border: 1px solid $table-border-color; }
+  }
+}
