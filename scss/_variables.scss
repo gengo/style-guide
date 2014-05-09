@@ -6,26 +6,26 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             lighten(#000, 60%) !default;   // #999
-$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
-
-$brand-primary:         #428bca !default;
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
-
 //## Gengo related colors
-$gengo-gray:            #4D4843 !default;
-$gengo-gray-light:      #A6A3A1 !default;
-$gengo-blue:            #98D7CC !default;
-$gengo-green:           #1CAD7E !default;
-$gengo-lime-green:      #B0D482 !default;
-$gengo-yellow:          #E0DA79 !default;
-$gengo-red:             #EA5E47 !default;
+$gengo-gray:            #4d4843 !default;
+$gengo-gray-light:      #a6a3a1 !default;
+$gengo-blue:            #98d7cc !default;
+$gengo-green:           #1cad7e !default;
+$gengo-lime-green:      #b0d482 !default;
+$gengo-yellow:          #e0da79 !default;
+$gengo-red:             #ea5e47 !default;
+
+$gray-darker:           lighten($gengo-gray, 13.5%) !default;
+$gray-dark:             lighten($gengo-gray, 20%) !default;
+$gray:                  lighten($gengo-gray, 33.5%) !default;
+$gray-light:            lighten($gengo-gray, 60%) !default;
+$gray-lighter:          lighten($gengo-gray, 93.5%) !default;
+
+$brand-primary:         $gengo-green !default;
+$brand-success:         #aedbb3 !default;
+$brand-info:            $gengo-gray !default;
+$brand-warning:         #e5d369 !default;
+$brand-danger:          $gengo-red !default;
 
 $brand-customer:        $gengo-green !default;
 $brand-translator:      $gengo-blue !default;
@@ -38,15 +38,21 @@ $brand-workbench:       $gengo-gray !default;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #F4F4F4 !default;
-$box-bg:                #FFFFFF !default;
+$body-bg:               #f4f4f4 !default;
+$box-bg:                #fff !default;
 //** Global text color on `<body>`.
-$text-color:            #4C4643 !default;
+$text-color:            #4c4643 !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $brand-customer !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
+
+$link-translator-color:         #79B1A5 !default;
+$link-translator-hover-color:   darken($link-translator-color, 15%) !default;
+
+$link-developer-color:          #EA5E46 !default;
+$link-developer-hover-color:    darken($link-developer-color, 15%) !default;
 
 
 //== Typography
@@ -75,14 +81,14 @@ $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429 !default; // 20/14
+$line-height-base:        1.5 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
+$headings-font-weight:    600 !default;
+$headings-line-height:    1.2 !default;
 $headings-color:          inherit !default;
 
 
@@ -101,20 +107,20 @@ $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 $padding-base-vertical:     6px !default;
 $padding-base-horizontal:   12px !default;
 
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
+$padding-large-vertical:    12px !default;
+$padding-large-horizontal:  18px !default;
 
-$padding-small-vertical:    5px !default;
-$padding-small-horizontal:  10px !default;
+$padding-small-vertical:    6px !default;
+$padding-small-horizontal:  12px !default;
 
-$padding-xs-vertical:       1px !default;
-$padding-xs-horizontal:     5px !default;
+$padding-xs-vertical:       3px !default;
+$padding-xs-horizontal:     6px !default;
 
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        4px !default;
-$border-radius-large:       6px !default;
+$border-radius-base:        3px !default;
+$border-radius-large:       3px !default;
 $border-radius-small:       3px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -133,9 +139,9 @@ $caret-width-large:         5px !default;
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
-$table-cell-padding:            8px !default;
+$table-cell-padding:            12px !default;
 //** Padding for cells in `.table-condensed`.
-$table-condensed-cell-padding:  5px !default;
+$table-condensed-cell-padding:  6px !default;
 
 //** Default background color used for all tables.
 $table-bg:                      transparent !default;
@@ -153,7 +159,7 @@ $table-border-color:            #ddd !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                normal !default;
+$btn-font-weight:                400 !default;
 
 $btn-default-color:              $text-color !default;
 $btn-default-bg:                 #fff !default;
@@ -161,7 +167,7 @@ $btn-default-border:             #ccc !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-border:             darken($gengo-green, 5%) !default;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
@@ -180,6 +186,14 @@ $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
+
+$btn-translator-color:           #fff !default;
+$btn-translator-bg:              $gengo-blue !default;
+$btn-translator-border:          darken($btn-translator-bg, 5%) !default;
+
+$btn-developer-color:            #fff !default;
+$btn-developer-bg:               $gengo-red !default;
+$btn-developer-border:           darken($btn-developer-bg, 5%) !default;
 
 
 //== Forms
@@ -344,7 +358,7 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    47px !default;
+$navbar-height:                    48px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
@@ -378,16 +392,16 @@ $navbar-default-toggle-border-color:       #ddd !default;
 // Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $gray-light !default;
-$navbar-inverse-bg:                         #222 !default;
+$navbar-inverse-bg:                          #4D4843 !default;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
-$navbar-inverse-link-color:                 $gray-light !default;
-$navbar-inverse-link-hover-color:           #fff !default;
+$navbar-inverse-link-color:                 #fff !default;
+$navbar-inverse-link-hover-color:           $gengo-green !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
-$navbar-inverse-link-disabled-color:        #444 !default;
+$navbar-inverse-link-disabled-color:        $gray !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
 
 // Inverted navbar brand label
@@ -576,7 +590,7 @@ $label-link-hover-color:      #fff !default;
 //##
 
 //** Padding applied to the modal body
-$modal-inner-padding:         20px !default;
+$modal-inner-padding:         36px !default;
 
 //** Padding applied to the modal title
 $modal-title-padding:         15px !default;
@@ -841,7 +855,7 @@ $page-header-border-color:    $gray-lighter !default;
 //##
 
 //** Horizontal line color.
-$hr-border:                   $gray-lighter !default;
+$hr-border:                   #ccc !default;
 
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px !default;
