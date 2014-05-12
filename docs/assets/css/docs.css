@@ -1,11 +1,3 @@
-/*!
- * Copyright 2011-2014 Gengo, Inc.
- * * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at :
- * http://www.apache.org/licenses/LICENSE-2.0
- */
-
 .box {
   margin-bottom: 26px;
   padding-bottom: 21px;
@@ -49,5 +41,9 @@
   background-color: #fff;
 }
 .colors .color-box.gengo-bg, .colors .color-box.gengo-white {
+  border: 1px solid #dddddd;
+}
+
+.navbar-styles .navbar {
   border: 1px solid #dddddd;
 }
