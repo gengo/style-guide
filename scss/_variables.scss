@@ -99,7 +99,7 @@ $headings-color:          inherit !default;
 //
 //## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
-$icon-font-path: "bootstrap/" !default;
+$icon-font-path:          "bootstrap/" !default;
 $icon-font-name:          "glyphicons-halflings-regular" !default;
 $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 
@@ -846,9 +846,9 @@ $headings-small-color:        $gray-light !default;
 //** Blockquote small color
 $blockquote-small-color:      $gray-light !default;
 //** Blockquote font size
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        $font-size-base !default;
 //** Blockquote border color
-$blockquote-border-color:     $gray-lighter !default;
+$blockquote-border-color:     #ddd !default;
 //** Page header border color
 $page-header-border-color:    $gray-lighter !default;
 
