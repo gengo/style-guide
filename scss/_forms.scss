@@ -6,6 +6,21 @@
 .form-control {
   @include box-shadow(none);
   border-top-color: #b8b8b8;
+
+  &:focus {
+    @include box-shadow(none);
+    border-color: $gengo-green;
+  }
+}
+
+.translator .form-control:focus {
+  border-color: $brand-translator;
+}
+.developer .form-control:focus {
+  border-color: $brand-developer;
+}
+.admin .form-control:focus {
+  border-color: $brand-admin;
 }
 
 
