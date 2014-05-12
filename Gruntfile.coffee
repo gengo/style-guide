@@ -39,10 +39,10 @@ module.exports = (grunt) ->
       options:
         livereload: 9002
       sass:
-        files: '<%= assets.sass %>/{,*/}*.{scss,sass}'
+        files: '<%= assets.sass %>/**/*.{scss,sass}'
         tasks: [ 'css-dev' ]
       html_files:
-        files: 'docs/{,*/}*.html'
+        files: 'docs/**/*.html'
 
     compass:
       options:
@@ -66,8 +66,8 @@ module.exports = (grunt) ->
           expand: true
           cwd: '<%= assets.style %>'
           src: [
-            '{,*/}*.css'
-            '!{,*/}*.min.css'
+            '**/*.css'
+            '!**/*.min.css'
           ]
           dest: '<%= assets.style %>'
         }]
@@ -92,15 +92,13 @@ module.exports = (grunt) ->
 
     cssmin:
       options:
-        compatibility: 'ie8'
         keepSpecialComments: '*'
-        noAdvanced: true # turn advanced optimizations off until the issue is fixed in clean-css
       minify:
         expand: true
         cwd: '<%= assets.style %>'
         src: [
-          '{,*/}*.css'
-          '!{,*/}*.min.css'
+          '**/*.css'
+          '!**/*.min.css'
         ]
         dest: '<%= assets.style %>'
         ext: '.min.css'
@@ -110,13 +108,13 @@ module.exports = (grunt) ->
         position: 'top'
         banner: '<%= banner %>'
       files:
-        src: ['<%= assets.style %>/{,*/}*.css']
+        src: ['<%= assets.style %>/**/*.css']
 
     copy:
       bootstrap:
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-sass-official/vendor/assets/stylesheets'
-        src: '{,*/}*.{scss,sass}'
+        src: '**/*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party'
       docs:
         expand: true,
