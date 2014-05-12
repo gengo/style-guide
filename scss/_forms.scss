@@ -2,3 +2,13 @@
   margin-top: 14px;
   margin-bottom: 14px;
 }
+
+.form-control {
+  @include box-shadow(none);
+  border-top-color: #b8b8b8;
+}
+
+
+.form-search {
+  // TODO: add an search icon to background
+}
