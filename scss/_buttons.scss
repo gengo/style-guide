@@ -52,9 +52,9 @@ $btn-darken-percent: 7%;
 }
 
 // Buttons sizes
-.btn-lg { font-size: 16px; }
+.btn-lg { font-size: $font-size-large; }
 .btn-sm { font-size: $font-size-base;}
-.btn-xs { font-size: 13px; }
+.btn-xs { font-size: $font-size-small; }
 
 a,
 .btn-link {

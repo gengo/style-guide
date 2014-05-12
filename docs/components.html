@@ -130,7 +130,6 @@
             <li class="disabled"><a href="#">Messages</a></li>
           </ul>
 
-
           <h2>Using Dropdown</h2>
           <ul class="nav nav-tabs">
             <li class="active"><a href="#">Home</a></li>
@@ -411,6 +410,86 @@
         <div class="box">
           <h1 id="buttons-groups">Buttons Groups</h1>
           <hr/>
+
+          <h2>Basic example</h2>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">Left</button>
+            <button type="button" class="btn btn-default">Middle</button>
+            <button type="button" class="btn btn-default">Right</button>
+          </div>
+
+          <h2>Button toolbar</h2>
+          <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default">&lt;</button>
+              <button type="button" class="btn btn-default">1</button>
+              <button type="button" class="btn btn-default">2</button>
+              <button type="button" class="btn btn-default">3</button>
+              <button type="button" class="btn btn-default">&gt;</button>
+            </div>
+          </div>
+
+          <h2>Sizing</h2>
+          <div class="bs-example">
+            <div class="btn-toolbar" role="toolbar">
+              <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+              </div>
+            </div>
+            <div class="btn-toolbar" role="toolbar">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+              </div>
+            </div>
+            <div class="btn-toolbar" role="toolbar">
+              <div class="btn-group btn-group-sm">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+              </div>
+            </div>
+            <div class="btn-toolbar" role="toolbar">
+              <div class="btn-group btn-group-xs">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+              </div>
+            </div>
+          </div>
+
+          <h2>Nesting</h2>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                Dropdown
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown link</a></li>
+                <li><a href="#">Dropdown link</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <h2>Justified Button Groups</h2>
+          <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default">Left</button>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default">Middle</button>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default">Right</button>
+            </div>
+          </div>
         </div>
 
         <div class="box">
