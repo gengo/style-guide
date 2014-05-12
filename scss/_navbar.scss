@@ -119,6 +119,14 @@ $hover-dark-gray:         #413C38 !default;
   @include navbar-base($brand-customer, #199B71);
 }
 
+
+.translator .navbar .navbar-brand,
+.developer .navbar .navbar-brand,
+.admin .navbar .navbar-brand {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
 //
 // Translator
 // --------------------------------------------------
@@ -128,8 +136,6 @@ $hover-dark-gray:         #413C38 !default;
 
   .navbar-brand {
     @include vertical-align(26px);
-    padding-right: 18px;
-    padding-left: 18px;
 
     &:before {
       width: 26px;
@@ -148,9 +154,7 @@ $hover-dark-gray:         #413C38 !default;
   @include navbar-base($brand-developer, #D25440);
 
   .navbar-brand {
-    @include vertical-align(24px);
-    padding-right: 18px;
-    padding-left: 18px;
+    @include vertical-align(26px);
 
     &:before {
       width: 26px;
@@ -170,8 +174,6 @@ $hover-dark-gray:         #413C38 !default;
 
   .navbar-brand {
     @include vertical-align(27px);
-    padding-right: 18px;
-    padding-left: 18px;
 
     &:before {
       width: 27px;
