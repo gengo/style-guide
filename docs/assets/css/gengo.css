@@ -789,6 +789,9 @@ a:hover,
 .navbar > .container-fluid .navbar-brand {
   margin: 0;
 }
+.navbar .nav > li {
+  line-height: 21px;
+}
 .navbar .nav a {
   margin: 0 17px;
   padding: 14px 0 10px 0;
@@ -808,9 +811,6 @@ a:hover,
     -webkit-transition: none;
             transition: none;
   }
-}
-.navbar .nav a li {
-  line-height: 21px;
 }
 .navbar .nav .active a,
 .navbar .nav a:hover {

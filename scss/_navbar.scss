@@ -48,6 +48,8 @@ $hover-dark-gray:         #413C38 !default;
   }
 
   .nav {
+    > li { line-height: 21px; }
+
     a {
       margin: 0 17px;
       padding: 14px 0 10px 0;
@@ -64,8 +66,6 @@ $hover-dark-gray:         #413C38 !default;
         color: #fff;
         transition: none;
       }
-
-      li { line-height: 21px; }
     }
 
     .active a,
