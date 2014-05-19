@@ -1,3 +1,11 @@
+/*!
+ * Copyright 2011-2014 Gengo, Inc.
+ * * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at :
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+
 ul,
 ol {
   padding-left: 32px;
@@ -87,12 +95,20 @@ a:hover,
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF0F0F0', GradientType=0);
 }
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
   color: #4c4643;
-  background-color: #e6e6e6;
+  background-color: #ebebeb;
   border-color: #adadad;
 }
-.btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+.open .btn-default.dropdown-toggle {
+  color: #4c4643;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+.btn-default:active, .btn-default.active {
+  background-image: none;
+}
+.open .btn-default.dropdown-toggle {
   background-image: none;
 }
 .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
@@ -122,12 +138,20 @@ a:hover,
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1CAD7E', endColorstr='#FF18936B', GradientType=0);
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
   color: white;
-  background-color: #15815e;
+  background-color: #168a64;
   border-color: #106248;
 }
-.btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+.open .btn-primary.dropdown-toggle {
+  color: white;
+  background-color: #168a64;
+  border-color: #106248;
+}
+.btn-primary:active, .btn-primary.active {
+  background-image: none;
+}
+.open .btn-primary.dropdown-toggle {
   background-image: none;
 }
 .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
@@ -157,12 +181,20 @@ a:hover,
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFAEDBB3', endColorstr='#FF99D29F', GradientType=0);
 }
-.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
   color: white;
-  background-color: #8bcb92;
+  background-color: #92ce98;
   border-color: #72c07b;
 }
-.btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
+.open .btn-success.dropdown-toggle {
+  color: white;
+  background-color: #92ce98;
+  border-color: #72c07b;
+}
+.btn-success:active, .btn-success.active {
+  background-image: none;
+}
+.open .btn-success.dropdown-toggle {
   background-image: none;
 }
 .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
@@ -192,12 +224,20 @@ a:hover,
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF4D4843', endColorstr='#FF3D3935', GradientType=0);
 }
-.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active {
   color: white;
-  background-color: #322f2b;
+  background-color: #373430;
   border-color: #1f1d1b;
 }
-.btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+.open .btn-info.dropdown-toggle {
+  color: white;
+  background-color: #373430;
+  border-color: #1f1d1b;
+}
+.btn-info:active, .btn-info.active {
+  background-image: none;
+}
+.open .btn-info.dropdown-toggle {
   background-image: none;
 }
 .btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
@@ -227,12 +267,20 @@ a:hover,
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE5D369', endColorstr='#FFE0CB4F', GradientType=0);
 }
-.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle {
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active {
   color: white;
-  background-color: #ddc63e;
+  background-color: #dfc946;
   border-color: #d3b925;
 }
-.btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle {
+.open .btn-warning.dropdown-toggle {
+  color: white;
+  background-color: #dfc946;
+  border-color: #d3b925;
+}
+.btn-warning:active, .btn-warning.active {
+  background-image: none;
+}
+.open .btn-warning.dropdown-toggle {
   background-image: none;
 }
 .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
@@ -262,12 +310,20 @@ a:hover,
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEA5E47', endColorstr='#FFE7462C', GradientType=0);
 }
-.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active {
   color: white;
-  background-color: #e4371a;
+  background-color: #e63e22;
   border-color: #c42f16;
 }
-.btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
+.open .btn-danger.dropdown-toggle {
+  color: white;
+  background-color: #e63e22;
+  border-color: #c42f16;
+}
+.btn-danger:active, .btn-danger.active {
+  background-image: none;
+}
+.open .btn-danger.dropdown-toggle {
   background-image: none;
 }
 .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
@@ -297,12 +353,20 @@ a:hover,
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF98D7CC', endColorstr='#FF82CEC1', GradientType=0);
 }
-.translator .btn-primary:hover, .translator .btn-primary:focus, .translator .btn-primary:active, .translator .btn-primary.active, .open > .translator .btn-primary.dropdown-toggle {
+.translator .btn-primary:hover, .translator .btn-primary:focus, .translator .btn-primary:active, .translator .btn-primary.active {
   color: white;
-  background-color: #73c9ba;
+  background-color: #7bccbd;
   border-color: #5abfad;
 }
-.translator .btn-primary:active, .translator .btn-primary.active, .open > .translator .btn-primary.dropdown-toggle {
+.open .translator .btn-primary.dropdown-toggle {
+  color: white;
+  background-color: #7bccbd;
+  border-color: #5abfad;
+}
+.translator .btn-primary:active, .translator .btn-primary.active {
+  background-image: none;
+}
+.open .translator .btn-primary.dropdown-toggle {
   background-image: none;
 }
 .translator .btn-primary.disabled, .translator .btn-primary.disabled:hover, .translator .btn-primary.disabled:focus, .translator .btn-primary.disabled:active, .translator .btn-primary.disabled.active, .translator .btn-primary[disabled], .translator .btn-primary[disabled]:hover, .translator .btn-primary[disabled]:focus, .translator .btn-primary[disabled]:active, .translator .btn-primary[disabled].active, fieldset[disabled] .translator .btn-primary, fieldset[disabled] .translator .btn-primary:hover, fieldset[disabled] .translator .btn-primary:focus, fieldset[disabled] .translator .btn-primary:active, fieldset[disabled] .translator .btn-primary.active {
@@ -338,12 +402,20 @@ a:hover,
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEA5E47', endColorstr='#FFE7462C', GradientType=0);
 }
-.developer .btn-primary:hover, .developer .btn-primary:focus, .developer .btn-primary:active, .developer .btn-primary.active, .open > .developer .btn-primary.dropdown-toggle {
+.developer .btn-primary:hover, .developer .btn-primary:focus, .developer .btn-primary:active, .developer .btn-primary.active {
   color: white;
-  background-color: #e4371a;
+  background-color: #e63e22;
   border-color: #c42f16;
 }
-.developer .btn-primary:active, .developer .btn-primary.active, .open > .developer .btn-primary.dropdown-toggle {
+.open .developer .btn-primary.dropdown-toggle {
+  color: white;
+  background-color: #e63e22;
+  border-color: #c42f16;
+}
+.developer .btn-primary:active, .developer .btn-primary.active {
+  background-image: none;
+}
+.open .developer .btn-primary.dropdown-toggle {
   background-image: none;
 }
 .developer .btn-primary.disabled, .developer .btn-primary.disabled:hover, .developer .btn-primary.disabled:focus, .developer .btn-primary.disabled:active, .developer .btn-primary.disabled.active, .developer .btn-primary[disabled], .developer .btn-primary[disabled]:hover, .developer .btn-primary[disabled]:focus, .developer .btn-primary[disabled]:active, .developer .btn-primary[disabled].active, fieldset[disabled] .developer .btn-primary, fieldset[disabled] .developer .btn-primary:hover, fieldset[disabled] .developer .btn-primary:focus, fieldset[disabled] .developer .btn-primary:active, fieldset[disabled] .developer .btn-primary.active {
@@ -736,6 +808,9 @@ a:hover,
     -webkit-transition: none;
             transition: none;
   }
+}
+.navbar .nav a li {
+  line-height: 21px;
 }
 .navbar .nav .active a,
 .navbar .nav a:hover {
