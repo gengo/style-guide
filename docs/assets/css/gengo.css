@@ -87,7 +87,7 @@ a:hover,
 .btn-default {
   color: #4c4643;
   background-color: white;
-  border-color: #cccccc;
+  border-color: #dbdbdb;
   background-image: -webkit-linear-gradient(top, white 0%, #f0f0f0 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0f0));
   background-image: -webkit-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
@@ -98,12 +98,12 @@ a:hover,
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
   color: #4c4643;
   background-color: #ebebeb;
-  border-color: #adadad;
+  border-color: #bcbcbc;
 }
 .open .btn-default.dropdown-toggle {
   color: #4c4643;
   background-color: #ebebeb;
-  border-color: #adadad;
+  border-color: #bcbcbc;
 }
 .btn-default:active, .btn-default.active {
   background-image: none;
@@ -113,7 +113,7 @@ a:hover,
 }
 .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
   background-color: white;
-  border-color: #cccccc;
+  border-color: #dbdbdb;
 }
 .btn-default .badge {
   color: white;
@@ -776,6 +776,27 @@ a:hover,
 
 .breadcrumb {
   margin-bottom: 0;
+}
+
+.pagination .btn {
+  padding: 3px 10px;
+}
+.pagination .form-control {
+  padding: 3px 0;
+  width: 32px;
+  height: auto;
+  border-color: #dbdbdb;
+  color: #4c4643;
+  text-align: center;
+}
+.pagination .pages-text {
+  margin-right: 9px;
+  margin-left: 3px;
+}
+.pagination .icon-previous,
+.pagination .icon-next {
+  color: #a6a3a1;
+  font-size: 9px;
 }
 
 .navbar {
