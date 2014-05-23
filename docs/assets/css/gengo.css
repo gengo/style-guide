@@ -778,6 +778,9 @@ a:hover,
   margin-bottom: 0;
 }
 
+.pagination {
+  margin: 0;
+}
 .pagination .btn {
   padding: 3px 10px;
 }
