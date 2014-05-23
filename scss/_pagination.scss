@@ -1,0 +1,24 @@
+.pagination {
+
+  .btn { padding: 3px 10px; }
+
+  .form-control {
+    padding: 3px 0;
+    width: 32px;
+    height: auto;
+    border-color: $btn-default-border;
+    color: $text-color;
+    text-align: center;
+  }
+
+  .pages-text {
+    margin-right: 9px;
+    margin-left: 3px;
+  }
+
+  .icon-previous,
+  .icon-next {
+    color: $gengo-gray-light;
+    font-size: 9px;
+  }
+}
