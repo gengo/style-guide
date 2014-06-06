@@ -46,3 +46,11 @@
 .bs-example .btn-toolbar {
   margin-top: 20px;
 }
+
+// ------ dropdown -------------------------------
+.bs-example > .dropdown > .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 5px;
+}
+

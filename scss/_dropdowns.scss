@@ -1,8 +1,24 @@
+// ------ navbar  ---------------------------------------
+
 .nav .dropdown.open > a {
   border-color: transparent;
 }
+
 .nav .dropdown > a:hover,
 .nav .dropdown > a:focus,
 .nav .dropdown > a:active {
   border-bottom-color: $table-border-color;
+}
+
+
+// ------ regular dropdow ---------------------------------------
+
+.dropdown-menu {
+  min-width: 120px;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
+
+  > li > a {
+    color: $text-color;
+  }
 }
