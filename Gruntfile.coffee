@@ -15,6 +15,7 @@ module.exports = (grunt) ->
     sass   : 'scss'
     style  : 'css'
     bower  : 'bower_components'
+    html   : 'html'
 
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
@@ -32,7 +33,7 @@ module.exports = (grunt) ->
       server:
         options:
           port: 9001
-          base: 'docs'
+          base: 'demo'
           livereload: true
 
     watch:
@@ -41,8 +42,14 @@ module.exports = (grunt) ->
       sass:
         files: '<%= assets.sass %>/**/*.{scss,sass}'
         tasks: [ 'css-dev' ]
-      html_files:
-        files: 'docs/**/*.html'
+      html:
+        files: [
+          '<%= assets.html %>/_includes/*.html'
+          '<%= assets.html %>/_layouts/*.html'
+          '<%= assets.html %>/_includes/**/*.html'
+          '<%= assets.html %>/*.html'
+        ]
+        tasks: 'jekyll'
 
     compass:
       options:
@@ -132,12 +139,25 @@ module.exports = (grunt) ->
           '<%= assets.style %>/*'
         ],
         dest: 'docs/assets'
+      demo:
+        expand: true,
+        cwd: ''
+        src: [
+          '<%= assets.style %>/*'
+          'fonts/*'
+          'images/*'
+        ],
+        dest: 'html/assets'
 
     clean:
       dist: [
         # 'dist'
         '<%= assets.style %>/third_party'
       ]
+    jekyll:
+      dist:
+        src: "html"
+        dest:"demo"
 
   grunt.registerTask 'css-build', [
     'compass'
@@ -164,6 +184,7 @@ module.exports = (grunt) ->
     'clean'
     'newer:copy'
     'css-dev'
+    'jekyll'
     'connect'
     'watch'
   ]
