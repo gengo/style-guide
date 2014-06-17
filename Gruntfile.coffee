@@ -16,6 +16,7 @@ module.exports = (grunt) ->
     style  : 'css'
     bower  : 'bower_components'
     html   : 'html'
+    html_dist : 'demo'
 
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
@@ -155,9 +156,11 @@ module.exports = (grunt) ->
         '<%= assets.style %>/third_party'
       ]
     jekyll:
+      options:
+        src : "<%= assets.html %>"
       dist:
-        src: "html"
-        dest:"demo"
+        options:
+          dest: "<%= assets.html_dist %>"
 
   grunt.registerTask 'css-build', [
     'compass'
