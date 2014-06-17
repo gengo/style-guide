@@ -156,8 +156,8 @@ module.exports = (grunt) ->
       ]
     jekyll:
       dist:
-        src: "html"
-        dest:"demo"
+        options:
+          config:'_config.yml'
 
   grunt.registerTask 'css-build', [
     'compass'
