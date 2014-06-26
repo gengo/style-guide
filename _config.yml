@@ -8,8 +8,4 @@ permalink:        pretty
 # Server
 source:           html
 destination:      demo
-host:             0.0.0.0
-port:             3000
-baseurl:
-url:
 encoding:         UTF-8
