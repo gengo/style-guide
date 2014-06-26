@@ -1,0 +1,30 @@
+---
+layout: default
+title: Grid | Gengo Style Guide
+permalink: /grid.html
+---
+<style type="text/css">
+  .container {
+    margin-bottom: 36px;
+  }
+  .show-grid {
+    margin-bottom: 15px;
+  }
+  .show-grid p {
+    background-color: #C3EA94;
+    text-align: center;
+    padding: 16px 0;
+  }
+  .box .show-grid p {
+    background-color: #CDE496;
+  }
+  @media (max-width: 720px) {
+    .mobile-disable {
+      display: none;
+    }
+  }
+</style>
+{% include grid/full-width.html %}
+{% include grid/full-width-in-box.html %}
+{% include grid/sidebar-and-box.html %}
+{% include grid/mobile-disable.html %}

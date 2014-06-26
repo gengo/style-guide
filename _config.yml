@@ -1,0 +1,11 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Server
+source:           html
+destination:      demo
+encoding:         UTF-8
