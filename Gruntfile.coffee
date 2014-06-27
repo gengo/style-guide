@@ -10,12 +10,13 @@ module.exports = (grunt) ->
 
   #path configuration
   assetsConfig =
-    images : 'img'
-    scripts: 'js'
-    sass   : 'scss'
-    style  : 'css'
-    bower  : 'bower_components'
-    html   : 'html'
+    images  : 'img'
+    scripts : 'js'
+    sass    : 'scss'
+    style   : 'css'
+    bower   : 'bower_components'
+    html    : 'html'
+    template: 'liquid'
 
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
@@ -33,7 +34,7 @@ module.exports = (grunt) ->
       server:
         options:
           port: 9001
-          base: 'demo'
+          base: 'dev'
           livereload: true
 
     watch:
@@ -41,15 +42,18 @@ module.exports = (grunt) ->
         livereload: true
       sass:
         files: '<%= assets.sass %>/**/*.{scss,sass}'
-        tasks: [ 'css-dev' ]
+        tasks: [ 'cssdev' ]
       html:
         files: [
-          '<%= assets.html %>/_includes/*.html'
-          '<%= assets.html %>/_layouts/*.html'
-          '<%= assets.html %>/_includes/**/*.html'
-          '<%= assets.html %>/*.html'
+          '<%= assets.template %>/_includes/*.html'
+          '<%= assets.template %>/_layouts/*.html'
+          '<%= assets.template %>/_includes/**/*.html'
+          '<%= assets.template %>/*.html'
         ]
-        tasks: 'jekyll'
+        tasks: [
+          'jekyll'
+          'newer:copy:html-dev'
+        ]
 
     compass:
       options:
@@ -123,55 +127,88 @@ module.exports = (grunt) ->
         cwd: '<%= assets.bower %>/bootstrap-sass-official/vendor/assets/stylesheets'
         src: '**/*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party'
-      docs:
+      'fonts-images-dev':
         expand: true,
         cwd: ''
         src: [
-          '<%= assets.style %>/*'
           'fonts/*'
           'images/*'
         ],
-        dest: 'docs/assets'
-      docstyle:
+        dest: 'dev/assets/'
+      'fonts-images-dist':
         expand: true,
         cwd: ''
         src: [
-          '<%= assets.style %>/*'
-        ],
-        dest: 'docs/assets'
-      demo:
-        expand: true,
-        cwd: ''
-        src: [
-          '<%= assets.style %>/*'
           'fonts/*'
           'images/*'
         ],
-        dest: 'html/assets'
+        dest: 'dist/assets/'
+      # dev用にjsコピー
+      'js-dev':
+        expand: true,
+        cwd: '<%= assets.scripts %>'
+        src: [
+          '*.js'
+        ],
+        dest: 'dev/assets/js'
+      # ビルド用にjsコピー
+      'js-dist':
+        expand: true,
+        cwd: '<%= assets.scripts %>'
+        src: [
+          '*.js'
+        ],
+        dest: 'dist/assets/js'
+      # dev用にcssコピー
+      'css-dev':
+        expand: true,
+        cwd: '<%= assets.style %>'
+        src: [
+          '*.css'
+          # '!*.min.css'
+        ],
+        dest: 'dev/assets/css'
+      # ビルド用にcssコピー
+      'css-dist':
+        expand: true,
+        cwd: '<%= assets.style %>'
+        src: [
+          '*.css'
+          # '*.min.css'
+        ],
+        dest: 'dist/assets/css'
+      # dev用にhtmlコピー
+      'html-dev':
+        expand: true,
+        cwd: '<%= assets.html %>'
+        src: [
+          '*.html'
+        ],
+        dest: 'dev'
+      # ビルド用にhtmlコピー
+      'html-dist':
+        expand: true,
+        cwd: '<%= assets.html %>'
+        src: [
+          '*.html'
+        ],
+        dest: 'dist'
 
     clean:
       dist: [
-        # 'dist'
-        '<%= assets.style %>/third_party'
+        'dist'
+        'dev'
+        'html'
+        'css'
       ]
+    # _config.ymlの設定通りにhtml生成
     jekyll:
       dist:
         options:
           config:'_config.yml'
 
-  grunt.registerTask 'css-build', [
-    'compass'
-    'newer:csslint'
-    'autoprefixer'
-    'cssmin'
-    'usebanner'
-  ]
-  grunt.registerTask 'css-dev', [
-    'compass'
-    'newer:csslint'
-    'autoprefixer'
-    'newer:copy:docstyle'
-  ]
+
+  # 外部リソースの更新のとき
 
   grunt.registerTask 'default', [
     'clean'
@@ -180,11 +217,42 @@ module.exports = (grunt) ->
     'newer:copy:docs'
   ]
 
+  # 開発時。ローカルサーバたてる。watch
+
   grunt.registerTask 'dev', [
     'clean'
-    'newer:copy'
-    'css-dev'
+    # html
     'jekyll'
+    'newer:copy:html-dev'
+    # css
+    'compass'
+    'newer:csslint'
+    'autoprefixer'
+    'newer:copy:css-dev'
+    # js
+    'newer:copy:js-dev'
+    # other resourses
+    'newer:copy:fonts-images-dev'
     'connect'
     'watch'
+  ]
+
+  # gh-page用にpush
+
+  grunt.registerTask 'dist', [
+    'clean'
+    # html
+    'jekyll'
+    'newer:copy:html-dist'
+    # css + optimize
+    'compass'
+    'newer:csslint'
+    'autoprefixer'
+    'cssmin'
+    'usebanner'
+    'newer:copy:css-dist'
+    # js
+    'newer:copy:js-dist'
+    # other resourses
+    'newer:copy:fonts-images-dist'
   ]

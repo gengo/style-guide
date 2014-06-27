@@ -6,6 +6,6 @@ highlighter:      pygments
 permalink:        pretty
 
 # Server
-source:           html
-destination:      demo
+source:           liquid
+destination:      html
 encoding:         UTF-8
