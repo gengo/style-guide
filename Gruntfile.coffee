@@ -143,7 +143,7 @@ module.exports = (grunt) ->
           'images/*'
         ],
         dest: 'dist/assets/'
-      # dev用にjsコピー
+      # copy js for development
       'js-dev':
         expand: true,
         cwd: '<%= assets.scripts %>'
@@ -151,7 +151,7 @@ module.exports = (grunt) ->
           '*.js'
         ],
         dest: 'dev/assets/js'
-      # ビルド用にjsコピー
+      # copy js for distribution
       'js-dist':
         expand: true,
         cwd: '<%= assets.scripts %>'
@@ -159,7 +159,7 @@ module.exports = (grunt) ->
           '*.js'
         ],
         dest: 'dist/assets/js'
-      # dev用にcssコピー
+      # copy css for development
       'css-dev':
         expand: true,
         cwd: '<%= assets.style %>'
@@ -168,7 +168,7 @@ module.exports = (grunt) ->
           # '!*.min.css'
         ],
         dest: 'dev/assets/css'
-      # ビルド用にcssコピー
+      # copy css for distribution
       'css-dist':
         expand: true,
         cwd: '<%= assets.style %>'
@@ -177,7 +177,7 @@ module.exports = (grunt) ->
           # '*.min.css'
         ],
         dest: 'dist/assets/css'
-      # dev用にhtmlコピー
+      # copy html for development
       'html-dev':
         expand: true,
         cwd: '<%= assets.html %>'
@@ -185,7 +185,7 @@ module.exports = (grunt) ->
           '*.html'
         ],
         dest: 'dev'
-      # ビルド用にhtmlコピー
+      # copy htmls for distribution
       'html-dist':
         expand: true,
         cwd: '<%= assets.html %>'
@@ -201,23 +201,20 @@ module.exports = (grunt) ->
         'html'
         'css'
       ]
-    # _config.ymlの設定通りにhtml生成
+    # generate htmls with _config.yml
     jekyll:
       dist:
         options:
           config:'_config.yml'
 
 
-  # 外部リソースの更新のとき
+
 
   grunt.registerTask 'default', [
-    'clean'
-    'newer:copy:bootstrap'
-    'css-build'
-    'newer:copy:docs'
+    'dev'
   ]
-
-  # 開発時。ローカルサーバたてる。watch
+  # in development:
+  # all resources are generated into dev/
 
   grunt.registerTask 'dev', [
     'clean'
@@ -225,6 +222,7 @@ module.exports = (grunt) ->
     'jekyll'
     'newer:copy:html-dev'
     # css
+    'newer:copy:bootstrap'
     'compass'
     'newer:csslint'
     'autoprefixer'
@@ -237,7 +235,7 @@ module.exports = (grunt) ->
     'watch'
   ]
 
-  # gh-page用にpush
+  # generate all resources for gh-pages
 
   grunt.registerTask 'dist', [
     'clean'
