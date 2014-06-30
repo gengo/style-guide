@@ -243,6 +243,7 @@ module.exports = (grunt) ->
     'jekyll'
     'newer:copy:html-dist'
     # css + optimize
+    'newer:copy:bootstrap'
     'compass'
     'newer:csslint'
     'autoprefixer'
