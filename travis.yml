@@ -1,0 +1,10 @@
+language: node_js
+before_script:
+- ./setup.sh
+
+# after_success:
+# - ./deploy.sh
+# env:
+#   global:
+#   - GH_REPO="gengo/style-guide"
+#   - secure: nw7ifeqCwFRdSVpt0PzjTBKVCHI++d79VR6rtgSeHwo+lZ0Jmx2KkvdZ04V8EYxuCF4TpDFPHNKAqj63LsssTZSE80ykxlRkQeOBBN1wXt7wpYQiqwKiIx0KQpcZOL5KrOkUtOax55bXHkqR2cRqiLYYWwEjR7B4WDgBoi8b/cA=
