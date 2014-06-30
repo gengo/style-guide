@@ -1,6 +1,6 @@
 language: node_js
 before_script:
-- ./setup.sh
+- bash ./setup.sh
 
 # after_success:
 # - ./deploy.sh
