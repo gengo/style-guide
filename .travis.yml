@@ -5,5 +5,4 @@ after_success: ./deploy.sh
 env:
   global:
   - DEPLOY_BRANCH="gh-pages"
-  - GH_REPO="gengo/style-guide"
   - secure: gyleTUmfoIgmAAgf8eOjjcPG/GCTqLIbFwkFBREfLPjO6rAgK4+q20QECI/dPCwkgzumExjTNq+OYT6YEDCWy2e5F/yptn2/DAmOOXvek7RwSyDGnoYAPbqDyaw/RP+cYcIgXbY91YwbnIkPhaJoWjHUqxAqTAlc6v9Mkk5TfGA=

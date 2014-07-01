@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
+export REPO_URL="https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG.git"
 
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
