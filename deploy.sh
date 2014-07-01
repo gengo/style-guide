@@ -10,7 +10,7 @@ LAST_COMMIT=$(git log --oneline | head -n 1)
 git checkout -B gh-pages
 
 echo "=remove unnecessary files for deployment="
-rm -fr bower_components node_modules css docs fonts/ html images js  liquid scss
+rm -fr bower_components node_modules css fonts/ html images js  liquid scss
 rm  .* *.*
 rm -fr .sass-cache
 
@@ -19,7 +19,6 @@ cd dist
 git add --all
 mv *.html ../
 mv assets ../
-mv docs ../
 cd ..
 rm -fr dist
 
