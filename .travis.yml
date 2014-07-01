@@ -5,4 +5,4 @@ after_success: ./deploy.sh
 env:
   global:
   - DEPLOY_BRANCH="gh-pages"
-  - secure: gyleTUmfoIgmAAgf8eOjjcPG/GCTqLIbFwkFBREfLPjO6rAgK4+q20QECI/dPCwkgzumExjTNq+OYT6YEDCWy2e5F/yptn2/DAmOOXvek7RwSyDGnoYAPbqDyaw/RP+cYcIgXbY91YwbnIkPhaJoWjHUqxAqTAlc6v9Mkk5TfGA=
+  - secure: bXs04Hc2Kngi4uGqPzH5hV35wcV1y0RSdXz9fs15RcEmq85XBkcQzAkIk31WS+fu4X4Zn9wr/E+HhTD93/QOYvqZBV9Nyd0vqIABe7IWvRYEAIDc9OCjUb8GxiD838peyOiicDY/YArOyRhcUhzMsOLhxwx+O74F4wRW+iI23jw=
