@@ -6,7 +6,8 @@
 .sass-cache
 bower_components
 node_modules
-dist
 scss/third_party
-demo
-html/assets
+dev
+dist
+html
+css
