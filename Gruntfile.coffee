@@ -127,6 +127,11 @@ module.exports = (grunt) ->
         cwd: '<%= assets.bower %>/bootstrap-sass-official/vendor/assets/stylesheets'
         src: '**/*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party'
+      'bootstrap-docs':
+        expand: true
+        cwd: '<%= assets.bower %>/bootstrap/assets/css'
+        src: '*.*.css'
+        dest: '<%= assets.style %>'
       'fonts-images-dev':
         expand: true,
         cwd: ''
@@ -223,6 +228,7 @@ module.exports = (grunt) ->
     'newer:copy:html-dev'
     # css
     'newer:copy:bootstrap'
+    'newer:copy:bootstrap-docs'
     'compass'
     'newer:csslint'
     'autoprefixer'
@@ -244,6 +250,7 @@ module.exports = (grunt) ->
     'newer:copy:html-dist'
     # css + optimize
     'newer:copy:bootstrap'
+    'newer:copy:bootstrap-docs'
     'compass'
     'newer:csslint'
     'autoprefixer'

@@ -76,6 +76,35 @@ git clone git@github.com:vwxyz/style-guide.git
 travis encrypt --add -r gengo/style-guide 'GIT_NAME="vwxyz [via travis key]" GIT_EMAIL=feeddcit@gmail.com GH_TOKEN=XXXXXXXXXXX'
 ```
 
+## Code snippet highlighting
+
+To render a code block with syntax highlighting, surround your code like this:
+
+```
+{% highlight html %}
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+{% endhighlight %}
+```
+
+This `{% highlight html %}...{% endhighlight %}` block is converted into this:
+
+```
+<div class="highlight">
+   <pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre>
+</div>
+```
+
+- [Templates](http://jekyllrb.com/docs/templates/#code-snippet-highlighting)
+- [Liquid basics - Shopify Themes](http://docs.shopify.com/themes/liquid-basics)
+
 ## Documentation
 
 For more detailed documentation, please look at : [bootstrap-sass](https://github.com/twbs/bootstrap-sass)
