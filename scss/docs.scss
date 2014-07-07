@@ -33,6 +33,15 @@
   }
 }
 
+.bs-example{
+  margin:0;
+  padding:0;
+  border:none;
+  box-shadow:none;
+  &:before,&:after{
+    display: none;
+  }
+}
 
 // Navbar
 
@@ -52,5 +61,17 @@
   position: static;
   display: block;
   margin-bottom: 5px;
+}
+.dropdown-header{
+  font-size:10px;
+  color:#A5A39F;
+}
+
+.bs-example{
+  .dropdown-menu,
+  .multiselect-container{
+    position: static;
+
+  }
 }
 

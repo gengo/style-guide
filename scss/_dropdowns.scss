@@ -11,7 +11,7 @@
 }
 
 
-// ------ regular dropdow ---------------------------------------
+// ------ regular dropdown ---------------------------------------
 
 .dropdown-menu {
   min-width: 120px;
@@ -20,5 +20,45 @@
 
   > li > a {
     color: $text-color;
+  }
+}
+.multiselect-container{
+  &.dropdown-menu{
+    min-width:240px;
+    padding:6px;
+    li{
+      margin-bottom: 3px;
+    }
+    .active > a,
+    .active > a:hover,
+    .active > a:active,
+    {
+      background-color: #1CAD7E;
+      border-radius:5px;
+      label{
+        color:#fff;
+      }
+    }
+    li > a > label{
+      padding-left:30px;
+      input{
+        margin-left:-23px;
+      }
+    }
+  }
+  .input-group-addon{
+    display:none;
+  }
+  .input-group{
+    width:206px;
+    .multiselect-search{
+      border-radius: 5px;
+      margin:0;
+      margin-left:14px;
+      background-image:url(../images/search.png);
+      background-position: right 3px bottom 6px;
+      background-repeat:no-repeat;
+      height:30px;
+    }
   }
 }
