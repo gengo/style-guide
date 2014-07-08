@@ -52,9 +52,21 @@ $btn-darken-percent: 7%;
 }
 
 // Buttons sizes
-.btn-lg { font-size: $font-size-large; }
-.btn-sm { font-size: $font-size-base;}
-.btn-xs { font-size: $font-size-small; }
+.btn{
+  padding:6px 14px;
+}
+.btn-lg {
+  font-size: $font-size-large;
+  padding:10px 16px;
+  }
+.btn-sm {
+  font-size: $font-size-base;
+  padding:4px 13px;
+  }
+.btn-xs {
+  font-size: $font-size-small;
+  padding:2px 8px;
+  }
 
 a,
 .btn-link {
