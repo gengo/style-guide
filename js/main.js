@@ -2,7 +2,6 @@
   'use strict';
 
   $('.change-brand').on('click', 'a', function(e){
-    console.log("hoge")
     var brand = $(e.target).closest('a').attr('class');
     $('body').attr('class', brand);
   });
