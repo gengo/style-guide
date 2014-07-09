@@ -5,9 +5,15 @@
     color:#333;
     opacity: .4;
     padding-right:0;
+    padding-left:2px;
+    padding-bottom: 7px ;
     &.translator{
       color: #79b1a5;
       opacity:1;
+      padding-left:32px;
+    }
+    &.reward{
+      text-align: right ;
     }
   }
   th:last-child,
@@ -24,9 +30,11 @@
     .reward{
       color:#4c4643;
       font-weight:bold;
+      text-align:right ;
     }
     .text{
       color:#4c4743;
+      padding-left:32px;
     }
   }
   .lang-from:after{
@@ -36,6 +44,24 @@
     height:7px;
     background:url("../images/to.png") 7px 7px no-repeat;
   }
+  .translator{
+
+  }
+  .reward{
+    padding-right:0;
+    position:relative;
+    right:23px;
+  }
+  > tbody > tr > td{
+    padding-top:19px;
+    padding-bottom:20px;
+    vertical-align: middle ;
+
+  }
+   &.table-condensed > tbody > tr > td{
+     padding-top:6px;
+     padding-bottom:6px;
+   }
 
 
 }
