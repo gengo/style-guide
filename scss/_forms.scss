@@ -3,6 +3,12 @@
   margin-bottom: 14px;
 }
 
+input[type="file"]{
+  margin: 10px 0;
+  font-size:15px;
+  line-height:14px;
+}
+
 .form-control {
   @include box-shadow(none);
   border-top-color: #b8b8b8;
@@ -11,6 +17,8 @@
     @include box-shadow(none);
     border-color: $gengo-green;
   }
+  padding:6px 8px;
+  height:31px;
 }
 
 .translator .form-control:focus {
@@ -26,4 +34,33 @@
 
 .form-search {
   // TODO: add an search icon to background
+}
+
+.form-category{
+  [class*="col-"]{
+    padding-left:10px;
+    padding-right:0;
+  }
+  [class*="col-"]:first-child{
+    padding-left:2px;
+  }
+  label+input{
+    margin-bottom:1em;
+
+  }
+  .form-group{
+    padding-top:24px;
+    padding-bottom:12px;
+    border-top:1px solid #ccc;
+    &:first-child{
+      border:none;
+      margin-bottom:1em;
+    }
+  }
+  .form-category-title{
+    font-weight:bold;
+  }
+  label{
+    font-weight:normal;
+  }
 }
