@@ -20,6 +20,7 @@
 
   > li > a {
     color: $text-color;
+    border-radius:5px;
   }
 }
 .multiselect-container{
@@ -50,11 +51,11 @@
     display:none;
   }
   .input-group{
-    width:206px;
+    width:216px;
     .multiselect-search{
       border-radius: 5px;
       margin:0;
-      margin-left:14px;
+      // margin-left:14px;
       background-image:url(../images/search.png);
       background-position: right 3px bottom 6px;
       background-repeat:no-repeat;
