@@ -1,28 +1,28 @@
 .translating .icon-status {
-  @extend .icon-half;
+  @extend %icon-half;
   color: $gengo-blue;
 }
 .translated .icon-status {
-  @extend .icon-circle;
+  @extend %icon-circle;
   color: $gengo-blue;
 }
 .submitted .icon-status {
-  @extend .icon-success;
+  @extend %icon-success;
   color: $gengo-lime-green;
 }
 .error .icon-status {
-  @extend .icon-circle;
+  @extend %icon-circle;
   color: $gengo-red;
 }
 .revising .icon-status {
-  @extend .icon-circle;
+  @extend %icon-circle;
   color: $gengo-yellow;
 }
 .approved .icon-status {
-  @extend .icon-success;
+  @extend %icon-success;
   color: $gengo-green;
 }
 .rejected .icon-status {
-  @extend .icon-error;
+  @extend %icon-error;
   color: $gengo-red;
 }
