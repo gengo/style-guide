@@ -19,14 +19,14 @@
   box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
 
   > li > a {
-    color: $text-color;
     border-radius:5px;
+    color: $text-color;
   }
 }
 .multiselect-container{
   &.dropdown-menu{
-    min-width:240px;
     padding:6px;
+    min-width:240px;
     li{
       margin-bottom: 3px;
     }
@@ -34,8 +34,8 @@
     .active > a:hover,
     .active > a:active,
     {
-      background-color: #1CAD7E;
       border-radius:5px;
+      background-color: #1CAD7E;
       label{
         color:#fff;
       }
@@ -53,13 +53,13 @@
   .input-group{
     width:216px;
     .multiselect-search{
-      border-radius: 5px;
       margin:0;
+      height:30px;
+      border-radius: 5px;
       // margin-left:14px;
       background-image:url(../images/search.png);
       background-position: right 3px bottom 6px;
       background-repeat:no-repeat;
-      height:30px;
     }
   }
 }
