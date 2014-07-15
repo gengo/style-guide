@@ -14,10 +14,10 @@
 
 .dropdown-menu {
     min-width: 120px;
-    border-radius: 5px;
+    border-radius: $dropdown-border-radius;
     box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
     > li > a {
-        border-radius: 5px;
+        border-radius: $dropdown-border-radius;
         color: $text-color;
     }
 }
@@ -32,8 +32,8 @@
         .active > a,
         .active > a:hover,
         .active > a:active {
-            border-radius: 5px;
-            background-color: #1CAD7E;
+            border-radius: $dropdown-border-radius;
+            background-color: $gengo-green;
             label {
                 color: #fff;
             }
@@ -53,9 +53,9 @@
         .multiselect-search {
             margin: 0;
             height: 30px;
-            border-radius: 5px;
+            border-radius: $dropdown-border-radius;
             // margin-left:14px;
-            background-image: url(../images/search.png);
+            background-image: url("../images/search.png");
             background-position: right 3px bottom 6px;
             background-repeat: no-repeat;
         }
