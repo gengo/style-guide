@@ -1,65 +1,63 @@
 // ------ navbar  ---------------------------------------
 
 .nav .dropdown.open > a {
-  border-color: transparent;
+    border-color: transparent;
 }
 
 .nav .dropdown > a:hover,
 .nav .dropdown > a:focus,
 .nav .dropdown > a:active {
-  border-bottom-color: $table-border-color;
+    border-bottom-color: $table-border-color;
 }
-
 
 // ------ regular dropdown ---------------------------------------
 
 .dropdown-menu {
-  min-width: 120px;
-  border-radius: 5px;
-  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
-
-  > li > a {
-    border-radius:5px;
-    color: $text-color;
-  }
+    min-width: 120px;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
+    > li > a {
+        border-radius: 5px;
+        color: $text-color;
+    }
 }
-.multiselect-container{
-  &.dropdown-menu{
-    padding:6px;
-    min-width:240px;
-    li{
-      margin-bottom: 3px;
+
+.multiselect-container {
+    &.dropdown-menu {
+        padding: 6px;
+        min-width: 240px;
+        li {
+            margin-bottom: 3px;
+        }
+        .active > a,
+        .active > a:hover,
+        .active > a:active {
+            border-radius: 5px;
+            background-color: #1CAD7E;
+            label {
+                color: #fff;
+            }
+        }
+        li > a > label {
+            padding-left: 30px;
+            input {
+                margin-left: -23px;
+            }
+        }
     }
-    .active > a,
-    .active > a:hover,
-    .active > a:active,
-    {
-      border-radius:5px;
-      background-color: #1CAD7E;
-      label{
-        color:#fff;
-      }
+    .input-group-addon {
+        display: none;
     }
-    li > a > label{
-      padding-left:30px;
-      input{
-        margin-left:-23px;
-      }
+    .input-group {
+        width: 216px;
+        .multiselect-search {
+            margin: 0;
+            height: 30px;
+            border-radius: 5px;
+            // margin-left:14px;
+            background-image: url(../images/search.png);
+            background-position: right 3px bottom 6px;
+            background-repeat: no-repeat;
+        }
     }
-  }
-  .input-group-addon{
-    display:none;
-  }
-  .input-group{
-    width:216px;
-    .multiselect-search{
-      margin:0;
-      height:30px;
-      border-radius: 5px;
-      // margin-left:14px;
-      background-image:url(../images/search.png);
-      background-position: right 3px bottom 6px;
-      background-repeat:no-repeat;
-    }
-  }
 }
