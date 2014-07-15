@@ -168,7 +168,7 @@ module.exports = (grunt) ->
         dest: '<%= assets.sass %>/third_party'
       'bootstrap-docs':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap/assets/css'
+        cwd: '<%= assets.bower %>/bootstrap-docs/assets/css'
         src: 'docs.min.css'
         dest: '<%= assets.style %>'
       'fonts-images-dev':
