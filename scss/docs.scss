@@ -52,10 +52,23 @@
 .bs-example {
   margin: 0;
   padding: 0;
-  border: none;
+  border: 0;
   box-shadow: none;
-  &:before, &:after {
+  &:before,
+  &:after {
     display: none;
+  }
+  .btn-toolbar {
+    margin-top: 20px;
+    .dropdown-menu,
+    .multiselect-container {
+      position: static;
+    }
+  }
+  & > .dropdown > .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 5px;
   }
 }
 
@@ -67,25 +80,9 @@
   }
 }
 
-.bs-example .btn-toolbar {
-  margin-top: 20px;
-}
-
-// ------ dropdown -------------------------------
-.bs-example > .dropdown > .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 5px;
-}
+// Dropdonws
 
 .dropdown-header {
-  color: #A5A39F;
+  color: #a5a39f;
   font-size: 10px;
-}
-
-.bs-example {
-  .dropdown-menu,
-  .multiselect-container {
-    position: static;
-  }
 }

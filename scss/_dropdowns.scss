@@ -28,6 +28,12 @@
     min-width: 240px;
     li {
       margin-bottom: 3px;
+      & > a > label {
+        padding-left: 30px;
+        input {
+          margin-left: -23px;
+        }
+      }
     }
     .active > a,
     .active > a:hover,
@@ -36,12 +42,6 @@
       background-color: $gengo-green;
       label {
         color: #fff;
-      }
-    }
-    li > a > label {
-      padding-left: 30px;
-      input {
-        margin-left: -23px;
       }
     }
   }
