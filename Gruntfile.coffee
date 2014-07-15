@@ -43,7 +43,11 @@ module.exports = (grunt) ->
         livereload: true
       sass:
         files: '<%= assets.sass %>/**/*.{scss,sass}'
-        tasks: [ 'cssdev' ]
+        tasks: [
+          'compass'
+          'newer:csslint'
+          'autoprefixer'
+          'newer:copy:css-dev'        ]
       html:
         files: [
           '<%= assets.template %>/_includes/*.html'
@@ -54,6 +58,13 @@ module.exports = (grunt) ->
         tasks: [
           'jekyll'
           'newer:copy:html-dev'
+        ]
+      js:
+        files: [
+          '<%= assets.scripts %>/*.js'
+        ]
+        tasks: [
+          'newer:copy:js-dev'
         ]
 
     compass:
@@ -128,6 +139,14 @@ module.exports = (grunt) ->
         src: ['<%= assets.style %>/**/*.css']
 
     copy:
+      'multi-select':
+        expand: true
+        cwd: '<%= assets.bower %>/bootstrap-multiselect'
+        src: [
+          'js/bootstrap-multiselect.js'
+          'css/bootstrap-multiselect.css'
+        ]
+        dest: './'
       bootstrap:
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-sass-official/vendor/assets/stylesheets'
@@ -136,7 +155,7 @@ module.exports = (grunt) ->
       'bootstrap-docs':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap/assets/css'
-        src: '*.*.css'
+        src: 'docs.min.css'
         dest: '<%= assets.style %>'
       'fonts-images-dev':
         expand: true,
@@ -235,6 +254,7 @@ module.exports = (grunt) ->
     # css
     'newer:copy:bootstrap'
     'newer:copy:bootstrap-docs'
+    'newer:copy:multi-select'
     'scsslint'
     'compass'
     'newer:csslint'
@@ -258,6 +278,7 @@ module.exports = (grunt) ->
     # css + optimize
     'newer:copy:bootstrap'
     'newer:copy:bootstrap-docs'
+    'newer:copy:multi-select'
     'scsslint'
     'compass'
     'newer:csslint'

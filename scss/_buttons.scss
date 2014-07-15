@@ -29,21 +29,19 @@ $btn-darken-percent: 7%;
   }
 }
 
-
 //
 // Buttons
 // --------------------------------------------------
 
 // Common styles
 .btn {
-  // padding: 7px 14px;
-
+  // Buttons sizes
+  padding: 6px 14px;
   // Remove the gradient for the pressed/active state
   &:active,
   &.active {
     background-image: none;
   }
-
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
@@ -51,15 +49,27 @@ $btn-darken-percent: 7%;
   }
 }
 
-// Buttons sizes
-.btn-lg { font-size: $font-size-large; }
-.btn-sm { font-size: $font-size-base;}
-.btn-xs { font-size: $font-size-small; }
+.btn-lg {
+  padding: 10px 16px;
+  font-size: $font-size-large;
+}
+
+.btn-sm {
+  padding: 4px 13px;
+  font-size: $font-size-base;
+}
+
+.btn-xs {
+  padding: 2px 8px;
+  font-size: $font-size-small;
+}
 
 a,
 .btn-link {
   color: $link-color;
-  &:hover { color: $link-hover-color; }
+  &:hover {
+    color: $link-hover-color;
+  }
 }
 
 .btn-default {
@@ -75,15 +85,19 @@ a,
 .btn-primary {
   @include get-btn-base($btn-primary-color, $btn-primary-bg, $btn-primary-border, $brand-primary);
 }
+
 .btn-success {
   @include get-btn-base($btn-success-color, $btn-success-bg, $btn-success-border, $brand-success);
 }
+
 .btn-info {
   @include get-btn-base($btn-info-color, $btn-info-bg, $btn-info-border, $brand-info);
 }
+
 .btn-warning {
   @include get-btn-base($btn-warning-color, $btn-warning-bg, $btn-warning-border, $brand-warning);
 }
+
 .btn-danger {
   @include get-btn-base($btn-danger-color, $btn-danger-bg, $btn-danger-border, $brand-danger);
 }
@@ -92,11 +106,12 @@ a,
   .btn-primary {
     @include get-btn-base($btn-translator-color, $btn-translator-bg, $btn-translator-border, $brand-translator);
   }
-
   a,
   .btn-link {
     color: $link-translator-color;
-    &:hover { color: $link-translator-hover-color; }
+    &:hover {
+      color: $link-translator-hover-color;
+    }
   }
 }
 
@@ -104,10 +119,11 @@ a,
   .btn-primary {
     @include get-btn-base($btn-developer-color, $btn-developer-bg, $btn-developer-border, $brand-developer);
   }
-
   a,
   .btn-link {
     color: $link-developer-color;
-    &:hover { color: $link-developer-hover-color; }
+    &:hover {
+      color: $link-developer-hover-color;
+    }
   }
 }
