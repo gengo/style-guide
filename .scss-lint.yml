@@ -63,7 +63,7 @@ linters:
     convention: hyphenated_lowercase # or 'BEM', or a regex pattern
 
   PlaceholderInExtend:
-    enabled: true
+    enabled: false
 
   PropertySortOrder:
     enabled: false
