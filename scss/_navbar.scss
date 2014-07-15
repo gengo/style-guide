@@ -21,7 +21,7 @@
 }
 
 @mixin vertical-align ($height, $parent-height: $navbar-height) {
-  padding-top   : ($parent-height - $height) * .5 + .5 !important;
+  padding-top: ($parent-height - $height) * .5 + .5 !important;
   padding-bottom: ($parent-height - $height) * .5 - .5 !important;
   font-size: $height;
   line-height: $height;
@@ -32,7 +32,7 @@
 // --------------------------------------------------
 
 $navbar-background-color: #fff !default;
-$hover-dark-gray:         #413C38 !default;
+$hover-dark-gray:         #413c38 !default;
 
 .navbar {
   border-bottom: 1px solid $table-border-color;
@@ -52,10 +52,10 @@ $hover-dark-gray:         #413C38 !default;
 
     a {
       margin: 0 17px;
-      padding: 14px 0 10px 0;
+      padding: 14px 0 10px;
       border-bottom: solid 3px $navbar-background-color;
       color: $text-color;
-      transition: border-bottom-color 0.3s ease;
+      transition: border-bottom-color .3s ease;
 
       @media (max-width: $grid-float-breakpoint) {
         margin: 0 13px;
@@ -88,11 +88,11 @@ $hover-dark-gray:         #413C38 !default;
       display: block;
       width: 59px;
       height: 20px;
-      background-image: url(../images/logo_gengo.svg);
+      background-image: url("../images/logo_gengo.svg");
       background-size: 59px 20px;
       background-size: contain;
       background-repeat: no-repeat;
-      content: '';
+      content: "";
     }
   }
 
@@ -110,7 +110,7 @@ $hover-dark-gray:         #413C38 !default;
     line-height: 16px;
   }
 
-  p { color: #A5A39F; }
+  p { color: #a5a39f; }
 }
 
 //
@@ -118,7 +118,7 @@ $hover-dark-gray:         #413C38 !default;
 // --------------------------------------------------
 
 .customer .navbar {
-  @include navbar-base($brand-customer, #199B71);
+  @include navbar-base($brand-customer, #199b71);
 }
 
 
@@ -134,7 +134,7 @@ $hover-dark-gray:         #413C38 !default;
 // --------------------------------------------------
 
 .translator .navbar {
-  @include navbar-base($brand-translator, #89C1B7);
+  @include navbar-base($brand-translator, #89c1b7);
 
   .navbar-brand {
     @include vertical-align(26px);
@@ -142,7 +142,7 @@ $hover-dark-gray:         #413C38 !default;
     &:before {
       width: 26px;
       height: 26px;
-      background-image: url(../images/logo_translator.svg);
+      background-image: url("../images/logo_translator.svg");
       background-size: 26px 26px;
     }
   }
@@ -153,7 +153,7 @@ $hover-dark-gray:         #413C38 !default;
 // --------------------------------------------------
 
 .developer .navbar {
-  @include navbar-base($brand-developer, #D25440);
+  @include navbar-base($brand-developer, #d25440);
 
   .navbar-brand {
     @include vertical-align(26px);
@@ -161,7 +161,7 @@ $hover-dark-gray:         #413C38 !default;
     &:before {
       width: 26px;
       height: 24px;
-      background-image: url(../images/logo_developer.svg);
+      background-image: url("../images/logo_developer.svg");
       background-size: 26px 26px;
     }
   }
@@ -180,7 +180,7 @@ $hover-dark-gray:         #413C38 !default;
     &:before {
       width: 27px;
       height: 27px;
-      background-image: url(../images/logo_admin.svg);
+      background-image: url("../images/logo_admin.svg");
       background-size: 27px 27px;
     }
   }
@@ -190,9 +190,9 @@ $hover-dark-gray:         #413C38 !default;
 // Workbench
 // --------------------------------------------------
 
-$workbench-text-color:        #A6A4A1 !default;
-$workbench-border-color:      #716D69 !default;
-$workbench-icon-color:        #837F7C !default;
+$workbench-text-color:        #a6a4a1 !default;
+$workbench-border-color:      #716d69 !default;
+$workbench-icon-color:        #837f7c !default;
 $workbench-icon-active-color: #fff !default;
 
 .workbench .navbar {
@@ -205,7 +205,7 @@ $workbench-icon-active-color: #fff !default;
     border-left: 1px solid $workbench-border-color;
   }
 
-  .nav  {
+  .nav {
     padding: 0 22px;
 
     .navbar-text {
@@ -249,7 +249,7 @@ $workbench-icon-active-color: #fff !default;
     li > {
       [class^="icon-"],
       [class*=" icon-"] {
-        color: #837F7C;
+        color: #837f7c;
 
         &:hover,
         &.selected {
@@ -285,9 +285,9 @@ $workbench-icon-active-color: #fff !default;
     margin-top: 0;
     padding: 5px 0;
     min-width: 190px;
-    border: 1px solid #433F3B;
+    border: 1px solid #433f3b;
     background-color: $brand-workbench;
-    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .2);
 
     &:before,
     &:after {
@@ -295,18 +295,18 @@ $workbench-icon-active-color: #fff !default;
     }
 
     .divider {
-      background-color: #635E5A;
+      background-color: #635e5a;
     }
 
     > li > a {
       position: relative;
-      padding:0 17px;
+      padding: 0 17px;
       color: #fff;
       line-height: 36px;
 
-      &:hover{
+      &:hover {
         padding-bottom: 0;
-        background-color: #322E2A;
+        background-color: #322e2a;
       }
 
       .text {
