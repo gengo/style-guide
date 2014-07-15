@@ -6,6 +6,7 @@ module.exports = (grunt) ->
   # load all grunt tasks
   require('jit-grunt')(grunt, {
     usebanner: 'grunt-banner'
+    scsslint: 'grunt-scss-lint'
   })
 
   #path configuration
@@ -111,6 +112,11 @@ module.exports = (grunt) ->
         csslintrc: '<%= assets.sass %>/.csslintrc'
       src:
         '<%= assets.style %>/<%= pkg.name %>.css'
+
+    scsslint:
+      allFiles: ['scss/*.scss']
+      options:
+        config: '.scss-lint.yml'
 
     cssmin:
       options:
@@ -249,6 +255,7 @@ module.exports = (grunt) ->
     'newer:copy:bootstrap'
     'newer:copy:bootstrap-docs'
     'newer:copy:multi-select'
+    'scsslint'
     'compass'
     'newer:csslint'
     'autoprefixer'
@@ -272,6 +279,7 @@ module.exports = (grunt) ->
     'newer:copy:bootstrap'
     'newer:copy:bootstrap-docs'
     'newer:copy:multi-select'
+    'scsslint'
     'compass'
     'newer:csslint'
     'autoprefixer'
