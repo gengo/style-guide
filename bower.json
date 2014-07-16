@@ -4,9 +4,11 @@
   "description": "Gengo style guide",
   "dependencies": {
     "bootstrap-sass-official": "~3.1.1",
-    "bootstrap": "https://github.com/twbs/bootstrap.git#gh-pages"
+    "bootstrap-docs": "https://github.com/twbs/bootstrap.git#gh-pages",
+    "bootstrap-multiselect": "~0.9.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "ignore": [
     "**/.*",
     "node_modules",

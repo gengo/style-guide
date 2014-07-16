@@ -1,19 +1,19 @@
 .table {
   > thead > tr > th {
+    padding-right: 0;
+    padding-bottom: 7px;
+    padding-left: 2px;
     border-bottom-width: 1px;
-    font-size:12px;
-    color:#333;
+    color: $table-color-default;
+    font-size: $table-header-font-size;
     opacity: .4;
-    padding-right:0;
-    padding-left:2px;
-    padding-bottom: 7px ;
-    &.translator{
+    &.translator {
+      padding-left: 32px;
       color: #79b1a5;
-      opacity:1;
-      padding-left:32px;
+      opacity: 1;
     }
-    &.reward{
-      text-align: right ;
+    &.reward {
+      text-align: right;
     }
   }
   th:last-child,
@@ -21,48 +21,41 @@
   th:nth-last-child(3),
   td:last-child,
   td:nth-last-child(2),
-  td:nth-last-child(3){
+  td:nth-last-child(3) {
+    padding-right: 0;
+    color: $table-color-default;
+    text-align: right;
+  }
+  tr {
+    .reward {
+      color: #4c4643;
       text-align: right;
-      padding-right:0;
-      color:#333;
-  }
-  tr{
-    .reward{
-      color:#4c4643;
-      font-weight:bold;
-      text-align:right ;
+      font-weight: bold;
     }
-    .text{
-      color:#4c4743;
-      padding-left:32px;
+    .text {
+      padding-left: 32px;
+      color: #4c4743;
     }
   }
-  .lang-from:after{
-    width:20px;
-    content:"";
-    padding-right:20px;
-    height:7px;
-    background:url("../images/to.png") 7px 7px no-repeat;
+  .lang-from:after {
+    padding-right: 20px;
+    width: 20px;
+    height: 7px;
+    background: url("../images/to.png") 7px 7px no-repeat;
+    content: "";
   }
-  .translator{
-
+  .reward {
+    position: relative;
+    right: 23px;
+    padding-right: 0;
   }
-  .reward{
-    padding-right:0;
-    position:relative;
-    right:23px;
+  > tbody > tr > td {
+    padding-top: 19px;
+    padding-bottom: 20px;
+    vertical-align: middle;
   }
-  > tbody > tr > td{
-    padding-top:19px;
-    padding-bottom:20px;
-    vertical-align: middle ;
-
+  &.table-condensed > tbody > tr > td {
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
-   &.table-condensed > tbody > tr > td{
-     padding-top:6px;
-     padding-bottom:6px;
-   }
-
-
 }
-
