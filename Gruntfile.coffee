@@ -63,6 +63,7 @@ module.exports = (grunt) ->
       js:
         files: [
           '<%= assets.scripts %>/*.js'
+          '<%= assets.scripts %>/**/*.js'
         ]
         tasks: [
           'newer:copy:js-dev'
