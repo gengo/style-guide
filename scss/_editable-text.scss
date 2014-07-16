@@ -1,4 +1,14 @@
 // ------ simple text field --------------------
+.bs-editable{
+  .ui{
+    text-align: right ;
+  }
+}
+.editable-input{
+  .form-control{
+    color: #333;
+  }
+}
 // ------ empty  text field, required ----------
 // ------ select, local array, custom display --
 // ------ select, remote array, no buttons -----
