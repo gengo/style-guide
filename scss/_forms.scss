@@ -10,11 +10,23 @@ input[type="file"] {
   line-height: 14px;
 }
 
+.form-inline {
+  .form-group {
+    margin-right: 10px;
+  }
+  .checkbox {
+    label {
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+}
+
 .form-control {
   @include box-shadow(none);
-  border-top-color: #b8b8b8;
   padding: 6px 8px;
   height: 31px;
+  border-top-color: #b8b8b8;
   &:focus {
     @include box-shadow(none);
     border-color: $gengo-green;
@@ -39,8 +51,8 @@ input[type="file"] {
 
 .form-category {
   [class*="col-"] {
-    padding-left: 10px;
     padding-right: 0;
+    padding-left: 10px;
   }
   [class*="col-"]:first-child {
     padding-left: 2px;
@@ -56,8 +68,8 @@ input[type="file"] {
     padding-bottom: 12px;
     border-top: 1px solid #ccc;
     &:first-child {
-      border: 0;
       margin-bottom: 1em;
+      border: 0;
     }
   }
   .form-category-title {
