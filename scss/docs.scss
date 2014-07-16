@@ -5,6 +5,7 @@
 .box {
   margin-bottom: 26px;
   padding-bottom: 21px;
+  padding-left: 33px;
 }
 
 .colors {
@@ -85,4 +86,38 @@
 .dropdown-header {
   color: #a5a39f;
   font-size: 10px;
+}
+
+// ------ header -------------------------------
+.ge-navbar-collapse {
+  .navbar-nav {
+    padding-left: 15px;
+  }
+}
+
+.ge-nav {
+  padding-top: 16px;
+  padding-left: 10px;
+  .nav > li > a {
+    padding-right: 0;
+  }
+}
+
+.ge-content {
+  padding: {
+    top: 13px;
+    // right:13px;
+    // left:23px;
+  };
+  h1[id] {
+    padding-top: 30px;
+  }
+  hr {
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  h2 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
 }

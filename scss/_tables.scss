@@ -1,5 +1,61 @@
 .table {
   > thead > tr > th {
+    padding-right: 0;
+    padding-bottom: 7px;
+    padding-left: 2px;
     border-bottom-width: 1px;
+    color: $table-color-default;
+    font-size: $table-header-font-size;
+    opacity: .4;
+    &.translator {
+      padding-left: 32px;
+      color: $link-translator-color;
+      opacity: 1;
+    }
+    &.reward {
+      text-align: right;
+    }
+  }
+  th:last-child,
+  th:nth-last-child(2),
+  th:nth-last-child(3),
+  td:last-child,
+  td:nth-last-child(2),
+  td:nth-last-child(3) {
+    padding-right: 0;
+    color: $table-color-default;
+    text-align: right;
+  }
+  tr {
+    .reward {
+      color: #4c4743;
+      text-align: right;
+      font-weight: bold;
+    }
+    .text {
+      padding-left: 32px;
+      color: $text-color;
+    }
+  }
+  .lang-from:after {
+    padding-right: 20px;
+    width: 20px;
+    height: 7px;
+    background: url("../images/to.png") 7px 7px no-repeat;
+    content: "";
+  }
+  .reward {
+    position: relative;
+    right: 23px;
+    padding-right: 0;
+  }
+  > tbody > tr > td {
+    padding-top: 19px;
+    padding-bottom: 20px;
+    vertical-align: middle;
+  }
+  &.table-condensed > tbody > tr > td {
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 }
