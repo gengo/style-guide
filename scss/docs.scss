@@ -60,12 +60,12 @@
   }
   .btn-toolbar {
     margin-top: 20px;
-    .dropdown-menu,
-    .multiselect-container {
-      position: static;
-    }
   }
-  & > .dropdown > .dropdown-menu {
+  .dropdown-menu,
+  .multiselect-container {
+    position: static;
+  }
+  > .dropdown > .dropdown-menu {
     position: static;
     display: block;
     margin-bottom: 5px;

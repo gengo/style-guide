@@ -29,7 +29,7 @@ module.exports = (grunt) ->
             ' * you may not use this file except in compliance with the License.\n' +
             ' * You may obtain a copy of the License at :\n' +
             ' * http://www.apache.org/licenses/LICENSE-2.0\n' +
-            ' */\n'
+            ' */\n\n'
 
     connect:
       server:
@@ -47,6 +47,7 @@ module.exports = (grunt) ->
           'compass'
           'newer:csslint'
           'autoprefixer'
+          'concat:docs'
           'newer:copy:css-dev'        ]
       html:
         files: [
@@ -125,18 +126,31 @@ module.exports = (grunt) ->
         expand: true
         cwd: '<%= assets.style %>'
         src: [
-          '**/*.css'
-          '!**/*.min.css'
+          '**/docs.css'
+          '**/gengo.css'
+          '**/gengo-bootstrap-theme.css'
         ]
         dest: '<%= assets.style %>'
-        ext: '.min.css'
+        ext: '.css'
+
+    concat:
+      docs:
+        src:[
+          '<%= assets.style %>/docs.min.css'
+          '<%= assets.style %>/docs.css'
+        ]
+        dest:'<%= assets.style %>/docs.all.css'
 
     usebanner:
       options:
         position: 'top'
         banner: '<%= banner %>'
       files:
-        src: ['<%= assets.style %>/**/*.css']
+        src: [
+          '**/docs.css'
+          '**/gengo.css'
+          '**/gengo-bootstrap-theme.css'
+        ]
 
     copy:
       'multi-select':
@@ -154,7 +168,7 @@ module.exports = (grunt) ->
         dest: '<%= assets.sass %>/third_party'
       'bootstrap-docs':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap/assets/css'
+        cwd: '<%= assets.bower %>/bootstrap-docs/assets/css'
         src: 'docs.min.css'
         dest: '<%= assets.style %>'
       'fonts-images-dev':
@@ -259,6 +273,7 @@ module.exports = (grunt) ->
     'compass'
     'newer:csslint'
     'autoprefixer'
+    'concat:docs'
     'newer:copy:css-dev'
     # js
     'newer:copy:js-dev'
@@ -285,6 +300,7 @@ module.exports = (grunt) ->
     'autoprefixer'
     'cssmin'
     'usebanner'
+    'concat:docs'
     'newer:copy:css-dist'
     # js
     'newer:copy:js-dist'
