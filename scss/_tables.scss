@@ -1,16 +1,16 @@
 .table {
   > thead > tr > th {
-    border-bottom-width: 1px;
-    font-size: 12px;
-    color: #333;
-    opacity: .4;
     padding-right: 0;
-    padding-left: 2px;
     padding-bottom: 7px;
+    padding-left: 2px;
+    border-bottom-width: 1px;
+    color: $table-color-default;
+    font-size: $table-header-font-size;
+    opacity: .4;
     &.translator {
+      padding-left: 32px;
       color: #79b1a5;
       opacity: 1;
-      padding-left: 32px;
     }
     &.reward {
       text-align: right;
@@ -22,32 +22,32 @@
   td:last-child,
   td:nth-last-child(2),
   td:nth-last-child(3) {
-    text-align: right;
     padding-right: 0;
-    color: #333;
+    color: $table-color-default;
+    text-align: right;
   }
   tr {
     .reward {
       color: #4c4643;
-      font-weight: bold;
       text-align: right;
+      font-weight: bold;
     }
     .text {
-      color: #4c4743;
       padding-left: 32px;
+      color: #4c4743;
     }
   }
   .lang-from:after {
-    width: 20px;
-    content: "";
     padding-right: 20px;
+    width: 20px;
     height: 7px;
     background: url("../images/to.png") 7px 7px no-repeat;
+    content: "";
   }
   .reward {
-    padding-right: 0;
     position: relative;
     right: 23px;
+    padding-right: 0;
   }
   > tbody > tr > td {
     padding-top: 19px;
