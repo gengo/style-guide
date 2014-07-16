@@ -9,7 +9,7 @@
     opacity: .4;
     &.translator {
       padding-left: 32px;
-      color: #79b1a5;
+      color: $link-translator-color;
       opacity: 1;
     }
     &.reward {
