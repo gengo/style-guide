@@ -2,45 +2,74 @@
 @import "compass";
 @import "variables";
 
-
 .box {
   margin-bottom: 26px;
   padding-bottom: 21px;
-  padding-left:33px;
+  padding-left: 33px;
 }
 
 .colors {
   font-size: $font-size-small;
-
   .color-box {
     display: block;
     margin: 15px 0;
     width: 100%;
     height: 96px;
     border-radius: 3px;
-
-    &.gengo-green { background-color: $gengo-green; }
-    &.translator-blue { background-color: $gengo-blue; }
-    &.developer-red { background-color: $gengo-red; }
-    &.gengo-lemon { background-color: $gengo-lemon; }
-    &.gengo-lgreen { background-color: $gengo-lgreen; }
-    &.gengo-beige { background-color: $gengo-beige; }
-    &.gengo-gray { background-color: $gengo-gray; }
-    &.gengo-bg { background-color: $body-bg; }
-    &.gengo-white { background-color: #fff; }
-
+    &.gengo-green {
+      background-color: $gengo-green;
+    }
+    &.translator-blue {
+      background-color: $gengo-blue;
+    }
+    &.developer-red {
+      background-color: $gengo-red;
+    }
+    &.gengo-lemon {
+      background-color: $gengo-lemon;
+    }
+    &.gengo-lgreen {
+      background-color: $gengo-lgreen;
+    }
+    &.gengo-beige {
+      background-color: $gengo-beige;
+    }
+    &.gengo-gray {
+      background-color: $gengo-gray;
+    }
+    &.gengo-bg {
+      background-color: $body-bg;
+    }
+    &.gengo-white {
+      background-color: #fff;
+    }
     &.gengo-bg,
-    &.gengo-white { border: 1px solid $table-border-color; }
+    &.gengo-white {
+      border: 1px solid $table-border-color;
+    }
   }
 }
 
-.bs-example{
-  margin:0;
-  padding:0;
-  border:none;
-  box-shadow:none;
-  &:before,&:after{
+.bs-example {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  &:before,
+  &:after {
     display: none;
+  }
+  .btn-toolbar {
+    margin-top: 20px;
+  }
+  .dropdown-menu,
+  .multiselect-container {
+    position: static;
+  }
+  > .dropdown > .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 5px;
   }
 }
 
@@ -48,68 +77,47 @@
 
 .navbar-styles {
   .navbar {
-    border: 1px solid  $table-border-color;
+    border: 1px solid $table-border-color;
   }
 }
 
+// Dropdonws
 
-.bs-example .btn-toolbar {
-  margin-top: 20px;
+.dropdown-header {
+  color: #a5a39f;
+  font-size: 10px;
 }
 
-// ------ dropdown -------------------------------
-.bs-example > .dropdown > .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 5px;
-}
-.dropdown-header{
-  font-size:10px;
-  color:#A5A39F;
-}
-
-.bs-example{
-  .dropdown-menu,
-  .multiselect-container{
-    position: static;
-
-  }
-}
 // ------ header -------------------------------
-.ge-navbar-collapse{
-  .navbar-nav{
-    padding-left:15px;
+.ge-navbar-collapse {
+  .navbar-nav {
+    padding-left: 15px;
   }
 }
 
-.ge-nav{
-  padding-top:16px;
-  padding-left:10px;
-
-  .nav > li > a{
-    padding-right:0;
+.ge-nav {
+  padding-top: 16px;
+  padding-left: 10px;
+  .nav > li > a {
+    padding-right: 0;
   }
 }
 
-.ge-content{
-  padding:{
-    top:13px;
+.ge-content {
+  padding: {
+    top: 13px;
     // right:13px;
     // left:23px;
+  };
+  h1[id] {
+    padding-top: 30px;
   }
-  h1[id]{
-    padding-top:30px;
-  }
-
-  hr{
-    margin-top:16px;
+  hr {
+    margin-top: 16px;
     margin-bottom: 0;
   }
-  h2{
-    margin-top:25px;
-    margin-bottom:20px;
+  h2 {
+    margin-top: 25px;
+    margin-bottom: 20px;
   }
 }
-
-
-
