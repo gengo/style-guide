@@ -167,6 +167,11 @@ module.exports = (grunt) ->
         cwd: '<%= assets.bower %>/bootstrap-sass-official/vendor/assets/stylesheets'
         src: '**/*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party'
+      'bootstrap-fonts':
+        expand: true
+        cwd: '<%= assets.bower %>/bootstrap-docs/dist/fonts'
+        src: 'glyphicons-halflings-regular.*'
+        dest: '<%= assets.style %>/bootstrap'
       'bootstrap-docs':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-docs/assets/css'
@@ -210,7 +215,7 @@ module.exports = (grunt) ->
         cwd: '<%= assets.style %>'
         src: [
           '*.css'
-          # '!*.min.css'
+          'bootstrap/*.*'
         ],
         dest: 'dev/assets/css'
       # copy css for distribution
@@ -219,7 +224,7 @@ module.exports = (grunt) ->
         cwd: '<%= assets.style %>'
         src: [
           '*.css'
-          # '*.min.css'
+          'bootstrap/*.*'
         ],
         dest: 'dist/assets/css'
       # copy html for development
@@ -268,6 +273,7 @@ module.exports = (grunt) ->
     'newer:copy:html-dev'
     # css
     'newer:copy:bootstrap'
+    'newer:copy:bootstrap-fonts'
     'newer:copy:bootstrap-docs'
     'newer:copy:multi-select'
     'scsslint'
@@ -293,6 +299,7 @@ module.exports = (grunt) ->
     'newer:copy:html-dist'
     # css + optimize
     'newer:copy:bootstrap'
+    'newer:copy:bootstrap-fonts'
     'newer:copy:bootstrap-docs'
     'newer:copy:multi-select'
     'scsslint'
