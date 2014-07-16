@@ -4,64 +4,63 @@
   margin-bottom: 14px;
 }
 
-input[type="file"]{
+input[type="file"] {
   margin: 10px 0;
-  font-size:15px;
-  line-height:14px;
+  font-size: 15px;
+  line-height: 14px;
 }
 
 .form-control {
   @include box-shadow(none);
   border-top-color: #b8b8b8;
-
+  padding: 6px 8px;
+  height: 31px;
   &:focus {
     @include box-shadow(none);
     border-color: $gengo-green;
   }
-  padding:6px 8px;
-  height:31px;
 }
 
 .translator .form-control:focus {
   border-color: $brand-translator;
 }
+
 .developer .form-control:focus {
   border-color: $brand-developer;
 }
+
 .admin .form-control:focus {
   border-color: $brand-admin;
 }
-
 
 .form-search {
   // TODO: add an search icon to background
 }
 
-.form-category{
-  [class*="col-"]{
-    padding-left:10px;
-    padding-right:0;
+.form-category {
+  [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 0;
   }
-  [class*="col-"]:first-child{
-    padding-left:2px;
+  [class*="col-"]:first-child {
+    padding-left: 2px;
   }
-  label+input{
-    margin-bottom:1em;
-
-  }
-  .form-group{
-    padding-top:24px;
-    padding-bottom:12px;
-    border-top:1px solid #ccc;
-    &:first-child{
-      border:none;
-      margin-bottom:1em;
+  label {
+    font-weight: normal;
+    + input {
+      margin-bottom: 1em;
     }
   }
-  .form-category-title{
-    font-weight:bold;
+  .form-group {
+    padding-top: 24px;
+    padding-bottom: 12px;
+    border-top: 1px solid #ccc;
+    &:first-child {
+      border: 0;
+      margin-bottom: 1em;
+    }
   }
-  label{
-    font-weight:normal;
+  .form-category-title {
+    font-weight: bold;
   }
 }
