@@ -10,3 +10,5 @@ scss/third_party
 dev
 dist
 html
+css/*
+!css/gengo*
