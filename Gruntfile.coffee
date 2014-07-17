@@ -48,7 +48,8 @@ module.exports = (grunt) ->
           'newer:csslint'
           'autoprefixer'
           'concat:docs'
-          'newer:copy:css-dev'        ]
+          'newer:copy:css-dev'
+        ]
       html:
         files: [
           '<%= assets.template %>/_includes/*.html'
