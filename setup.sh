@@ -6,4 +6,8 @@ gem install scss-lint
 npm install
 bower install twbs/bootstrap-sass
 bower install https://github.com/twbs/bootstrap.git#gh-pages
+cd bower_components
+mv bootstrap bootstrap-docs
+cd ..
 bower install bootstrap-multiselect
+bower install x-select
