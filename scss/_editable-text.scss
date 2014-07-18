@@ -1,25 +1,36 @@
 // ------ simple text field --------------------
-.bs-editable{
-  .ui{
-    text-align: right ;
+.bs-editable {
+  .ui {
+    text-align: right;
   }
 }
-.editable-input{
-  .form-control{
-    color: #333;
-  }
-}
-// ------ empty  text field, required ----------
-// ------ select, local array, custom display --
-// ------ select, remote array, no buttons -----
-// ------ select, error while loading ----------
-// ------ Datepicker ---------------------------
-// ------ Combodate (date) ---------------------
-// ------ Combodate (datetime) -----------------
-// ------ ComboTextarea, buttons below ---------
-// ------ Twitter typehead.js ------------------
-// ------ Checklist ----------------------------
-// ------ Select2 (tags mode) ------------------
-// ------ Select2 (tags dropdown mode) ---------
-// ------ Custom input, several fields ---------
 
+.editable-input {
+  .form-control {
+    color: $editable-input-color;
+  }
+}
+
+.editable-error-block {
+  text-align: left;
+}
+
+.has-error {
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+// overwrite image path used in 'x-editable' plugin
+.editableform-loading {
+  background-image: url("../images/loading.gif");
+}
+
+.editable-clear-x {
+  background: url("../images/clear.png");
+}
