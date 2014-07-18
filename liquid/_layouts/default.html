@@ -8,6 +8,29 @@ navigation:
   url: components.html
 - text: Layout
   url: grid.html
+css:
+- http://fonts.googleapis.com/css?family=Open+Sans:400,600,700
+- assets/css/bootstrap-multiselect.css
+- assets/css/bootstrap-editable.css
+- assets/css/select2-bootstrap.css
+- assets/css/typeahead.js-bootstrap.css
+- assets/css/address.css
+- assets/css/gengo-bootstrap-theme.css
+- assets/css/gengo.css
+- assets/css/docs.all.css
+js:
+- http://code.jquery.com/jquery-1.9.0.js
+- http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js
+- assets/js/moment.min.js
+- assets/js/bootstrap-editable.min.js
+- assets/js/bootstrap-multiselect.js
+- assets/js/select2.min.js
+- assets/js/typeaheadjs.js
+- assets/js/typeahead.js
+- assets/js/address.js
+- http://vitalets.github.io/x-editable/assets/mockjax/jquery.mockjax.js
+- http://vitalets.github.io/x-editable/assets/demo-mock.js
+- assets/js/main.js
 ---
 <!DOCTYPE html>
 <html>
@@ -17,12 +40,8 @@ navigation:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gengo Style Guide</title>
   <!-- CSS -->
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="assets/css/gengo-bootstrap-theme.css">
-  <link rel="stylesheet" href="assets/css/bootstrap-multiselect.css">
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/gengo.css">
-  <link rel="stylesheet" href="assets/css/docs.all.css">
+  {% for href in page.css %}<link rel="stylesheet" type="text/css" href="{{href}}" />
+  {% endfor %}
 </head>
 <body>
   <header class="navbar navbar-static-top ge-navbar" role="banner">
@@ -37,12 +56,8 @@ navigation:
         <a class="navbar-brand" href="./index.html"></a>
       </div>
       <nav class="collapse navbar-collapse ge-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-          {% for link in page.navigation %}
-          <li class="{% if page.name == link.url %}active{% endif %}">
-            <a href="{{link.url}}">{{link.text}}</a>
-          </li>
-          {% endfor %}
+        <ul class="nav navbar-nav">{% for link in page.navigation %}
+          <li class="{% if page.name == link.url %}active{% endif %}"><a href="{{link.url}}">{{link.text}}</a></li>{% endfor %}
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -63,12 +78,7 @@ navigation:
     </div>
   </header>
   {{ content }}
-  <!-- JS -->
-  <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
-  <script src="./assets/js/bootstrap-multiselect.js"></script>
-  <script src="./assets/js/main.js"></script>
-
+  <!-- JS -->{% for src in page.js %}
+  <script src="{{src}}"></script>{% endfor %}
 </body>
 </html>

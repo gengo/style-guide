@@ -1,14 +1,18 @@
-s{
+{
   "name": "gengo-style-guide",
   "version": "0.0.3",
   "description": "Gengo style guide",
   "dependencies": {
     "bootstrap-sass-official": "~3.1.1",
-    "bootstrap-docs": "https://github.com/twbs/bootstrap.git#gh-pages",
     "bootstrap-multiselect": "~0.9.6",
-    "x-editable": "~1.5.1"
+    "x-editable": "~1.5.1",
+    "typeahead.js": "~0.10.4",
+    "select2": "~3.5.0",
+    "moment": "~2.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "bootstrap-docs": "https://github.com/twbs/bootstrap.git#gh-pages"
+    },
   "ignore": [
     "**/.*",
     "node_modules",

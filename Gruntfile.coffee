@@ -11,7 +11,7 @@ module.exports = (grunt) ->
 
   #path configuration
   assetsConfig =
-    images  : 'img'
+    images  : 'images'
     scripts : 'js'
     sass    : 'scss'
     style   : 'css'
@@ -29,7 +29,7 @@ module.exports = (grunt) ->
             ' * you may not use this file except in compliance with the License.\n' +
             ' * You may obtain a copy of the License at :\n' +
             ' * http://www.apache.org/licenses/LICENSE-2.0\n' +
-            ' */\n\n'
+            ' */\n'
 
     connect:
       server:
@@ -50,21 +50,13 @@ module.exports = (grunt) ->
           'concat:docs'
           'newer:copy:css-dev'        ]
       html:
-        files: [
-          '<%= assets.template %>/_includes/*.html'
-          '<%= assets.template %>/_layouts/*.html'
-          '<%= assets.template %>/_includes/**/*.html'
-          '<%= assets.template %>/*.html'
-        ]
+        files: '<%= assets.template %>/**/*.html'
         tasks: [
           'jekyll'
           'newer:copy:html-dev'
         ]
       js:
-        files: [
-          '<%= assets.scripts %>/*.js'
-          '<%= assets.scripts %>/**/*.js'
-        ]
+        files: '<%= assets.scripts %>/**/*.js'
         tasks: [
           'newer:copy:js-dev'
         ]
@@ -154,15 +146,7 @@ module.exports = (grunt) ->
         ]
 
     copy:
-      'multi-select':
-        expand: true
-        cwd: '<%= assets.bower %>/bootstrap-multiselect'
-        src: [
-          'js/bootstrap-multiselect.js'
-          'css/bootstrap-multiselect.css'
-        ]
-        dest: './'
-      bootstrap:
+      'bootstrap-sass':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-sass-official/vendor/assets/stylesheets'
         src: '**/*.{scss,sass}'
@@ -193,6 +177,60 @@ module.exports = (grunt) ->
           'images/*'
         ],
         dest: 'dist/assets/'
+      'bootstrap-multiselect':
+        expand: true
+        cwd: '<%= assets.bower %>/bootstrap-multiselect'
+        src: '**/*-multiselect.*'
+        dest: './'
+      'x-editable':
+        expand: true
+        cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable'
+        src: [
+          'css/bootstrap-editable.css'
+          'js/bootstrap-editable.min.js'
+        ]
+        dest: './'
+      'x-editable-img':
+        expand: true
+        cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable/img'
+        src: '*.*'
+        dest: '<%= assets.images %>'
+      'select2-css':
+        expand:true
+        cwd:'<%= assets.bower %>/select2'
+        src: 'select2-bootstrap.css'
+        dest: '<%= assets.style %>'
+      'select2-js':
+        expand:true
+        cwd:'<%= assets.bower %>/select2'
+        src: 'select2.min.js'
+        dest: '<%= assets.scripts %>'
+      'address-css':
+        expand:true
+        cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
+        src: '*.css'
+        dest: '<%= assets.style %>'
+      'address-js':
+        expand:true
+        cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
+        src: '*.js'
+        dest: '<%= assets.scripts %>'
+      'typeheadjs-css':
+        expand:true
+        cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/lib'
+        src: '*.css'
+        dest: '<%= assets.style %>'
+      'typeheadjs-js':
+        expand:true
+        cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/'
+        src: ['lib/*.js','*.js']
+        flatten:true
+        dest: '<%= assets.scripts %>'
+      'moment':
+        expand:true
+        cwd:'<%= assets.bower %>/moment/min'
+        src: 'moment.min.js'
+        dest: '<%= assets.scripts %>'
       # copy js for development
       'js-dev':
         expand: true,
@@ -271,21 +309,34 @@ module.exports = (grunt) ->
     # html
     'jekyll'
     'newer:copy:html-dev'
-    # css
-    'newer:copy:bootstrap'
+    # copy 3rd party resources
+    'newer:copy:bootstrap-sass'
     'newer:copy:bootstrap-fonts'
     'newer:copy:bootstrap-docs'
-    'newer:copy:multi-select'
+    'newer:copy:fonts-images-dev'
+    'newer:copy:fonts-images-dist'
+    'newer:copy:bootstrap-multiselect'
+    'newer:copy:x-editable'
+    'newer:copy:x-editable-img'
+    'newer:copy:select2-css'
+    'newer:copy:select2-js'
+    'newer:copy:address-css'
+    'newer:copy:address-js'
+    'newer:copy:typeheadjs-css'
+    'newer:copy:typeheadjs-js'
+    'newer:copy:moment'
+    # preprocess scss into css
     'scsslint'
     'compass'
     'newer:csslint'
     'autoprefixer'
     'concat:docs'
+    #copy css/js into dev/
     'newer:copy:css-dev'
-    # js
     'newer:copy:js-dev'
-    # other resourses
+    #copy font/images into dev/
     'newer:copy:fonts-images-dev'
+    # start development env
     'connect'
     'watch'
   ]
