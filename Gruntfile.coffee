@@ -177,16 +177,18 @@ module.exports = (grunt) ->
         expand: true,
         cwd: ''
         src: [
-          'fonts/*'
-          'images/*'
+          'fonts/**/*'
+          'images/**/*'
+          'favicons/**/*'
         ],
         dest: 'dev/assets/'
       'fonts-images-dist':
         expand: true,
         cwd: ''
         src: [
-          'fonts/*'
-          'images/*'
+          'fonts/**/*'
+          'images/**/*'
+          'favicons/**/*'
         ],
         dest: 'dist/assets/'
       # copy js for development
