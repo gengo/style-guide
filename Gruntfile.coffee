@@ -17,8 +17,6 @@ module.exports = (grunt) ->
     style   : 'css'
     bower   : 'bower_components'
     html    : 'html'
-    dist    : 'dist'
-    dev     : 'dev'
     template: 'liquid'
 
   grunt.initConfig
@@ -194,7 +192,7 @@ module.exports = (grunt) ->
           'fonts/*'
           'images/*'
         ],
-        dest: '<%= assets.dev %>/assets/'
+        dest: 'dev/assets/'
       'fonts-images-dist':
         expand: true,
         cwd: ''
@@ -202,7 +200,7 @@ module.exports = (grunt) ->
           'fonts/*'
           'images/*'
         ],
-        dest: '<%= assets.dist %>/assets/'
+        dest: 'dist/assets/'
       # copy js for development
       'js-dev':
         expand: true,
@@ -210,7 +208,7 @@ module.exports = (grunt) ->
         src: [
           '*.js'
         ],
-        dest: '<%= assets.dev %>/assets/js'
+        dest: 'dev/assets/js'
       # copy js for distribution
       'js-dist':
         expand: true,
@@ -218,7 +216,7 @@ module.exports = (grunt) ->
         src: [
           '*.js'
         ],
-        dest: '<%= assets.dist %>/assets/js'
+        dest: 'dist/assets/js'
       # copy css for development
       'css-dev':
         expand: true,
@@ -227,7 +225,7 @@ module.exports = (grunt) ->
           '*.css'
           # '!*.min.css'
         ],
-        dest: '<%= assets.dev %>/assets/css'
+        dest: 'dev/assets/css'
       # copy css for distribution
       'css-dist':
         expand: true,
@@ -236,7 +234,7 @@ module.exports = (grunt) ->
           '*.css'
           # '*.min.css'
         ],
-        dest: '<%= assets.dist %>/assets/css'
+        dest: 'dist/assets/css'
       # copy html for development
       'html-dev':
         expand: true,
