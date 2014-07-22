@@ -17,6 +17,8 @@ module.exports = (grunt) ->
     style   : 'css'
     bower   : 'bower_components'
     html    : 'html'
+    dist    : 'dist'
+    dev     : 'dev'
     template: 'liquid'
 
   grunt.initConfig
@@ -86,7 +88,17 @@ module.exports = (grunt) ->
     autoprefixer:
       options:
         cascade: true
-        browsers: ["> 1%", 'last 2 version', 'ie >= 8']
+        browsers: [
+          'Android 2.3'
+          'Android >= 4'
+          'Chrome >= 20'
+          'Firefox >= 24' # Firefox 24 is the latest ESR
+          'Explorer >= 8'
+          'iOS >= 6'
+          'Opera >= 12'
+          'Safari >= 6'
+        ]
+
       build:
         files: [{
           expand: true
@@ -123,7 +135,9 @@ module.exports = (grunt) ->
 
     cssmin:
       options:
+        compatibility: 'ie8'
         keepSpecialComments: '*'
+        noAdvanced: true
       minify:
         expand: true
         cwd: '<%= assets.style %>'
@@ -149,9 +163,9 @@ module.exports = (grunt) ->
         banner: '<%= banner %>'
       files:
         src: [
-          '**/docs.css'
-          '**/gengo.css'
-          '**/gengo-bootstrap-theme.css'
+          '<%= assets.style %>/docs.css'
+          '<%= assets.style %>/gengo.css'
+          '<%= assets.style %>/gengo-bootstrap-theme.css'
         ]
 
     copy:
@@ -180,7 +194,7 @@ module.exports = (grunt) ->
           'fonts/*'
           'images/*'
         ],
-        dest: 'dev/assets/'
+        dest: '<%= assets.dev %>/assets/'
       'fonts-images-dist':
         expand: true,
         cwd: ''
@@ -188,7 +202,7 @@ module.exports = (grunt) ->
           'fonts/*'
           'images/*'
         ],
-        dest: 'dist/assets/'
+        dest: '<%= assets.dist %>/assets/'
       # copy js for development
       'js-dev':
         expand: true,
@@ -196,7 +210,7 @@ module.exports = (grunt) ->
         src: [
           '*.js'
         ],
-        dest: 'dev/assets/js'
+        dest: '<%= assets.dev %>/assets/js'
       # copy js for distribution
       'js-dist':
         expand: true,
@@ -204,7 +218,7 @@ module.exports = (grunt) ->
         src: [
           '*.js'
         ],
-        dest: 'dist/assets/js'
+        dest: '<%= assets.dist %>/assets/js'
       # copy css for development
       'css-dev':
         expand: true,
@@ -213,7 +227,7 @@ module.exports = (grunt) ->
           '*.css'
           # '!*.min.css'
         ],
-        dest: 'dev/assets/css'
+        dest: '<%= assets.dev %>/assets/css'
       # copy css for distribution
       'css-dist':
         expand: true,
@@ -222,7 +236,7 @@ module.exports = (grunt) ->
           '*.css'
           # '*.min.css'
         ],
-        dest: 'dist/assets/css'
+        dest: '<%= assets.dist %>/assets/css'
       # copy html for development
       'html-dev':
         expand: true,
