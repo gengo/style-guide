@@ -44,6 +44,7 @@ module.exports = (grunt) ->
       sass:
         files: '<%= assets.sass %>/**/*.{scss,sass}'
         tasks: [
+          'scsslint'
           'compass'
           'newer:csslint'
           'autoprefixer'
