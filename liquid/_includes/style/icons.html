@@ -1,4 +1,21 @@
+{% assign icons = "warning|half|circle|funnel|validation|memory|menu|success|error|expand|user|settings|refresh|tooltip|previous|next|check|close|message|comment|global|minimize|info|vertical|horizontal|trash|search|find|share|flag|create|notification|activity|unlocked|locked|database|transfer|start|play|file|download|star|print|email|archive|edit" | split: "|" %}
+
 <div class="box">
   <h1 id="icons">Icons</h1>
   <hr/>
+  <ul class="list-inline icons">
+    {% for name in icons %}
+      <li>
+        <span class="icon-{{ name }}"></span>
+        <div class="text">{{ name }}</div>
+      </li>
+    {% endfor %}
+   </ul>
+
+{% highlight html %}
+<span class="icon-user"></span>
+<span class="icon-email"></span>
+<span class="icon-settings"></span>
+{% endhighlight %}
+
 </div>
