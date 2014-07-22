@@ -1,11 +1,9 @@
-{% assign icons = "gengo|customer|translator|developer|admin" | split: "|" %}
-
 <div class="box">
   <h1 id="favicons">Favicons</h1>
   <hr/>
 
   <ul class="list-inline favicons">
-    {% for name in icons %}
+    {% for name in site.data.favicons  %}
       <li>
         <img src="/assets/images/docs/{{ name }}.png" width="32" height="32" alt="{{ name }}">
         <div class="text">{{ name }}</div>
