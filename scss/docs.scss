@@ -121,3 +121,81 @@
     margin-bottom: 20px;
   }
 }
+
+.apple-touch-icons {
+
+  .customer .logo:before,
+  .translator .logo:before,
+  .developer .logo:before,
+  .admin .logo:before {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  li {
+    margin-right: 23px;
+
+    p {
+      margin-top: 13px;
+    }
+  }
+
+  .logo {
+    border-radius: 32px;
+  }
+
+  .customer {
+    .logo {
+      padding: 60px 19px 52px 24px;
+      background-color: $brand-customer;
+
+      &:before {
+        width: 110px;
+        height: 39px;
+        background-image: url("../images/logo_gengo.svg");
+        background-size: 110px 39px;
+      }
+    }
+  }
+  .translator {
+    .logo {
+      padding: 36px;
+      background-color: $brand-translator;
+
+      &:before {
+        width: 79px;
+        height: 79px;
+        background-image: url("../images/logo_translator.svg");
+        background-size: 79px 79px;
+      }
+    }
+  }
+  .developer {
+    .logo {
+      padding: 36px;
+      background-color: $brand-developer;
+
+      &:before {
+        width: 79px;
+        height: 79px;
+        background-image: url("../images/logo_developer.svg");
+        background-size: 79px 79px;
+      }
+    }
+  }
+  .admin {
+    .logo {
+      padding: 36px;
+      background-color: $brand-admin;
+
+      &:before {
+        width: 79px;
+        height: 79px;
+        background-image: url("../images/logo_admin.svg");
+        background-size: 79px 79px;
+      }
+    }
+  }
+}
