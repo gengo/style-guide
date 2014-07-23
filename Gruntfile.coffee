@@ -44,6 +44,7 @@ module.exports = (grunt) ->
       sass:
         files: '<%= assets.sass %>/**/*.{scss,sass}'
         tasks: [
+          'scsslint'
           'compass'
           'newer:csslint'
           'autoprefixer'
@@ -86,7 +87,17 @@ module.exports = (grunt) ->
     autoprefixer:
       options:
         cascade: true
-        browsers: ["> 1%", 'last 2 version', 'ie >= 8']
+        browsers: [
+          'Android 2.3'
+          'Android >= 4'
+          'Chrome >= 20'
+          'Firefox >= 24' # Firefox 24 is the latest ESR
+          'Explorer >= 8'
+          'iOS >= 6'
+          'Opera >= 12'
+          'Safari >= 6'
+        ]
+
       build:
         files: [{
           expand: true
@@ -123,7 +134,9 @@ module.exports = (grunt) ->
 
     cssmin:
       options:
+        compatibility: 'ie8'
         keepSpecialComments: '*'
+        noAdvanced: true
       minify:
         expand: true
         cwd: '<%= assets.style %>'
@@ -149,9 +162,9 @@ module.exports = (grunt) ->
         banner: '<%= banner %>'
       files:
         src: [
-          '**/docs.css'
-          '**/gengo.css'
-          '**/gengo-bootstrap-theme.css'
+          '<%= assets.style %>/docs.css'
+          '<%= assets.style %>/gengo.css'
+          '<%= assets.style %>/gengo-bootstrap-theme.css'
         ]
 
     copy:
@@ -177,16 +190,18 @@ module.exports = (grunt) ->
         expand: true,
         cwd: ''
         src: [
-          'fonts/*'
-          'images/*'
+          'fonts/**/*'
+          'images/**/*'
+          'favicons/**/*'
         ],
         dest: 'dev/assets/'
       'fonts-images-dist':
         expand: true,
         cwd: ''
         src: [
-          'fonts/*'
-          'images/*'
+          'fonts/**/*'
+          'images/**/*'
+          'favicons/**/*'
         ],
         dest: 'dist/assets/'
       # copy js for development
