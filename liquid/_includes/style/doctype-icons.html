@@ -11,9 +11,9 @@
     {% endfor %}
    </ul>
 {% highlight html %}
-<i class="doctype-def"></i>
-<i class="doctype-txt"></i>
-<i class="doctype-doc"></i>
+{% for doctype in site.data.doctype %}
+<!-- {{ doctype.name }} -->
+<i class="{{ doctype.class }}"></i>{% endfor %}
 {% endhighlight %}
 
 </div>
