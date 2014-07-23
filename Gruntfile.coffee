@@ -368,11 +368,23 @@ module.exports = (grunt) ->
     # html
     'jekyll'
     'newer:copy:html-dist'
-    # css + optimize
-    'newer:copy:bootstrap'
+    # copy 3rd party resources
+    'newer:copy:bootstrap-sass'
     'newer:copy:bootstrap-fonts'
     'newer:copy:bootstrap-docs'
-    'newer:copy:multi-select'
+    'newer:copy:fonts-images-dev'
+    'newer:copy:fonts-images-dist'
+    'newer:copy:bootstrap-multiselect'
+    'newer:copy:x-editable'
+    'newer:copy:x-editable-img'
+    'newer:copy:select2-css'
+    'newer:copy:select2-js'
+    'newer:copy:address-css'
+    'newer:copy:address-js'
+    'newer:copy:typeheadjs-css'
+    'newer:copy:typeheadjs-js'
+    'newer:copy:moment'
+    # preprocess scss into css
     'scsslint'
     'compass'
     'newer:csslint'
