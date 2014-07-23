@@ -99,7 +99,7 @@ $('#group').editable({
   <h2>select, error while loading </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline" style=""><div><div class="editableform-loading" style="display: none;"></div><form class="form-inline editableform" style=""><div class="control-group form-group has-error"><div><div class="editable-input"><select class="form-control" disabled="disabled"></select></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit" disabled="disabled"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div></div><div class="editable-error-block help-block">Error when loading list</div></div></form></div></span>
+      <span class="editable-container editable-inline" style=""><div><div class="editableform-loading" style="display: none;"></div><form class="form-inline editableform" style=""><div class="control-group form-group has-error" style="right:0;"><div><div class="editable-input"><select class="form-control" disabled="disabled"></select></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit" disabled="disabled"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div></div><div class="editable-error-block help-block">Error when loading list</div></div></form></div></span>
     </div>
     <div class="col-md-6 ui">
       <a href="#" id="status" data-type="select" data-value="0" data-source="/status">Active</a>
@@ -115,20 +115,14 @@ $('#group').editable({
 $('#status').editable();
 {% endhighlight %}
 
-  <h2>Datepicker </h2>
+<!--   <h2>Datepicker </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
     </div>
     <div class="col-md-6 ui">
     </div>
   </div>
-  <br>
-{% highlight html %}
-<!-- html -->
-{% endhighlight %}
-{% highlight javascript %}
-// javascript
-{% endhighlight %}
+  <br> -->
 
   <h2>Combodate (date) </h2>
   <div class="row bs-editable">
@@ -435,6 +429,7 @@ $('#dob').editable();
         </div>
       </span>
     </div>
+    <br>
     <div class="col-md-12 ui">
       <a href="#" id="event" data-type="combodate" data-template="D MMM YYYY  HH:mm" data-format="YYYY-MM-DD HH:mm" data-viewformat="MMM D, YYYY, HH:mm"></a>
     </div>
@@ -463,7 +458,7 @@ $('#event').editable({
           <form class="form-inline editableform" style="">
             <div class="control-group form-group">
               <div>
-                <div class="editable-input"><textarea class="form-control input-large" placeholder="Your comments here..." rows="7"></textarea></div>
+                <div class="editable-input"><textarea class="form-control input-large" placeholder="Your comments here..." rows="3"></textarea></div>
                 <div class="editable-buttons editable-buttons-bottom"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
               </div>
               <div class="editable-error-block help-block" style="display: none;"></div>
@@ -484,7 +479,8 @@ $('#event').editable({
 {% highlight javascript %}
 // javascript
 $('#comments').editable({
-    showbuttons: 'bottom'
+    showbuttons: 'bottom',
+    rows:3
 });
 {% endhighlight %}
 
@@ -545,7 +541,7 @@ $('#state2').editable({
                     <div><label><input type="checkbox" value="5"><span> orange</span></label></div>
                   </div>
                 </div>
-                <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
+                <div class="editable-buttons" style="display:block;margin-left:0;"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
               </div>
               <div class="editable-error-block help-block" style="display: none;"></div>
             </div>
@@ -614,7 +610,8 @@ $('#fruits').editable({
       </span>
     </div>
     <div class="col-md-6 ui">
-      <a href="#" id="tags" data-type="select2">html, javascript</a>
+      <!-- <a href="#" id="tags" data-type="select2">html, javascript</a> -->
+      <a href="#" id="tags" data-type="select2" data-pk="1" data-title="Enter tags">html, javascript</a>
     </div>
   </div>
   <br>
@@ -624,11 +621,11 @@ $('#fruits').editable({
 {% endhighlight %}
 {% highlight javascript %}
 // javascript
-$('#state2').editable({
-    value: 'California',
-    typeahead: {
-        name: 'state',
-        local: ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
+$('#tags').editable({
+    inputclass: 'input-large',
+    select2: {
+        tags: ['html', 'javascript', 'css', 'ajax'],
+        tokenSeparators: [",", " "]
     }
 });
 {% endhighlight %}
@@ -667,7 +664,7 @@ $('#country').editable({
   <h2>Custom input, several fields </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline" style=""><div><div class="editableform-loading" style="display: none;"></div><form class="form-inline editableform" style=""><div class="control-group form-group"><div><div class="editable-input"><div class="editable-address"><label><span>City: </span><input type="text" name="city" class="input-small"></label></div><div class="editable-address"><label><span>Street: </span><input type="text" name="street" class="input-small"></label></div><div class="editable-address"><label><span>Building: </span><input type="text" name="building" class="input-mini"></label></div></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div></div><div class="editable-error-block help-block" style="display: none;"></div></div></form></div></span>
+      <span class="editable-container editable-inline" style=""><div><div class="editableform-loading" style="display: none;"></div><form class="form-inline editableform" style=""><div class="control-group form-group"><div><div class="editable-input"><div class="editable-address"><label><span>City: </span><input type="text" name="city" class="input-small form-control"></label></div><div class="editable-address"><label><span>Street: </span><input type="text" name="street" class="input-small form-control"></label></div><div class="editable-address"><label><span>Building: </span><input type="text" name="building" class="input-mini form-control"></label></div></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div></div><div class="editable-error-block help-block" style="display: none;"></div></div></form></div></span>
     </div>
     <div class="col-md-6 ui">
       <a href="#" id="address" data-type="address"></a>
@@ -698,7 +695,11 @@ $('#address').editable({
         var html = '<b>' + $('<div>').text(value.city).html() + '</b>, ' + $('<div>').text(value.street).html() + ' st., bld. ' + $('<div>').text(value.building).html();
         $(this).html(html);
     }
-}
+}).on("click",function(){
+  $(this).next("span").find("input").each(function(){
+    $(this).addClass("form-control")
+  });
+});
 {% endhighlight %}
 
 </div>

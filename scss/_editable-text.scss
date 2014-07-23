@@ -1,14 +1,38 @@
-// ------ simple text field --------------------
-.bs-editable {
-  .ui {
-    text-align: right;
+.editable-buttons {
+  margin-left: 6px;
+  .btn-sm {
+    padding: 3px 8px;
+    width: $editable-control-height;
+  }
+  .editable-cancel {
+    margin-left: 5px;
   }
 }
 
 .editable-input {
-  .form-control {
+  input.form-control {
     color: $editable-input-color;
+    height: $editable-control-height;
+    min-width: $editable-control-width;
   }
+  select {
+    color: #333;
+    &.form-control {
+      height: $editable-control-height;
+      min-width: 58px;
+    }
+  }
+  textarea {
+    min-width: 377px;
+    min-height: 76px;
+  }
+  label {
+    font-weight: normal;
+  }
+}
+
+.editable.editable-click.editable-empty {
+  border-bottom-color: #d14;
 }
 
 .editable-error-block {
@@ -16,6 +40,8 @@
 }
 
 .has-error {
+  position: relative;
+  right: $editable-control-height;
   > div {
     display: inline-block;
     vertical-align: middle;
@@ -25,12 +51,97 @@
   }
 }
 
+.control-group.form-group {
+  text-align: left;
+}
 
-// overwrite image path used in 'x-editable' plugin
+// overwrite image path which is
+// used in 'x-editable' plugin
 .editableform-loading {
   background-image: url("../images/loading.gif");
 }
 
 .editable-clear-x {
   background: url("../images/clear.png");
+}
+
+[data-type="checklist"] ~ .editable-inline .editable-buttons {
+  display: block;
+  margin-left: 0;
+}
+
+// twitter typeheadjs
+.tt-query {
+  text-indent: 6px;
+  line-height: 1.4;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  margin: 0 5px;
+  border-radius: $editable-border-radius;
+  color: $editable-cursored-color;
+  background-color: $gengo-green;
+  background-image: none !important;
+  filter: none;
+}
+
+.tt-dropdown-menu {
+  width: 240px;
+}
+
+// select2
+
+.select2-container-multi {
+  .select2-choices {
+    border-radius: $editable-border-radius;
+    height: $editable-control-height !important;
+    .select2-search-choice {
+      margin-top: 4px;
+    }
+  }
+  &.select2-container-active .select2-choices {
+    border-color: $editable-border-color;
+  }
+}
+
+.select2-results .select2-highlighted {
+  background-color: $gengo-green;
+  border-radius: $editable-border-radius;
+}
+
+.select2-dropdown-open .select2-choices {
+  border-top-left-radius: $editable-border-radius;
+  border-top-right-radius: $editable-border-radius;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+  border-color: $editable-border-color;
+}
+
+.select2-drop-active {
+  border-color: $editable-border-color;
+  border-top: 0;
+}
+
+.editable-input {
+  .select2-container-multi.select2-container-active .select2-choices {
+    border-color: $editable-border-color;
+    -webkit-box-shadow: 0;
+    box-shadow: 0;
+  }
+}
+
+.select2-container {
+  .select2-choice {
+    height: $editable-control-height;
+    abbr {
+      top: 7px;
+    }
+  }
+}
+
+// combodate
+[data-type="combodate"] + span {
+  padding-top: 5px;
+  min-height: $editable-control-height;
 }

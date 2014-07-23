@@ -50,7 +50,8 @@
     });
     //
     $('#comments').editable({
-        showbuttons: 'bottom'
+        showbuttons: 'bottom',
+        rows:3
     });
     //
     $('#state2').editable({
@@ -122,6 +123,10 @@
             var html = '<b>' + $('<div>').text(value.city).html() + '</b>, ' + $('<div>').text(value.street).html() + ' st., bld. ' + $('<div>').text(value.building).html();
             $(this).html(html);
         }
+    }).on("click",function(){
+      $(this).next("span").find("input").each(function(){
+        $(this).addClass("form-control")
+      });
     });
 
 

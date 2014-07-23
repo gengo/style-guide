@@ -198,7 +198,10 @@ module.exports = (grunt) ->
       'select2-css':
         expand:true
         cwd:'<%= assets.bower %>/select2'
-        src: 'select2-bootstrap.css'
+        src: [
+          'select2*.css'
+          'select2*.png'
+        ]
         dest: '<%= assets.style %>'
       'select2-js':
         expand:true
@@ -254,6 +257,7 @@ module.exports = (grunt) ->
         src: [
           '*.css'
           'bootstrap/*.*'
+          '*.png'
         ],
         dest: 'dev/assets/css'
       # copy css for distribution
