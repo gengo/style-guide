@@ -1,4 +1,19 @@
 <div class="box">
   <h1 id="doctype-icons">Doctype Icons</h1>
   <hr/>
+
+  <ul class="list-inline doctype">
+    {% for doctype in site.data.doctype %}
+      <li>
+        <span class="{{ doctype.class }}"></span>
+        <div class="text">{{ doctype.name }}</div>
+      </li>
+    {% endfor %}
+   </ul>
+{% highlight html %}
+<span class="doctype-def"></span>
+<span class="doctype-txt"></span>
+<span class="doctype-doc"></span>
+{% endhighlight %}
+
 </div>
