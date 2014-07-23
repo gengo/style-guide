@@ -10,4 +10,8 @@ cd bower_components
 mv bootstrap bootstrap-docs
 cd ..
 bower install bootstrap-multiselect
-bower install x-select
+bower install x-editable
+bower install typeahead.js
+bower install select2
+bower install moment
+
