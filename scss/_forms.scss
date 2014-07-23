@@ -26,7 +26,6 @@ input[type="file"] {
   @include box-shadow(none);
   padding: 6px 8px;
   height: 31px;
-  // border-top-color: #b8b8b8;
   &:focus {
     @include box-shadow(none);
     border-color: $gengo-green;
