@@ -6,7 +6,7 @@
 
 input[type="file"] {
   margin: 10px 0;
-  font-size: 15px;
+  font-size: $input-file-font-size;
   line-height: 14px;
 }
 
@@ -16,8 +16,8 @@ input[type="file"] {
   }
   .checkbox {
     label {
-      padding-left: 0;
       padding-right: 10px;
+      padding-left: 0;
     }
   }
 }
@@ -26,7 +26,6 @@ input[type="file"] {
   @include box-shadow(none);
   padding: 6px 8px;
   height: 31px;
-  border-top-color: #b8b8b8;
   &:focus {
     @include box-shadow(none);
     border-color: $gengo-green;
@@ -60,19 +59,19 @@ input[type="file"] {
   label {
     font-weight: normal;
     + input {
-      margin-bottom: 1em;
+      margin-bottom: 17px;
     }
   }
   .form-group {
     padding-top: 24px;
     padding-bottom: 12px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $input-border;
     &:first-child {
-      margin-bottom: 1em;
+      margin-bottom: 17px;
       border: 0;
     }
   }
   .form-category-title {
-    font-weight: bold;
+    font-weight: $font-bold;
   }
 }

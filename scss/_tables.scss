@@ -9,7 +9,7 @@
     opacity: .4;
     &.translator {
       padding-left: 32px;
-      color: #79b1a5;
+      color: $link-translator-color;
       opacity: 1;
     }
     &.reward {
@@ -28,13 +28,13 @@
   }
   tr {
     .reward {
-      color: #4c4643;
+      color: #4c4743;
       text-align: right;
       font-weight: bold;
     }
     .text {
       padding-left: 32px;
-      color: #4c4743;
+      color: $text-color;
     }
   }
   .lang-from:after {
