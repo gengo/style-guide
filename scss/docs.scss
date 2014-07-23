@@ -126,12 +126,12 @@
 // Icons
 .icons,
 .favicons {
-  margin-left: -32px;
-
-  li {
+  [class^="col-"],
+  [class*=" col-"] {
     margin-bottom: 34px;
-    margin-left: 32px;
-    width: 102px;
+  }
+
+  .item {
     border-radius: $border-radius-base;
     background-color: $body-bg;
     text-align: center;
@@ -149,19 +149,12 @@
     display: block;
     font-size: $font-size-large;
   }
-  li { padding: 30px 0 16px; }
-  .text { margin-top: 12px; }
+  .item { padding: 30px 0 20px; }
+  .text { margin-top: 16px; }
 }
 
 // Favicons
 .favicons {
-  li {
-    padding: 24px 0 10px;
-
-    img {
-      width: 32px;
-      height: 32px;
-    }
-  }
-  .text { margin-top: 4px; }
+  .item { padding: 24px 0 16px; }
+  .text { margin-top: 8px; }
 }

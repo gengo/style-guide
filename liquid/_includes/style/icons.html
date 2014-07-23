@@ -1,14 +1,17 @@
 <div class="box">
   <h1 id="icons">Icons</h1>
   <hr/>
-  <ul class="list-inline icons">
-    {% for name in site.data.icons %}
-      <li>
+
+  <div class="row icons">
+  {% for name in site.data.icons %}
+    <div class="col-sm-2">
+      <div class="item">
         <span class="icon-{{ name }}"></span>
         <div class="text">{{ name }}</div>
-      </li>
-    {% endfor %}
-   </ul>
+      </div>
+    </div>
+  {% endfor %}
+   </div>
 
 {% highlight html %}
 <span class="icon-user"></span>
