@@ -143,7 +143,6 @@
 .logo-usage {
 
   hr { margin-bottom: 24px; }
-
   > p { margin-bottom: 34px; }
 
   .item {
@@ -198,14 +197,12 @@
   }
 
   > h2 { margin-bottom: 18px; }
-  > p {
-    margin-bottom: 12px;
-
-  }
-
   > ul,
   > ol { margin-bottom: 16px; }
-  > blockquote p { max-width: 78%; }
+  > p { margin-bottom: 12px; }
+
+  > p,
+  > blockquote p { max-width: 75%; }
 }
 
 // Icons & Favicons
