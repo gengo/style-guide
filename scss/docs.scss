@@ -5,17 +5,21 @@
 .box {
   margin-bottom: 26px;
   padding-bottom: 21px;
-  padding-left: 33px;
+  padding-left: 35px;
 }
 
 .colors {
   font-size: $font-size-small;
+
+  h3 { margin-bottom: 18px; }
+  .item { margin-bottom: 8px; }
   .color-box {
     display: block;
-    margin: 15px 0;
+    margin-bottom: 10px;
     width: 100%;
     height: 96px;
     border-radius: 3px;
+
     &.gengo-green {
       background-color: $gengo-green;
     }
@@ -109,6 +113,7 @@
     // right:13px;
     // left:23px;
   }
+
   h1[id] {
     padding-top: 30px;
   }
@@ -119,17 +124,96 @@
   h2 {
     margin-top: 25px;
     margin-bottom: 20px;
-  };
+  }
 }
 
+//
+// Style Page
+// --------------------------------------------------
 
-// Icons
+.logo-usage,
 .icons,
 .favicons {
   [class^="col-"],
   [class*=" col-"] {
     margin-bottom: 34px;
   }
+}
+
+.logo-usage {
+
+  hr { margin-bottom: 24px; }
+
+  > p { margin-bottom: 34px; }
+
+  .item {
+    position: relative;
+    height: 100px;
+    background-color: #fee;
+
+    &:hover .download-links {
+      display: block;
+    }
+
+    .download-links {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .75);
+      text-align: center;
+
+      .links {
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        overflow: auto;
+        margin: auto;
+        width: 50%;
+        height: 50%;
+      }
+
+      a {
+        padding: 0 10px;
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+
+.typography {
+  .headers {
+    margin: 23px 0 14px;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      padding: 9px 0;
+    }
+  }
+
+  > h2 { margin-bottom: 18px; }
+  > p {
+    margin-bottom: 12px;
+
+  }
+
+  > ul,
+  > ol { margin-bottom: 16px; }
+  > blockquote p { max-width: 78%; }
+}
+
+// Icons & Favicons
+.icons,
+.favicons {
+  > .row { margin-top: 16px; }
+
+  hr { margin-bottom: 10px; }
 
   .item {
     border-radius: $border-radius-base;
@@ -143,6 +227,7 @@
   }
 }
 
+// Icons
 .icons {
   [class^="icon-"],
   [class*=" icon-"] {

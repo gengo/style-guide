@@ -1,13 +1,13 @@
 ul,
 ol {
-  padding-left: 32px;
+  padding-left: 36px;
 
-  li { line-height: 24px; }
+  li { line-height: $line-height-list; }
 }
-
 
 blockquote {
   padding: 0 ($grid-gutter-width / 2);
   margin: 0 0 ($grid-gutter-width / 2);
   border-left: 3px solid $blockquote-border-color;
+  margin-left: 18px;
 }
