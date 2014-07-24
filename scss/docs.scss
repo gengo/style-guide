@@ -108,7 +108,7 @@
     top: 13px;
     // right:13px;
     // left:23px;
-  }
+  };
   h1[id] {
     padding-top: 30px;
   }
@@ -120,7 +120,7 @@
     margin-top: 25px;
     margin-bottom: 20px;
     padding-left: 1px;
-  };
+  }
 }
 
 .bs-editable {
@@ -176,4 +176,25 @@
   .text {
     margin-top: 4px;
   }
+}
+
+// Supported controls
+#focusedinput {
+  border-color: rgba($gengo-green, .8);
+  outline: 0;
+  box-shadow: 0 0 8px rgba($gengo-green, .6);
+}
+.translator #focusedinput {
+  border-color: rgba($gengo-blue, .8);
+  box-shadow: 0 0 8px rgba($gengo-blue, .6);
+}
+
+.developer #focusedinput {
+  border-color: rgba($gengo-red, .8);
+  box-shadow: 0 0 8px rgba($gengo-red, .6);
+}
+
+.admin #focusedinput {
+  border-color: rgba($gengo-gray, .8);
+  box-shadow: 0 0 8px rgba($gengo-gray, .6);
 }
