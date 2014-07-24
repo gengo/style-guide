@@ -1,0 +1,48 @@
+.has-success {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    color: $validation-success-color;
+  }
+  .form-control {
+    border-color: $validation-success-border-color;
+  }
+}
+
+.has-warning {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    color: $validation-warning-color;
+  }
+  .form-control {
+    border-color: $validation-warning-border-color;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    color: $validation-error-color;
+  }
+  .form-control {
+    border-color: $validation-error-border-color;
+  }
+}
+
+
+.icon-check.form-control-feedback{
+  color:#fff;
+  backround-color:red;
+  border-radius:5px;
+}

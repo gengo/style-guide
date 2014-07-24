@@ -288,7 +288,17 @@ $editable-border-radius:              5px !default;
 $editable-border-color:               #ccc !default;
 $editable-cursored-color:             #fff;
 $editable-control-width:              240px !default;
-$editable-control-height:               30px !default;
+$editable-control-height:             30px !default;
+
+//== Validation states
+//
+//##
+$validation-success-color:              #067957 !default;
+$validation-success-border-color:       #1cad7e !default;
+$validation-warning-color:             #999d5f !default;
+$validation-warning-border-color:      #dde187 !default;
+$validation-error-color:               #a53f2c !default;
+$validation-error-border-color:        #ea5e47 !default;
 
 //-- Z-index master list
 //
