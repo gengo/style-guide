@@ -323,6 +323,23 @@ module.exports = (grunt) ->
   ]
   # in development:
   # all resources are generated into dev/
+  grunt.registerTask 'copy-3rd-party-resources',[
+    'copy:bootstrap-sass'
+    'copy:bootstrap-fonts'
+    'copy:bootstrap-docs'
+    'copy:fonts-images-dev'
+    'copy:fonts-images-dist'
+    'copy:bootstrap-multiselect'
+    'copy:x-editable'
+    'copy:x-editable-img'
+    'copy:select2-css'
+    'copy:select2-js'
+    'copy:address-css'
+    'copy:address-js'
+    'copy:typeheadjs-css'
+    'copy:typeheadjs-js'
+    'copy:moment'
+  ]
 
   grunt.registerTask 'dev', [
     'clean'
@@ -330,21 +347,7 @@ module.exports = (grunt) ->
     'jekyll'
     'newer:copy:html-dev'
     # copy 3rd party resources
-    'newer:copy:bootstrap-sass'
-    'newer:copy:bootstrap-fonts'
-    'newer:copy:bootstrap-docs'
-    'newer:copy:fonts-images-dev'
-    'newer:copy:fonts-images-dist'
-    'newer:copy:bootstrap-multiselect'
-    'newer:copy:x-editable'
-    'newer:copy:x-editable-img'
-    'newer:copy:select2-css'
-    'newer:copy:select2-js'
-    'newer:copy:address-css'
-    'newer:copy:address-js'
-    'newer:copy:typeheadjs-css'
-    'newer:copy:typeheadjs-js'
-    'newer:copy:moment'
+    'copy-3rd-party-resources'
     # preprocess scss into css
     'scsslint'
     'compass'
@@ -369,21 +372,7 @@ module.exports = (grunt) ->
     'jekyll'
     'newer:copy:html-dist'
     # copy 3rd party resources
-    'newer:copy:bootstrap-sass'
-    'newer:copy:bootstrap-fonts'
-    'newer:copy:bootstrap-docs'
-    'newer:copy:fonts-images-dev'
-    'newer:copy:fonts-images-dist'
-    'newer:copy:bootstrap-multiselect'
-    'newer:copy:x-editable'
-    'newer:copy:x-editable-img'
-    'newer:copy:select2-css'
-    'newer:copy:select2-js'
-    'newer:copy:address-css'
-    'newer:copy:address-js'
-    'newer:copy:typeheadjs-css'
-    'newer:copy:typeheadjs-js'
-    'newer:copy:moment'
+    'copy-3rd-party-resources'
     # preprocess scss into css
     'scsslint'
     'compass'
