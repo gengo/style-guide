@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "bootstrap-docs": "https://github.com/twbs/bootstrap.git#gh-pages"
-    },
+  },
   "ignore": [
     "**/.*",
     "node_modules",
@@ -22,5 +22,8 @@
     "Gruntfile.*",
     "package.json",
     "setup.sh"
-  ]
+  ],
+  "resolutions": {
+    "jquery": "~1.7"
+  }
 }
