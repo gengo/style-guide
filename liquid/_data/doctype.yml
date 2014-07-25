@@ -1,0 +1,38 @@
+ - class: doctype-def
+   name: file
+
+ - class: doctype-txt
+   name: text
+
+ - class: doctype-doc
+   name: word
+
+ - class: doctype-xls
+   name: exel
+
+ - class: doctype-rtf
+   name: rtf
+
+ - class: doctype-ppt
+   name: ppt
+
+ - class: doctype-pdf
+   name: pdf
+
+ - class: doctype-odt
+   name: odt
+
+ - class: doctype-yt
+   name: youtube
+
+ - class: doctype-ggl
+   name: google
+
+ - class: doctype-check
+   name: check
+
+ - class: doctype-gls
+   name: glossary
+
+ - class: doctype-grp
+   name: group
