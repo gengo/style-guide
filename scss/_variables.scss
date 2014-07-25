@@ -283,6 +283,16 @@ $dropdown-caret-color:           #000 !default;
 //** Dropdown container border radius
 $dropdown-border-radius: 5px !default;
 
+//== Editable text
+//
+//##
+$editable-input-color:                #333 !default;
+$editable-border-radius:              5px !default;
+$editable-border-color:               #ccc !default;
+$editable-cursored-color:             #fff;
+$editable-control-width:              240px !default;
+$editable-control-height:               30px !default;
+$editable-empty-color:                #d14 !default;
 
 //-- Z-index master list
 //

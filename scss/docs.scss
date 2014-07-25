@@ -113,7 +113,6 @@
     // right:13px;
     // left:23px;
   }
-
   h1[id] {
     padding-top: 30px;
   }
@@ -124,6 +123,16 @@
   h2 {
     margin-top: 25px;
     margin-bottom: 20px;
+    padding-left: 1px;
+  }
+}
+
+.bs-editable {
+  .ui {
+    text-align: right;
+  }
+  .form-inline .form-group {
+    margin-right: 0;
   }
 }
 
