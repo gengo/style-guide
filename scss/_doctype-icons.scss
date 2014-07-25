@@ -10,67 +10,59 @@ $doctype-path : "../images/doctype";
   background-repeat: no-repeat;
 }
 
+[class^="doctype-"],
+[class*=" doctype-"] {
+  display: inline-block;
+}
+
 .doctype-def {
   @include get-image("#{$doctype-path}/file_def", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-txt {
   @include get-image("#{$doctype-path}/file_txt", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-doc {
   @include get-image("#{$doctype-path}/file_doc", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-xls {
   @include get-image("#{$doctype-path}/file_xls", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-rtf {
   @include get-image("#{$doctype-path}/file_rtf", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-ppt {
   @include get-image("#{$doctype-path}/file_ppt", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-pdf {
   @include get-image("#{$doctype-path}/file_pdf", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-odt {
   @include get-image("#{$doctype-path}/file_odt", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-yt {
   @include get-image("#{$doctype-path}/file_yt", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-ggl {
   @include get-image("#{$doctype-path}/file_ggl", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-check {
   @include get-image("#{$doctype-path}/file_check", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-gls {
   @include get-image("#{$doctype-path}/file_gls", "png", 20px, 25px);
-  display: inline-block;
 }
 
 .doctype-grp {
   @include get-image("#{$doctype-path}/file_grp", "png", 28px, 33px);
-  display: inline-block;
 }
