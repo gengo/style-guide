@@ -125,6 +125,7 @@
 
 // Icons
 .icons,
+.doctype,
 .favicons {
   margin-left: -32px;
   li {
@@ -153,6 +154,10 @@
   .text {
     margin-top: 12px;
   }
+}
+
+.doctype {
+  li { padding: 24px 0 16px; }
 }
 
 // Favicons
