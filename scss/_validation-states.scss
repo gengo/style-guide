@@ -40,9 +40,20 @@
   }
 }
 
+.form-horizontal,
+.form-inline {
+  .form-group.has-feedback {
+    .form-control-feedback {
+      top: 10px;
+    }
+    .control-label {
+      padding-right: 18px;
+    }
+  }
+}
 
-.icon-check.form-control-feedback{
-  color:#fff;
-  backround-color:red;
-  border-radius:5px;
+.form-group.has-feedback {
+  .form-control-feedback {
+    top: 35px;
+  }
 }
