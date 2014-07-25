@@ -122,46 +122,121 @@
   };
 }
 
+//
+// Style Page
+// --------------------------------------------------
 
-// Icons
+.logo-usage {
+
+  [class^="col-"],
+  [class*=" col-"] {
+    margin-bottom: 24px;
+  }
+
+  h2 { margin-top: 6px; }
+  hr { margin-bottom: 24px; }
+  > p { margin-bottom: 34px; }
+
+  .row p {
+    margin: 6px 0 0;
+  }
+
+  .image-wrap {
+    height: 180px;
+    background-color: #efefef;
+    position: relative;
+
+    &:hover .download-links {
+      display: block;
+    }
+
+    .download-links {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .75);
+      text-align: center;
+
+      .links {
+        margin: 78px auto;
+      }
+
+      a {
+        padding: 0 10px;
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+
+.typography {
+  .headers {
+    margin: 23px 0 14px;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      padding: 9px 0;
+    }
+  }
+
+  > h2 { margin-bottom: 18px; }
+  > ul,
+  > ol { margin-bottom: 16px; }
+  > p { margin-bottom: 12px; }
+
+  > p,
+  > blockquote p { max-width: 75%; }
+}
+
+// Icons & Favicons
 .icons,
+.doctype,
 .favicons {
-  margin-left: -32px;
-
-  li {
+  [class^="col-"],
+  [class*=" col-"] {
     margin-bottom: 34px;
-    margin-left: 32px;
-    width: 102px;
+  }
+
+  > .row { margin-top: 16px; }
+
+  hr { margin-bottom: 10px; }
+
+  .item {
     border-radius: $border-radius-base;
     background-color: $body-bg;
     text-align: center;
   }
-
   .text {
     text-transform: uppercase;
     font-size: 10px;
   }
 }
 
+// Icons
 .icons {
   [class^="icon-"],
   [class*=" icon-"] {
     display: block;
     font-size: $font-size-large;
   }
-  li { padding: 30px 0 16px; }
-  .text { margin-top: 12px; }
+  .item { padding: 30px 0 20px; }
+  .text { margin-top: 16px; }
+}
+
+.doctype {
+  li { padding: 24px 0 16px; }
 }
 
 // Favicons
 .favicons {
-  li {
-    padding: 24px 0 10px;
-
-    img {
-      width: 32px;
-      height: 32px;
-    }
-  }
-  .text { margin-top: 4px; }
+  .item { padding: 24px 0 16px; }
+  .text { margin-top: 8px; }
 }
