@@ -1,13 +1,31 @@
 .radio,
 .checkbox {
   margin-top: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 0;
+}
+
+input[type="file"] {
+  margin: 10px 0;
+  font-size: $input-file-font-size;
+  line-height: 14px;
+}
+
+.form-inline {
+  .form-group {
+    margin-right: 10px;
+  }
+  .checkbox {
+    label {
+      padding-right: 10px;
+      padding-left: 0;
+    }
+  }
 }
 
 .form-control {
   @include box-shadow(none);
-  border-top-color: #b8b8b8;
-
+  padding: 6px 8px;
+  height: 31px;
   &:focus {
     @include box-shadow(none);
     border-color: $gengo-green;
@@ -17,14 +35,43 @@
 .translator .form-control:focus {
   border-color: $brand-translator;
 }
+
 .developer .form-control:focus {
   border-color: $brand-developer;
 }
+
 .admin .form-control:focus {
   border-color: $brand-admin;
 }
 
-
 .form-search {
   // TODO: add an search icon to background
+}
+
+.form-category {
+  [class*="col-"] {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  [class*="col-"]:first-child {
+    padding-left: 2px;
+  }
+  label {
+    font-weight: normal;
+    + input {
+      margin-bottom: 17px;
+    }
+  }
+  .form-group {
+    padding-top: 24px;
+    padding-bottom: 12px;
+    border-top: 1px solid $input-border;
+    &:first-child {
+      margin-bottom: 17px;
+      border: 0;
+    }
+  }
+  .form-category-title {
+    font-weight: $font-bold;
+  }
 }

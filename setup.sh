@@ -4,6 +4,4 @@ gem install compass
 gem install jekyll
 gem install scss-lint
 npm install
-bower install twbs/bootstrap-sass
-bower install https://github.com/twbs/bootstrap.git#gh-pages
-bower install bootstrap-multiselect
+bower install bootstrap-docs=https://github.com/twbs/bootstrap.git#gh-pages
