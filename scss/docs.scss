@@ -5,7 +5,7 @@
 .box {
   margin-bottom: 26px;
   padding-bottom: 21px;
-  padding-left: 33px;
+  padding-left: 36px;
 }
 
 .colors {
@@ -108,7 +108,7 @@
     top: 13px;
     // right:13px;
     // left:23px;
-  }
+  };
   h1[id] {
     padding-top: 30px;
   }
@@ -119,15 +119,14 @@
   h2 {
     margin-top: 25px;
     margin-bottom: 20px;
-  };
+    padding-left: 1px;
+  }
 }
-
 
 // Icons
 .icons,
 .favicons {
   margin-left: -32px;
-
   li {
     margin-bottom: 34px;
     margin-left: 32px;
@@ -136,7 +135,6 @@
     background-color: $body-bg;
     text-align: center;
   }
-
   .text {
     text-transform: uppercase;
     font-size: 10px;
@@ -149,19 +147,24 @@
     display: block;
     font-size: $font-size-large;
   }
-  li { padding: 30px 0 16px; }
-  .text { margin-top: 12px; }
+  li {
+    padding: 30px 0 16px;
+  }
+  .text {
+    margin-top: 12px;
+  }
 }
 
 // Favicons
 .favicons {
   li {
     padding: 24px 0 10px;
-
     img {
       width: 32px;
       height: 32px;
     }
   }
-  .text { margin-top: 4px; }
+  .text {
+    margin-top: 4px;
+  }
 }
