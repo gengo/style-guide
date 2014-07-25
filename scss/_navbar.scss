@@ -17,7 +17,9 @@
       }
     }
   }
-  .navbar-brand { background-color: $bg-color; }
+  .navbar-brand {
+    background-color: $bg-color;
+  }
 }
 
 @mixin vertical-align ($height, $parent-height: $navbar-height) {
@@ -32,7 +34,7 @@
 // --------------------------------------------------
 
 $navbar-background-color: #fff !default;
-$hover-dark-gray:         #413c38 !default;
+$hover-dark-gray: #413c38 !default;
 
 .navbar {
   border-bottom: 1px solid $table-border-color;
@@ -48,7 +50,9 @@ $hover-dark-gray:         #413c38 !default;
   }
 
   .nav {
-    > li { line-height: 21px; }
+    > li {
+      line-height: 21px;
+    }
 
     a {
       margin: 0 17px;
@@ -110,7 +114,9 @@ $hover-dark-gray:         #413c38 !default;
     line-height: 16px;
   }
 
-  p { color: #a5a39f; }
+  p {
+    color: #a5a39f;
+  }
 }
 
 //
@@ -190,9 +196,9 @@ $hover-dark-gray:         #413c38 !default;
 // Workbench
 // --------------------------------------------------
 
-$workbench-text-color:        #a6a4a1 !default;
-$workbench-border-color:      #716d69 !default;
-$workbench-icon-color:        #837f7c !default;
+$workbench-text-color: #a6a4a1 !default;
+$workbench-border-color: #716d69 !default;
+$workbench-icon-color: #837f7c !default;
 $workbench-icon-active-color: #fff !default;
 
 .workbench .navbar {
@@ -283,7 +289,19 @@ $workbench-icon-active-color: #fff !default;
     padding: 0 12px;
   }
 
-  .navbar-right { margin-right: 0; }
+  .navbar-right {
+    margin-right: 0;
+    padding-right: $grid-gutter-width;
+
+    .btn,
+    .navbar-text {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .navbar-text {
+      margin-right: 12px;
+    }
+  }
 
   .dropdown-menu {
     @include border-top-radius(1px);
@@ -340,5 +358,4 @@ $workbench-icon-active-color: #fff !default;
       line-height: 21px;
     }
   }
-
 }
