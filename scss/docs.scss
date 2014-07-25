@@ -131,24 +131,25 @@
 // Style Page
 // --------------------------------------------------
 
-.logo-usage,
-.icons,
-.favicons {
-  [class^="col-"],
-  [class*=" col-"] {
-    margin-bottom: 34px;
-  }
-}
-
 .logo-usage {
 
+  [class^="col-"],
+  [class*=" col-"] {
+    margin-bottom: 24px;
+  }
+
+  h2 { margin-top: 6px; }
   hr { margin-bottom: 24px; }
   > p { margin-bottom: 34px; }
 
-  .item {
+  .row p {
+    margin: 6px 0 0;
+  }
+
+  .image-wrap {
+    height: 180px;
+    background-color: #efefef;
     position: relative;
-    height: 100px;
-    background-color: #fee;
 
     &:hover .download-links {
       display: block;
@@ -165,12 +166,7 @@
       text-align: center;
 
       .links {
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        overflow: auto;
-        margin: auto;
-        width: 50%;
-        height: 50%;
+        margin: 78px auto;
       }
 
       a {
@@ -208,6 +204,11 @@
 // Icons & Favicons
 .icons,
 .favicons {
+  [class^="col-"],
+  [class*=" col-"] {
+    margin-bottom: 34px;
+  }
+
   > .row { margin-top: 16px; }
 
   hr { margin-bottom: 10px; }
