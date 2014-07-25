@@ -62,12 +62,6 @@ js:
         <ul class="nav navbar-nav">{% for link in page.navigation %}
           <li class="{% if page.name == link.url %}active{% endif %}"><a href="{{link.url}}">{{link.text}}</a></li>{% endfor %}
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a class="" href="http://gengo.github.io/html-prototypes/workbench_twbs3/">Translator workbench</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Section <b class="caret"></b></a>
             <ul class="change-brand dropdown-menu">
               <li><a class="customer" href="#">Customer</a></li>
