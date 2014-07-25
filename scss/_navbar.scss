@@ -77,9 +77,9 @@ $hover-dark-gray:         #413c38 !default;
 
   .navbar-brand {
     padding-top: 16px;
+    padding-right: 26px;
     padding-bottom: 10px;
     padding-left: 29px;
-    padding-right: 26px;
     background-color: $brand-customer;
     font-size: 20px;
     line-height: 20px;
@@ -206,7 +206,7 @@ $workbench-icon-active-color: #fff !default;
   }
 
   .nav {
-    padding: 0 22px;
+    padding: 0 23px;
 
     .navbar-text {
       padding: 0 12px;
@@ -266,9 +266,15 @@ $workbench-icon-active-color: #fff !default;
       .icon-comment {
         @include vertical-align(14px);
       }
-      .icon-validation,
-      .icon-memory {
+      .icon-validation {
         @include vertical-align(16px);
+      }
+      .icon-memory {
+        // this is special case to center the icon
+        padding-top: 10.5px !important;
+        padding-bottom: 15.5px !important;
+        font-size: 22px;
+        line-height: 22px;
       }
     }
   }
@@ -306,6 +312,7 @@ $workbench-icon-active-color: #fff !default;
 
       &:hover {
         padding-bottom: 0;
+        border-radius: 0;
         background-color: #322e2a;
       }
 

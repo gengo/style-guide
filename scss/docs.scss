@@ -203,6 +203,7 @@
 
 // Icons & Favicons
 .icons,
+.doctype,
 .favicons {
   [class^="col-"],
   [class*=" col-"] {
@@ -233,6 +234,10 @@
   }
   .item { padding: 30px 0 20px; }
   .text { margin-top: 16px; }
+}
+
+.doctype {
+  li { padding: 24px 0 16px; }
 }
 
 // Favicons
