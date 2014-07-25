@@ -53,12 +53,21 @@ a.editable-click:hover {
 
 .has-error {
   position: relative;
-  right: $editable-control-height;
   > div {
     display: inline-block;
     vertical-align: middle;
     &:first-child {
       margin-right: 10px;
+    }
+  }
+}
+
+a[data-placeholder="Required"] ~ .editable-inline {
+  .has-error {
+    > div {
+      &:first-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -142,6 +151,13 @@ a.editable-click:hover {
   }
 }
 
+.select2-container-active {
+  .select2-choice,
+  .select2-choices {
+    border-color: $brand-customer;
+  }
+}
+
 // combodate
 [data-type="combodate"] + span {
   padding-top: 5px;
@@ -158,8 +174,14 @@ a.editable-click:hover {
   .tt-suggestion.tt-is-under-cursor {
     background-color: $brand-customer;
   }
-  &.select2-results .select2-highlighted {
+  .select2-results .select2-highlighted {
     background-color: $brand-customer;
+  }
+  .select2-container-active {
+    .select2-choice,
+    .select2-choices {
+      border-color: $brand-customer;
+    }
   }
   .editable.editable-click.editable-empty {
     color: $editable-empty-color;
@@ -179,6 +201,12 @@ a.editable-click:hover {
   &.select2-results .select2-highlighted {
     background-color: $brand-translator;
   }
+  .select2-container-active {
+    .select2-choice,
+    .select2-choices {
+      border-color: $brand-translator;
+    }
+  }
   .editable.editable-click.editable-empty {
     color: $editable-empty-color;
     border-bottom-color: $editable-empty-color;
@@ -194,8 +222,14 @@ a.editable-click:hover {
   .tt-suggestion.tt-is-under-cursor {
     background-color: $brand-developer;
   }
-  &.select2-results .select2-highlighted {
+  .select2-results .select2-highlighted {
     background-color: $brand-developer;
+  }
+  .select2-container-active {
+    .select2-choice,
+    .select2-choices {
+      border-color: $brand-developer;
+    }
   }
   .editable.editable-click.editable-empty {
     color: $editable-empty-color;
@@ -212,11 +246,18 @@ a.editable-click:hover {
   .tt-suggestion.tt-is-under-cursor {
     background-color: $brand-admin;
   }
-  &.select2-results .select2-highlighted {
+  .select2-results .select2-highlighted {
     background-color: $brand-admin;
+  }
+  .select2-container-active {
+    .select2-choice,
+    .select2-choices {
+      border-color: $brand-admin;
+    }
   }
   .editable.editable-click.editable-empty {
     color: $editable-empty-color;
     border-bottom-color: $editable-empty-color;
   }
 }
+
