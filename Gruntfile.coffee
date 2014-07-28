@@ -175,6 +175,16 @@ module.exports = (grunt) ->
         cwd: '<%= assets.bower %>/bootstrap-docs/assets/css'
         src: 'docs.min.css'
         dest: '<%= assets.style %>'
+      'downloads-dev':
+        expand: true,
+        cwd: ''
+        src: [ 'downloads/**/*' ],
+        dest: 'dev/'
+      'downloads-dist':
+        expand: true,
+        cwd: ''
+        src: [ 'downloads/**/*' ],
+        dest: 'dist/'
       'fonts-images-dev':
         expand: true,
         cwd: ''
@@ -362,6 +372,7 @@ module.exports = (grunt) ->
     'newer:copy:js-dev'
     #copy font/images into dev/
     'newer:copy:fonts-images-dev'
+    'newer:copy:downloads-dev'
     # start development env
     'connect'
     'watch'
@@ -389,4 +400,5 @@ module.exports = (grunt) ->
     'newer:copy:js-dist'
     # other resourses
     'newer:copy:fonts-images-dist'
+    'newer:copy:downloads-dist'
   ]
