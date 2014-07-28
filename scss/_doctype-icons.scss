@@ -1,15 +1,5 @@
 $doctype-path : "../images/doctype";
 
-@mixin get-image($path, $ext: "png", $w: auto, $h: auto) {
-  $at1x-path: "#{$path}.#{$ext}";
-  $at2x-path: "#{$path}_@2x.#{$ext}";
-
-  @include img-retina("#{$at1x-path}", "#{$at2x-path}", $w, $h);
-  width: $w;
-  height: $h;
-  background-repeat: no-repeat;
-}
-
 [class^="doctype-"],
 [class*=" doctype-"] {
   display: inline-block;

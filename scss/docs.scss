@@ -1,5 +1,6 @@
 @import "third_party/bootstrap/mixins";
 @import "compass";
+@import "mixin";
 @import "variables";
 
 .box {
@@ -136,6 +137,28 @@
   }
 }
 
+// Supported controls
+#focusedinput {
+  border-color: rgba($gengo-green, .8);
+  outline: 0;
+  box-shadow: 0 0 8px rgba($gengo-green, .6);
+}
+.translator #focusedinput {
+  border-color: rgba($gengo-blue, .8);
+  box-shadow: 0 0 8px rgba($gengo-blue, .6);
+}
+
+.developer #focusedinput {
+  border-color: rgba($gengo-red, .8);
+  box-shadow: 0 0 8px rgba($gengo-red, .6);
+}
+
+.admin #focusedinput {
+  border-color: rgba($gengo-gray, .8);
+  box-shadow: 0 0 8px rgba($gengo-gray, .6);
+}
+
+
 //
 // Style Page
 // --------------------------------------------------
@@ -255,101 +278,28 @@
   .text { margin-top: 8px; }
 }
 
-// Supported controls
-#focusedinput {
-  border-color: rgba($gengo-green, .8);
-  outline: 0;
-  box-shadow: 0 0 8px rgba($gengo-green, .6);
-}
-.translator #focusedinput {
-  border-color: rgba($gengo-blue, .8);
-  box-shadow: 0 0 8px rgba($gengo-blue, .6);
-}
-
-.developer #focusedinput {
-  border-color: rgba($gengo-red, .8);
-  box-shadow: 0 0 8px rgba($gengo-red, .6);
-}
-
-.admin #focusedinput {
-  border-color: rgba($gengo-gray, .8);
-  box-shadow: 0 0 8px rgba($gengo-gray, .6);
-}
-
 .apple-touch-icons {
 
-  .customer .logo:before,
-  .translator .logo:before,
-  .developer .logo:before,
-  .admin .logo:before {
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    content: "";
+  .row { margin-top: 16px; }
+  .item { margin-bottom: 18px; }
+  .text { margin-top: 8px; }
+
+  [class^="apple-touch-"],
+  [class*=" apple-touch-"] {
+    display: inline-block;
   }
 
-  li {
-    margin-right: 23px;
-
-    p {
-      margin-top: 13px;
-    }
+  .apple-touch-customer {
+    @include get-image("../images/apple-touch-icons/gengo_c_app", "png", 152px, 152px);
+  }
+  .apple-touch-translator {
+    @include get-image("../images/apple-touch-icons/gengo_t_app", "png", 152px, 152px);
+  }
+  .apple-touch-developer {
+    @include get-image("../images/apple-touch-icons/gengo_d_app", "png", 152px, 152px);
+  }
+  .apple-touch-admin {
+    @include get-image("../images/apple-touch-icons/gengo_a_app", "png", 152px, 152px);
   }
 
-  .logo {
-    border-radius: 32px;
-  }
-
-  .customer {
-    .logo {
-      padding: 60px 19px 52px 24px;
-      background-color: $brand-customer;
-
-      &:before {
-        width: 110px;
-        height: 39px;
-        background-image: url("../images/logo_gengo.svg");
-        background-size: 110px 39px;
-      }
-    }
-  }
-  .translator {
-    .logo {
-      padding: 36px;
-      background-color: $brand-translator;
-
-      &:before {
-        width: 79px;
-        height: 79px;
-        background-image: url("../images/logo_translator.svg");
-        background-size: 79px 79px;
-      }
-    }
-  }
-  .developer {
-    .logo {
-      padding: 36px;
-      background-color: $brand-developer;
-
-      &:before {
-        width: 79px;
-        height: 79px;
-        background-image: url("../images/logo_developer.svg");
-        background-size: 79px 79px;
-      }
-    }
-  }
-  .admin {
-    .logo {
-      padding: 36px;
-      background-color: $brand-admin;
-
-      &:before {
-        width: 79px;
-        height: 79px;
-        background-image: url("../images/logo_admin.svg");
-        background-size: 79px 79px;
-      }
-    }
-  }
 }
