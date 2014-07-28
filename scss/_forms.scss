@@ -24,8 +24,6 @@ input[type="file"] {
 
 .form-control {
   @include box-shadow(none);
-  padding: 6px 8px;
-  height: 31px;
   &:focus {
     @include box-shadow(none);
     border-color: $gengo-green;
