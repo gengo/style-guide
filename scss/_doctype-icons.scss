@@ -1,0 +1,68 @@
+$doctype-path : "../images/doctype";
+
+@mixin get-image($path, $ext: "png", $w: auto, $h: auto) {
+  $at1x-path: "#{$path}.#{$ext}";
+  $at2x-path: "#{$path}_@2x.#{$ext}";
+
+  @include img-retina("#{$at1x-path}", "#{$at2x-path}", $w, $h);
+  width: $w;
+  height: $h;
+  background-repeat: no-repeat;
+}
+
+[class^="doctype-"],
+[class*=" doctype-"] {
+  display: inline-block;
+}
+
+.doctype-def {
+  @include get-image("#{$doctype-path}/file_def", "png", 20px, 25px);
+}
+
+.doctype-txt {
+  @include get-image("#{$doctype-path}/file_txt", "png", 20px, 25px);
+}
+
+.doctype-doc {
+  @include get-image("#{$doctype-path}/file_doc", "png", 20px, 25px);
+}
+
+.doctype-xls {
+  @include get-image("#{$doctype-path}/file_xls", "png", 20px, 25px);
+}
+
+.doctype-rtf {
+  @include get-image("#{$doctype-path}/file_rtf", "png", 20px, 25px);
+}
+
+.doctype-ppt {
+  @include get-image("#{$doctype-path}/file_ppt", "png", 20px, 25px);
+}
+
+.doctype-pdf {
+  @include get-image("#{$doctype-path}/file_pdf", "png", 20px, 25px);
+}
+
+.doctype-odt {
+  @include get-image("#{$doctype-path}/file_odt", "png", 20px, 25px);
+}
+
+.doctype-yt {
+  @include get-image("#{$doctype-path}/file_yt", "png", 20px, 25px);
+}
+
+.doctype-ggl {
+  @include get-image("#{$doctype-path}/file_ggl", "png", 20px, 25px);
+}
+
+.doctype-check {
+  @include get-image("#{$doctype-path}/file_check", "png", 20px, 25px);
+}
+
+.doctype-gls {
+  @include get-image("#{$doctype-path}/file_gls", "png", 20px, 25px);
+}
+
+.doctype-grp {
+  @include get-image("#{$doctype-path}/file_grp", "png", 28px, 33px);
+}

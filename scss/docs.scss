@@ -5,17 +5,21 @@
 .box {
   margin-bottom: 26px;
   padding-bottom: 21px;
-  padding-left: 33px;
+  padding-left: 36px;
 }
 
 .colors {
   font-size: $font-size-small;
+
+  h3 { margin-bottom: 18px; }
+  .item { margin-bottom: 8px; }
   .color-box {
     display: block;
-    margin: 15px 0;
+    margin-bottom: 10px;
     width: 100%;
     height: 96px;
     border-radius: 3px;
+
     &.gengo-green {
       background-color: $gengo-green;
     }
@@ -119,51 +123,157 @@
   h2 {
     margin-top: 25px;
     margin-bottom: 20px;
-  };
+    padding-left: 1px;
+  }
+}
+
+.bs-editable {
+  .ui {
+    text-align: right;
+  }
+  .form-inline .form-group {
+    margin-right: 0;
+  }
+}
+
+//
+// Style Page
+// --------------------------------------------------
+
+.logo-usage {
+
+  [class^="col-"],
+  [class*=" col-"] {
+    margin-bottom: 24px;
+  }
+
+  h2 { margin-top: 6px; }
+  hr { margin-bottom: 24px; }
+  > p { margin-bottom: 34px; }
+
+  .row p {
+    margin: 6px 0 0;
+  }
+
+  .image-wrap {
+    height: 180px;
+    background-color: #efefef;
+    position: relative;
+
+    &:hover .download-links {
+      display: block;
+    }
+
+    .download-links {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .75);
+      text-align: center;
+
+      .links {
+        margin: 78px auto;
+      }
+
+      a {
+        padding: 0 10px;
+        color: #fff;
+      }
+    }
+  }
+
 }
 
 
-// Icons
-.icons,
-.favicons {
-  margin-left: -32px;
+.typography {
+  .headers {
+    margin: 23px 0 14px;
 
-  li {
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      padding: 9px 0;
+    }
+  }
+
+  > h2 { margin-bottom: 18px; }
+  > ul,
+  > ol { margin-bottom: 16px; }
+  > p { margin-bottom: 12px; }
+
+  > p,
+  > blockquote p { max-width: 75%; }
+}
+
+// Icons & Favicons
+.icons,
+.doctype,
+.favicons {
+  [class^="col-"],
+  [class*=" col-"] {
     margin-bottom: 34px;
-    margin-left: 32px;
-    width: 102px;
+  }
+
+  > .row { margin-top: 16px; }
+
+  hr { margin-bottom: 10px; }
+
+  .item {
     border-radius: $border-radius-base;
     background-color: $body-bg;
     text-align: center;
   }
-
   .text {
     text-transform: uppercase;
     font-size: 10px;
   }
 }
 
+// Icons
 .icons {
   [class^="icon-"],
   [class*=" icon-"] {
     display: block;
     font-size: $font-size-large;
   }
-  li { padding: 30px 0 16px; }
-  .text { margin-top: 12px; }
+  .item { padding: 30px 0 20px; }
+  .text { margin-top: 16px; }
+}
+
+.doctype {
+  .item { padding: 24px 0 16px; }
 }
 
 // Favicons
 .favicons {
-  li {
-    padding: 24px 0 10px;
+  .item { padding: 24px 0 16px; }
+  .text { margin-top: 8px; }
+}
 
-    img {
-      width: 32px;
-      height: 32px;
-    }
-  }
-  .text { margin-top: 4px; }
+// Supported controls
+#focusedinput {
+  border-color: rgba($gengo-green, .8);
+  outline: 0;
+  box-shadow: 0 0 8px rgba($gengo-green, .6);
+}
+.translator #focusedinput {
+  border-color: rgba($gengo-blue, .8);
+  box-shadow: 0 0 8px rgba($gengo-blue, .6);
+}
+
+.developer #focusedinput {
+  border-color: rgba($gengo-red, .8);
+  box-shadow: 0 0 8px rgba($gengo-red, .6);
+}
+
+.admin #focusedinput {
+  border-color: rgba($gengo-gray, .8);
+  box-shadow: 0 0 8px rgba($gengo-gray, .6);
 }
 
 .apple-touch-icons {

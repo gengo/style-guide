@@ -1,0 +1,263 @@
+.editable-buttons {
+  margin-left: 6px;
+  .btn-sm {
+    padding: 3px 8px;
+    width: $editable-control-height;
+  }
+  .editable-cancel {
+    margin-left: 5px;
+  }
+}
+
+.editable-input {
+  input.form-control {
+    color: $editable-input-color;
+    height: $editable-control-height;
+    min-width: $editable-control-width;
+  }
+  select {
+    color: #333;
+    &.form-control {
+      height: $editable-control-height;
+      min-width: 58px;
+    }
+  }
+  textarea {
+    min-width: 377px;
+    min-height: 76px;
+  }
+  label {
+    font-weight: normal;
+  }
+  // select2
+  .select2-container-multi.select2-container-active .select2-choices {
+    border-color: $editable-border-color;
+    -webkit-box-shadow: 0;
+    box-shadow: 0;
+  }
+}
+
+.editable-click,
+a.editable-click,
+a.editable-click:hover {
+  border-bottom-color: $brand-customer;
+}
+
+.editable.editable-click.editable-empty {
+  border-bottom-color: $editable-empty-color;
+}
+
+.editable-error-block {
+  text-align: left;
+}
+
+.has-error {
+  position: relative;
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+a[data-placeholder="Required"] ~ .editable-inline {
+  .has-error {
+    > div {
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.control-group.form-group {
+  text-align: left;
+}
+
+// overwrite image path which is
+// used in 'x-editable' plugin
+.editableform-loading {
+  background-image: url("../images/loading.gif");
+}
+
+.editable-clear-x {
+  background: url("../images/clear.png");
+}
+
+[data-type="checklist"] ~ .editable-inline .editable-buttons {
+  display: block;
+  margin-left: 0;
+}
+
+// twitter typeheadjs
+.tt-query {
+  text-indent: 6px;
+  line-height: 1.4;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  margin: 0 5px;
+  border-radius: $editable-border-radius;
+  color: $editable-cursored-color;
+  background-color: $brand-customer;
+  background-image: none !important;
+  filter: none;
+}
+
+.tt-dropdown-menu {
+  width: 240px;
+}
+
+// select2
+
+.select2-container-multi {
+  .select2-choices {
+    border-radius: $editable-border-radius;
+    height: $editable-control-height !important;
+    .select2-search-choice {
+      margin-top: 4px;
+    }
+  }
+  &.select2-container-active .select2-choices {
+    border-color: $editable-border-color;
+  }
+}
+
+.select2-results .select2-highlighted {
+  background-color: $brand-customer;
+  border-radius: $editable-border-radius;
+}
+
+.select2-dropdown-open .select2-choices {
+  @include border-top-radius($editable-border-radius);
+  @include border-bottom-radius(0);
+  border-bottom: 0;
+  border-color: $editable-border-color;
+}
+
+.select2-drop-active {
+  border-color: $editable-border-color;
+  border-top: 0;
+}
+
+.select2-container {
+  .select2-choice {
+    height: $editable-control-height;
+    abbr {
+      top: 7px;
+    }
+  }
+}
+
+.select2-container-active {
+  .select2-choice,
+  .select2-choices {
+    border-color: $brand-customer;
+  }
+}
+
+// combodate
+[data-type="combodate"] + span {
+  padding-top: 5px;
+  min-height: $editable-control-height;
+}
+
+// switch colors
+.customer {
+  .editable-click,
+  a.editable-click,
+  a.editable-click:hover {
+    border-bottom-color: $brand-customer;
+  }
+  .tt-suggestion.tt-is-under-cursor {
+    background-color: $brand-customer;
+  }
+  .select2-results .select2-highlighted {
+    background-color: $brand-customer;
+  }
+  .select2-container-active {
+    .select2-choice,
+    .select2-choices {
+      border-color: $brand-customer;
+    }
+  }
+  .editable.editable-click.editable-empty {
+    color: $editable-empty-color;
+    border-bottom-color: $editable-empty-color;
+  }
+}
+
+.translator {
+  .editable-click,
+  a.editable-click,
+  a.editable-click:hover {
+    border-bottom-color: $brand-translator;
+  }
+  .tt-suggestion.tt-is-under-cursor {
+    background-color: $brand-translator;
+  }
+  &.select2-results .select2-highlighted {
+    background-color: $brand-translator;
+  }
+  .select2-container-active {
+    .select2-choice,
+    .select2-choices {
+      border-color: $brand-translator;
+    }
+  }
+  .editable.editable-click.editable-empty {
+    color: $editable-empty-color;
+    border-bottom-color: $editable-empty-color;
+  }
+}
+
+.developer {
+  .editable-click,
+  a.editable-click,
+  a.editable-click:hover {
+    border-bottom-color: $brand-developer;
+  }
+  .tt-suggestion.tt-is-under-cursor {
+    background-color: $brand-developer;
+  }
+  .select2-results .select2-highlighted {
+    background-color: $brand-developer;
+  }
+  .select2-container-active {
+    .select2-choice,
+    .select2-choices {
+      border-color: $brand-developer;
+    }
+  }
+  .editable.editable-click.editable-empty {
+    color: $editable-empty-color;
+    border-bottom-color: $editable-empty-color;
+  }
+}
+
+.admin {
+  .editable-click,
+  a.editable-click,
+  a.editable-click:hover {
+    border-bottom-color: $brand-admin;
+  }
+  .tt-suggestion.tt-is-under-cursor {
+    background-color: $brand-admin;
+  }
+  .select2-results .select2-highlighted {
+    background-color: $brand-admin;
+  }
+  .select2-container-active {
+    .select2-choice,
+    .select2-choices {
+      border-color: $brand-admin;
+    }
+  }
+  .editable.editable-click.editable-empty {
+    color: $editable-empty-color;
+    border-bottom-color: $editable-empty-color;
+  }
+}
+

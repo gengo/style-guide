@@ -1,3 +1,51 @@
 .nav-pills.nav-stacked > li > a {
   display: inline-block;
 }
+
+.customer {
+  .nav-pills {
+    > li.active {
+      a,
+      a:hover,
+      a:focus {
+        background-color: $brand-customer;
+      }
+    }
+  }
+}
+
+.translator {
+  .nav-pills {
+    > li.active {
+      a,
+      a:hover,
+      a:focus {
+        background-color: $brand-translator;
+      }
+    }
+  }
+}
+
+.developer {
+  .nav-pills {
+    > li.active {
+      a,
+      a:hover,
+      a:focus {
+        background-color: $brand-developer;
+      }
+    }
+  }
+}
+
+.admin {
+  .nav-pills {
+    > li.active {
+      a,
+      a:hover,
+      a:focus {
+        background-color: $brand-admin;
+      }
+    }
+  }
+}
