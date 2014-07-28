@@ -1,5 +1,6 @@
 @import "third_party/bootstrap/mixins";
 @import "compass";
+@import "mixins";
 @import "variables";
 
 .box {
@@ -183,6 +184,11 @@
         color: #fff;
       }
     }
+
+    &.gengo-green { background-color: $gengo-green; }
+    &.gengo-gray { background-color: $gengo-gray; }
+    &.gengo-blue { background-color: $gengo-blue; }
+    &.gengo-red { background-color: $gengo-red; }
   }
 
 }
