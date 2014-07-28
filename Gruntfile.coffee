@@ -196,7 +196,10 @@ module.exports = (grunt) ->
       'bootstrap-multiselect':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-multiselect'
-        src: '**/*-multiselect.*'
+        src: [
+          'css/bootstrap-multiselect.css'
+          'js/bootstrap-multiselect.js'
+        ]
         dest: './'
       'x-editable':
         expand: true

@@ -1,5 +1,6 @@
 @import "third_party/bootstrap/mixins";
 @import "compass";
+@import "mixins";
 @import "variables";
 
 // @import "fonts";
@@ -14,8 +15,8 @@
 @import "dropdowns";
 @import "tables";
 @import "editable-text";
-@import "_supported-controls";
-@import "_validation-states";
+@import "supported-controls";
+@import "validation-states";
 @import "modals";
 @import "status";
 @import "breadcrumbs";
