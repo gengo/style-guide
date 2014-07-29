@@ -268,10 +268,10 @@ $workbench-icon-active-color: #fff !default;
       .icon-expand {
         @include vertical-align(12px);
       }
-      .icon-funnel,
-      .icon-comment {
+      .icon-funnel {
         @include vertical-align(14px);
       }
+      .icon-info,
       .icon-validation {
         @include vertical-align(16px);
       }
