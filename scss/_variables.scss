@@ -658,9 +658,14 @@ $modal-sm:                    300px !default;
 //
 //## Define alert colors, border radius, and padding.
 
-$alert-padding:               15px !default;
+$alert-padding:               20px 18px 20px 23px;
 $alert-border-radius:         $border-radius-base !default;
 $alert-link-font-weight:      bold !default;
+$alert-text-color:            #fff !default;
+$alert-bg-color:              #5d5a56 !default;
+$alert-font-size:             13px !default;
+$alert-icon-size:             25px !default;
+$alert-close-button-color:    #ccc !default;
 
 $alert-success-bg:            $state-success-bg !default;
 $alert-success-text:          $state-success-text !default;
@@ -671,12 +676,16 @@ $alert-info-text:             $state-info-text !default;
 $alert-info-border:           $state-info-border !default;
 
 $alert-warning-bg:            $state-warning-bg !default;
-$alert-warning-text:          $state-warning-text !default;
+$alert-warning-text:          #dece78 !default;
 $alert-warning-border:        $state-warning-border !default;
 
 $alert-danger-bg:             $state-danger-bg !default;
 $alert-danger-text:           $state-danger-text !default;
 $alert-danger-border:         $state-danger-border !default;
+
+$alert-error-text:            #c46950 !default;
+$alert-validation-text:       #70a581 !default;
+
 
 
 //== Progress bars
