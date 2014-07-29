@@ -3,15 +3,32 @@
   <hr/>
   <br>
   <div class="bs-example">
-    <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#">All</a><span class="badge">42</span></li>
-      <li><a href="#">Pending</a><span class="badge">42</span></li>
-      <li><a href="#">reviewable</a><span class="badge">42</span></li>
-    </ul>
+    <div class="row">
+      <div class="list-group ge-list col-md-4">
+        <a href="#" class="list-group-item">All<span class="badge">31</span></a>
+        <a href="#" class="list-group-item active">Pending<span class="badge">29</span></a>
+        <a href="#" class="list-group-item">reviewable<span class="badge">20</span></a>
+      </div>
+      <div class="list-group ge-list ge-dark col-md-4">
+        <a href="#" class="list-group-item">All<span class="badge">31</span></a>
+        <a href="#" class="list-group-item active">Pending<span class="badge">29</span></a>
+        <a href="#" class="list-group-item">reviewable<span class="badge">20</span></a>
+      </div>
+    </div>
   </div>
-<br>
+  <br>
 {% highlight html %}
-<span class="badge">42</span>
+<div class="list-group ge-list">
+  <a href="#" class="list-group-item">All<span class="badge">31</span></a>
+  <a href="#" class="list-group-item active">Pending<span class="badge">29</span></a>
+  <a href="#" class="list-group-item">reviewable<span class="badge">20</span></a>
+</div>
+
+<div class="list-group ge-list ge-dark">
+  <a href="#" class="list-group-item">All<span class="badge">31</span></a>
+  <a href="#" class="list-group-item active">Pending<span class="badge">29</span></a>
+  <a href="#" class="list-group-item">reviewable<span class="badge">20</span></a>
+</div>
 {% endhighlight %}
   <div>If the background is <code>#f4f4f4</code>, the active state becomes <code>#ffffff</code></div>
 </div>
