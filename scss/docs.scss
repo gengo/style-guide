@@ -182,6 +182,7 @@
     height: 180px;
     background-color: #efefef;
     position: relative;
+    border-radius: 3px;
 
     &:hover .download-links {
       display: block;
@@ -206,6 +207,54 @@
         color: #fff;
       }
     }
+
+    .img-fit {
+      width: 60%;
+      height: auto;
+      overflow: auto;
+      margin: auto;
+      position: absolute;
+      top: 0; left: 10px; bottom: 0; right: 0;
+      max-width: 144px;
+      max-height: 51px;
+    }
+
+    &.gengo-green { background-color: $gengo-green; }
+    &.gengo-gray { background-color: $gengo-gray; }
+    &.gengo-blue { background-color: $gengo-blue; }
+    &.gengo-red { background-color: $gengo-red; }
+    &.gengo-white {
+      background-color: #fff;
+      border: 1px solid $table-border-color;
+    }
+    &.bg-image {
+      background-color: transparent;
+      background-image: url("../images/logos/bg_image.png");
+      background-repeat: no-repeat;
+      background-size: 240px 178px;
+    }
+    .logo-circle,
+    &.minimal-spacing {
+      background-color: transparent;
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .logo-circle img {
+      width: 180px;
+      height: auto;
+      padding: 24px;
+      overflow: auto;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      left: 0;
+    }
+
   }
 
 }
