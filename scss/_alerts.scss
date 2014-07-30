@@ -1,0 +1,29 @@
+.alert {
+  background-color: $alert-bg-color;
+  color: $alert-text-color;
+  font-size: $alert-font-size;
+  padding: $alert-padding;
+  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .2);
+  [class^="icon-"] {
+    font-size: $alert-icon-size;
+  }
+  .icon-warning {
+    color: $alert-warning-text;
+  }
+  .icon-error {
+    color: $alert-error-text;
+  }
+  .icon-validation {
+    color: $alert-validation-text;
+  }
+  .close span {
+    color: $alert-close-button-color;
+    text-shadow: none;
+  }
+  a,
+  a:hover,
+  a:focus {
+    color: $alert-text-color;
+    text-decoration: underline;
+  }
+}
