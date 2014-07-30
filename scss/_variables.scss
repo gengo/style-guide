@@ -633,10 +633,13 @@ $label-link-hover-color:      #fff !default;
 //** Padding applied to the modal body
 $modal-inner-padding:         36px !default;
 
+
+//** Font size applied to the modal title
+$modal-title-font-size:       28px !default;
 //** Padding applied to the modal title
 $modal-title-padding:         15px !default;
 //** Modal title line-height
-$modal-title-line-height:     $line-height-base !default;
+$modal-title-line-height:     36px !default;
 
 //** Background color of modal content area
 $modal-content-bg:                             #fff !default;
