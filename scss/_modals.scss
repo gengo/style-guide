@@ -5,8 +5,8 @@
 
   .close {
     position: absolute;
-    top: 13px;
-    right: 13px;
+    top: $modal-close-btn-possition;
+    right: $modal-close-btn-possition;
   }
   .modal-header {
     margin: 0 0 12px;
@@ -16,12 +16,12 @@
     .modal-title {
       margin: 0;
       font-weight: $font-semibold;
-      font-size: 28px;
-      line-height: 36px;
+      font-size: $modal-title-font-size;
+      line-height: $modal-title-line-height;
     }
   }
   .modal-body {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     padding: 0;
     line-height: 21px;
 
@@ -32,5 +32,9 @@
   .modal-footer {
     padding: 0;
     border: 0;
+
+    .btn + .btn {
+      margin-left: $modal-footer-btn-padding;
+    }
   }
 }
