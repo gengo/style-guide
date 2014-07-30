@@ -663,7 +663,7 @@ $modal-sm:                    300px !default;
 //
 //## Define alert colors, border radius, and padding.
 
-$alert-padding:               20px 18px 20px 23px;
+$alert-padding:               20px 18px 20px 23px !default;
 $alert-border-radius:         $border-radius-base !default;
 $alert-link-font-weight:      bold !default;
 $alert-text-color:            #fff !default;
