@@ -633,6 +633,8 @@ $label-link-hover-color:      #fff !default;
 //** Padding applied to the modal body
 $modal-inner-padding:         36px !default;
 
+//** Modal close button position
+$modal-close-btn-possition:   12px !default;
 
 //** Font size applied to the modal title
 $modal-title-font-size:       28px !default;
@@ -640,7 +642,6 @@ $modal-title-font-size:       28px !default;
 $modal-title-padding:         15px !default;
 //** Modal title line-height
 $modal-title-line-height:     36px !default;
-
 //** Background color of modal content area
 $modal-content-bg:                             #fff !default;
 //** Modal content border color
@@ -656,6 +657,8 @@ $modal-backdrop-opacity:      .5 !default;
 $modal-header-border-color:   #e5e5e5 !default;
 //** Modal footer border color
 $modal-footer-border-color:   $modal-header-border-color !default;
+//** Modal footer button left padding
+$modal-footer-btn-padding:    12px !default;
 
 $modal-lg:                    900px !default;
 $modal-md:                    504px !default;
