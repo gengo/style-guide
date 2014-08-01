@@ -64,4 +64,42 @@
   </div>
 </div>
 {% endhighlight %}
+  <h2>Overlayed alerts</h2>
+  <p>Add <code>.alert-container</code> into parent element</p>
+  <div class="bs-example row alert-container" style="height:50px;">
+    <div class="col-xs-12"><p>Alerts ovelayed dissappeared....</p></div>
+    <div class="alert alert-success alert-overlay">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <i class="icon-warning"></i>
+      <span ng-bind-html="notify.msg" class="ng-binding"><strong>Submit warning:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+    </div>
+  </div>
+  <br>
+  <div class="bs-example row alert-container" style="height:50px;">
+    <div class="col-xs-12"><p>Alerts ovelayed dissappeared....</p></div>
+    <div class="alert alert-success alert-overlay">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <i class="icon-error"></i>
+      <span ng-bind-html="notify.msg" class="ng-binding"><strong>Submit error:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+    </div>
+  </div>
+  <br>
+  <div class="bs-example row alert-container" style="height:50px;">
+    <div class="col-xs-12"><p>Alerts ovelayed dissappeared....</p></div>
+    <div class="alert alert-success alert-overlay">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <i class="icon-validation"></i>
+      <span ng-bind-html="notify.msg" class="ng-binding"><strong>Submit complete:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+    </div>
+  </div>
+  <br>
+{% highlight html %}
+<div class="alert-container">
+  <div class="alert alert-success alert-overlay">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <i class="icon-validation"></i>
+    <span><strong>Submit complete:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+  </div>
+</div>
+{% endhighlight %}
 </div>

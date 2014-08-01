@@ -26,4 +26,32 @@
     color: $alert-text-color;
     text-decoration: underline;
   }
+  &.alert-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    padding: 12px 24px 12px 33px;
+    width: 100%;
+    height: 48px;
+    border: 0;
+    border-radius: 0;
+    font-size: $alert-overlay-text;
+    line-height: $alert-overlay-lineheight;
+    opacity: 1;
+    transition: top .2s linear;
+    .icon-warning,
+    .icon-error,
+    .icon-validation {
+      float: left;
+      font-size: $alert-overlay-icon;
+    }
+    span {
+      float: left;
+      margin-left: 14px;
+    }
+  }
+}
+.alert-container {
+  position: relative;
 }
