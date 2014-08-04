@@ -1,5 +1,50 @@
-.nav-pills.nav-stacked > li > a {
-  display: inline-block;
+// Pills
+// -------------------------
+.nav-pills.nav-stacked {
+  > li {
+    margin-bottom: -2px;
+
+    // Links rendered as pills
+    > a {
+      color: $list-group-link-color;
+
+      &:hover,
+      &:focus {
+        color: $gengo-green;
+      }
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $gengo-green;
+        background-color: $list-group-hover-bg;
+      }
+    }
+
+    .badge,
+    &.active .badge {
+      background-color: transparent;
+      color: $text-color;
+      font-size: $list-group-badge-font-size;
+      font-weight: $font-normal;
+      line-height: $line-height-base;
+      border-radius: 0;
+    }
+  }
+
+  // dark background
+  &.ge-dark > li {
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $component-active-color;
+      }
+    }
+  }
 }
 
 .customer {
