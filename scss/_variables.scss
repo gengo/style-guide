@@ -669,13 +669,16 @@ $modal-sm:                    300px !default;
 //
 //## Define alert colors, border radius, and padding.
 
-$alert-padding:               20px 18px 20px 23px !default;
+$alert-close-color:           #fff !default;
+$alert-close-size:            10px !default;
+
+$alert-padding:               18px 36px 18px 24px !default;
 $alert-border-radius:         $border-radius-base !default;
 $alert-link-font-weight:      bold !default;
 $alert-text-color:            #fff !default;
 $alert-bg-color:              #5d5a56 !default;
-$alert-font-size:             13px !default;
-$alert-icon-size:             25px !default;
+$alert-font-size:             14px !default;
+$alert-icon-size:             24px !default;
 $alert-close-button-color:    #ccc !default;
 
 $alert-success-bg:            $state-success-bg !default;
@@ -697,9 +700,9 @@ $alert-danger-border:         $state-danger-border !default;
 $alert-error-text:            #c46950 !default;
 $alert-validation-text:       #1cad7e !default;
 
+$alert-overlay-padding:       12px 36px 12px 24px !default;
 $alert-overlay-text:          14px !default;
-$alert-overlay-lineheight:    24px !default;
-$alert-overlay-icon:          24px !default;
+$alert-overlay-line-height:   $navbar-height / 2 !default;
 
 
 
