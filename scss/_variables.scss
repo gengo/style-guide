@@ -602,8 +602,10 @@ $popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%
 //
 //##
 
+//** Default label font size
+$label-font-size:            12px !default;
 //** Default label background color
-$label-default-bg:            $gray-light !default;
+$label-default-bg:            $gengo-gray-light !default;
 //** Primary label background color
 $label-primary-bg:            $brand-primary !default;
 //** Success label background color
