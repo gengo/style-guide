@@ -1,3 +1,21 @@
+.form-control-feedback {
+  width: $input-height-base !important;
+  height: $input-height-base !important;
+  line-height: $input-height-base !important;
+}
+
+.input-lg + .form-control-feedback {
+  width: $input-height-large !important;
+  height: $input-height-large !important;
+  line-height: $input-height-large !important;
+}
+.input-sm + .form-control-feedback {
+  width: $input-height-small !important;
+  height: $input-height-small !important;
+  line-height: $input-height-small !important;
+}
+
+
 .has-success {
   .help-block,
   .control-label,
@@ -37,23 +55,5 @@
   }
   .form-control {
     border-color: $validation-error-border-color;
-  }
-}
-
-.form-horizontal,
-.form-inline {
-  .form-group.has-feedback {
-    .form-control-feedback {
-      top: 10px;
-    }
-    .control-label {
-      padding-right: 18px;
-    }
-  }
-}
-
-.form-group.has-feedback {
-  .form-control-feedback {
-    top: 35px;
   }
 }
