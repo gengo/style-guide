@@ -119,7 +119,11 @@
   }
   hr {
     margin-top: 16px;
-    margin-bottom: 0;
+    margin-bottom: 24px;
+
+    &.no-bottom {
+      margin-bottom: 0;
+    }
   }
   h2 {
     margin-top: 25px;
@@ -352,3 +356,18 @@
   }
 
 }
+
+
+//
+// Components Page
+// --------------------------------------------------
+
+.alerts-examples {
+  hr {
+    margin-bottom: 36px;
+  }
+  .highlight {
+    margin-top: 6px;
+  }
+}
+
