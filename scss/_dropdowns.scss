@@ -24,10 +24,13 @@
     padding: 6px;
     li {
       margin-bottom: 3px;
-      & > a > label {
-        padding-left: 30px;
-        input {
-          margin-left: -23px;
+      > a {
+        padding: 3px 0;
+        > label {
+          padding-left: 30px;
+          input {
+            margin-left: -23px;
+          }
         }
       }
     }
