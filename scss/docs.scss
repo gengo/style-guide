@@ -142,27 +142,6 @@
   }
 }
 
-// Supported controls
-#focusedinput {
-  border-color: rgba($gengo-green, .8);
-  outline: 0;
-  box-shadow: 0 0 8px rgba($gengo-green, .6);
-}
-.translator #focusedinput {
-  border-color: rgba($gengo-blue, .8);
-  box-shadow: 0 0 8px rgba($gengo-blue, .6);
-}
-
-.developer #focusedinput {
-  border-color: rgba($gengo-red, .8);
-  box-shadow: 0 0 8px rgba($gengo-red, .6);
-}
-
-.admin #focusedinput {
-  border-color: rgba($gengo-gray, .8);
-  box-shadow: 0 0 8px rgba($gengo-gray, .6);
-}
-
 
 //
 // Style Page
@@ -376,6 +355,27 @@
   .highlight {
     margin-top: 6px;
   }
+}
+
+// Supported controls
+#focusedinput {
+  border-color: $gengo-lemon;
+  outline: 0;
+  box-shadow: 0 0 6px rgba($gengo-lemon, .6);
+}
+.translator #focusedinput {
+  border-color: rgba($gengo-blue, .8);
+  box-shadow: 0 0 6px rgba($gengo-blue, .6);
+}
+
+.developer #focusedinput {
+  border-color: rgba($gengo-red, .8);
+  box-shadow: 0 0 6px rgba($gengo-red, .6);
+}
+
+.admin #focusedinput {
+  border-color: rgba($gengo-gray, .8);
+  box-shadow: 0 0 6px rgba($gengo-gray, .6);
 }
 
 
