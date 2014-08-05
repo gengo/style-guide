@@ -340,6 +340,8 @@ module.exports = (grunt) ->
           'Bad value X-UA-Compatible for attribute http-equiv on element meta.'
           'Element img is missing required attribute src.'
           'Attribute autocomplete not allowed on element input at this point.'
+          'The element input must not appear as a descendant of the a element.'
+          'The element label must not appear as a descendant of the a element.'
         ]
       files:
         src: '<%= assets.html %>/**/*.html'
