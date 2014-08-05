@@ -1,8 +1,8 @@
 .editable-buttons {
   margin-left: 6px;
   .btn-sm {
-    padding: 3px 8px;
     width: $editable-control-height;
+    padding: 3px 8px;
   }
   .editable-cancel {
     margin-left: 5px;
@@ -11,15 +11,15 @@
 
 .editable-input {
   input.form-control {
-    color: $editable-input-color;
-    height: $editable-control-height;
     min-width: $editable-control-width;
+    height: $editable-control-height;
+    color: $editable-input-color;
   }
   select {
     color: #333;
     &.form-control {
-      height: $editable-control-height;
       min-width: 58px;
+      height: $editable-control-height;
     }
   }
   textarea {
@@ -33,7 +33,7 @@
   .select2-container-multi.select2-container-active .select2-choices {
     border-color: $editable-border-color;
     -webkit-box-shadow: 0;
-    box-shadow: 0;
+            box-shadow: 0;
   }
 }
 
@@ -93,17 +93,17 @@ a[data-placeholder="Required"] ~ .editable-inline {
 
 // twitter typeheadjs
 .tt-query {
-  text-indent: 6px;
   line-height: 1.4;
+  text-indent: 6px;
 }
 
 .tt-suggestion.tt-is-under-cursor {
   margin: 0 5px;
-  border-radius: $editable-border-radius;
   color: $editable-cursored-color;
   background-color: $brand-customer;
   background-image: none !important;
   filter: none;
+  border-radius: $editable-border-radius;
 }
 
 .tt-dropdown-menu {
@@ -114,8 +114,8 @@ a[data-placeholder="Required"] ~ .editable-inline {
 
 .select2-container-multi {
   .select2-choices {
-    border-radius: $editable-border-radius;
     height: $editable-control-height !important;
+    border-radius: $editable-border-radius;
     .select2-search-choice {
       margin-top: 4px;
     }
@@ -131,10 +131,11 @@ a[data-placeholder="Required"] ~ .editable-inline {
 }
 
 .select2-dropdown-open .select2-choices {
+  border-color: $editable-border-color;
+  border-bottom: 0;
+
   @include border-top-radius($editable-border-radius);
   @include border-bottom-radius(0);
-  border-bottom: 0;
-  border-color: $editable-border-color;
 }
 
 .select2-drop-active {
@@ -160,8 +161,8 @@ a[data-placeholder="Required"] ~ .editable-inline {
 
 // combodate
 [data-type="combodate"] + span {
-  padding-top: 5px;
   min-height: $editable-control-height;
+  padding-top: 5px;
 }
 
 // switch colors
@@ -260,4 +261,3 @@ a[data-placeholder="Required"] ~ .editable-inline {
     border-bottom-color: $editable-empty-color;
   }
 }
-
