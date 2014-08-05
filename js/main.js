@@ -10,10 +10,11 @@
     $('.dropdown-select-search').multiselect({
       enableFiltering:true
     });
+
     $('.dropdown-select').multiselect({});
     /*
-    X-Editable
-    */
+     * X-Editable
+     */
     $.fn.editable.defaults.mode = 'inline';
     // simple text field
     $('#username').editable();
@@ -37,28 +38,28 @@
       { value: 2, text: 'Female' }
     ]
   });
-  //
+
   $('#group').editable({
      showbuttons: false
   });
-  //
+
   $('#status').editable();
-  //
+
   // $.fn.editable.defaults.mode = 'inline';
   $('#dob').editable();
-  //
+
   $('#event').editable({
     placement: 'right',
     combodate: {
       firstItem: 'name'
     }
   });
-  //
+
   $('#comments').editable({
     showbuttons: 'bottom',
     rows:3
   });
-  //
+
   $('#state2').editable({
     value: 'California',
     typeahead: {
@@ -66,7 +67,7 @@
       local: [ 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Dakota', 'North Carolina', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming' ]
     }
   });
-  //
+
   $('#fruits').editable({
      pk: 1,
      limit: 3,
