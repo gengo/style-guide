@@ -119,6 +119,11 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 
+.navbar-form {
+  @include navbar-vertical-align($input-height-small);
+}
+
+
 //
 // Customer
 // --------------------------------------------------
