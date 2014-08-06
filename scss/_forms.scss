@@ -47,7 +47,24 @@ input[type="file"] {
 }
 
 .form-search {
-  // TODO: add an search icon to background
+  @extend .icon-search;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    height: 58%;
+    font-family: "icomoon";
+    color: #c8c6c5;
+  }
+
+  .form-control {
+    padding-right: 24px;
+  }
 }
 
 .form-category {
