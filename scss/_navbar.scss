@@ -90,9 +90,9 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 
-// //
-// // Customer
-// // --------------------------------------------------
+//
+// Customer
+// --------------------------------------------------
 
 .customer .navbar {
   @include navbar-base($brand-customer, #199b71);
@@ -105,9 +105,9 @@ $hover-dark-gray: #413c38 !default;
   padding-left: 30px;
 }
 
-// //
-// // Translator
-// // --------------------------------------------------
+//
+// Translator
+// --------------------------------------------------
 
 .translator .navbar {
   @include navbar-base($brand-translator, #89c1b7);
@@ -124,9 +124,9 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 
-// //
-// // Developer
-// // --------------------------------------------------
+//
+// Developer
+// --------------------------------------------------
 
 .developer .navbar {
   @include navbar-base($brand-developer, #d25440);
@@ -143,9 +143,9 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 
-// //
-// // Admin
-// // --------------------------------------------------
+//
+// Admin
+// --------------------------------------------------
 
 .admin .navbar {
   @include navbar-base($brand-admin, $hover-dark-gray);
