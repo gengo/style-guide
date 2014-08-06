@@ -41,11 +41,11 @@ $hover-dark-gray: #413c38 !default;
   background-color: $navbar-background-color;
 
   > .container-fluid {
-    padding-right: 12px;
+    padding-right: 0;
     padding-left: 0;
 
     .navbar-brand {
-      margin: 0 12px 0 0;
+      margin: 0 $padding-base-horizontal 0 0;
     }
   }
 
@@ -114,11 +114,6 @@ $hover-dark-gray: #413c38 !default;
     color: #a5a39f;
   }
 }
-
-.navbar-form {
-  @include navbar-vertical-align($input-height-small);
-}
-
 
 //
 // Customer
@@ -216,7 +211,7 @@ $workbench-icon-active-color: #fff !default;
     padding: 0 23px;
 
     .navbar-text {
-      padding: 0 12px;
+      padding: 0 $padding-base-horizontal;
     }
 
     .navbar-brand {
@@ -353,7 +348,7 @@ $workbench-icon-active-color: #fff !default;
       }
 
       > i {
-        margin-right: 12px;
+        margin-right: $padding-base-horizontal;
         font-size: 12px;
         line-height: inherit;
       }
@@ -364,6 +359,35 @@ $workbench-icon-active-color: #fff !default;
       color: $workbench-text-color;
       font-size: 10px;
       line-height: 21px;
+    }
+  }
+}
+
+// Navbar nav links
+//
+.navbar-collapse {
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar-right:last-child {
+      padding-right: $padding-base-horizontal;
+
+      .navbar-text {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// Navbar form
+//
+.navbar-form {
+  @include navbar-vertical-align($input-height-small);
+
+  // Undo 100% width for pull classes
+  @media (min-width: $grid-float-breakpoint) {
+    // Outdent the form if last child to line up with content down the page
+    &.navbar-right:last-child {
+      padding-right: $navbar-padding-horizontal + $padding-base-horizontal;
     }
   }
 }
