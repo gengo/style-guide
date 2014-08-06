@@ -3,18 +3,21 @@
 .nav-pills.nav-stacked {
   > li {
     margin-bottom: -2px;
-
     // Links rendered as pills
     > a {
+      display: inline-block;
+      padding: $padding-base-vertical $padding-base-horizontal;
+    }
+  }
+  &.ge-nav-stacked > li {
+    > a {
+      display: block;
       color: $list-group-link-color;
-      padding: 6px 12px;
-
       &:hover,
       &:focus {
         color: $gengo-green;
       }
     }
-
     // Active state
     &.active > a {
       &,
@@ -24,21 +27,26 @@
         background-color: $list-group-hover-bg;
       }
     }
-
+    // Badge
     .badge,
     &.active .badge {
-      background-color: transparent;
-      color: $text-color;
+      padding: 4px;
       font-size: $list-group-badge-font-size;
       font-weight: $font-normal;
       line-height: $line-height-base;
+      color: $text-color;
+      background-color: transparent;
       border-radius: 0;
-      padding: 4px;
     }
   }
-
   // dark background
-  &.ge-dark > li {
+  &.ge-nav-stacked.ge-dark > li {
+    > a {
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
     &.active > a {
       &,
       &:hover,
