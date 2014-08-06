@@ -41,7 +41,7 @@ $hover-dark-gray: #413c38 !default;
   background-color: $navbar-background-color;
 
   > .container-fluid {
-    padding-right: 0;
+    padding-right: 12px;
     padding-left: 0;
 
     .navbar-brand {
@@ -104,14 +104,10 @@ $hover-dark-gray: #413c38 !default;
     background-color: #fff;
   }
 
-  .navbar-form.navbar-right:last-child {
-    margin-right: inherit;
-  }
-
   .btn {
-    margin: 9px 18px 0;
-    font-size: 13px;
-    line-height: 16px;
+    margin: 8.5px 0;
+    font-size: $font-size-small;
+    padding: 5px $padding-base-horizontal;
   }
 
   p {
