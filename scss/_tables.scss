@@ -3,10 +3,10 @@
     padding-right: 0;
     padding-bottom: 7px;
     padding-left: 2px;
-    border-bottom-width: 1px;
-    color: $table-color-default;
     font-size: $table-header-font-size;
-    opacity: .4;
+    color: $gengo-gray-light;
+    border-bottom-width: 1px;
+
     &.translator {
       padding-left: 32px;
       color: $link-translator-color;
@@ -16,6 +16,9 @@
       text-align: right;
     }
   }
+}
+
+.table-dashboard {
   th:last-child,
   th:nth-last-child(2),
   th:nth-last-child(3),
@@ -23,14 +26,12 @@
   td:nth-last-child(2),
   td:nth-last-child(3) {
     padding-right: 0;
-    color: $table-color-default;
     text-align: right;
   }
   tr {
     .reward {
-      color: #4c4743;
-      text-align: right;
       font-weight: bold;
+      text-align: right;
     }
     .text {
       padding-left: 32px;
@@ -38,11 +39,11 @@
     }
   }
   .lang-from:after {
-    padding-right: 20px;
     width: 20px;
     height: 7px;
-    background: url("../images/to.png") 7px 7px no-repeat;
+    padding-right: 20px;
     content: "";
+    background: url("../images/to.png") 7px 7px no-repeat;
   }
   .reward {
     position: relative;
