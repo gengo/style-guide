@@ -52,20 +52,40 @@ $('#firstname').editable({
   <h2>select, local array, custom display </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline"><div><div class="editableform-loading" style="display: none;"></div><form class="form-inline editableform" style=""><div class="control-group form-group"><div><div class="editable-input"><select class="form-control input-sm"><option value="">not selected</option><option value="1">Male</option><option value="2">Female</option></select></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div></div><div class="editable-error-block help-block" style="display: none;"></div></div></form></div></span>
+      <div class="editable-container editable-inline">
+        <form class="form-inline editableform" style="">
+          <div class="control-group form-group">
+            <div class="editable-input">
+              <select class="form-control input-sm">
+                <option value="">not selected</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </div>
+            <div class="editable-buttons">
+              <button type="submit" class="btn btn-primary btn-sm editable-submit">
+                <i class="glyphicon glyphicon-ok"></i>
+              </button>
+              <button type="button" class="btn btn-default btn-sm editable-cancel">
+                <i class="glyphicon glyphicon-remove"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="col-md-6 ui">
-      <a href="#" id="sex" data-type="select" data-value=""></a>
+      <a href="#" id="gender" data-type="select" data-value="">Gender</a>
     </div>
   </div>
   <br>
 {% highlight html %}
 <!-- html  -->
-<a href="#" id="sex" data-type="select" data-value=""></a>
+<a href="#" id="gender" data-type="select" data-value=""></a>
 {% endhighlight %}
 {% highlight javascript %}
 // javascript
-$('#sex').editable({
+$('#gender').editable({
     prepend: "not selected",
     source: [
         {value: 1, text: 'Male'},
@@ -99,7 +119,20 @@ $('#group').editable({
   <h2>select, error while loading </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline" style=""><div><div class="editableform-loading" style="display: none;"></div><form class="form-inline editableform" style=""><div class="control-group form-group has-error" style="right:0;"><div><div class="editable-input"><select class="form-control" disabled="disabled"></select></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit" disabled="disabled"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div></div><div class="editable-error-block help-block">Error when loading list</div></div></form></div></span>
+      <div class="editable-container editable-inline">
+      <form class="form-inline editableform" style="">
+        <div class="control-group form-group has-error" style="right:0;">
+          <div class="editable-input">
+            <select class="form-control" disabled="disabled"></select>
+          </div>
+          <div class="editable-buttons">
+            <button type="submit" class="btn btn-primary btn-sm editable-submit" disabled="disabled"><i class="glyphicon glyphicon-ok"></i></button>
+            <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+          </div>
+        </div>
+        <div class="editable-error-block help-block">Error when loading list</div>
+      </form>
+      </div>
     </div>
     <div class="col-md-6 ui">
       <a href="#" id="status" data-type="select" data-value="0" data-source="/status">Active</a>
@@ -127,7 +160,7 @@ $('#status').editable();
   <h2>Combodate (date) </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline" style="">
+      <div class="editable-container editable-inline">
          <div>
             <div class="editableform-loading" style="display: none;"></div>
             <form class="form-inline editableform" style="">
@@ -137,7 +170,7 @@ $('#status').editable();
                         <input type="text" style="display: none;">
                         <span class="combodate">
                            <select class="day form-control" style="width: auto;">
-                              <option value=""></option>
+                              <option value="-">-</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -172,7 +205,7 @@ $('#status').editable();
                            </select>
                            &nbsp;/&nbsp;
                            <select class="month form-control" style="width: auto;">
-                              <option value=""></option>
+                              <option value="-">-</option>
                               <option value="0">Jan</option>
                               <option value="1">Feb</option>
                               <option value="2">Mar</option>
@@ -188,53 +221,17 @@ $('#status').editable();
                            </select>
                            &nbsp;/&nbsp;
                            <select class="year form-control" style="width: auto;">
-                              <option value=""></option>
+                              <option value="-">-</option>
+                              <option value="2018">2018</option>
+                              <option value="2017">2017</option>
+                              <option value="2016">2016</option>
                               <option value="2015">2015</option>
-                              <option value="2014">2014</option>
+                              <option value="2014" selected>2014</option>
                               <option value="2013">2013</option>
                               <option value="2012">2012</option>
                               <option value="2011">2011</option>
                               <option value="2010">2010</option>
                               <option value="2009">2009</option>
-                              <option value="2008">2008</option>
-                              <option value="2007">2007</option>
-                              <option value="2006">2006</option>
-                              <option value="2005">2005</option>
-                              <option value="2004">2004</option>
-                              <option value="2003">2003</option>
-                              <option value="2002">2002</option>
-                              <option value="2001">2001</option>
-                              <option value="2000">2000</option>
-                              <option value="1999">1999</option>
-                              <option value="1998">1998</option>
-                              <option value="1997">1997</option>
-                              <option value="1996">1996</option>
-                              <option value="1995">1995</option>
-                              <option value="1994">1994</option>
-                              <option value="1993">1993</option>
-                              <option value="1992">1992</option>
-                              <option value="1991">1991</option>
-                              <option value="1990">1990</option>
-                              <option value="1989">1989</option>
-                              <option value="1988">1988</option>
-                              <option value="1987">1987</option>
-                              <option value="1986">1986</option>
-                              <option value="1985">1985</option>
-                              <option value="1984" selected>1984</option>
-                              <option value="1983">1983</option>
-                              <option value="1982">1982</option>
-                              <option value="1981">1981</option>
-                              <option value="1980">1980</option>
-                              <option value="1979">1979</option>
-                              <option value="1978">1978</option>
-                              <option value="1977">1977</option>
-                              <option value="1976">1976</option>
-                              <option value="1975">1975</option>
-                              <option value="1974">1974</option>
-                              <option value="1973">1973</option>
-                              <option value="1972">1972</option>
-                              <option value="1971">1971</option>
-                              <option value="1970">1970</option>
                            </select>
                         </span>
                      </div>
@@ -244,11 +241,11 @@ $('#status').editable();
                </div>
             </form>
          </div>
-      </span>
+      </div>
 
     </div>
     <div class="col-md-6 ui">
-      <a href="#" id="dob" data-type="combodate" data-value="1984-05-15" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-title="Select Date of birth"></a>
+      <a href="#" id="dob" data-type="combodate" data-value="2014-05-15" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-title="Select Date of birth"></a>
     </div>
   </div>
   <br>
@@ -266,168 +263,128 @@ $('#dob').editable();
   <h2>Combodate (datetime) </h2>
   <div class="row bs-editable">
     <div class="col-md-12">
-      <span class="editable-container editable-inline" style="">
-        <div>
-          <div class="editableform-loading" style="display: none;"></div>
-          <form class="form-inline editableform" style="">
-            <div class="control-group form-group">
-              <div>
-                <div class="editable-input">
-                  <input type="text" style="display: none;">
-                  <span class="combodate">
-                    <select class="day form-control" style="width: auto;">
-                      <option value="">day</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                      <option value="24">24</option>
-                      <option value="25">25</option>
-                      <option value="26">26</option>
-                      <option value="27">27</option>
-                      <option value="28">28</option>
-                      <option value="29">29</option>
-                      <option value="30">30</option>
-                      <option value="31">31</option>
-                    </select>
-                    &nbsp;
-                    <select class="month form-control" style="width: auto;">
-                      <option value="">month</option>
-                      <option value="0">Jan</option>
-                      <option value="1">Feb</option>
-                      <option value="2">Mar</option>
-                      <option value="3">Apr</option>
-                      <option value="4">May</option>
-                      <option value="5">Jun</option>
-                      <option value="6">Jul</option>
-                      <option value="7">Aug</option>
-                      <option value="8">Sep</option>
-                      <option value="9">Oct</option>
-                      <option value="10">Nov</option>
-                      <option value="11">Dec</option>
-                    </select>
-                    &nbsp;
-                    <select class="year form-control" style="width: auto;">
-                      <option value="">year</option>
-                      <option value="2015">2015</option>
-                      <option value="2014">2014</option>
-                      <option value="2013">2013</option>
-                      <option value="2012">2012</option>
-                      <option value="2011">2011</option>
-                      <option value="2010">2010</option>
-                      <option value="2009">2009</option>
-                      <option value="2008">2008</option>
-                      <option value="2007">2007</option>
-                      <option value="2006">2006</option>
-                      <option value="2005">2005</option>
-                      <option value="2004">2004</option>
-                      <option value="2003">2003</option>
-                      <option value="2002">2002</option>
-                      <option value="2001">2001</option>
-                      <option value="2000">2000</option>
-                      <option value="1999">1999</option>
-                      <option value="1998">1998</option>
-                      <option value="1997">1997</option>
-                      <option value="1996">1996</option>
-                      <option value="1995">1995</option>
-                      <option value="1994">1994</option>
-                      <option value="1993">1993</option>
-                      <option value="1992">1992</option>
-                      <option value="1991">1991</option>
-                      <option value="1990">1990</option>
-                      <option value="1989">1989</option>
-                      <option value="1988">1988</option>
-                      <option value="1987">1987</option>
-                      <option value="1986">1986</option>
-                      <option value="1985">1985</option>
-                      <option value="1984">1984</option>
-                      <option value="1983">1983</option>
-                      <option value="1982">1982</option>
-                      <option value="1981">1981</option>
-                      <option value="1980">1980</option>
-                      <option value="1979">1979</option>
-                      <option value="1978">1978</option>
-                      <option value="1977">1977</option>
-                      <option value="1976">1976</option>
-                      <option value="1975">1975</option>
-                      <option value="1974">1974</option>
-                      <option value="1973">1973</option>
-                      <option value="1972">1972</option>
-                      <option value="1971">1971</option>
-                      <option value="1970">1970</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    <select class="hour form-control" style="width: auto;">
-                      <option value="">hour</option>
-                      <option value="0">00</option>
-                      <option value="1">01</option>
-                      <option value="2">02</option>
-                      <option value="3">03</option>
-                      <option value="4">04</option>
-                      <option value="5">05</option>
-                      <option value="6">06</option>
-                      <option value="7">07</option>
-                      <option value="8">08</option>
-                      <option value="9">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                    </select>
-                    :
-                    <select class="minute form-control" style="width: auto;">
-                      <option value="">minute</option>
-                      <option value="0">00</option>
-                      <option value="5">05</option>
-                      <option value="10">10</option>
-                      <option value="15">15</option>
-                      <option value="20">20</option>
-                      <option value="25">25</option>
-                      <option value="30">30</option>
-                      <option value="35">35</option>
-                      <option value="40">40</option>
-                      <option value="45">45</option>
-                      <option value="50">50</option>
-                      <option value="55">55</option>
-                    </select>
-                  </span>
-                </div>
-                <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
-              </div>
-              <div class="editable-error-block help-block" style="display: none;"></div>
+      <div class="editable-container editable-inline">
+        <form class="form-inline editableform" style="">
+          <div class="control-group form-group">
+            <div class="editable-input">
+              <span class="combodate">
+                <select class="day form-control" style="width: auto;">
+                  <option value="">day</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                </select>
+                &nbsp;
+                <select class="month form-control" style="width: auto;">
+                  <option value="">month</option>
+                  <option value="0">Jan</option>
+                  <option value="1">Feb</option>
+                  <option value="2">Mar</option>
+                  <option value="3">Apr</option>
+                  <option value="4">May</option>
+                  <option value="5">Jun</option>
+                  <option value="6">Jul</option>
+                  <option value="7">Aug</option>
+                  <option value="8">Sep</option>
+                  <option value="9">Oct</option>
+                  <option value="10">Nov</option>
+                  <option value="11">Dec</option>
+                </select>
+                &nbsp;
+                <select class="year form-control" style="width: auto;">
+                  <option value="">year</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                </select>
+                &nbsp;&nbsp;
+                <select class="hour form-control" style="width: auto;">
+                  <option value="">hour</option>
+                  <option value="0">00</option>
+                  <option value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                  <option value="4">04</option>
+                  <option value="5">05</option>
+                  <option value="6">06</option>
+                  <option value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                </select>
+                :
+                <select class="minute form-control" style="width: auto;">
+                  <option value="">minute</option>
+                  <option value="0">00</option>
+                  <option value="5">05</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+              </span>
             </div>
-          </form>
-        </div>
-      </span>
+            <div class="editable-buttons">
+              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
+              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <br>
     <div class="col-md-12 ui">
@@ -452,20 +409,19 @@ $('#event').editable({
   <h2>ComboTextarea, buttons below </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline" style="">
-        <div>
-          <div class="editableform-loading" style="display: none;"></div>
-          <form class="form-inline editableform" style="">
-            <div class="control-group form-group">
-              <div>
-                <div class="editable-input"><textarea class="form-control input-large" placeholder="Your comments here..." rows="3"></textarea></div>
-                <div class="editable-buttons editable-buttons-bottom"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
-              </div>
-              <div class="editable-error-block help-block" style="display: none;"></div>
+      <div class="editable-container editable-inline">
+        <form class="form-inline editableform" style="">
+          <div class="control-group form-group">
+            <div class="editable-input">
+              <textarea class="form-control input-large" placeholder="Your comments here..." rows="3"></textarea>
             </div>
-          </form>
-        </div>
-      </span>
+            <div class="editable-buttons editable-buttons-bottom">
+              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
+              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="col-md-6 ui">
       <a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here...">Awesome User</a>
@@ -488,20 +444,25 @@ $('#comments').editable({
   <h2>Twitter typehead.js </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline" style="">
-        <div>
-          <div class="editableform-loading" style="display: none;"></div>
-          <form class="form-inline editableform" style="">
-            <div class="control-group form-group">
-              <div>
-                <div class="editable-input" style="position: relative;"><span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="tt-hint input-sm" type="text" autocomplete="off" spellcheck="off" disabled="" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input type="text" class="form-control input-sm tt-query" style="padding-right: 24px; position: relative; vertical-align: top; background-color: transparent;" autocomplete="off" spellcheck="false" dir="auto"><span style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></span><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"></span></span><span class="editable-clear-x"></span></div>
-                <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
-              </div>
-              <div class="editable-error-block help-block" style="display: none;"></div>
+      <div class="editable-container editable-inline">
+        <form class="form-inline editableform" style="">
+          <div class="control-group form-group">
+            <div class="editable-input" style="position: relative;">
+              <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                <input class="tt-hint input-sm" type="text" autocomplete="off" disabled="" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);">
+                <input type="text" class="form-control input-sm tt-query" style="padding-right: 24px; position: relative; vertical-align: top; background-color: transparent;" autocomplete="off" spellcheck="false" dir="auto">
+                  <span style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></span>
+                  <span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"></span>
+              </span>
+              <span class="editable-clear-x"></span>
             </div>
-          </form>
-        </div>
-      </span>
+            <div class="editable-buttons">
+              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
+              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="col-md-6 ui">
       <a href="#" id="state2" data-type="typeaheadjs" data-placement="right"></a>
@@ -526,28 +487,25 @@ $('#state2').editable({
   <h2>Checklist </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline">
-        <div>
-          <div class="editableform-loading" style="display: none;"></div>
-          <form class="form-inline editableform" style="">
-            <div class="control-group form-group">
-              <div>
-                <div class="editable-input">
-                  <div class="editable-checklist">
-                    <div><label><input type="checkbox" value="1"><span> banana</span></label></div>
-                    <div><label><input type="checkbox" value="2"><span> peach</span></label></div>
-                    <div><label><input type="checkbox" value="3"><span> apple</span></label></div>
-                    <div><label><input type="checkbox" value="4"><span> watermelon</span></label></div>
-                    <div><label><input type="checkbox" value="5"><span> orange</span></label></div>
-                  </div>
-                </div>
-                <div class="editable-buttons" style="display:block;margin-left:0;"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
+      <div class="editable-container editable-inline">
+        <form class="form-inline editableform" style="">
+          <div class="control-group form-group">
+            <div class="editable-input">
+              <div class="editable-checklist">
+                <div><label><input type="checkbox" value="1"><span> banana</span></label></div>
+                <div><label><input type="checkbox" value="2"><span> peach</span></label></div>
+                <div><label><input type="checkbox" value="3"><span> apple</span></label></div>
+                <div><label><input type="checkbox" value="4"><span> watermelon</span></label></div>
+                <div><label><input type="checkbox" value="5"><span> orange</span></label></div>
               </div>
-              <div class="editable-error-block help-block" style="display: none;"></div>
             </div>
-          </form>
-        </div>
-      </span>
+            <div class="editable-buttons" style="display:block;margin-left:0;">
+              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
+              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="col-md-6 ui">
       <a href="#" id="fruits" data-type="checklist" data-value="2,3"></a>
@@ -576,38 +534,35 @@ $('#fruits').editable({
   <h2>Select2 (tags mode) </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline">
-        <div>
-          <div class="editableform-loading" style="display: none;"></div>
-          <form class="form-inline editableform" style="">
-            <div class="control-group form-group">
-              <div>
-                <div class="editable-input">
-                  <div class="select2-container select2-container-multi input-large" id="s2id_autogen1">
-                    <ul class="select2-choices">
-                      <li class="select2-search-choice">
-                        <div>html</div>
-                        <a href="#" onclick="return false;" class="select2-search-choice-close" tabindex="-1"></a>
-                      </li>
-                      <li class="select2-search-choice">
-                        <div>javascript</div>
-                        <a href="#" onclick="return false;" class="select2-search-choice-close" tabindex="-1"></a>
-                      </li>
-                      <li class="select2-search-field">    <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" id="s2id_autogen2" style="width: 20px;">  </li>
-                    </ul>
-                    <div class="select2-drop select2-drop-multi select2-display-none">
-                      <ul class="select2-results">   </ul>
-                    </div>
-                  </div>
-                  <input type="hidden" class="input-large select2-offscreen" value="html,javascript" tabindex="-1">
+      <div class="editable-container editable-inline">
+        <form class="form-inline editableform" style="">
+          <div class="control-group form-group">
+            <div class="editable-input">
+              <div class="select2-container select2-container-multi input-large" id="s2id_autogen1">
+                <ul class="select2-choices">
+                  <li class="select2-search-choice">
+                    <div>html</div>
+                    <a href="#" onclick="return false;" class="select2-search-choice-close" tabindex="-1"></a>
+                  </li>
+                  <li class="select2-search-choice">
+                    <div>javascript</div>
+                    <a href="#" onclick="return false;" class="select2-search-choice-close" tabindex="-1"></a>
+                  </li>
+                  <li class="select2-search-field">    <input type="text" autocomplete="off" class="select2-input" id="s2id_autogen2" style="width: 20px;">  </li>
+                </ul>
+                <div class="select2-drop select2-drop-multi select2-display-none">
+                  <ul class="select2-results">   </ul>
                 </div>
-                <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
               </div>
-              <div class="editable-error-block help-block" style="display: none;"></div>
+              <input type="hidden" class="input-large select2-offscreen" value="html,javascript" tabindex="-1">
             </div>
-          </form>
-        </div>
-      </span>
+            <div class="editable-buttons">
+              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
+              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="col-md-6 ui">
       <!-- <a href="#" id="tags" data-type="select2">html, javascript</a> -->
@@ -634,7 +589,34 @@ $('#tags').editable({
   <h2>Select2 (tags dropdown mode) </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline"><div><div class="editableform-loading" style="display: none;"></div><form class="form-inline editableform" style=""><div class="control-group form-group"><div><div class="editable-input"><div class="select2-container select2-allowclear" id="s2id_autogen1" style="width: 200px;"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">Bahamas</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input type="hidden" value="BS" tabindex="-1" class="select2-offscreen"></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div></div><div class="editable-error-block help-block" style="display: none;"></div></div></form></div></span>
+      <div class="editable-container editable-inline">
+        <form class="form-inline editableform" style="">
+          <div class="control-group form-group">
+            <div class="editable-input">
+              <div class="select2-container select2-allowclear" id="s2id_autogen3" style="width: 200px;">
+                <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
+                  <span class="select2-chosen">Bahamas</span>
+                  <abbr class="select2-search-choice-close"></abbr>
+                  <span class="select2-arrow"><b></b>
+                  </span>
+                </a>
+                <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen4">
+                <div class="select2-drop select2-display-none select2-with-searchbox">
+                  <div class="select2-search">
+                    <input type="text" autocomplete="off" class="select2-input">
+                  </div>
+                  <ul class="select2-results"></ul>
+                </div>
+              </div>
+              <input type="hidden" value="BS" tabindex="-1" class="select2-offscreen">
+            </div>
+            <div class="editable-buttons">
+              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
+              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="col-md-6 ui">
       <a href="#" id="country" data-type="select2" data-pk="1" data-value="BS" data-title="Select country"></a>
@@ -664,7 +646,36 @@ $('#country').editable({
   <h2>Custom input, several fields </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <span class="editable-container editable-inline" style=""><div><div class="editableform-loading" style="display: none;"></div><form class="form-inline editableform" style=""><div class="control-group form-group"><div><div class="editable-input"><div class="editable-address"><label><span>City: </span><input type="text" name="city" class="input-small form-control"></label></div><div class="editable-address"><label><span>Street: </span><input type="text" name="street" class="input-small form-control"></label></div><div class="editable-address"><label><span>Building: </span><input type="text" name="building" class="input-mini form-control"></label></div></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div></div><div class="editable-error-block help-block" style="display: none;"></div></div></form></div></span>
+      <div class="editable-container editable-inline">
+        <form class="form-inline editableform" style="">
+          <div class="control-group form-group">
+            <div class="editable-input">
+              <div class="editable-address">
+                <label>
+                  <span>City:</span>
+                  <input type="text" name="city" class="input-small form-control">
+                </label>
+              </div>
+              <div class="editable-address">
+                <label>
+                  <span>Street:</span>
+                  <input type="text" name="street" class="input-small form-control">
+                </label>
+              </div>
+              <div class="editable-address">
+                <label>
+                  <span>Building:</span>
+                  <input type="text" name="building" class="input-mini form-control">
+                </label>
+              </div>
+            </div>
+            <div class="editable-buttons">
+              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
+              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="col-md-6 ui">
       <a href="#" id="address" data-type="address"></a>

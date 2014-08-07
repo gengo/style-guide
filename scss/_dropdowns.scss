@@ -18,24 +18,31 @@
   box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .2);
 }
 
+.dropdown-header {
+  font-size: $dropdown-header-font-size;
+}
+
 .multiselect-container {
   &.dropdown-menu {
-    padding: 6px;
     min-width: 240px;
+    padding: 6px;
     li {
       margin-bottom: 3px;
-      & > a > label {
-        padding-left: 30px;
-        input {
-          margin-left: -23px;
+      > a {
+        padding: 3px 0;
+        > label {
+          padding-left: 30px;
+          input {
+            margin-left: -23px;
+          }
         }
       }
     }
     .active > a,
     .active > a:hover,
     .active > a:active {
-      border-radius: $dropdown-border-radius;
       background-color: $gengo-green;
+      border-radius: $dropdown-border-radius;
       label {
         color: #fff;
       }
@@ -47,13 +54,13 @@
   .input-group {
     width: 216px;
     .multiselect-search {
-      margin: 0;
       height: 30px;
-      border-radius: $dropdown-border-radius;
+      margin: 0;
       // margin-left:14px;
       background-image: url("../images/search.png");
-      background-position: right 3px bottom 6px;
       background-repeat: no-repeat;
+      background-position: right 3px bottom 6px;
+      border-radius: $dropdown-border-radius;
     }
   }
 }

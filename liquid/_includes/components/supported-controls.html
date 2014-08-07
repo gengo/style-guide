@@ -1,67 +1,97 @@
 <div class="box">
   <h1 id="supported-controls">Supported Controls</h1>
   <hr/>
+
   <h2>Inputs</h2>
-  <div><input type="text" class="form-control" placeholder="Text input"></div>
+  <div class="bs-example">
+    <input type="text" class="form-control input-sm" placeholder="Text input">
+  </div>
 <br>
 {% highlight html %}
 <input type="text" class="form-control" placeholder="Text input">
 {% endhighlight %}
-<h2>Textarea</h2>
-<div><textarea class="form-control" rows="3"></textarea></div>
+
+  <h2>Textarea</h2>
+  <div class="bs-example">
+    <textarea class="form-control" rows="4"></textarea>
+  </div>
 <br>
 {% highlight html %}
 <textarea class="form-control" rows="3"></textarea>
 {% endhighlight %}
 
-<h2>Vertical checkboxes and radios</h2>
-<div class="bs-example">
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="">Option one
-    </label>
+  <h2>Vertical checkboxes and radios</h2>
+  <div class="bs-example">
+    <form role="form">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Option one
+        </label>
+      </div>
+      <div class="checkbox disabled">
+        <label>
+          <input type="checkbox" value="" disabled>
+          Option two
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          Option one
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          Option two
+        </label>
+      </div>
+      <div class="radio disabled">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+          Option three
+        </label>
+      </div>
+    </form>
   </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox">Option two
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Option one
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Option two
-    </label>
-  </div>
-</div>
 <br>
 {% highlight html %}
 <div class="checkbox">
   <label>
-    <input type="checkbox" value="">Option one
+    <input type="checkbox" value="">
+    Option one
   </label>
 </div>
-<div class="checkbox">
+<div class="checkbox disabled">
   <label>
-    <input type="checkbox">Option two
+    <input type="checkbox" value="" disabled>
+    Option two
+  </label>
+</div>
+
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    Option one
   </label>
 </div>
 <div class="radio">
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Option one
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Option two
   </label>
 </div>
-<div class="radio">
+<div class="radio disabled">
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Option two
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    Option three
   </label>
 </div>
 {% endhighlight %}
 
-<h2>Inline checkboxes</h2>
+  <h2>Inline checkboxes</h2>
   <div class="bs-example">
     <label class="checkbox-inline">
     <input type="checkbox" id="inlineCheckbox1" value="option1" checked> 1

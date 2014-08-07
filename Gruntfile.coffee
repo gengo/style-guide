@@ -7,6 +7,7 @@ module.exports = (grunt) ->
   require('jit-grunt')(grunt, {
     usebanner: 'grunt-banner'
     scsslint: 'grunt-scss-lint'
+    validation: 'grunt-html-validation'
   })
 
   #path configuration
@@ -55,6 +56,7 @@ module.exports = (grunt) ->
         files: '<%= assets.template %>/**/*.html'
         tasks: [
           'jekyll'
+          'validation'
           'newer:copy:html-dev'
         ]
       js:
@@ -328,6 +330,22 @@ module.exports = (grunt) ->
         options:
           config:'_config.yml'
 
+    validation:
+      options:
+        charset: 'utf-8'
+        doctype: 'HTML5'
+        failHard: true
+        reset: true
+        relaxerror: [
+          'Bad value X-UA-Compatible for attribute http-equiv on element meta.'
+          'Element img is missing required attribute src.'
+          'Attribute autocomplete not allowed on element input at this point.'
+          'The element input must not appear as a descendant of the a element.'
+          'The element label must not appear as a descendant of the a element.'
+        ]
+      files:
+        src: '<%= assets.html %>/**/*.html'
+
 
 
 
@@ -358,6 +376,7 @@ module.exports = (grunt) ->
     'clean'
     # html
     'jekyll'
+    'validation'
     'newer:copy:html-dev'
     # copy 3rd party resources
     'copy-3rd-party-resources'
@@ -384,6 +403,7 @@ module.exports = (grunt) ->
     'clean'
     # html
     'jekyll'
+    'validation'
     'newer:copy:html-dist'
     # copy 3rd party resources
     'copy-3rd-party-resources'

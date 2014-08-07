@@ -6,7 +6,6 @@
   @media (max-width: $grid-float-breakpoint) {
     background-color: $bg-color;
   }
-
   .nav {
     a:hover,
     .active a {
@@ -37,85 +36,57 @@ $navbar-background-color: #fff !default;
 $hover-dark-gray: #413c38 !default;
 
 .navbar {
-  border-bottom: 1px solid $table-border-color;
   background-color: $navbar-background-color;
-
-  > .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-
-    .navbar-brand {
-      margin: 0;
-    }
-  }
-
-  .nav {
-    > li {
-      line-height: 21px;
-    }
-
-    a {
-      margin: 0 17px;
-      padding: 14px 0 10px;
-      border-bottom: solid 3px $navbar-background-color;
-      color: $text-color;
-      transition: border-bottom-color .3s ease;
-
-      @media (max-width: $grid-float-breakpoint) {
-        margin: 0 13px;
-        padding-right: 13px;
-        padding-left: 13px;
-        border-bottom: 0;
-        border-radius: 3px;
-        color: #fff;
-        transition: none;
-      }
-    }
-
-    .active a,
-    a:hover {
-      border-bottom-color: $brand-customer;
-      background-color: $navbar-background-color;
-    }
-  }
+  border-bottom: 1px solid $table-border-color;
 
   .navbar-brand {
-    padding-top: 16px;
-    padding-right: 26px;
-    padding-bottom: 10px;
-    padding-left: 29px;
+    padding: 16px 26px 10px 29px;
+    margin-right: 14px;
     background-color: $brand-customer;
-    font-size: 20px;
-    line-height: 20px;
 
     &:before {
       display: block;
       width: 59px;
       height: 20px;
+      content: "";
       background-image: url("../images/logo_gengo.svg");
+      background-repeat: no-repeat;
       background-size: 59px 20px;
       background-size: contain;
-      background-repeat: no-repeat;
-      content: "";
     }
   }
-
   .navbar-toggle .icon-bar {
     background-color: #fff;
   }
-
-  .navbar-form.navbar-right:last-child {
-    margin-right: inherit;
-  }
-
   .btn {
-    margin: 9px 18px 0;
-    font-size: 13px;
-    line-height: 16px;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    margin: 7.5px 0;
+    font-size: $font-size-small;
   }
+  p,
+  p > a {
+    color: $gengo-gray-light;
+  }
+}
 
-  p {
-    color: #a5a39f;
+.navbar-collapse .navbar-nav {
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+    > li {
+      > a {
+        padding: 13px 0 10px;
+        padding-bottom: $navbar-padding-vertical - $navbar-btn-border-bottom;
+        margin: 0 17px;
+        color: $text-color;
+        border-bottom: solid $navbar-btn-border-bottom $navbar-background-color;
+        transition: border-bottom-color .3s ease;
+      }
+      .active a,
+      a:hover {
+        background-color: $navbar-background-color;
+        border-bottom-color: $brand-customer;
+      }
+    }
   }
 }
 
@@ -126,7 +97,6 @@ $hover-dark-gray: #413c38 !default;
 .customer .navbar {
   @include navbar-base($brand-customer, #199b71);
 }
-
 
 .translator .navbar .navbar-brand,
 .developer .navbar .navbar-brand,
@@ -202,22 +172,20 @@ $workbench-icon-color: #837f7c !default;
 $workbench-icon-active-color: #fff !default;
 
 .workbench .navbar {
-  border-bottom-color: $brand-workbench;
-  background-color: $brand-workbench;
-  color: $workbench-text-color;
   font-size: 13px;
+  color: $workbench-text-color;
+  background-color: $brand-workbench;
+  border-bottom-color: $brand-workbench;
 
   .border-left {
     border-left: 1px solid $workbench-border-color;
   }
-
   .nav {
     padding: 0 23px;
 
     .navbar-text {
-      padding: 0 12px;
+      padding: 0 $padding-base-horizontal;
     }
-
     .navbar-brand {
       padding-right: 18px;
       padding-left: 18px;
@@ -227,34 +195,29 @@ $workbench-icon-active-color: #fff !default;
         background-color: $hover-dark-gray;
       }
     }
-
     a,
     a:hover,
     .active a {
       border-bottom: 0;
     }
-
     a {
-      margin: 0;
       padding: 14px 8px 13px;
-      background-color: $brand-workbench;
+      margin: 0;
       color: $workbench-text-color;
+      background-color: $brand-workbench;
     }
-
     > li > a:hover,
     .open > a:hover {
       background-color: $hover-dark-gray;
 
       &.disabled {
-        background-color: transparent;
         cursor: default;
+        background-color: transparent;
       }
     }
-
     .btn {
       font-size: 13px;
     }
-
     li > {
       [class^="icon-"],
       [class*=" icon-"] {
@@ -263,13 +226,11 @@ $workbench-icon-active-color: #fff !default;
         &:hover,
         &.selected {
           color: $workbench-icon-active-color;
-
           &.disabled {
             color: #837f7c;
           }
         }
       }
-
       .icon-vertical,
       .icon-horizontal,
       .icon-expand {
@@ -291,78 +252,75 @@ $workbench-icon-active-color: #fff !default;
       }
     }
   }
-
   .navbar-header .nav {
     padding: 0 12px;
   }
-
   .navbar-right {
-    margin-right: 0;
     padding-right: $grid-gutter-width;
+    margin-right: 0;
 
     .btn,
     .navbar-text {
-      margin-left: 0;
       margin-right: 0;
+      margin-left: 0;
     }
     .navbar-text {
       margin-right: 12px;
     }
   }
-
   .dropdown-menu {
     @include border-top-radius(1px);
     @include border-bottom-radius(2px);
-    margin-top: 0;
-    padding: 5px 0;
     min-width: 190px;
-    border: 1px solid #433f3b;
+    padding: 5px 0;
+    margin-top: 0;
     background-color: $brand-workbench;
+    border: 1px solid #433f3b;
     box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .2);
 
     &:before,
     &:after {
       border-color: transparent;
     }
-
     .divider {
       background-color: #635e5a;
     }
-
     > li > a {
       position: relative;
       padding: 0 17px;
-      color: #fff;
       line-height: 36px;
+      color: #fff;
 
       &:hover {
         padding-bottom: 0;
-        border-radius: 0;
         background-color: #322e2a;
+        border-radius: 0;
       }
-
       .text {
         margin-right: 40px;
         text-align: right;
       }
-
       .count {
         position: absolute;
         right: 24px;
       }
-
       > i {
-        margin-right: 12px;
+        margin-right: $padding-base-horizontal;
         font-size: 12px;
         line-height: inherit;
       }
     }
-
     .section-text {
       padding: 0 24px;
-      color: $workbench-text-color;
       font-size: 10px;
       line-height: 21px;
+      color: $workbench-text-color;
     }
   }
+}
+
+// Navbar form
+//
+.navbar-form {
+  @include navbar-vertical-align($input-height-small);
 }

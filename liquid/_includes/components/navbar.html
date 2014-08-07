@@ -16,6 +16,7 @@
           <a class="navbar-brand" href="#"></a>
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
+          <!-- Left nav -->
           <ul class="nav navbar-nav">
             <li>
               <a href="#">Orders</a>
@@ -33,9 +34,19 @@
               <a href="#">Support</a>
             </li>
           </ul>
+          <!-- Right nav -->
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#"><i class="icon-create"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon-settings"></i></a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
+  </div>
 {% highlight html %}
 <header class="navbar navbar-static-top" role="banner">
   <div class="container-fluid">
@@ -71,8 +82,6 @@
 </header>
 {% endhighlight %}
 
-  </div>
-
   <p>Add <code>.navbar-fixed-top</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content. Create a full-width navbar that scrolls away with the page by adding .navbar-static-top and include a .container or <code>.container-fluid</code> to center and pad navbar content.</p>
   <p>Unlike the <code>.navbar-fixed-*</code> classes, you do not need to change any padding on the body.</p>
 
@@ -91,13 +100,14 @@
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
           <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control form-search" placeholder="Search">
+            <div class="form-group form-search">
+              <input type="text" class="form-control input-sm" placeholder="Search">
             </div>
           </form>
         </nav>
       </div>
     </header>
+  </div>
 {% highlight html %}
 <header class="navbar navbar-static-top" role="banner">
   <div class="container-fluid">
@@ -112,15 +122,14 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control form-search" placeholder="Search">
+        <div class="form-group form-search">
+          <input type="text" class="form-control form-search input-sm" placeholder="Search">
         </div>
       </form>
     </nav>
   </div>
 </header>
 {% endhighlight %}
-  </div>
 
   <h2>Buttons</h2>
   <div class="navbar-styles">
@@ -137,11 +146,12 @@
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
           <div class="navbar-right">
-            <button class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary navbar-btn">Submit</button>
           </div>
         </nav>
       </div>
     </header>
+  </div>
 {% highlight html %}
 <header class="navbar navbar-static-top" role="banner">
   <div class="container-fluid">
@@ -156,13 +166,13 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <div class="navbar-right">
-        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary navbar-btn">Submit</button>
       </div>
     </nav>
   </div>
 </header>
 {% endhighlight %}
-  </div>
+
   <h2>Text</h2>
   <div class="navbar-styles">
     <header class="navbar navbar-static-top" role="banner">
@@ -178,11 +188,12 @@
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
           <div class="navbar-right">
-            <p class="navbar-text">Logged in as User-123</p>
+            <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">User-123</a></p>
           </div>
         </nav>
       </div>
     </header>
+  </div>
 {% highlight html %}
 <header class="navbar navbar-static-top" role="banner">
   <div class="container-fluid">
@@ -197,12 +208,11 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <div class="navbar-right">
-        <p class="navbar-text">Logged in as User-123</p>
+        <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">User-123</a></p>
       </div>
     </nav>
   </div>
 </header>
 {% endhighlight %}
-  </div>
 
 </div>
