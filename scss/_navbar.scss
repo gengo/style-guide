@@ -40,8 +40,8 @@ $hover-dark-gray: #413c38 !default;
   border-bottom: 1px solid $table-border-color;
 
   .navbar-brand {
-    padding: 16px 29px 10px 26px;
-    margin-right: $padding-base-horizontal;
+    padding: 16px 26px 10px 29px;
+    margin-right: 14px;
     background-color: $brand-customer;
 
     &:before {
