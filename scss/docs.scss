@@ -60,6 +60,11 @@ body > .container {
   }
 }
 
+.ge-nav-stacked.affix {
+  position: fixed;
+  top: 36px;
+}
+
 .bs-example {
   margin: 0;
   padding: 0;

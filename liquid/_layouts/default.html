@@ -49,7 +49,7 @@ js:
   <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icons/gengo_c_app.png">
   <link rel="icon" href="assets/favicons/gengo.ico" type="image/x-icon">
 </head>
-<body data-spy="scroll" data-target=".ge-nav">
+<body>
   <header class="navbar navbar-static-top ge-navbar" role="banner">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -82,7 +82,10 @@ js:
     </div>
   </header>
   {{ content }}
-  <!-- JS -->{% for src in page.js %}
-  <script src="{{src}}"></script>{% endfor %}
+
+  <!-- JS -->
+{% for src in page.js %}
+  <script src="{{src}}"></script>
+{% endfor %}
 </body>
 </html>

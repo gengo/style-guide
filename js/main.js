@@ -1,6 +1,35 @@
 (function($) {
   'use strict';
 
+  // Scrollspy
+  var $window = $(window);
+  var $body   = $(document.body);
+
+  $body.scrollspy({
+    target: '.ge-nav'
+  })
+  $window.on('load', function() {
+    $body.scrollspy('refresh');
+  });
+
+  // Kill links
+  $('.container [href=#]').click(function(e) {
+    e.preventDefault();
+  });
+
+  // Sidenav affixing
+  setTimeout(function () {
+    var $sideBar = $('.ge-nav > .ge-nav-stacked');
+
+    $sideBar.affix({
+      offset: {
+        top: $sideBar.offset().top,
+        bottom: $sideBar.offset().top
+      }
+    });
+  }, 100);
+
+
   $('.change-brand').on('click', 'a', function(e) {
     var brand = $(e.target).closest('a').attr('class');
     $('body').attr('class', brand);
