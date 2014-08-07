@@ -81,7 +81,7 @@ $hover-dark-gray: #413c38 !default;
         border-bottom: solid $navbar-btn-border-bottom $navbar-background-color;
         transition: border-bottom-color .3s ease;
       }
-      .active a,
+      &.active a,
       a:hover {
         background-color: $navbar-background-color;
         border-bottom-color: $brand-customer;
