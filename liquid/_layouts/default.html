@@ -82,7 +82,10 @@ js:
     </div>
   </header>
   {{ content }}
-  <!-- JS -->{% for src in page.js %}
-  <script src="{{src}}"></script>{% endfor %}
+
+  <!-- JS -->
+{% for src in page.js %}
+  <script src="{{src}}"></script>
+{% endfor %}
 </body>
 </html>
