@@ -124,15 +124,17 @@ $('#group').editable({
       <div class="editable-container editable-inline">
       <form class="form-inline editableform" style="">
         <div class="control-group form-group has-error" style="right:0;">
-          <div class="editable-input">
-            <select class="form-control" disabled="disabled"></select>
+          <div>
+            <div class="editable-input">
+              <select class="form-control" disabled="disabled"></select>
+            </div>
+            <div class="editable-buttons">
+              <button type="submit" class="btn btn-primary btn-sm editable-submit" disabled="disabled"><i class="glyphicon glyphicon-ok"></i></button>
+              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
           </div>
-          <div class="editable-buttons">
-            <button type="submit" class="btn btn-primary btn-sm editable-submit" disabled="disabled"><i class="glyphicon glyphicon-ok"></i></button>
-            <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
-          </div>
+          <div class="editable-error-block help-block">Error when loading list</div>
         </div>
-        <div class="editable-error-block help-block">Error when loading list</div>
       </form>
       </div>
     </div>
