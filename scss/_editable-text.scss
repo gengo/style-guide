@@ -91,7 +91,9 @@ a[data-placeholder="Required"] ~ .editable-inline {
   margin-left: 0;
 }
 
+//
 // twitter typeheadjs
+// --------------------------------------------------
 .tt-query {
   line-height: 1.4;
   text-indent: 6px;
@@ -106,12 +108,18 @@ a[data-placeholder="Required"] ~ .editable-inline {
   border-radius: $editable-border-radius;
 }
 
+.tt-hint {
+  @extend .form-control;
+  border-width: 1px;
+}
+
 .tt-dropdown-menu {
   width: 240px;
 }
 
+//
 // select2
-
+// --------------------------------------------------
 .select2-container-multi {
   .select2-choices {
     height: $editable-control-height !important;
@@ -159,13 +167,17 @@ a[data-placeholder="Required"] ~ .editable-inline {
   }
 }
 
+//
 // combodate
+// --------------------------------------------------
 [data-type="combodate"] + span {
   min-height: $editable-control-height;
   padding-top: 5px;
 }
 
+//
 // switch colors
+// --------------------------------------------------
 .customer {
   .editable-click,
   a.editable-click,
