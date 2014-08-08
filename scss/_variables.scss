@@ -27,7 +27,7 @@ $gray-light:            lighten($gengo-gray, 60%) !default;
 $gray-lighter:          lighten($gengo-gray, 93.5%) !default;
 
 $brand-primary:         $gengo-green !default;
-$brand-success:         #aedbb3 !default;
+$brand-success:         $gengo-lgreen !default;
 $brand-info:            $gengo-gray !default;
 $brand-warning:         #e5d369 !default;
 $brand-danger:          $gengo-red !default;
@@ -303,11 +303,11 @@ $editable-empty-color:                #d14 !default;
 //
 //##
 $validation-success-color:             #067957 !default;
-$validation-success-border-color:      #1cad7e !default;
+$validation-success-border-color:      $gengo-green !default;
 $validation-warning-color:             #999d5f !default;
 $validation-warning-border-color:      #dde187 !default;
 $validation-error-color:               #a53f2c !default;
-$validation-error-border-color:        #ea5e47 !default;
+$validation-error-border-color:        $brand-danger !default;
 
 //-- Z-index master list
 //
@@ -434,7 +434,7 @@ $navbar-default-toggle-border-color:       #ddd !default;
 // Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $gray-light !default;
-$navbar-inverse-bg:                         #4d4843 !default;
+$navbar-inverse-bg:                         $gengo-gray !default;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
@@ -706,7 +706,7 @@ $alert-danger-text:           $state-danger-text !default;
 $alert-danger-border:         $state-danger-border !default;
 
 $alert-error-text:            #c46950 !default;
-$alert-validation-text:       #1cad7e !default;
+$alert-validation-text:       $gengo-green !default;
 
 $alert-overlay-padding:       12px 36px 12px 24px !default;
 $alert-overlay-text:          14px !default;
