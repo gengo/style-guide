@@ -297,7 +297,12 @@ body > .container {
 }
 
 .doctype {
-  .item { padding: 24px 0 16px; }
+  .item {
+    padding: 24px 0 20px;
+
+    &.grp { padding-top: 16px; }
+  }
+  .text { margin-top: 5px; }
 }
 
 // Favicons
