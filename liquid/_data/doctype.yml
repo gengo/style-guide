@@ -22,12 +22,6 @@
  - class: doctype-odt
    name: odt
 
- - class: doctype-yt
-   name: youtube
-
- - class: doctype-ggl
-   name: google
-
  - class: doctype-check
    name: check
 
