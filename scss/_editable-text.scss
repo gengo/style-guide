@@ -1,19 +1,36 @@
 .editable-buttons {
   margin-left: 6px;
+
   .btn-sm {
     width: $editable-control-height;
     padding: 3px 8px;
   }
   .editable-cancel {
-    margin-left: 5px;
+    margin-left: 0;
+  }
+
+  .glyphicon-ok,
+  .glyphicon-remove {
+    font-family: "icomoon";
+  }
+  .glyphicon-ok {
+    @extend .icon-check;
+  }
+  .glyphicon-remove {
+    @extend .icon-close;
   }
 }
 
 .editable-input {
-  input.form-control {
-    min-width: $editable-control-width;
-    height: $editable-control-height;
-    color: $editable-input-color;
+  input {
+    &.form-control {
+      min-width: $editable-control-width;
+      height: $editable-control-height;
+      color: $editable-input-color;
+    }
+    &.tt-hint {
+      color: $gengo-gray-light;
+    }
   }
   select {
     color: #333;
@@ -94,9 +111,15 @@ a[data-placeholder="Required"] ~ .editable-inline {
 //
 // twitter typeheadjs
 // --------------------------------------------------
-.tt-query {
-  line-height: 1.4;
-  text-indent: 6px;
+
+.tt-hint {
+  @extend .form-control;
+  border-width: 1px;
+  color: $gengo-gray-light;
+}
+
+.tt-dropdown-menu {
+  width: $editable-control-width;
 }
 
 .tt-suggestion.tt-is-under-cursor {
@@ -108,14 +131,6 @@ a[data-placeholder="Required"] ~ .editable-inline {
   border-radius: $editable-border-radius;
 }
 
-.tt-hint {
-  @extend .form-control;
-  border-width: 1px;
-}
-
-.tt-dropdown-menu {
-  width: 240px;
-}
 
 //
 // select2
@@ -170,11 +185,21 @@ a[data-placeholder="Required"] ~ .editable-inline {
     background: $input-bg;
     color: $text-color;
     border-color: $input-border;
+    padding-left: $padding-base-horizontal;
 
-    abbr {
+    > span {
+      height: $editable-control-height;
+    }
+
+    .select2-search-choice-close {
+      @extend .editable-clear-x;
       top: 50%;
+      width: 13px;
+      height: 13px;
       right: 18px;
       margin-top: -7px;
+      background-repeat: no-repeat;
+      background-size: 13px 13px;
     }
 
     .select2-arrow {
