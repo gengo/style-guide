@@ -1,19 +1,36 @@
 .editable-buttons {
   margin-left: 6px;
+
   .btn-sm {
     width: $editable-control-height;
     padding: 3px 8px;
   }
   .editable-cancel {
-    margin-left: 5px;
+    margin-left: 0;
+  }
+
+  .glyphicon-ok,
+  .glyphicon-remove {
+    font-family: "icomoon";
+  }
+  .glyphicon-ok {
+    @extend .icon-check;
+  }
+  .glyphicon-remove {
+    @extend .icon-close;
   }
 }
 
 .editable-input {
-  input.form-control {
-    min-width: $editable-control-width;
-    height: $editable-control-height;
-    color: $editable-input-color;
+  input {
+    &.form-control {
+      min-width: $editable-control-width;
+      height: $editable-control-height;
+      color: $editable-input-color;
+    }
+    &.tt-hint {
+      color: $gengo-gray-light;
+    }
   }
   select {
     color: #333;
@@ -91,10 +108,18 @@ a[data-placeholder="Required"] ~ .editable-inline {
   margin-left: 0;
 }
 
+//
 // twitter typeheadjs
-.tt-query {
-  line-height: 1.4;
-  text-indent: 6px;
+// --------------------------------------------------
+
+.tt-hint {
+  @extend .form-control;
+  border-width: 1px;
+  color: $gengo-gray-light;
+}
+
+.tt-dropdown-menu {
+  width: $editable-control-width;
 }
 
 .tt-suggestion.tt-is-under-cursor {
@@ -106,18 +131,30 @@ a[data-placeholder="Required"] ~ .editable-inline {
   border-radius: $editable-border-radius;
 }
 
-.tt-dropdown-menu {
-  width: 240px;
-}
 
+//
 // select2
-
+// --------------------------------------------------
 .select2-container-multi {
   .select2-choices {
     height: $editable-control-height !important;
+    color: $input-color;
+    background: $input-bg;
+    border-color: $input-border;
     border-radius: $editable-border-radius;
+
     .select2-search-choice {
       margin-top: 4px;
+      background: #fff;
+      border-color: $input-border;
+      box-shadow: none;
+      color: $text-color;
+      font-size: $font-size-small;
+
+      .select2-search-choice-close {
+        top: 50%;
+        margin-top: -7px;
+      }
     }
   }
   &.select2-container-active .select2-choices {
@@ -131,11 +168,10 @@ a[data-placeholder="Required"] ~ .editable-inline {
 }
 
 .select2-dropdown-open .select2-choices {
-  border-color: $editable-border-color;
-  border-bottom: 0;
-
   @include border-top-radius($editable-border-radius);
   @include border-bottom-radius(0);
+  border-color: $editable-border-color;
+  border-bottom: 0;
 }
 
 .select2-drop-active {
@@ -146,8 +182,29 @@ a[data-placeholder="Required"] ~ .editable-inline {
 .select2-container {
   .select2-choice {
     height: $editable-control-height;
-    abbr {
-      top: 7px;
+    background: $input-bg;
+    color: $text-color;
+    border-color: $input-border;
+    padding-left: $padding-base-horizontal;
+
+    > span {
+      height: $editable-control-height;
+    }
+
+    .select2-search-choice-close {
+      @extend .editable-clear-x;
+      top: 50%;
+      width: 13px;
+      height: 13px;
+      right: 18px;
+      margin-top: -7px;
+      background-repeat: no-repeat;
+      background-size: 13px 13px;
+    }
+
+    .select2-arrow {
+      border: 0;
+      background: transparent;
     }
   }
 }
@@ -159,13 +216,17 @@ a[data-placeholder="Required"] ~ .editable-inline {
   }
 }
 
+//
 // combodate
+// --------------------------------------------------
 [data-type="combodate"] + span {
   min-height: $editable-control-height;
   padding-top: 5px;
 }
 
+//
 // switch colors
+// --------------------------------------------------
 .customer {
   .editable-click,
   a.editable-click,
