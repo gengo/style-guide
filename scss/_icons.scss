@@ -25,6 +25,12 @@
   // Better Font Rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &:focus,
+  &:active,
+  &.active {
+    outline: 0 !important;
+  }
 }
 
 .icon-warning:before {

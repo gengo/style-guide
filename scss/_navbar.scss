@@ -253,7 +253,7 @@ $workbench-icon-active-color: #fff !default;
     }
   }
   .navbar-header .nav {
-    padding: 0 12px;
+    padding: 0 12px 0 0;
   }
   .navbar-right {
     padding-right: $grid-gutter-width;
@@ -262,11 +262,11 @@ $workbench-icon-active-color: #fff !default;
     .btn,
     .navbar-text {
       margin-right: 0;
-      margin-left: 0;
       margin-bottom: 0;
+      margin-left: 0;
     }
     .navbar-text {
-      margin-right: 12px;
+      margin-right: $padding-base-horizontal;
     }
   }
   .dropdown-menu {
