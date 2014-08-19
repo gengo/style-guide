@@ -7,8 +7,10 @@
     <div class="col-md-6">
       <div>
         <div class="editable-input" style="position: relative;">
-          <input type="text" class="form-control input-sm" style="padding-right: 24px;" value="superuser"><span class="editable-clear-x"></span></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
+          <input type="text" class="form-control input-sm" style="padding-right: 24px;" value="superuser">
+          <span class="editable-clear-x"></span>
         </div>
+        <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
       </div>
     </div>
     <div class="col-md-6 ui">
@@ -29,7 +31,13 @@ $('#username').editable();
   <h2>empty  text field, required </h2>
   <div class="row bs-editable">
     <div class="col-md-6">
-      <div><div class="editable-input" style="position: relative;"><input type="text" class="form-control input-sm" placeholder="Required" style="padding-right: 24px;"><span class="editable-clear-x" style="display: none;"></span></div><div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div></div>
+      <div>
+        <div class="editable-input" style="position: relative;">
+          <input type="text" class="form-control input-sm" placeholder="Required" style="padding-right: 24px;">
+          <span class="editable-clear-x" style="display: none;"></span>
+        </div>
+        <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
+      </div>
     </div>
     <div class="col-md-6 ui">
       <a href="#" id="firstname" data-type="text" data-placeholder="Required"></a>
@@ -64,14 +72,7 @@ $('#firstname').editable({
                 <option value="2">Female</option>
               </select>
             </div>
-            <div class="editable-buttons">
-              <button type="submit" class="btn btn-primary btn-sm editable-submit">
-                <i class="glyphicon glyphicon-ok"></i>
-              </button>
-              <button type="button" class="btn btn-default btn-sm editable-cancel">
-                <i class="glyphicon glyphicon-remove"></i>
-              </button>
-            </div>
+            <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
           </div>
         </form>
       </div>
@@ -128,10 +129,7 @@ $('#group').editable({
             <div class="editable-input">
               <select class="form-control" disabled="disabled"></select>
             </div>
-            <div class="editable-buttons">
-              <button type="submit" class="btn btn-primary btn-sm editable-submit" disabled="disabled"><i class="glyphicon glyphicon-ok"></i></button>
-              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
-            </div>
+            <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit" disabled="disabled"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
           </div>
           <div class="editable-error-block help-block">Error when loading list</div>
         </div>
@@ -382,10 +380,7 @@ $('#dob').editable();
                 </select>
               </span>
             </div>
-            <div class="editable-buttons">
-              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
-              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
-            </div>
+            <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
           </div>
         </form>
       </div>
@@ -419,10 +414,7 @@ $('#event').editable({
             <div class="editable-input">
               <textarea class="form-control input-large" placeholder="Your comments here..." rows="3"></textarea>
             </div>
-            <div class="editable-buttons editable-buttons-bottom">
-              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
-              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
-            </div>
+            <div class="editable-buttons editable-buttons-bottom"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
           </div>
         </form>
       </div>
@@ -460,10 +452,7 @@ $('#comments').editable({
               </span>
               <span class="editable-clear-x"></span>
             </div>
-            <div class="editable-buttons">
-              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
-              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
-            </div>
+            <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
           </div>
         </form>
       </div>
@@ -503,10 +492,7 @@ $('#state2').editable({
                 <div><label><input type="checkbox" value="5"><span> orange</span></label></div>
               </div>
             </div>
-            <div class="editable-buttons" style="display:block;margin-left:0;">
-              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
-              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
-            </div>
+            <div class="editable-buttons" style="display:block;margin-left:0;"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
           </div>
         </form>
       </div>
@@ -560,10 +546,7 @@ $('#fruits').editable({
               </div>
               <input type="hidden" class="input-large select2-offscreen" value="html,javascript" tabindex="-1">
             </div>
-            <div class="editable-buttons">
-              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
-              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
-            </div>
+            <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
           </div>
         </form>
       </div>
@@ -614,10 +597,7 @@ $('#tags').editable({
               </div>
               <input type="hidden" value="BS" tabindex="-1" class="select2-offscreen">
             </div>
-            <div class="editable-buttons">
-              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
-              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
-            </div>
+            <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
           </div>
         </form>
       </div>
@@ -674,10 +654,7 @@ $('#country').editable({
                 </label>
               </div>
             </div>
-            <div class="editable-buttons">
-              <button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button>
-              <button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button>
-            </div>
+            <div class="editable-buttons"><button type="submit" class="btn btn-primary btn-sm editable-submit"><i class="glyphicon glyphicon-ok"></i></button><button type="button" class="btn btn-default btn-sm editable-cancel"><i class="glyphicon glyphicon-remove"></i></button></div>
           </div>
         </form>
       </div>
