@@ -188,7 +188,7 @@ $workbench-icon-active-color: #fff !default;
     }
     .navbar-brand {
       padding-right: 18px;
-      padding-left: 18px;
+      padding-left: 10px;
       background-color: $brand-workbench;
 
       &:hover {
@@ -256,8 +256,8 @@ $workbench-icon-active-color: #fff !default;
     padding: 0 12px 0 0;
   }
   .navbar-right {
-    padding-right: $grid-gutter-width;
     margin-right: 0;
+    padding: 0;
 
     .btn,
     .navbar-text {
