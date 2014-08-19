@@ -1,5 +1,5 @@
 <div class="box">
-  <h1 id="buttons-groups">Buttons Groups</h1>
+  <h1 id="buttons-groups">Buttons groups</h1>
   <hr/>
 
   <h2>Basic example</h2>
@@ -8,17 +8,38 @@
     <button type="button" class="btn btn-default">Middle</button>
     <button type="button" class="btn btn-default">Right</button>
   </div>
+  <br>
+  <br>
+{% highlight html %}
+<div class="btn-group">
+  <button type="button" class="btn btn-default">Left</button>
+  <button type="button" class="btn btn-default">Middle</button>
+  <button type="button" class="btn btn-default">Right</button>
+</div>
+{% endhighlight %}
 
   <h2>Button toolbar</h2>
   <div class="btn-toolbar" role="toolbar">
     <div class="btn-group">
-      <button type="button" class="btn btn-default">&lt;</button>
+      <button type="button" class="btn btn-default"><i class="icon-previous"></i></button>
       <button type="button" class="btn btn-default">1</button>
       <button type="button" class="btn btn-default">2</button>
       <button type="button" class="btn btn-default">3</button>
-      <button type="button" class="btn btn-default">&gt;</button>
+      <button type="button" class="btn btn-default"><i class="icon-next"></i></button>
     </div>
   </div>
+  <br>
+{% highlight html %}
+<div class="btn-toolbar" role="toolbar">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default"><i class="icon-previous"></i></button>
+    <button type="button" class="btn btn-default">1</button>
+    <button type="button" class="btn btn-default">2</button>
+    <button type="button" class="btn btn-default">3</button>
+    <button type="button" class="btn btn-default"><i class="icon-next"></i></button>
+  </div>
+</div>
+{% endhighlight %}
 
   <h2>Sizing</h2>
   <div class="bs-example">
@@ -51,6 +72,40 @@
       </div>
     </div>
   </div>
+  <br>
+{% highlight html %}
+<!-- Large -->
+<div class="btn-toolbar" role="toolbar">
+  <div class="btn-group btn-group-lg">
+    <button type="button" class="btn btn-default">Left</button>
+    ...
+  </div>
+</div>
+
+<!-- Default -->
+<div class="btn-toolbar" role="toolbar">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default">Left</button>
+    ...
+  </div>
+</div>
+
+<!-- Small -->
+<div class="btn-toolbar" role="toolbar">
+  <div class="btn-group btn-group-sm">
+    <button type="button" class="btn btn-default">Left</button>
+    ...
+  </div>
+</div>
+
+<!-- Extra Small -->
+<div class="btn-toolbar" role="toolbar">
+  <div class="btn-group btn-group-xs">
+    <button type="button" class="btn btn-default">Left</button>
+    ...
+  </div>
+</div>
+{% endhighlight %}
 
   <h2>Nesting</h2>
   <div class="btn-group">
@@ -68,6 +123,25 @@
       </ul>
     </div>
   </div>
+  <br>
+  <br>
+{% highlight html %}
+<div class="btn-group">
+  <button type="button" class="btn btn-default">1</button>
+  <button type="button" class="btn btn-default">2</button>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      Dropdown
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Dropdown link</a></li>
+      <li><a href="#">Dropdown link</a></li>
+    </ul>
+  </div>
+</div>
+{% endhighlight %}
 
   <h2>Justified Button Groups</h2>
   <div class="btn-group btn-group-justified">
@@ -81,4 +155,19 @@
       <button type="button" class="btn btn-default">Right</button>
     </div>
   </div>
+  <br>
+{% highlight html %}
+<div class="btn-group btn-group-justified">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default">Left</button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default">Middle</button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default">Right</button>
+  </div>
+</div>
+{% endhighlight %}
+
 </div>

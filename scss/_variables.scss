@@ -27,7 +27,7 @@ $gray-light:            lighten($gengo-gray, 60%) !default;
 $gray-lighter:          lighten($gengo-gray, 93.5%) !default;
 
 $brand-primary:         $gengo-green !default;
-$brand-success:         #aedbb3 !default;
+$brand-success:         $gengo-lgreen !default;
 $brand-info:            $gengo-gray !default;
 $brand-warning:         #e5d369 !default;
 $brand-danger:          $gengo-red !default;
@@ -114,8 +114,8 @@ $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 $padding-base-vertical:     6px !default;
 $padding-base-horizontal:   12px !default;
 
-$padding-large-vertical:    12px !default;
-$padding-large-horizontal:  18px !default;
+$padding-large-vertical:    6px !default;
+$padding-large-horizontal:  12px !default;
 
 $padding-small-vertical:    6px !default;
 $padding-small-horizontal:  12px !default;
@@ -215,10 +215,10 @@ $btn-developer-border:           darken($btn-developer-bg, 5%) !default;
 //** `<input>` background color
 $input-bg:                       #f9f9f9 !default;
 //** `<input disabled>` background color
-$input-bg-disabled:              $gray-lighter !default;
+$input-bg-disabled:              lighten($gengo-gray, 67.5%) !default;
 
 //** Text color for `<input>`s
-$input-color:                    $gray !default;
+$input-color:                    $text-color !default;
 //** `<input>` border color
 $input-border:                   #ccc !default;
 //** `<input>` border radius
@@ -231,10 +231,13 @@ $input-color-placeholder:        #969696 !default;
 
 //** Default `.form-control` height
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+// $input-height-base:              36px !default;
 //** Large `.form-control` height
-$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+// $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+$input-height-large:             42px !default;
 //** Small `.form-control` height
-$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+// $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height-small:             30px !default;
 
 $legend-color:                   $gray-dark !default;
 $legend-border-color:            #e5e5e5 !default;
@@ -260,9 +263,9 @@ $dropdown-fallback-border:       #ccc !default;
 $dropdown-divider-bg:            #e5e5e5 !default;
 
 //** Dropdown link text color.
-$dropdown-link-color:            $gray-dark !default;
+$dropdown-link-color:            $gengo-gray !default;
 //** Hover color for dropdown links.
-$dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
+$dropdown-link-hover-color:      darken($gengo-gray, 5%) !default;
 //** Hover background for dropdown links.
 $dropdown-link-hover-bg:         #f5f5f5 !default;
 
@@ -272,10 +275,12 @@ $dropdown-link-active-color:     $component-active-color !default;
 $dropdown-link-active-bg:        $component-active-bg !default;
 
 //** Disabled dropdown menu item background color.
-$dropdown-link-disabled-color:   $gray-light !default;
+$dropdown-link-disabled-color:   $gengo-gray-light !default;
 
 //** Text color for headers within dropdown menus.
-$dropdown-header-color:          $gray-light !default;
+$dropdown-header-color:          $gengo-gray-light !default;
+//** Text font size for headers within dropdown menus.
+$dropdown-header-font-size:      10px !default;
 
 // Note: Deprecated $dropdown-caret-color as of v3.1.0
 $dropdown-caret-color:           #000 !default;
@@ -297,12 +302,12 @@ $editable-empty-color:                #d14 !default;
 //== Validation states
 //
 //##
-$validation-success-color:              #067957 !default;
-$validation-success-border-color:       #1cad7e !default;
+$validation-success-color:             #067957 !default;
+$validation-success-border-color:      $gengo-green !default;
 $validation-warning-color:             #999d5f !default;
 $validation-warning-border-color:      #dde187 !default;
 $validation-error-color:               #a53f2c !default;
-$validation-error-border-color:        #ea5e47 !default;
+$validation-error-border-color:        $brand-danger !default;
 
 //-- Z-index master list
 //
@@ -400,6 +405,7 @@ $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
+$navbar-btn-border-bottom:         3px !default;
 
 $navbar-default-color:             #777 !default;
 $navbar-default-bg:                #f8f8f8 !default;
@@ -428,7 +434,7 @@ $navbar-default-toggle-border-color:       #ddd !default;
 // Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $gray-light !default;
-$navbar-inverse-bg:                         #4d4843 !default;
+$navbar-inverse-bg:                         $gengo-gray !default;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
@@ -459,8 +465,8 @@ $navbar-inverse-toggle-border-color:        #333 !default;
 $nav-link-padding:                          6px 16px !default;
 $nav-link-hover-bg:                         $gray-lighter !default;
 
-$nav-disabled-link-color:                   $gray-light !default;
-$nav-disabled-link-hover-color:             $gray-light !default;
+$nav-disabled-link-color:                   $gengo-gray-light !default;
+$nav-disabled-link-hover-color:             $gengo-gray-light !default;
 
 $nav-open-link-hover-color:                 #fff !default;
 
@@ -534,7 +540,7 @@ $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
+$state-success-text:             $gengo-green !default;
 $state-success-bg:               #dff0d8 !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
@@ -542,11 +548,11 @@ $state-info-text:                #31708f !default;
 $state-info-bg:                  #d9edf7 !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-$state-warning-text:             #8a6d3b !default;
+$state-warning-text:             $brand-warning !default;
 $state-warning-bg:               #fcf8e3 !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #a94442 !default;
+$state-danger-text:              $brand-danger !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
@@ -602,8 +608,10 @@ $popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%
 //
 //##
 
+//** Default label font size
+$label-font-size:            12px !default;
 //** Default label background color
-$label-default-bg:            $gray-light !default;
+$label-default-bg:            $gengo-gray-light !default;
 //** Primary label background color
 $label-primary-bg:            $brand-primary !default;
 //** Success label background color
@@ -614,6 +622,11 @@ $label-info-bg:               $brand-info !default;
 $label-warning-bg:            $brand-warning !default;
 //** Danger label background color
 $label-danger-bg:             $brand-danger !default;
+//** Translator label background color
+$label-translator-bg:          $brand-translator !default;
+//** Developer label background color
+$label-developer-bg:           $brand-developer !default;
+
 
 //** Default label text color
 $label-color:                 #fff !default;
@@ -628,11 +641,15 @@ $label-link-hover-color:      #fff !default;
 //** Padding applied to the modal body
 $modal-inner-padding:         36px !default;
 
+//** Modal close button position
+$modal-close-btn-possition:   12px !default;
+
+//** Font size applied to the modal title
+$modal-title-font-size:       28px !default;
 //** Padding applied to the modal title
 $modal-title-padding:         15px !default;
 //** Modal title line-height
-$modal-title-line-height:     $line-height-base !default;
-
+$modal-title-line-height:     36px !default;
 //** Background color of modal content area
 $modal-content-bg:                             #fff !default;
 //** Modal content border color
@@ -648,6 +665,8 @@ $modal-backdrop-opacity:      .5 !default;
 $modal-header-border-color:   #e5e5e5 !default;
 //** Modal footer border color
 $modal-footer-border-color:   $modal-header-border-color !default;
+//** Modal footer button left padding
+$modal-footer-btn-padding:    12px !default;
 
 $modal-lg:                    900px !default;
 $modal-md:                    504px !default;
@@ -658,9 +677,17 @@ $modal-sm:                    300px !default;
 //
 //## Define alert colors, border radius, and padding.
 
-$alert-padding:               15px !default;
+$alert-close-color:           #fff !default;
+$alert-close-size:            10px !default;
+
+$alert-padding:               18px 36px 18px 24px !default;
 $alert-border-radius:         $border-radius-base !default;
 $alert-link-font-weight:      bold !default;
+$alert-text-color:            #fff !default;
+$alert-bg-color:              #5d5a56 !default;
+$alert-font-size:             14px !default;
+$alert-icon-size:             24px !default;
+$alert-close-button-color:    #ccc !default;
 
 $alert-success-bg:            $state-success-bg !default;
 $alert-success-text:          $state-success-text !default;
@@ -671,12 +698,20 @@ $alert-info-text:             $state-info-text !default;
 $alert-info-border:           $state-info-border !default;
 
 $alert-warning-bg:            $state-warning-bg !default;
-$alert-warning-text:          $state-warning-text !default;
+$alert-warning-text:          #dece78 !default;
 $alert-warning-border:        $state-warning-border !default;
 
 $alert-danger-bg:             $state-danger-bg !default;
 $alert-danger-text:           $state-danger-text !default;
 $alert-danger-border:         $state-danger-border !default;
+
+$alert-error-text:            #c46950 !default;
+$alert-validation-text:       $gengo-green !default;
+
+$alert-overlay-padding:       12px 36px 12px 24px !default;
+$alert-overlay-text:          14px !default;
+$alert-overlay-line-height:   $navbar-height / 2 !default;
+
 
 
 //== Progress bars
@@ -723,6 +758,7 @@ $list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
 
 $list-group-link-color:         #555 !default;
 $list-group-link-heading-color: #333 !default;
+$list-group-badge-font-size:    12px !default;
 
 
 //== Panels

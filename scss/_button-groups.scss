@@ -1,19 +1,25 @@
 .btn-group > .btn {
-  // padding-right: 15px;
-  // padding-left: 15px;
   line-height: 17px;
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: 9px;
+  }
 }
+
 .btn-group-xs > .btn {
   padding-right: 8px;
   padding-left: 8px;
   font-size: $font-size-small;
   line-height: 16px;
 }
+
 .btn-group-sm > .btn {
   font-size: $font-size-base;
   line-height: 17px;
   padding: 6px 12px;
 }
+
 .btn-group-lg > .btn {
   font-size: $font-size-large;
   line-height: 19px;

@@ -1,11 +1,15 @@
 <div class="box doctype">
-  <h1 id="doctype-icons">Doctype Icons</h1>
+  <h1 id="doctype-icons">Doctype icons</h1>
   <!-- <hr/> -->
 
   <div class="row">
   {% for doctype in site.data.doctype %}
     <div class="col-xs-3 col-md-2">
+    {% if doctype.class == "doctype-grp" %}
+      <div class="item grp">
+    {% else %}
       <div class="item">
+    {% endif %}
         <span class="{{ doctype.class }}"></span>
         <div class="text">{{ doctype.name }}</div>
       </div>

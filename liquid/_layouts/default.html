@@ -3,11 +3,12 @@ navigation:
 - text: Style
   url: style.html
 - text: Voice
-  url: #
+  url: voice.html
 - text: Components
   url: components.html
 - text: Layout
   url: grid.html
+
 css:
 - http://fonts.googleapis.com/css?family=Open+Sans:400,600,700
 - assets/css/bootstrap-multiselect.css
@@ -19,6 +20,7 @@ css:
 - assets/css/gengo-bootstrap-theme.css
 - assets/css/gengo.css
 - assets/css/docs.all.css
+
 js:
 - http://code.jquery.com/jquery-1.9.0.js
 - http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js
@@ -60,8 +62,12 @@ js:
         <a class="navbar-brand" href="./index.html"></a>
       </div>
       <nav class="collapse navbar-collapse ge-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">{% for link in page.navigation %}
-          <li class="{% if page.name == link.url %}active{% endif %}"><a href="{{link.url}}">{{link.text}}</a></li>{% endfor %}
+        <ul class="nav navbar-nav">
+        {% for link in page.navigation %}
+          <li class="{% if page.name == link.url %}active{% endif %}">
+            <a href="{{link.url}}">{{link.text}}</a>
+          </li>
+        {% endfor %}
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Section <b class="caret"></b></a>
             <ul class="change-brand dropdown-menu">
@@ -76,7 +82,10 @@ js:
     </div>
   </header>
   {{ content }}
-  <!-- JS -->{% for src in page.js %}
-  <script src="{{src}}"></script>{% endfor %}
+
+  <!-- JS -->
+{% for src in page.js %}
+  <script src="{{src}}"></script>
+{% endfor %}
 </body>
 </html>

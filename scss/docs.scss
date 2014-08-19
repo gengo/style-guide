@@ -3,6 +3,11 @@
 @import "mixins";
 @import "variables";
 
+
+body > .container {
+  margin-bottom: 60px;
+}
+
 .box {
   margin-bottom: 26px;
   padding-bottom: 21px;
@@ -55,6 +60,11 @@
   }
 }
 
+.ge-nav-stacked.affix {
+  position: fixed;
+  top: 24px;
+}
+
 .bs-example {
   margin: 0;
   padding: 0;
@@ -86,26 +96,12 @@
   }
 }
 
-// Dropdonws
-
-.dropdown-header {
-  color: #a5a39f;
-  font-size: 10px;
-}
 
 // ------ header -------------------------------
-.ge-navbar-collapse {
-  .navbar-nav {
-    padding-left: 15px;
-  }
-}
 
 .ge-nav {
   padding-top: 16px;
   padding-left: 10px;
-  .nav > li > a {
-    padding-right: 0;
-  }
 }
 
 .ge-content {
@@ -119,7 +115,11 @@
   }
   hr {
     margin-top: 16px;
-    margin-bottom: 0;
+    margin-bottom: 24px;
+
+    &.no-bottom {
+      margin-bottom: 0;
+    }
   }
   h2 {
     margin-top: 25px;
@@ -135,27 +135,6 @@
   .form-inline .form-group {
     margin-right: 0;
   }
-}
-
-// Supported controls
-#focusedinput {
-  border-color: rgba($gengo-green, .8);
-  outline: 0;
-  box-shadow: 0 0 8px rgba($gengo-green, .6);
-}
-.translator #focusedinput {
-  border-color: rgba($gengo-blue, .8);
-  box-shadow: 0 0 8px rgba($gengo-blue, .6);
-}
-
-.developer #focusedinput {
-  border-color: rgba($gengo-red, .8);
-  box-shadow: 0 0 8px rgba($gengo-red, .6);
-}
-
-.admin #focusedinput {
-  border-color: rgba($gengo-gray, .8);
-  box-shadow: 0 0 8px rgba($gengo-gray, .6);
 }
 
 
@@ -318,7 +297,12 @@
 }
 
 .doctype {
-  .item { padding: 24px 0 16px; }
+  .item {
+    padding: 24px 0 20px;
+
+    &.grp { padding-top: 16px; }
+  }
+  .text { margin-top: 5px; }
 }
 
 // Favicons
@@ -351,4 +335,72 @@
     @include get-image("../images/apple-touch-icons/gengo_a_app", "png", 152px, 152px);
   }
 
+}
+
+
+//
+// Components Page
+// --------------------------------------------------
+
+.labels-example {
+  .label {
+    margin-right: 2px;
+  }
+}
+
+.alerts-examples {
+  hr {
+    margin-bottom: 36px;
+  }
+  .highlight {
+    margin-top: 6px;
+  }
+}
+
+// Supported controls
+#focusedinput {
+  border-color: $gengo-lemon;
+  outline: 0;
+  box-shadow: 0 0 6px rgba($gengo-lemon, .6);
+}
+.translator #focusedinput {
+  border-color: rgba($gengo-blue, .8);
+  box-shadow: 0 0 6px rgba($gengo-blue, .6);
+}
+
+.developer #focusedinput {
+  border-color: rgba($gengo-red, .8);
+  box-shadow: 0 0 6px rgba($gengo-red, .6);
+}
+
+.admin #focusedinput {
+  border-color: rgba($gengo-gray, .8);
+  box-shadow: 0 0 6px rgba($gengo-gray, .6);
+}
+
+
+//
+// Grid Page
+// --------------------------------------------------
+.grid {
+  .container {
+    margin-bottom: 36px;
+  }
+  .ge-show-grid {
+    margin-bottom: 15px;
+
+    p {
+      background-color: #c3ea94;
+      text-align: center;
+      padding: 16px 0;
+    }
+  }
+  .box .ge-show-grid p {
+    background-color: #cde496;
+  }
+  @media (max-width: 720px) {
+    .mobile-disable {
+      display: none;
+    }
+  }
 }
