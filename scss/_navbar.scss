@@ -136,7 +136,7 @@ $hover-dark-gray: #413c38 !default;
 
     &:before {
       width: 26px;
-      height: 24px;
+      height: 26px;
       background-image: url("../images/logo_developer.svg");
       background-size: 26px 26px;
     }
@@ -188,7 +188,7 @@ $workbench-icon-active-color: #fff !default;
     }
     .navbar-brand {
       padding-right: 18px;
-      padding-left: 18px;
+      padding-left: 10px;
       background-color: $brand-workbench;
 
       &:hover {
@@ -253,19 +253,20 @@ $workbench-icon-active-color: #fff !default;
     }
   }
   .navbar-header .nav {
-    padding: 0 12px;
+    padding: 0 12px 0 0;
   }
   .navbar-right {
-    padding-right: $grid-gutter-width;
     margin-right: 0;
+    padding: 0;
 
     .btn,
     .navbar-text {
       margin-right: 0;
+      margin-bottom: 0;
       margin-left: 0;
     }
     .navbar-text {
-      margin-right: 12px;
+      margin-right: $padding-base-horizontal;
     }
   }
   .dropdown-menu {
