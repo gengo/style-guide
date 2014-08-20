@@ -52,21 +52,17 @@
   }
 }
 
-.alert-container {
-  position: relative;
-
-  .alert-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    padding: $alert-overlay-padding;
-    width: 100%;
-    height: $navbar-height;
-    border: 0;
-    border-radius: 0;
-    line-height: $alert-overlay-line-height;
-    transition: top .2s linear;
-    box-shadow: none;
-  }
+.alert-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: $alert-overlay-padding;
+  width: 100%;
+  height: $navbar-height;
+  border: 0;
+  border-radius: 0;
+  line-height: $alert-overlay-line-height;
+  transition: top .2s linear;
+  box-shadow: none;
 }
