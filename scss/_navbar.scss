@@ -177,6 +177,10 @@ $workbench-icon-active-color: #fff !default;
   background-color: $brand-workbench;
   border-bottom-color: $brand-workbench;
 
+  .container-fluid {
+    padding-left: 0;
+  }
+
   .border-left {
     border-left: 1px solid $workbench-border-color;
   }
@@ -187,8 +191,8 @@ $workbench-icon-active-color: #fff !default;
       padding: 0 $padding-base-horizontal;
     }
     .navbar-brand {
-      padding-right: 18px;
-      padding-left: 10px;
+      padding-right: 30px;
+      padding-left: 28px;
       background-color: $brand-workbench;
 
       &:hover {
@@ -253,7 +257,7 @@ $workbench-icon-active-color: #fff !default;
     }
   }
   .navbar-header .nav {
-    padding: 0 12px 0 0;
+    padding: 0;
   }
   .navbar-right {
     margin-right: 0;
