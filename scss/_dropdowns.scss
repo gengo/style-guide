@@ -53,12 +53,11 @@
   }
   .input-group {
     width: 216px;
+
     .multiselect-search {
+      @extend .search-input-icon;
       height: 30px;
       margin: 0;
-      background-image: url("../images/search.png");
-      background-repeat: no-repeat;
-      background-position: right 3px bottom 6px;
       border-radius: $dropdown-border-radius;
     }
   }
