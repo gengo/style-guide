@@ -178,4 +178,19 @@
     });
   });
 
+  var $backToTop = $('#back-to-top');
+  var scrollThrottle = -1;
+  $window.on('scroll', function() {
+    // if (scrollThrottle !== -1) {
+    //   clearTimeout(scrollThrottle);
+    // }
+    // scrollThrottle = setTimeout(function() {
+      if (1200 <= $window.scrollTop()) {
+        $backToTop.show();
+      } else {
+        $backToTop.hide();
+      }
+    // }, 200);
+  });
+
 })(jQuery);
