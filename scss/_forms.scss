@@ -16,7 +16,7 @@ input[type="file"] {
 
 .form-inline {
   .form-group {
-    margin-right: 10px;
+    margin-right: 6px;
   }
   .checkbox {
     label {
@@ -28,23 +28,28 @@ input[type="file"] {
 
 .form-control {
   @include box-shadow(none);
+  border-top-color: darken($input-border, 7%);
 
   &:focus {
     @include box-shadow(none);
     border-color: $gengo-green;
+    border-top-color: darken($gengo-green, 7%);
   }
 }
 
 .translator .form-control:focus {
   border-color: $brand-translator;
+  border-top-color: darken($brand-translator, 7%);
 }
 
 .developer .form-control:focus {
   border-color: $brand-developer;
+  border-top-color: darken($brand-developer, 7%);
 }
 
 .admin .form-control:focus {
   border-color: $brand-admin;
+  border-top-color: darken($brand-admin, 7%);
 }
 
 .form-search {

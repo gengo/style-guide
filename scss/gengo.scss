@@ -46,3 +46,7 @@ $brand-color: $brand-customer;
 //   $brand-color: $brand-admin;
 //   @import "navbar";
 // }
+
+body {
+  -webkit-font-smoothing: antialiased !important;
+}

@@ -17,7 +17,10 @@ body > .container {
 .colors {
   font-size: $font-size-small;
 
-  h3 { margin-bottom: 18px; }
+  h3 {
+    margin-bottom: 18px;
+    margin-top: -5px;
+  }
   .item { margin-bottom: 8px; }
   .color-box {
     display: block;
@@ -96,6 +99,15 @@ body > .container {
   }
 }
 
+.highlight {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+.s { color: $gengo-red; }
+.na { color: #79b1a5; }
+.nt { color: $gengo-green; }
+
+
 
 // ------ header -------------------------------
 
@@ -105,11 +117,11 @@ body > .container {
 }
 
 .ge-content {
-  padding: {
-    top: 13px;
-    // right:13px;
-    // left:23px;
-  }
+  margin-top: 24px;
+  margin-bottom: 20px;
+  // padding-top: 13px;
+  padding-left: 1px;
+
   h1[id] {
     padding-top: 30px;
   }
@@ -154,7 +166,7 @@ body > .container {
   > p { margin-bottom: 34px; }
 
   .row p {
-    margin: 6px 0 0;
+    margin: 9px 0 0;
   }
 
   .image-wrap {
@@ -255,7 +267,6 @@ body > .container {
   > h2 { margin-bottom: 18px; }
   > ul,
   > ol { margin-bottom: 16px; }
-  > p { margin-bottom: 12px; }
 
   > p,
   > blockquote p { max-width: 75%; }
@@ -291,6 +302,7 @@ body > .container {
   [class*=" icon-"] {
     display: block;
     font-size: $font-size-large;
+    opacity: .3;
   }
   .item { padding: 30px 0 20px; }
   .text { margin-top: 16px; }
@@ -376,6 +388,12 @@ body > .container {
 .admin #focusedinput {
   border-color: rgba($gengo-gray, .8);
   box-shadow: 0 0 6px rgba($gengo-gray, .6);
+}
+
+.helper-classes {
+  .icon-close {
+    opacity: .3;
+  }
 }
 
 
