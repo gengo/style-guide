@@ -178,4 +178,13 @@
     });
   });
 
+  var $backToTop = $('#back-to-top');
+  $window.on('scroll', function() {
+    if (1200 <= $window.scrollTop()) {
+      $backToTop.show();
+    } else {
+      $backToTop.hide();
+    }
+  });
+
 })(jQuery);

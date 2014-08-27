@@ -8,6 +8,34 @@ body > .container {
   margin-bottom: 60px;
 }
 
+#back-to-top {
+  bottom: 24px;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 6px 54px 6px 12px;
+    display: block;
+
+    &:hover {
+      color: $brand-customer;
+      i {
+        color: $brand-customer;
+      }
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -7px;
+    color: lighten($gengo-gray, 50%);
+  }
+}
+
 .box {
   margin-bottom: 26px;
   padding-bottom: 21px;

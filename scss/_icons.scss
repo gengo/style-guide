@@ -99,6 +99,18 @@
 .icon-next:before {
   content: "\3e";
 }
+.icon-top {
+  transform: rotate(-90deg);
+  &:before {
+    content: "\3e";
+  }
+}
+.icon-down {
+  transform: rotate(90deg);
+  &:before {
+    content: "\3e";
+  }
+}
 .icon-minimize:before {
   content: "\2c";
 }
