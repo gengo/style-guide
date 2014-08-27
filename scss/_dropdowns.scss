@@ -15,7 +15,7 @@
 .dropdown-menu {
   min-width: 120px;
   border-radius: $dropdown-border-radius;
-  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .15);
 }
 
 .dropdown-header {
@@ -53,13 +53,11 @@
   }
   .input-group {
     width: 216px;
+
     .multiselect-search {
+      @extend .search-input-icon;
       height: 30px;
       margin: 0;
-      // margin-left:14px;
-      background-image: url("../images/search.png");
-      background-repeat: no-repeat;
-      background-position: right 3px bottom 6px;
       border-radius: $dropdown-border-radius;
     }
   }

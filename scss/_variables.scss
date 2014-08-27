@@ -74,9 +74,9 @@ $font-normal:            400 !default;
 $font-semibold:          600 !default;
 $font-bold:              700 !default;
 
-$font-size-base:          14px !default;
 $font-size-large:         16px !default;
-$font-size-small:         13px !default;
+$font-size-base:          14px !default;
+$font-size-small:         12px !default;
 
 
 $font-size-h1:            30px !default;
@@ -230,8 +230,8 @@ $input-border-focus:             #66afe9 !default;
 $input-color-placeholder:        #969696 !default;
 
 //** Default `.form-control` height
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
-// $input-height-base:              36px !default;
+// $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-base:              36px !default;
 //** Large `.form-control` height
 // $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
 $input-height-large:             42px !default;
@@ -286,7 +286,7 @@ $dropdown-header-font-size:      10px !default;
 $dropdown-caret-color:           #000 !default;
 
 //** Dropdown container border radius
-$dropdown-border-radius: 5px !default;
+$dropdown-border-radius: 3px !default;
 
 //== Editable text
 //
@@ -722,7 +722,8 @@ $alert-overlay-line-height:   $navbar-height / 2 !default;
 $progress-bg:                 #f5f5f5 !default;
 //** Progress bar text color
 $progress-bar-color:          #fff !default;
-
+//** Progress bar height
+$progress-bar-height:         24px !default;
 //** Default progress bar color
 $progress-bar-bg:             $brand-primary !default;
 //** Success progress bar color

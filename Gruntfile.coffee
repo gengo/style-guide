@@ -205,22 +205,34 @@ module.exports = (grunt) ->
           'favicons/**/*'
         ],
         dest: 'dist/assets/'
-      'bootstrap-multiselect':
+      'bootstrap-multiselect-css':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-multiselect'
+        cwd: '<%= assets.bower %>/bootstrap-multiselect/css'
         src: [
-          'css/bootstrap-multiselect.css'
-          'js/bootstrap-multiselect.js'
+          'bootstrap-multiselect.css'
         ]
-        dest: './'
-      'x-editable':
+        dest: '<%= assets.style %>'
+      'bootstrap-multiselect-js':
         expand: true
-        cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable'
+        cwd: '<%= assets.bower %>/bootstrap-multiselect/js'
         src: [
-          'css/bootstrap-editable.css'
-          'js/bootstrap-editable.min.js'
+          'bootstrap-multiselect.js'
         ]
-        dest: './'
+        dest: '<%= assets.scripts %>/vendor'
+      'x-editable-css':
+        expand: true
+        cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable/css'
+        src: [
+          'bootstrap-editable.css'
+        ]
+        dest: '<%= assets.style %>'
+      'x-editable-js':
+        expand: true
+        cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable/js'
+        src: [
+          'bootstrap-editable.min.js'
+        ]
+        dest: '<%= assets.scripts %>/vendor'
       'x-editable-img':
         expand: true
         cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable/img'
@@ -238,7 +250,7 @@ module.exports = (grunt) ->
         expand:true
         cwd:'<%= assets.bower %>/select2'
         src: 'select2.min.js'
-        dest: '<%= assets.scripts %>'
+        dest: '<%= assets.scripts %>/vendor'
       'address-css':
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
@@ -248,7 +260,7 @@ module.exports = (grunt) ->
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
         src: '*.js'
-        dest: '<%= assets.scripts %>'
+        dest: '<%= assets.scripts %>/vendor'
       'typeheadjs-css':
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/lib'
@@ -257,20 +269,23 @@ module.exports = (grunt) ->
       'typeheadjs-js':
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/'
-        src: ['lib/*.js','*.js']
+        src: [
+          'lib/*.js'
+          '*.js'
+        ]
         flatten:true
-        dest: '<%= assets.scripts %>'
+        dest: '<%= assets.scripts %>/vendor'
       'moment':
         expand:true
         cwd:'<%= assets.bower %>/moment/min'
         src: 'moment.min.js'
-        dest: '<%= assets.scripts %>'
+        dest: '<%= assets.scripts %>/vendor'
       # copy js for development
       'js-dev':
         expand: true,
         cwd: '<%= assets.scripts %>'
         src: [
-          '*.js'
+          '**/*.js'
         ],
         dest: 'dev/assets/js'
       # copy js for distribution
@@ -278,7 +293,7 @@ module.exports = (grunt) ->
         expand: true,
         cwd: '<%= assets.scripts %>'
         src: [
-          '*.js'
+          '**/*.js'
         ],
         dest: 'dist/assets/js'
       # copy css for development
@@ -360,8 +375,10 @@ module.exports = (grunt) ->
     'copy:bootstrap-docs'
     'copy:fonts-images-dev'
     'copy:fonts-images-dist'
-    'copy:bootstrap-multiselect'
-    'copy:x-editable'
+    'copy:bootstrap-multiselect-css'
+    'copy:bootstrap-multiselect-js'
+    'copy:x-editable-css'
+    'copy:x-editable-js'
     'copy:x-editable-img'
     'copy:select2-css'
     'copy:select2-js'
