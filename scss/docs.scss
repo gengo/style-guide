@@ -419,10 +419,21 @@ body > .container {
   }
 }
 
+.users,
 .voice-and-tone {
   hr { margin-bottom: 32px; }
   h3 { margin-bottom: 16px; }
   > p { margin-bottom: 0; }
+}
+
+.users {
+  h2 { margin-top: 20px; }
+  .customer {
+    color: #a7ccac;
+  }
+  .translator {
+    color: #95c8bf;
+  }
 }
 
 
