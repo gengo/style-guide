@@ -436,6 +436,37 @@ body > .container {
   }
 }
 
+.style-guide {
+  hr { margin-bottom: 32px; }
+  h2 {
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+  h3 {
+    margin-top: 16px;
+    margin-bottom: 14px;
+  }
+  ul {
+    padding-left: 30px;
+
+    li {
+      list-style: initial;
+      padding-left: 6px;
+    }
+  }
+
+  .table {
+    > thead > tr > th {
+      color: $gengo-green;
+      font-size: $font-size-h3;
+      padding-bottom: 16px;
+    }
+    > tbody > tr > td {
+      padding: 7px 0 7px 38px;
+    }
+  }
+}
+
 
 //
 // Components Page
