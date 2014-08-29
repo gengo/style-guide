@@ -419,6 +419,35 @@ body > .container {
     height: auto;
     margin-bottom: 12px;
   }
+
+
+  .customer li {
+    background-image: url("../images/voice/c-brand-traits.png");
+  }
+  .translator li {
+    background-image: url("../images/voice/t-brand-traits.png");
+  }
+  ul > li {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 12px;
+
+    > div {
+      display: inline-block;
+      width: 49%;
+      font-size: $font-size-small;
+    }
+
+    .title {
+      color: #fff;
+      font-weight: $font-semibold;
+      padding-left: 17%;
+    }
+    .txt {
+      color: $text-color;
+      padding-left: 13%;
+    }
+  }
 }
 
 .users,
@@ -452,7 +481,6 @@ body > .container {
     padding-left: 30px;
 
     li {
-      list-style: initial;
       padding-left: 6px;
     }
   }
