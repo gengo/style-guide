@@ -178,4 +178,21 @@
     });
   });
 
+  var $backToTop = $('#back-to-top');
+  $backToTop .on('click', 'a', function(e)  {
+    e.preventDefault();
+
+     $('html,body').animate({
+      scrollTop: 0
+    }, 1000);
+  });
+
+  $window.on('scroll', function() {
+    if (1200 <= $window.scrollTop()) {
+      $backToTop.show();
+    } else {
+      $backToTop.hide();
+    }
+  }).trigger('scroll');
+
 })(jQuery);

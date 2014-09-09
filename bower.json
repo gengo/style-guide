@@ -4,11 +4,11 @@
   "description": "Gengo style guide",
   "dependencies": {
     "bootstrap-sass-official": "~3.1.1",
-    "bootstrap-multiselect": "~0.9.6",
+    "bootstrap-multiselect": "~0.9.9",
     "x-editable": "~1.5.1",
-    "typeahead.js": "~0.10.4",
-    "select2": "~3.5.0",
-    "moment": "~2.7.0"
+    "typeahead.js": "~0.10.5",
+    "select2": "~3.5.1",
+    "moment": "~2.8.2"
   },
   "devDependencies": {
     "bootstrap-docs": "https://github.com/twbs/bootstrap.git#gh-pages"

@@ -36,7 +36,7 @@ $btn-darken-percent: 7%;
 // Common styles
 .btn {
   // Buttons sizes
-  padding: 6px 14px;
+  padding: 6px 16px 7px;
   // Remove the gradient for the pressed/active state
   &:active,
   &.active {
@@ -50,18 +50,22 @@ $btn-darken-percent: 7%;
 }
 
 .btn-lg {
-  padding: 10px 16px;
+  padding: 9px 16px 10px;
   font-size: $font-size-large;
 }
 
 .btn-sm {
-  padding: 4px 13px;
+  padding: 3px 13px 4px;
   font-size: $font-size-base;
 }
 
 .btn-xs {
-  padding: 2px 8px;
+  padding: 2px 9px;
   font-size: $font-size-small;
+}
+
+.btn-block + .btn-block {
+  margin-top: 12px;
 }
 
 a,
