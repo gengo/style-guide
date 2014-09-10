@@ -557,13 +557,14 @@ body > .container {
     margin-bottom: 15px;
 
     p {
-      background-color: #c3ea94;
+      background-color: #dbefc4;
       text-align: center;
+      font-weight: $font-semibold;
       padding: 16px 0;
     }
   }
   .box .ge-show-grid p {
-    background-color: #cde496;
+    background-color: #e1f4c9;
   }
   @media (max-width: 720px) {
     .mobile-disable {
