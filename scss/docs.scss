@@ -9,8 +9,8 @@ body > .container {
 }
 
 #back-to-top {
-  bottom: 24px;
-  display: none;
+  bottom: -40px; // 24px
+  transition: bottom .2s ease;
 
   a {
     color: $text-color;

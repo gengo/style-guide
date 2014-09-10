@@ -30,6 +30,8 @@ module.exports = (grunt) ->
             ' * you may not use this file except in compliance with the License.\n' +
             ' * You may obtain a copy of the License at :\n' +
             ' * http://www.apache.org/licenses/LICENSE-2.0\n' +
+            ' * \n' +
+            ' * update: <%= grunt.template.today("yyyy-mm-dd") %>\n' +
             ' */\n'
 
     connect:
@@ -164,7 +166,7 @@ module.exports = (grunt) ->
     copy:
       'bootstrap-sass':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-sass-official/vendor/assets/stylesheets'
+        cwd: '<%= assets.bower %>/bootstrap-sass-official/assets/stylesheets'
         src: '**/*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party'
       'bootstrap-fonts':

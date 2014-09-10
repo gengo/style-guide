@@ -179,6 +179,7 @@
   });
 
   var $backToTop = $('#back-to-top');
+  var hidePos = $backToTop.css('bottom');
   $backToTop .on('click', 'a', function(e)  {
     e.preventDefault();
 
@@ -189,9 +190,9 @@
 
   $window.on('scroll', function() {
     if (1200 <= $window.scrollTop()) {
-      $backToTop.show();
+      $backToTop.css('bottom', '24px');
     } else {
-      $backToTop.hide();
+      $backToTop.css('bottom', hidePos);
     }
   }).trigger('scroll');
 
