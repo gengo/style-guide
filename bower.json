@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Gengo style guide",
   "dependencies": {
-    "bootstrap-sass-official": "~3.1.1",
+    "bootstrap-sass-official": "~3.2.0",
     "bootstrap-multiselect": "~0.9.9",
     "x-editable": "~1.5.1",
     "typeahead.js": "~0.10.5",
@@ -22,8 +22,5 @@
     "Gruntfile.*",
     "package.json",
     "setup.sh"
-  ],
-  "resolutions": {
-    "jquery": "~1.7"
-  }
+  ]
 }
