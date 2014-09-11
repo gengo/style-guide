@@ -146,7 +146,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: '<%= assets.css %>'
         src: [
-          '**/docs.css'
+          '**/vendor.css'
           '**/gengo.css'
           '**/gengo-bootstrap-theme.css'
         ]
@@ -156,11 +156,11 @@ module.exports = (grunt) ->
     concat:
       docs:
         src:[
-          '<%= assets.docs %>/assets/css/bootstrap-docs.min.js'
+          '<%= assets.docs %>/assets/css/bootstrap-docs.min.css'
           '<%= assets.docs %>/assets/css/docs.css'
         ]
         dest:'<%= assets.docs %>/assets/css/docs.all.css'
-      vendor:
+      'vendor-js':
         src:[
           '<%= assets.scripts %>/vendor/moment.min.js'
           '<%= assets.scripts %>/vendor/bootstrap-editable.min.js'
@@ -171,6 +171,11 @@ module.exports = (grunt) ->
           '<%= assets.scripts %>/vendor/address.js'
         ]
         dest:'<%= assets.scripts %>/vendor.js'
+      'vendor-css':
+        src:[
+          '<%= assets.css %>/vendor/**/*.css'
+        ]
+        dest:'<%= assets.css %>/vendor.css'
 
     copy:
       ##############################################
@@ -192,14 +197,14 @@ module.exports = (grunt) ->
         src: 'docs.min.css'
         dest: '<%= assets.docs %>/assets/css'
         rename: (dest, src) ->
-          return dest + '/bootstrap-docs.min.js'
+          return dest + '/bootstrap-docs.min.css'
       'bootstrap-multiselect-css':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-multiselect/css'
         src: [
           'bootstrap-multiselect.css'
         ]
-        dest: '<%= assets.css %>'
+        dest: '<%= assets.css %>/vendor'
       'bootstrap-multiselect-js':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-multiselect/js'
@@ -213,7 +218,7 @@ module.exports = (grunt) ->
         src: [
           'bootstrap-editable.css'
         ]
-        dest: '<%= assets.css %>'
+        dest: '<%= assets.css %>/vendor'
       'x-editable-js':
         expand: true
         cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable/js'
@@ -231,6 +236,12 @@ module.exports = (grunt) ->
         cwd:'<%= assets.bower %>/select2'
         src: [
           'select2*.css'
+        ]
+        dest: '<%= assets.css %>/vendor'
+      'select2-img':
+        expand:true
+        cwd:'<%= assets.bower %>/select2'
+        src: [
           'select2*.png'
         ]
         dest: '<%= assets.css %>'
@@ -243,7 +254,7 @@ module.exports = (grunt) ->
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
         src: '*.css'
-        dest: '<%= assets.css %>'
+        dest: '<%= assets.css %>/vendor'
       'address-js':
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
@@ -253,7 +264,7 @@ module.exports = (grunt) ->
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/lib'
         src: '*.css'
-        dest: '<%= assets.css %>'
+        dest: '<%= assets.css %>/vendor'
       'typeheadjs-js':
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/'
@@ -319,7 +330,8 @@ module.exports = (grunt) ->
       vendor: [ '<%= assets.scripts %>/vendor' ]
       docs: [
         '<%= assets.css %>/docs.css'
-        '<%= assets.docs %>/assets/css/bootstrap-docs.min.js'
+        '<%= assets.css %>/vendor'
+        '<%= assets.docs %>/assets/css/bootstrap-docs.min.css'
         '<%= assets.docs %>/assets/css/docs.css'
       ]
 
@@ -378,6 +390,7 @@ module.exports = (grunt) ->
     'copy:x-editable-js'
     'copy:x-editable-img'
     'copy:select2-css'
+    'copy:select2-img'
     'copy:select2-js'
     'copy:address-css'
     'copy:address-js'
@@ -397,7 +410,8 @@ module.exports = (grunt) ->
     'build-css'
     # concat
     'docs-css'
-    'concat:vendor'
+    'concat:vendor-js'
+    'concat:vendor-css'
     'clean:vendor'
     # copy
     'copy:fonts-images'
@@ -418,14 +432,16 @@ module.exports = (grunt) ->
     'copy-3rd-party-resources'
     # preprocess scss into css
     'build-css'
-    'cssmin'
-    'usebanner'
     # concat
     'docs-css'
-    'concat:vendor'
+    'concat:vendor-js'
+    'concat:vendor-css'
     'clean:vendor'
     # copy
     'copy:fonts-images'
     'copy:gh_pages'
     'clean:docs'
+    #
+    'cssmin'
+    'usebanner'
   ]
