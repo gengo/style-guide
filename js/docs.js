@@ -146,7 +146,6 @@
     }
   });
 
-
   $('#address').editable({
     url: '/post',
     value: {
@@ -178,6 +177,11 @@
     });
   });
 
+  /**
+   *
+   * "Back to top" button
+   *
+   */
   var $backToTop = $('#back-to-top');
   var hidePos = $backToTop.css('bottom');
   $backToTop .on('click', 'a', function(e)  {

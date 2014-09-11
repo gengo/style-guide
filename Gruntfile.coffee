@@ -151,6 +151,17 @@ module.exports = (grunt) ->
           '<%= assets.style %>/docs.css'
         ]
         dest:'<%= assets.style %>/docs.all.css'
+      vendor:
+        src:[
+          '<%= assets.scripts %>/vendor/moment.min.js'
+          '<%= assets.scripts %>/vendor/bootstrap-editable.min.js'
+          '<%= assets.scripts %>/vendor/bootstrap-multiselect.js'
+          '<%= assets.scripts %>/vendor/select2.min.js'
+          '<%= assets.scripts %>/vendor/typeaheadjs.js'
+          '<%= assets.scripts %>/vendor/typeahead.js'
+          '<%= assets.scripts %>/vendor/address.js'
+        ]
+        dest:'<%= assets.scripts %>/vendor.js'
 
     usebanner:
       options:
@@ -341,6 +352,9 @@ module.exports = (grunt) ->
         'html'
         'css'
       ]
+      vendor: [
+        '<%= assets.scripts %>/vendor'
+      ]
     # generate htmls with _config.yml
     jekyll:
       dist:
@@ -392,7 +406,7 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'dev', [
-    'clean'
+    'clean:dist'
     # html
     'jekyll'
     'validation'
@@ -405,6 +419,8 @@ module.exports = (grunt) ->
     'newer:csslint'
     'autoprefixer'
     'concat:docs'
+    'concat:vendor'
+    'clean:vendor'
     #copy css/js into dev/
     'newer:copy:css-dev'
     'newer:copy:js-dev'
@@ -419,7 +435,7 @@ module.exports = (grunt) ->
   # generate all resources for gh-pages
 
   grunt.registerTask 'dist', [
-    'clean'
+    'clean:dist'
     # html
     'jekyll'
     'validation'
@@ -436,6 +452,8 @@ module.exports = (grunt) ->
     'concat:docs'
     'newer:copy:css-dist'
     # js
+    'concat:vendor'
+    'clean:vendor'
     'newer:copy:js-dist'
     # other resourses
     'newer:copy:fonts-images-dist'
