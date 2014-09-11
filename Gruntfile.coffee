@@ -58,7 +58,7 @@ module.exports = (grunt) ->
         files: '<%= assets.sass %>/**/*.{scss,sass}'
         tasks: [
           'build-css'
-          'concat:docs'
+          'docs-css'
           'copy:gh_pages'
         ]
       html:
@@ -156,10 +156,10 @@ module.exports = (grunt) ->
     concat:
       docs:
         src:[
-          '<%= assets.css %>/bootstrap-docs.min.js'
-          '<%= assets.css %>/docs.css'
+          '<%= assets.docs %>/assets/css/bootstrap-docs.min.js'
+          '<%= assets.docs %>/assets/css/docs.css'
         ]
-        dest:'<%= assets.css %>/docs.all.css'
+        dest:'<%= assets.docs %>/assets/css/docs.all.css'
       vendor:
         src:[
           '<%= assets.scripts %>/vendor/moment.min.js'
@@ -190,7 +190,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-docs/assets/css'
         src: 'docs.min.css'
-        dest: '<%= assets.css %>'
+        dest: '<%= assets.docs %>/assets/css'
         rename: (dest, src) ->
           return dest + '/bootstrap-docs.min.js'
       'bootstrap-multiselect-css':
@@ -303,6 +303,13 @@ module.exports = (grunt) ->
           '**/*'
         ],
         dest: '<%= assets.gh_pages %>/assets'
+      'gh-pages-css':
+        expand: true,
+        cwd: '<%= assets.docs %>/assets/css/'
+        src: [
+          '*.css'
+        ],
+        dest: '<%= assets.gh_pages %>/assets/css/'
 
     clean:
       dist: [
@@ -310,6 +317,12 @@ module.exports = (grunt) ->
         '_gh_pages'
       ]
       vendor: [ '<%= assets.scripts %>/vendor' ]
+      docs: [
+        '<%= assets.css %>/docs.css'
+        '<%= assets.docs %>/assets/css/bootstrap-docs.min.js'
+        '<%= assets.docs %>/assets/css/docs.css'
+      ]
+
 
     # generate htmls with _config.yml
     jekyll:
@@ -347,6 +360,12 @@ module.exports = (grunt) ->
     'autoprefixer'
   ]
 
+  grunt.registerTask 'docs-css', [
+    'copy:docs-css'
+    'concat:docs'
+    'copy:gh-pages-css'
+  ]
+
   # in development:
   # all resources are generated into dev/
   grunt.registerTask 'copy-3rd-party-resources',[
@@ -377,7 +396,7 @@ module.exports = (grunt) ->
     # preprocess scss into css
     'build-css'
     # concat
-    'concat:docs'
+    'docs-css'
     'concat:vendor'
     'clean:vendor'
     # copy
@@ -402,10 +421,11 @@ module.exports = (grunt) ->
     'cssmin'
     'usebanner'
     # concat
-    'concat:docs'
+    'docs-css'
     'concat:vendor'
     'clean:vendor'
     # copy
     'copy:fonts-images'
     'copy:gh_pages'
+    'clean:docs'
   ]
