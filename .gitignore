@@ -8,6 +8,7 @@ bower_components
 node_modules
 _gh_pages
 scss/third_party
+dist/css/vendor
 
 validation-report.json
 validation-status.json
