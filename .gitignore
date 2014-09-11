@@ -8,11 +8,6 @@ bower_components
 node_modules
 _gh_pages
 scss/third_party
-dev
-dist
-html
-css/*
-!css/gengo*
 
 validation-report.json
 validation-status.json

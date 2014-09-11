@@ -18,7 +18,7 @@ module.exports = (grunt) ->
     css     : 'dist/css'
     bower   : 'bower_components'
     gh_pages: '_gh_pages'
-    template: 'liquid'
+    docs    : 'docs'
 
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
@@ -40,7 +40,6 @@ module.exports = (grunt) ->
         banner: '<%= banner %>'
       files:
         src: [
-          '<%= assets.css %>/docs.css'
           '<%= assets.css %>/gengo.css'
           '<%= assets.css %>/gengo-bootstrap-theme.css'
         ]
@@ -58,21 +57,24 @@ module.exports = (grunt) ->
       sass:
         files: '<%= assets.sass %>/**/*.{scss,sass}'
         tasks: [
-          'scsslint'
-          'compass'
-          'newer:csslint'
-          'autoprefixer'
+          'build-css'
           'concat:docs'
+          'copy:gh_pages'
         ]
       html:
-        files: '<%= assets.template %>/**/*.html'
+        files: '<%= assets.docs %>/**/*.html'
         tasks: [
           'jekyll'
           'validation'
         ]
       js:
-        files: '<%= assets.scripts %>/**/*.js'
-        tasks: []
+        files: [
+          '<%= assets.scripts %>/**/*.js'
+          '<%= assets.docs %>/assets/js/**/*.js'
+        ]
+        tasks: [
+          'copy:docs-js'
+        ]
 
     compass:
       options:
@@ -154,7 +156,7 @@ module.exports = (grunt) ->
     concat:
       docs:
         src:[
-          '<%= assets.css %>/docs.min.css'
+          '<%= assets.css %>/bootstrap-docs.min.js'
           '<%= assets.css %>/docs.css'
         ]
         dest:'<%= assets.css %>/docs.all.css'
@@ -189,6 +191,8 @@ module.exports = (grunt) ->
         cwd: '<%= assets.bower %>/bootstrap-docs/assets/css'
         src: 'docs.min.css'
         dest: '<%= assets.css %>'
+        rename: (dest, src) ->
+          return dest + '/bootstrap-docs.min.js'
       'bootstrap-multiselect-css':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-multiselect/css'
@@ -268,6 +272,20 @@ module.exports = (grunt) ->
       ##############################################
       # Copy assets for _gh_pages
       ##############################################
+      'docs-js':
+        expand: true,
+        cwd: '<%= assets.docs %>/assets/js'
+        src: [
+          '*.js'
+        ],
+        dest: '<%= assets.gh_pages %>/assets/js/'
+      'docs-css':
+        expand: true,
+        cwd: '<%= assets.css %>'
+        src: [
+          'docs.css'
+        ],
+        dest: '<%= assets.docs %>/assets/css/'
       'fonts-images':
         expand: true,
         cwd: ''
@@ -291,9 +309,7 @@ module.exports = (grunt) ->
         'dist'
         '_gh_pages'
       ]
-      vendor: [
-        '<%= assets.scripts %>/vendor'
-      ]
+      vendor: [ '<%= assets.scripts %>/vendor' ]
 
     # generate htmls with _config.yml
     jekyll:
@@ -323,6 +339,14 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', [
     'dev'
   ]
+
+  grunt.registerTask 'build-css', [
+    'scsslint'
+    'compass'
+    'newer:csslint'
+    'autoprefixer'
+  ]
+
   # in development:
   # all resources are generated into dev/
   grunt.registerTask 'copy-3rd-party-resources',[
@@ -351,10 +375,7 @@ module.exports = (grunt) ->
     # copy 3rd party resources
     'copy-3rd-party-resources'
     # preprocess scss into css
-    'scsslint'
-    'compass'
-    'newer:csslint'
-    'autoprefixer'
+    'build-css'
     # concat
     'concat:docs'
     'concat:vendor'
@@ -377,10 +398,7 @@ module.exports = (grunt) ->
     # copy 3rd party resources
     'copy-3rd-party-resources'
     # preprocess scss into css
-    'scsslint'
-    'compass'
-    'newer:csslint'
-    'autoprefixer'
+    'build-css'
     'cssmin'
     'usebanner'
     # concat
