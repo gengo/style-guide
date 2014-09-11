@@ -292,7 +292,7 @@ module.exports = (grunt) ->
         '_gh_pages'
       ]
       vendor: [
-        '<%= assets.scripts %>/vendor/**/*.js'
+        '<%= assets.scripts %>/vendor'
       ]
 
     # generate htmls with _config.yml
