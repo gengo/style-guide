@@ -331,6 +331,9 @@ module.exports = (grunt) ->
       docs: [
         '<%= assets.css %>/docs.css'
         '<%= assets.css %>/vendor'
+        '<%= assets.gh_pages %>/assets/css/docs.css'
+        '<%= assets.gh_pages %>/assets/css/bootstrap-docs.min.css'
+        '<%= assets.gh_pages %>/assets/css/vendor'
         '<%= assets.docs %>/assets/css/bootstrap-docs.min.css'
         '<%= assets.docs %>/assets/css/docs.css'
       ]

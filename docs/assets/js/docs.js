@@ -21,6 +21,10 @@
   setTimeout(function () {
     var $sideBar = $('.ge-nav > .ge-nav-stacked');
 
+    if ($sideBar.length === 0) {
+      return;
+    }
+
     $sideBar.affix({
       offset: {
         top: $sideBar.offset().top,
