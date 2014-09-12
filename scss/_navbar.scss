@@ -40,7 +40,7 @@ $hover-dark-gray: #413c38 !default;
   border-bottom: 1px solid $table-border-color;
 
   .navbar-brand {
-    padding: 16px 26px 10px 29px;
+    padding: 16px 28px 10px 27px;
     margin-right: 14px;
     background-color: $brand-customer;
 
@@ -52,7 +52,6 @@ $hover-dark-gray: #413c38 !default;
       background-image: url("../images/logo_gengo.svg");
       background-repeat: no-repeat;
       background-size: 59px 20px;
-      background-size: contain;
     }
   }
   .navbar-toggle .icon-bar {

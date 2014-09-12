@@ -15,10 +15,10 @@ module.exports = (grunt) ->
     images  : 'images'
     scripts : 'js'
     sass    : 'scss'
-    style   : 'css'
+    css     : 'dist/css'
     bower   : 'bower_components'
-    html    : 'html'
-    template: 'liquid'
+    gh_pages: '_gh_pages'
+    docs    : 'docs'
 
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
@@ -34,11 +34,21 @@ module.exports = (grunt) ->
             ' * update: <%= grunt.template.today("yyyy-mm-dd") %>\n' +
             ' */\n'
 
+    usebanner:
+      options:
+        position: 'top'
+        banner: '<%= banner %>'
+      files:
+        src: [
+          '<%= assets.css %>/gengo.css'
+          '<%= assets.css %>/gengo-bootstrap-theme.css'
+        ]
+
     connect:
       server:
         options:
           port: 9001
-          base: 'dev'
+          base: '<%= assets.gh_pages %>'
           livereload: true
 
     watch:
@@ -47,24 +57,23 @@ module.exports = (grunt) ->
       sass:
         files: '<%= assets.sass %>/**/*.{scss,sass}'
         tasks: [
-          'scsslint'
-          'compass'
-          'newer:csslint'
-          'autoprefixer'
-          'concat:docs'
-          'newer:copy:css-dev'
+          'build-css'
+          'docs-css'
+          'copy:gh_pages'
         ]
       html:
-        files: '<%= assets.template %>/**/*.html'
+        files: '<%= assets.docs %>/**/*.html'
         tasks: [
           'jekyll'
           'validation'
-          'newer:copy:html-dev'
         ]
       js:
-        files: '<%= assets.scripts %>/**/*.js'
+        files: [
+          '<%= assets.scripts %>/**/*.js'
+          '<%= assets.docs %>/assets/js/**/*.js'
+        ]
         tasks: [
-          'newer:copy:js-dev'
+          'copy:docs-js'
         ]
 
     compass:
@@ -72,7 +81,7 @@ module.exports = (grunt) ->
         specify  : '<%= assets.sass %>/*.{scss,sass}'
         sassDir  : '<%= assets.sass %>'
         imagesDir: '<%= assets.images %>'
-        cssDir   : '<%= assets.style %>'
+        cssDir   : '<%= assets.css %>'
         relativeAssets: true
       prod:
         options:
@@ -97,12 +106,12 @@ module.exports = (grunt) ->
       build:
         files: [{
           expand: true
-          cwd: '<%= assets.style %>'
+          cwd: '<%= assets.css %>'
           src: [
             '**/*.css'
             '!**/*.min.css'
           ]
-          dest: '<%= assets.style %>'
+          dest: '<%= assets.css %>'
         }]
 
     csscomb:
@@ -110,18 +119,18 @@ module.exports = (grunt) ->
         config: '<%= assets.sass %>/.csscomb.json'
       dist:
         expand: true,
-        cwd: '<%= assets.style %>'
+        cwd: '<%= assets.css %>'
         src: [
           '*.css'
           '!*.min.css'
         ]
-        dest: '<%= assets.style %>'
+        dest: '<%= assets.css %>'
 
     csslint:
       options:
         csslintrc: '<%= assets.sass %>/.csslintrc'
       src:
-        '<%= assets.style %>/<%= pkg.name %>.css'
+        '<%= assets.css %>/<%= pkg.name %>.css'
 
     scsslint:
       allFiles: ['scss/*.scss']
@@ -135,23 +144,23 @@ module.exports = (grunt) ->
         noAdvanced: true
       minify:
         expand: true
-        cwd: '<%= assets.style %>'
+        cwd: '<%= assets.css %>'
         src: [
-          '**/docs.css'
+          '**/vendor.css'
           '**/gengo.css'
           '**/gengo-bootstrap-theme.css'
         ]
-        dest: '<%= assets.style %>'
+        dest: '<%= assets.css %>'
         ext: '.css'
 
     concat:
       docs:
         src:[
-          '<%= assets.style %>/docs.min.css'
-          '<%= assets.style %>/docs.css'
+          '<%= assets.docs %>/assets/css/bootstrap-docs.min.css'
+          '<%= assets.docs %>/assets/css/docs.css'
         ]
-        dest:'<%= assets.style %>/docs.all.css'
-      vendor:
+        dest:'<%= assets.docs %>/assets/css/docs.all.css'
+      'vendor-js':
         src:[
           '<%= assets.scripts %>/vendor/moment.min.js'
           '<%= assets.scripts %>/vendor/bootstrap-editable.min.js'
@@ -162,19 +171,16 @@ module.exports = (grunt) ->
           '<%= assets.scripts %>/vendor/address.js'
         ]
         dest:'<%= assets.scripts %>/vendor.js'
-
-    usebanner:
-      options:
-        position: 'top'
-        banner: '<%= banner %>'
-      files:
-        src: [
-          '<%= assets.style %>/docs.css'
-          '<%= assets.style %>/gengo.css'
-          '<%= assets.style %>/gengo-bootstrap-theme.css'
+      'vendor-css':
+        src:[
+          '<%= assets.css %>/vendor/**/*.css'
         ]
+        dest:'<%= assets.css %>/vendor.css'
 
     copy:
+      ##############################################
+      # Copy all vendor related assets
+      ##############################################
       'bootstrap-sass':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-sass-official/assets/stylesheets'
@@ -184,47 +190,21 @@ module.exports = (grunt) ->
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-docs/dist/fonts'
         src: 'glyphicons-halflings-regular.*'
-        dest: '<%= assets.style %>/bootstrap'
+        dest: '<%= assets.css %>/bootstrap'
       'bootstrap-docs':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-docs/assets/css'
         src: 'docs.min.css'
-        dest: '<%= assets.style %>'
-      'downloads-dev':
-        expand: true,
-        cwd: ''
-        src: [ 'downloads/**/*' ],
-        dest: 'dev/'
-      'downloads-dist':
-        expand: true,
-        cwd: ''
-        src: [ 'downloads/**/*' ],
-        dest: 'dist/'
-      'fonts-images-dev':
-        expand: true,
-        cwd: ''
-        src: [
-          'fonts/**/*'
-          'images/**/*'
-          'favicons/**/*'
-        ],
-        dest: 'dev/assets/'
-      'fonts-images-dist':
-        expand: true,
-        cwd: ''
-        src: [
-          'fonts/**/*'
-          'images/**/*'
-          'favicons/**/*'
-        ],
-        dest: 'dist/assets/'
+        dest: '<%= assets.docs %>/assets/css'
+        rename: (dest, src) ->
+          return dest + '/bootstrap-docs.min.css'
       'bootstrap-multiselect-css':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-multiselect/css'
         src: [
           'bootstrap-multiselect.css'
         ]
-        dest: '<%= assets.style %>'
+        dest: '<%= assets.css %>/vendor'
       'bootstrap-multiselect-js':
         expand: true
         cwd: '<%= assets.bower %>/bootstrap-multiselect/js'
@@ -238,7 +218,7 @@ module.exports = (grunt) ->
         src: [
           'bootstrap-editable.css'
         ]
-        dest: '<%= assets.style %>'
+        dest: '<%= assets.css %>/vendor'
       'x-editable-js':
         expand: true
         cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable/js'
@@ -256,9 +236,15 @@ module.exports = (grunt) ->
         cwd:'<%= assets.bower %>/select2'
         src: [
           'select2*.css'
+        ]
+        dest: '<%= assets.css %>/vendor'
+      'select2-img':
+        expand:true
+        cwd:'<%= assets.bower %>/select2'
+        src: [
           'select2*.png'
         ]
-        dest: '<%= assets.style %>'
+        dest: '<%= assets.css %>'
       'select2-js':
         expand:true
         cwd:'<%= assets.bower %>/select2'
@@ -268,7 +254,7 @@ module.exports = (grunt) ->
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
         src: '*.css'
-        dest: '<%= assets.style %>'
+        dest: '<%= assets.css %>/vendor'
       'address-js':
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
@@ -278,7 +264,7 @@ module.exports = (grunt) ->
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/lib'
         src: '*.css'
-        dest: '<%= assets.style %>'
+        dest: '<%= assets.css %>/vendor'
       'typeheadjs-js':
         expand:true
         cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/'
@@ -293,68 +279,66 @@ module.exports = (grunt) ->
         cwd:'<%= assets.bower %>/moment/min'
         src: 'moment.min.js'
         dest: '<%= assets.scripts %>/vendor'
-      # copy js for development
-      'js-dev':
+
+      ##############################################
+      # Copy assets for _gh_pages
+      ##############################################
+      'docs-js':
         expand: true,
-        cwd: '<%= assets.scripts %>'
+        cwd: '<%= assets.docs %>/assets/js'
         src: [
-          '**/*.js'
+          '*.js'
         ],
-        dest: 'dev/assets/js'
-      # copy js for distribution
-      'js-dist':
+        dest: '<%= assets.gh_pages %>/assets/js/'
+      'docs-css':
         expand: true,
-        cwd: '<%= assets.scripts %>'
+        cwd: '<%= assets.css %>'
         src: [
-          '**/*.js'
+          'docs.css'
         ],
-        dest: 'dist/assets/js'
-      # copy css for development
-      'css-dev':
+        dest: '<%= assets.docs %>/assets/css/'
+      'fonts-images':
         expand: true,
-        cwd: '<%= assets.style %>'
+        cwd: ''
+        src: [
+          'fonts/**/*'
+          'images/**/*'
+          'js/**/*'
+          'favicons/**/*'
+        ],
+        dest: 'dist/'
+      'gh_pages':
+        expand: true,
+        cwd: 'dist/'
+        src: [
+          '**/*'
+        ],
+        dest: '<%= assets.gh_pages %>/assets'
+      'gh-pages-css':
+        expand: true,
+        cwd: '<%= assets.docs %>/assets/css/'
         src: [
           '*.css'
-          'bootstrap/*.*'
-          '*.png'
         ],
-        dest: 'dev/assets/css'
-      # copy css for distribution
-      'css-dist':
-        expand: true,
-        cwd: '<%= assets.style %>'
-        src: [
-          '*.css'
-          'bootstrap/*.*'
-        ],
-        dest: 'dist/assets/css'
-      # copy html for development
-      'html-dev':
-        expand: true,
-        cwd: '<%= assets.html %>'
-        src: [
-          '*.html'
-        ],
-        dest: 'dev'
-      # copy htmls for distribution
-      'html-dist':
-        expand: true,
-        cwd: '<%= assets.html %>'
-        src: [
-          '*.html'
-        ],
-        dest: 'dist'
+        dest: '<%= assets.gh_pages %>/assets/css/'
 
     clean:
       dist: [
         'dist'
-        'dev'
-        'html'
-        'css'
+        '_gh_pages'
       ]
-      vendor: [
-        '<%= assets.scripts %>/vendor'
+      vendor: [ '<%= assets.scripts %>/vendor' ]
+      docs: [
+        '<%= assets.css %>/docs.css'
+        '<%= assets.css %>/vendor'
+        '<%= assets.gh_pages %>/assets/css/docs.css'
+        '<%= assets.gh_pages %>/assets/css/bootstrap-docs.min.css'
+        '<%= assets.gh_pages %>/assets/css/vendor'
+        '<%= assets.docs %>/assets/css/bootstrap-docs.min.css'
+        '<%= assets.docs %>/assets/css/docs.css'
       ]
+
+
     # generate htmls with _config.yml
     jekyll:
       dist:
@@ -375,7 +359,7 @@ module.exports = (grunt) ->
           'The element label must not appear as a descendant of the a element.'
         ]
       files:
-        src: '<%= assets.html %>/**/*.html'
+        src: '<%= assets.gh_pages %>/**/*.html'
 
 
 
@@ -383,20 +367,33 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', [
     'dev'
   ]
+
+  grunt.registerTask 'build-css', [
+    'scsslint'
+    'compass'
+    'newer:csslint'
+    'autoprefixer'
+  ]
+
+  grunt.registerTask 'docs-css', [
+    'copy:docs-css'
+    'concat:docs'
+    'copy:gh-pages-css'
+  ]
+
   # in development:
   # all resources are generated into dev/
   grunt.registerTask 'copy-3rd-party-resources',[
     'copy:bootstrap-sass'
     'copy:bootstrap-fonts'
     'copy:bootstrap-docs'
-    'copy:fonts-images-dev'
-    'copy:fonts-images-dist'
     'copy:bootstrap-multiselect-css'
     'copy:bootstrap-multiselect-js'
     'copy:x-editable-css'
     'copy:x-editable-js'
     'copy:x-editable-img'
     'copy:select2-css'
+    'copy:select2-img'
     'copy:select2-js'
     'copy:address-css'
     'copy:address-js'
@@ -406,27 +403,22 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'dev', [
-    'clean:dist'
+    'clean'
     # html
     'jekyll'
     'validation'
-    'newer:copy:html-dev'
     # copy 3rd party resources
     'copy-3rd-party-resources'
     # preprocess scss into css
-    'scsslint'
-    'compass'
-    'newer:csslint'
-    'autoprefixer'
-    'concat:docs'
-    'concat:vendor'
+    'build-css'
+    # concat
+    'docs-css'
+    'concat:vendor-js'
+    'concat:vendor-css'
     'clean:vendor'
-    #copy css/js into dev/
-    'newer:copy:css-dev'
-    'newer:copy:js-dev'
-    #copy font/images into dev/
-    'newer:copy:fonts-images-dev'
-    'newer:copy:downloads-dev'
+    # copy
+    'copy:fonts-images'
+    'copy:gh_pages'
     # start development env
     'connect'
     'watch'
@@ -435,27 +427,24 @@ module.exports = (grunt) ->
   # generate all resources for gh-pages
 
   grunt.registerTask 'dist', [
-    'clean:dist'
+    'clean'
     # html
     'jekyll'
     'validation'
-    'newer:copy:html-dist'
     # copy 3rd party resources
     'copy-3rd-party-resources'
     # preprocess scss into css
-    'scsslint'
-    'compass'
-    'newer:csslint'
-    'autoprefixer'
+    'build-css'
+    # concat
+    'docs-css'
+    'concat:vendor-js'
+    'concat:vendor-css'
+    'clean:vendor'
+    # copy
+    'copy:fonts-images'
+    'copy:gh_pages'
+    'clean:docs'
+    #
     'cssmin'
     'usebanner'
-    'concat:docs'
-    'newer:copy:css-dist'
-    # js
-    'concat:vendor'
-    'clean:vendor'
-    'newer:copy:js-dist'
-    # other resourses
-    'newer:copy:fonts-images-dist'
-    'newer:copy:downloads-dist'
   ]

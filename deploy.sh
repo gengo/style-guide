@@ -10,20 +10,20 @@ LAST_COMMIT=$(git log --oneline | head -n 1)
 git checkout -B gh-pages
 
 echo "=remove unnecessary files for deployment="
-rm -fr bower_components node_modules css fonts/ html images js  liquid scss
+rm -fr bower_components node_modules css fonts images js docs scss favicons dist
 rm  .* *.*
 rm -fr .sass-cache
 
 echo "=move resources to the parent directory="
-cd dist
+cd _gh_pages
 git add --all
 mv *.html ../
 mv assets ../
+mv downloads ../
 cd ..
-rm -fr dist
+rm -fr _gh_pages
 
 # make commit
-
 
 echo "=git status="
 git status
