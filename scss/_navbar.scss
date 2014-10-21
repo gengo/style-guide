@@ -294,13 +294,14 @@ $workbench-icon-active-color: #fff !default;
       padding: 0 17px;
       line-height: 36px;
       color: #fff;
+      cursor: pointer;
 
       &.disabled {
         opacity: .5;
-        cursor: default;
 
         &:hover {
           background-color: transparent;
+          cursor: default;
         }
       }
 
