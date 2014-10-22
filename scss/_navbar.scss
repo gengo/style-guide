@@ -212,6 +212,7 @@ $workbench-icon-active-color: #fff !default;
     > li > a:hover,
     .open > a:hover {
       background-color: $hover-dark-gray;
+      cursor: pointer;
 
       &.disabled {
         cursor: default;
@@ -294,7 +295,6 @@ $workbench-icon-active-color: #fff !default;
       padding: 0 17px;
       line-height: 36px;
       color: #fff;
-      cursor: pointer;
 
       &.disabled {
         opacity: .5;
@@ -309,6 +309,7 @@ $workbench-icon-active-color: #fff !default;
         padding-bottom: 0;
         background-color: #322e2a;
         border-radius: 0;
+        cursor: pointer;
       }
       .text {
         margin-right: 40px;
