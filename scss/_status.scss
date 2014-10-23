@@ -26,3 +26,7 @@
   @extend .icon-error;
   color: $gengo-red;
 }
+.flagged .icon-status {
+  @extend .icon-flag;
+  color: $gengo-red;
+}
