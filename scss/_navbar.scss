@@ -240,6 +240,7 @@ $workbench-icon-active-color: #fff !default;
       .icon-expand {
         @include vertical-align(12px);
       }
+      .icon-comment,
       .icon-funnel {
         @include vertical-align(14px);
       }
