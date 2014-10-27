@@ -273,6 +273,11 @@ $workbench-icon-active-color: #fff !default;
       margin-right: $padding-base-horizontal;
     }
   }
+
+  .dropdown-toggle .caret {
+    margin-left: 6px;
+  }
+
   .dropdown-menu {
     @include border-top-radius(1px);
     @include border-bottom-radius(2px);
