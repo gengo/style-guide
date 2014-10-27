@@ -8,7 +8,7 @@
    name: word
 
  - class: doctype-xls
-   name: exel
+   name: excel
 
  - class: doctype-rtf
    name: rtf
