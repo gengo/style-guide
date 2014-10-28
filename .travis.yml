@@ -1,8 +1,8 @@
 language: node_js
-install: ./setup.sh
+install: "./setup.sh"
 script: grunt dist
-after_success: ./deploy.sh
+after_success: "./deploy.sh"
 env:
   global:
   - DEPLOY_BRANCH="gh-pages"
-  - secure: bXs04Hc2Kngi4uGqPzH5hV35wcV1y0RSdXz9fs15RcEmq85XBkcQzAkIk31WS+fu4X4Zn9wr/E+HhTD93/QOYvqZBV9Nyd0vqIABe7IWvRYEAIDc9OCjUb8GxiD838peyOiicDY/YArOyRhcUhzMsOLhxwx+O74F4wRW+iI23jw=
+  - secure: SqIN6rmsX2yqRMy9NT8IkU8l48IbFLde/IRDTfS0hgNQg72PxN9JIVzoM3zQM5c64Xm1Vt2zmzHxhHF/Yl6taFSjKUeJ1NsyB3JByAScwuSnuZF47tpeYOz50DYDQZLQl4Jja1ml/RmbxIliyQldWgy0IXzEq4XDyQnLH7gMiEQ=
