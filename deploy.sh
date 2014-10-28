@@ -27,7 +27,7 @@ rm -fr .sass-cache
 
 echo "=== move resources to the parent directory ==="
 cd _gh_pages
-# git add --all .
+git add -A
 mv *.html ../
 mv assets ../
 mv downloads ../
@@ -39,6 +39,6 @@ git status
 
 echo "=== git commit ==="
 echo "message :" $LAST_COMMIT
-git add --all .
+git add -A
 git commit -q -m "Travis build $TRAVIS_BUILD_NUMBER"
-git push -fq $REPO_URL gh-pages 2> /dev/null
+git push -f $REPO_URL gh-pages 2> /dev/null
