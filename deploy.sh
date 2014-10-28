@@ -11,7 +11,7 @@ git checkout -B gh-pages
 
 echo "=remove unnecessary files for deployment="
 rm -fr bower_components node_modules css fonts images js docs scss favicons dist
-rm -fr .* *.*
+rm .* *.*
 rm -fr .sass-cache
 
 echo "=move resources to the parent directory="
