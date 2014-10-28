@@ -5,7 +5,7 @@ echo "This is a pull request. No deployment will be done.";
   exit 0;
 fi
 
-if [[ "$TRAVIS_BRANCH" != "master" ]] ]]; then
+if [[ "$TRAVIS_BRANCH" != "master" ]]; then
 echo "This is not a deployable branch.";
   exit 0;
 fi
