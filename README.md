@@ -22,19 +22,19 @@ Gengo Style Guide
 
 ## Build
 
-- use `grunt dist`
+- use `grunt build`
  - contents are generated into `./dist` directory
 
 
 
 ## Auto Deployment via Travis CI
 
-- All resources are deployed to `gh-pages` branch from `dist` folder on the `master` branch
+- All resources are deployed to `gh-pages` branch from `_gh_pages` folder on the `master` branch
 - Deployment to `gh-pages` branch are done via [Travis CI](https://travis-ci.org/gengo/style-guide)
 
 - Only when pushed into `master` branch, deployment is enabled.
 
-## How to test auto deployment ? 
+## How to test auto deployment ?
 
 
 ###requirement

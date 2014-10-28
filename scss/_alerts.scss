@@ -65,4 +65,17 @@
   line-height: $alert-overlay-line-height;
   transition: top .2s linear;
   box-shadow: none;
+
+  &.alert-success .icon-alert-status {
+    @extend .icon-success;
+    color: $gengo-green;
+  }
+  &.alert-warning .icon-alert-status {
+    @extend .icon-warning;
+    color: $alert-warning-text;
+  }
+  &.alert-error .icon-alert-status {
+    @extend .icon-error;
+    color: $alert-error-text;
+  }
 }
