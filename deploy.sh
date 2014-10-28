@@ -21,15 +21,8 @@ LAST_COMMIT=$(git log --oneline | head -n 1)
 # <new_branch> is created if it doesn’t exist; otherwise, it is reset.
 git checkout -B gh-pages
 
-echo "=== check what files are in gh-pages ==="
-ls -la
-
-echo "=== marge master into gh-pages ==="
-git fetch $REPO_URL master
-git merge $REPO_URL/master
-
-echo "=== grunt ==="
-grunt dist
+echo "=== git status ==="
+git status
 
 echo "=== remove unnecessary files for deployment ==="
 rm -fr bower_components node_modules css fonts images js docs scss favicons dist
@@ -47,13 +40,13 @@ rm -fr _gh_pages
 echo "=== check what files are remaining ==="
 ls -la
 
-echo "=== check gh-pages tree ==="
-git ls-tree --name-only gh-pages
-
 echo "=== git status ==="
 git status
 
 echo "=== git commit ==="
 echo "message :" $LAST_COMMIT
+
+echo "=== commit -q -am ==="
 git commit -q -am "Travis build $TRAVIS_BUILD_NUMBER"
+echo "=== git push -f ==="
 git push -f $REPO_URL gh-pages
