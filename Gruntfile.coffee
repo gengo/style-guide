@@ -426,7 +426,7 @@ module.exports = (grunt) ->
 
   # generate all resources for gh-pages
 
-  grunt.registerTask 'dist', [
+  grunt.registerTask 'build', [
     'clean'
     # html
     'jekyll'
