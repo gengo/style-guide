@@ -26,7 +26,9 @@ git ls-tree --name-only gh-pages
 
 echo "=== marge master into gh-pages ==="
 git fetch $REPO_URL master
-git message $REPO_URL/master
+git merge $REPO_URL/master
+
+echo "=== grunt ==="
 grunt dist
 
 echo "=== remove unnecessary files for deployment ==="
@@ -36,6 +38,7 @@ rm -fr .sass-cache
 
 echo "=== move resources to the parent directory ==="
 cd _gh_pages
+ls -la
 # git add -A .
 mv *.html ../
 mv assets ../
@@ -45,6 +48,9 @@ rm -fr _gh_pages
 
 echo "=== check what files are remaining ==="
 ls -la
+
+echo "=== check gh-pages tree ==="
+git ls-tree --name-only gh-pages
 
 echo "=== git status ==="
 git status
