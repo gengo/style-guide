@@ -10,8 +10,9 @@ echo "This is not a deployable branch.";
   exit 0;
 fi
 
-echo "Set up $GH_REPO [via travis] for $GIT_NAME <${GIT_EMAIL}>"
-export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
+echo "Set up $TRAVIS_REPO_SLUG [via travis] for $GIT_NAME <${GIT_EMAIL}>"
+export REPO_URL="https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG.git"
+
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
 
