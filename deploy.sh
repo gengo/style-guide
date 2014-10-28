@@ -21,8 +21,8 @@ LAST_COMMIT=$(git log --oneline | head -n 1)
 # <new_branch> is created if it doesn’t exist; otherwise, it is reset.
 git checkout -B gh-pages
 
-echo "=== check gh-pages tree ==="
-git ls-tree --name-only gh-pages
+echo "=== check what files are in gh-pages ==="
+ls -la
 
 echo "=== marge master into gh-pages ==="
 git fetch $REPO_URL master
@@ -38,8 +38,6 @@ rm -fr .sass-cache
 
 echo "=== move resources to the parent directory ==="
 cd _gh_pages
-ls -la
-# git add -A .
 mv *.html ../
 mv assets ../
 mv downloads ../
@@ -57,6 +55,5 @@ git status
 
 echo "=== git commit ==="
 echo "message :" $LAST_COMMIT
-git add -A .
-git commit -q -m "Travis build $TRAVIS_BUILD_NUMBER"
+git commit -q -am "Travis build $TRAVIS_BUILD_NUMBER"
 git push -f $REPO_URL gh-pages
