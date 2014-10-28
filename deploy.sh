@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# if [[ "$TRAVIS_PULL_REQUEST" == "true" ]]; then
-# echo "This is a pull request. No deployment will be done.";
-#   exit 0;
-# fi
+if [[ "$TRAVIS_PULL_REQUEST" == "true" ]]; then
+echo "This is a pull request. No deployment will be done.";
+  exit 0;
+fi
 
-# if [[ "$TRAVIS_BRANCH" != "master" ]]; then
-# echo "This is not a deployable branch.";
-#   exit 0;
-# fi
+if [[ "$TRAVIS_BRANCH" != "master" ]]; then
+echo "This is not a deployable branch.";
+  exit 0;
+fi
 
 echo "Set up $TRAVIS_REPO_SLUG [via travis] for $GIT_NAME <${GIT_EMAIL}>"
 export REPO_URL="https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG.git"
