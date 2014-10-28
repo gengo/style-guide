@@ -18,6 +18,7 @@ git config --global user.name "$GIT_NAME"
 
 LAST_COMMIT=$(git log --oneline | head -n 1)
 
+# <new_branch> is created if it doesn’t exist; otherwise, it is reset.
 git checkout -B gh-pages
 
 echo "=== remove unnecessary files for deployment ==="
@@ -27,18 +28,21 @@ rm -fr .sass-cache
 
 echo "=== move resources to the parent directory ==="
 cd _gh_pages
-git add -A
+# git add -A .
 mv *.html ../
 mv assets ../
 mv downloads ../
 cd ..
 rm -fr _gh_pages
 
+echo "=== check what files are remaining ==="
+ls -la
+
 echo "=== git status ==="
 git status
 
 echo "=== git commit ==="
 echo "message :" $LAST_COMMIT
-git add -A
+git add -A .
 git commit -q -m "Travis build $TRAVIS_BUILD_NUMBER"
 git push -f $REPO_URL gh-pages 2> /dev/null
