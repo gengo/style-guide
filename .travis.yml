@@ -4,5 +4,4 @@ script: grunt dist
 after_success: "./deploy.sh"
 env:
   global:
-  - DEPLOY_BRANCH="gh-pages"
-  - secure: kXx8ePEtVvwKVCuY+9ZDLK84WP1xuvV9xR7v8WKdl7wm5PpL0gHUFcSaRrNtaHhVlRgmKMzScAfbUIMVdYUKUlYPD8wbwqIKrbMZYZGu7HHcdndZMKUH1SMM/3Xkp3PMwCCHBJ+6tdvpaqYpsm9TM9SMO0YDSiEa4myFDEEtqLs=
+  - secure: JEcQL/4CBVZXgU9fo/QVBUF7ILQVet6WY6wNpyRMYb0tmf+5G1s2jwJ74962C8mMqPAel5Fw5w74RfUVSCUzJUXe46Pvpk9HQFGXbYl+6UIx52Mv1poO2wf8B6jqY3gai52/OCU0UxwINfXs+Q+Ue3tnk0jBgg97egfDC6MBhfo=

@@ -45,8 +45,6 @@ git status
 
 echo "=== git commit ==="
 echo "message :" $LAST_COMMIT
-
-echo "=== commit -q -am ==="
-git commit -q -am "Travis build $TRAVIS_BUILD_NUMBER"
-echo "=== git push -f ==="
-git push -f $REPO_URL gh-pages
+git add .
+git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
+git push --force --quiet $REPO_URL master:gh-pages > /dev/null 2>&1
