@@ -1,7 +1,17 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-export REPO_URL="https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG.git"
+if [[ "$TRAVIS_PULL_REQUEST" == "true" ]]; then
+echo "This is a pull request. No deployment will be done.";
+  exit 0;
+fi
 
+if [[ "$TRAVIS_BRANCH" != "master" ]] ]]; then
+echo "This is not a deployable branch.";
+  exit 0;
+fi
+
+echo "Set up $GH_REPO [via travis] for $GIT_NAME <${GIT_EMAIL}>"
+export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
 
@@ -23,17 +33,11 @@ mv downloads ../
 cd ..
 rm -fr _gh_pages
 
-# make commit
 echo "=== git status ==="
 git status
 
 echo "=== git commit ==="
 echo "message :" $LAST_COMMIT
-git add --all .
+git add .
 git commit -q -m "Travis build $TRAVIS_BUILD_NUMBER"
-
-# only when in 'master' branch, git-push-ed
-if [[ "$TRAVIS_BRANCH" = "master" ]]; then
-  echo "=== git push to gh-pages ==="
-  git push -fq $REPO_URL gh-pages 2> /dev/null
-fi
+git push -fq $REPO_URL gh-pages 2> /dev/null
