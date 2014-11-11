@@ -87,6 +87,7 @@ PLATFORMS
 DEPENDENCIES
   compass
   jekyll
+  listen
   mercenary
   sass
   scss-lint
