@@ -18,6 +18,10 @@
   @extend .icon-circle;
   color: $gengo-yellow;
 }
+.hold .icon-status {
+  @extend .icon-hold;
+  color: $gengo-gray;
+}
 .approved .icon-status {
   @extend .icon-success;
   color: $gengo-green;
