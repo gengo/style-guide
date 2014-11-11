@@ -1,7 +1,9 @@
 language: ruby
 rvm:
   - 2.0.0-p247
-install: "./setup.sh"
+install:
+  - ./setup.sh
+  - gem install jekyll
 script: grunt build
 after_success: "./deploy.sh"
 env:
