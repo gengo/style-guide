@@ -212,6 +212,7 @@ $workbench-icon-active-color: #fff !default;
     > li > a:hover,
     .open > a:hover {
       background-color: $hover-dark-gray;
+      color: $workbench-icon-active-color;
       cursor: pointer;
 
       &.disabled {
