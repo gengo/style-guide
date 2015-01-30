@@ -79,7 +79,7 @@ body > .container {
   background-color: #4d4843;
 }
 .colors .color-box.gengo-bg {
-  background-color: #f4f4f4;
+  background-color: #eee;
 }
 .colors .color-box.gengo-white {
   background-color: #fff;
@@ -312,7 +312,7 @@ body > .container {
 .doctype .item,
 .favicons .item {
   border-radius: 3px;
-  background-color: #f4f4f4;
+  background-color: #eee;
   text-align: center;
 }
 .icons .text,
