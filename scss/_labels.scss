@@ -2,10 +2,30 @@
 // Labels
 // --------------------------------------------------
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  .label {
+    font-size: 100%;
+    padding: 2px 12px;
+  }
+}
+
+h3,
+h4,
+h5 {
+  .label {
+    padding: 2px 8px;
+  }
+}
+
 .label {
-  padding: .08em .6em;
-  font-size: 85%;
+  padding: .2em .6em .12em;
+  font-size: $font-size-small;
   font-weight: $font-semibold;
+  border-radius: $border-radius-base;
 }
 
 .label-primary {
