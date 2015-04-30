@@ -85,27 +85,17 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 
-.navbar-collapse .navbar-nav {
-  // Uncollapse the nav
-  @media (min-width: $grid-float-breakpoint) {
-    > li {
-      > a {
-        padding: 13px 0 10px;
-        padding-bottom: $navbar-padding-vertical - $navbar-btn-border-bottom;
-        margin: 0 17px;
-        color: $text-color;
-        border-bottom: solid $navbar-btn-border-bottom $navbar-background-color;
-        transition: border-bottom-color .3s ease;
-      }
-      &.active a,
-      a:hover {
-        background-color: $navbar-background-color;
-        border-bottom-color: $brand-customer;
-      }
-    }
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-collapse .navbar-nav > li > a {
+    padding: 13px 0 10px;
+    padding-bottom: $navbar-padding-vertical - $navbar-btn-border-bottom;
+    margin: 0 17px;
+    color: $text-color;
+    border-bottom: solid $navbar-btn-border-bottom $navbar-background-color;
+    transition: border-bottom-color .3s ease;
   }
 }
-
+// On mobile/tablet
 @media (max-width: $grid-float-breakpoint) {
   .navbar-collapse {
     box-shadow: none;
