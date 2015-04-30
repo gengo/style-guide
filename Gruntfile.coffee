@@ -7,7 +7,7 @@ module.exports = (grunt) ->
   require('jit-grunt')(grunt, {
     usebanner: 'grunt-banner'
     scsslint: 'grunt-scss-lint'
-    validation: 'grunt-html-validation'
+    htmllint: 'grunt-html-validation'
   })
 
   #path configuration
@@ -65,7 +65,6 @@ module.exports = (grunt) ->
         files: '<%= assets.docs %>/**/*.html'
         tasks: [
           'jekyll'
-          'validation'
         ]
       js:
         files: [
@@ -345,7 +344,7 @@ module.exports = (grunt) ->
         options:
           config:'_config.yml'
 
-    validation:
+    htmllint:
       options:
         charset: 'utf-8'
         doctype: 'HTML5'
@@ -406,7 +405,6 @@ module.exports = (grunt) ->
     'clean'
     # html
     'jekyll'
-    'validation'
     # copy 3rd party resources
     'copy-3rd-party-resources'
     # preprocess scss into css
@@ -430,7 +428,7 @@ module.exports = (grunt) ->
     'clean'
     # html
     'jekyll'
-    'validation'
+    'htmllint'
     # copy 3rd party resources
     'copy-3rd-party-resources'
     # preprocess scss into css
