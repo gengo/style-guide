@@ -374,7 +374,7 @@ body > .container {
   -webkit-background-size: 152px 152px;
           background-size: 152px 152px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .apple-touch-icons .apple-touch-customer {
     background-image: url("../images/apple-touch-icons/gengo_c_app_@2x.png");
     -webkit-background-size: 152px 152px;
@@ -389,7 +389,7 @@ body > .container {
   -webkit-background-size: 152px 152px;
           background-size: 152px 152px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .apple-touch-icons .apple-touch-translator {
     background-image: url("../images/apple-touch-icons/gengo_t_app_@2x.png");
     -webkit-background-size: 152px 152px;
@@ -404,7 +404,7 @@ body > .container {
   -webkit-background-size: 152px 152px;
           background-size: 152px 152px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .apple-touch-icons .apple-touch-developer {
     background-image: url("../images/apple-touch-icons/gengo_d_app_@2x.png");
     -webkit-background-size: 152px 152px;
@@ -419,7 +419,7 @@ body > .container {
   -webkit-background-size: 152px 152px;
           background-size: 152px 152px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .apple-touch-icons .apple-touch-admin {
     background-image: url("../images/apple-touch-icons/gengo_a_app_@2x.png");
     -webkit-background-size: 152px 152px;
