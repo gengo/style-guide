@@ -5,30 +5,6 @@
 @mixin navbar-base($bg-color, $hove-clolr) {
   @media (max-width: $grid-float-breakpoint) {
     background-color: $bg-color;
-
-    .navbar-collapse {
-      box-shadow: none;
-
-      .navbar-nav {
-        li a,
-        .dropdown-menu li a {
-          color: #fff;
-          font-weight: $font-semibold;
-          padding-top: 8px;
-          padding-bottom: 8px;
-        }
-        .dropdown-menu {
-          padding: 0;
-        }
-      }
-    }
-    .nav {
-      a {
-        margin-left: 16px;
-        margin-right: 16px;
-        border-radius: $border-radius-base;
-      }
-    }
   }
   .nav {
     .open a,
@@ -129,6 +105,33 @@ $hover-dark-gray: #413c38 !default;
     }
   }
 }
+
+@media (max-width: $grid-float-breakpoint) {
+  .navbar-collapse {
+    box-shadow: none;
+
+    .navbar-nav {
+      li a,
+      .dropdown-menu li a {
+        color: #fff;
+        font-weight: $font-semibold;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      .dropdown-menu {
+        padding: 0;
+      }
+    }
+  }
+  .nav {
+    a {
+      margin-left: 16px;
+      margin-right: 16px;
+      border-radius: $border-radius-base;
+    }
+  }
+}
+
 
 //
 // Customer
