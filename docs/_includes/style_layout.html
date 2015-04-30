@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-2 ge-nav">
-      <ul class="nav nav nav-pills nav-stacked ge-nav-stacked ge-dark">
+    <div class="col-md-2 ge-nav" role="complementary">
+      <ul class="nav nav-pills nav-stacked ge-nav-stacked ge-dark hidden-print hidden-xs hidden-sm">
         <li class="active"><a href="#introduction">Introduction</a></li>
         <li><a href="#logo-usage">Logo usage</a></li>
         <li><a href="#colors">Colors</a></li>
@@ -14,7 +14,7 @@
       {% include _template/back-to-top-btn.html %}
     </div>
 
-    <div class="col-xs-10 ge-content">
+    <div class="col-md-10 ge-content" role="main">
       {% include style/introduction.html %}
       {% include style/logo-usage.html %}
       {% include style/colors.html %}

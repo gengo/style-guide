@@ -31,7 +31,9 @@
       > a {
         padding: 3px 0;
         > label {
+          margin: 3px 0;
           padding-left: 30px;
+          font-weight: $font-normal;
           input {
             margin-left: -23px;
           }
