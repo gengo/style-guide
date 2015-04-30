@@ -7,8 +7,16 @@
     background-color: $bg-color;
   }
   .nav {
-    a:hover,
-    .active a {
+    a {
+      margin-left: 16px;
+      margin-right: 16px;
+      border-radius: $border-radius-base;
+    }
+
+    .open a,
+    .active a,
+    a:focus,
+    a:hover {
       border-bottom-color: $bg-color;
 
       @media (max-width: $grid-float-breakpoint) {
@@ -36,8 +44,12 @@ $navbar-background-color: #fff !default;
 $hover-dark-gray: #413c38 !default;
 
 .navbar {
-  background-color: $navbar-background-color;
-  border-bottom: 1px solid $table-border-color;
+  @include navbar-base($brand-customer, #199b71);
+  // border-bottom: 1px solid $table-border-color;
+
+  @media (min-width: $grid-float-breakpoint) {
+    background-color: $navbar-background-color;
+  }
 
   .navbar-brand {
     padding: 16px 28px 10px 27px;
@@ -54,9 +66,20 @@ $hover-dark-gray: #413c38 !default;
       background-size: 59px 20px;
     }
   }
-  .navbar-toggle .icon-bar {
-    background-color: #fff;
+  .navbar-toggle {
+    margin-top: 9px;
+
+    .icon-bar {
+      background-color: #fff;
+      width: 16px;
+      border-radius: 0;
+
+      + .icon-bar {
+        margin-top: 3px;
+      }
+    }
   }
+
   .btn {
     padding: 4.5px $padding-base-horizontal;
     margin: 9px 0;
@@ -68,27 +91,47 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 
-.navbar-collapse .navbar-nav {
-  // Uncollapse the nav
+.navbar-collapse {
+  box-shadow: none;
+
   @media (min-width: $grid-float-breakpoint) {
-    > li {
-      > a {
-        padding: 13px 0 10px;
-        padding-bottom: $navbar-padding-vertical - $navbar-btn-border-bottom;
-        margin: 0 17px;
-        color: $text-color;
-        border-bottom: solid $navbar-btn-border-bottom $navbar-background-color;
-        transition: border-bottom-color .3s ease;
-      }
-      &.active a,
-      a:hover {
-        background-color: $navbar-background-color;
-        border-bottom-color: $brand-customer;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+  }
+
+  .navbar-nav {
+    li a,
+    .dropdown-menu li a {
+      color: #fff;
+      font-weight: $font-semibold;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .dropdown-menu {
+      padding: 0;
+    }
+
+    // Uncollapse the nav
+    @media (min-width: $grid-float-breakpoint) {
+      li {
+        a {
+          padding: 13px 0 10px;
+          padding-bottom: $navbar-padding-vertical - $navbar-btn-border-bottom;
+          margin: 0 17px;
+          color: $text-color;
+          border-bottom: solid $navbar-btn-border-bottom $navbar-background-color;
+          transition: border-bottom-color .3s ease;
+        }
+        &.open a,
+        &.active a,
+        a:focus,
+        a:hover {
+          background-color: $navbar-background-color;
+          border-bottom-color: $brand-customer;
+        }
       }
     }
   }
 }
-
 //
 // Customer
 // --------------------------------------------------
@@ -97,11 +140,13 @@ $hover-dark-gray: #413c38 !default;
   @include navbar-base($brand-customer, #199b71);
 }
 
-.translator .navbar .navbar-brand,
-.developer .navbar .navbar-brand,
-.admin .navbar .navbar-brand {
-  padding-right: 30px;
-  padding-left: 30px;
+.translator .navbar,
+.developer .navbar,
+.admin .navbar {
+  .navbar-brand {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 
 //
