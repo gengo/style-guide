@@ -5,14 +5,32 @@
 @mixin navbar-base($bg-color, $hove-clolr) {
   @media (max-width: $grid-float-breakpoint) {
     background-color: $bg-color;
+
+    .navbar-collapse {
+      box-shadow: none;
+
+      .navbar-nav {
+        li a,
+        .dropdown-menu li a {
+          color: #fff;
+          font-weight: $font-semibold;
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+        .dropdown-menu {
+          padding: 0;
+        }
+      }
+    }
+    .nav {
+      a {
+        margin-left: 16px;
+        margin-right: 16px;
+        border-radius: $border-radius-base;
+      }
+    }
   }
   .nav {
-    a {
-      margin-left: 16px;
-      margin-right: 16px;
-      border-radius: $border-radius-base;
-    }
-
     .open a,
     .active a,
     a:focus,
@@ -45,7 +63,7 @@ $hover-dark-gray: #413c38 !default;
 
 .navbar {
   @include navbar-base($brand-customer, #199b71);
-  // border-bottom: 1px solid $table-border-color;
+  border-bottom: 1px solid $table-border-color;
 
   @media (min-width: $grid-float-breakpoint) {
     background-color: $navbar-background-color;
@@ -91,47 +109,27 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 
-.navbar-collapse {
-  box-shadow: none;
-
+.navbar-collapse .navbar-nav {
+  // Uncollapse the nav
   @media (min-width: $grid-float-breakpoint) {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
-  }
-
-  .navbar-nav {
-    li a,
-    .dropdown-menu li a {
-      color: #fff;
-      font-weight: $font-semibold;
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
-    .dropdown-menu {
-      padding: 0;
-    }
-
-    // Uncollapse the nav
-    @media (min-width: $grid-float-breakpoint) {
-      li {
-        a {
-          padding: 13px 0 10px;
-          padding-bottom: $navbar-padding-vertical - $navbar-btn-border-bottom;
-          margin: 0 17px;
-          color: $text-color;
-          border-bottom: solid $navbar-btn-border-bottom $navbar-background-color;
-          transition: border-bottom-color .3s ease;
-        }
-        &.open a,
-        &.active a,
-        a:focus,
-        a:hover {
-          background-color: $navbar-background-color;
-          border-bottom-color: $brand-customer;
-        }
+    > li {
+      > a {
+        padding: 13px 0 10px;
+        padding-bottom: $navbar-padding-vertical - $navbar-btn-border-bottom;
+        margin: 0 17px;
+        color: $text-color;
+        border-bottom: solid $navbar-btn-border-bottom $navbar-background-color;
+        transition: border-bottom-color .3s ease;
+      }
+      &.active a,
+      a:hover {
+        background-color: $navbar-background-color;
+        border-bottom-color: $brand-customer;
       }
     }
   }
 }
+
 //
 // Customer
 // --------------------------------------------------
