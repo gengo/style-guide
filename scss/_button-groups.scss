@@ -3,6 +3,11 @@
   [class*=" icon-"] {
     font-size: 9px;
   }
+
+  // Give the line between buttons some depth
+  + .dropdown-toggle {
+    border-left-color: rgba(0, 0, 0, .08);
+  }
 }
 
 .btn-group-xs > .btn {
