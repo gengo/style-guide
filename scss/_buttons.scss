@@ -35,6 +35,7 @@ $btn-darken-percent: 7%;
 
 // Common styles
 .btn {
+  font-weight: $font-semibold;
   // Buttons sizes
   padding: 6px 16px 7px;
   // Remove the gradient for the pressed/active state
@@ -71,6 +72,7 @@ $btn-darken-percent: 7%;
 a,
 .btn-link {
   color: $link-color;
+  font-weight: $font-normal;
   &:hover {
     color: $link-hover-color;
   }
