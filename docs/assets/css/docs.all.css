@@ -258,7 +258,7 @@ body > .container {
   height: auto;
 }
 .logo-usage .image-wrap .logo-circle img {
-  width: 180px;
+  max-width: 180px;
   height: auto;
   padding: 24px;
   overflow: auto;

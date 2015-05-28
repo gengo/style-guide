@@ -122,6 +122,36 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 
+// ------ navbar dropdown  ---------------------------------------
+
+.navbar-collapse .nav .dropdown {
+
+  &.open {
+    .dropdown-toggle {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    > a {
+      border-color: transparent;
+    }
+  }
+  > a:hover,
+  > a:focus,
+  > a:active {
+    border-bottom-color: $table-border-color;
+  }
+
+  .dropdown-menu > li > a {
+    border-radius: 0;
+
+    @media (max-width: $grid-float-breakpoint) {
+      padding-left: 36px;
+    }
+  }
+
+
+}
+
 
 //
 // Customer
