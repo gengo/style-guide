@@ -1,13 +1,31 @@
 // ------ navbar  ---------------------------------------
 
-.nav .dropdown.open > a {
-  border-color: transparent;
-}
+.nav .dropdown {
 
-.nav .dropdown > a:hover,
-.nav .dropdown > a:focus,
-.nav .dropdown > a:active {
-  border-bottom-color: $table-border-color;
+  &.open {
+    .dropdown-toggle {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    > a {
+      border-color: transparent;
+    }
+  }
+  > a:hover,
+  > a:focus,
+  > a:active {
+    border-bottom-color: $table-border-color;
+  }
+
+  .dropdown-menu > li > a {
+    border-radius: 0;
+
+    @media (max-width: $grid-float-breakpoint) {
+      padding-left: 36px;
+    }
+  }
+
+
 }
 
 // ------ regular dropdown ---------------------------------------
