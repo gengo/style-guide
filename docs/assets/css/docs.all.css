@@ -371,8 +371,8 @@ body > .container {
   width: 152px;
   height: 152px;
   background-repeat: no-repeat;
-  -webkit-background-size: 152px 152px;
-          background-size: 152px 152px;
+  -webkit-background-size: contain;
+          background-size: contain;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .apple-touch-icons .apple-touch-customer {
@@ -386,8 +386,8 @@ body > .container {
   width: 152px;
   height: 152px;
   background-repeat: no-repeat;
-  -webkit-background-size: 152px 152px;
-          background-size: 152px 152px;
+  -webkit-background-size: contain;
+          background-size: contain;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .apple-touch-icons .apple-touch-translator {
@@ -401,8 +401,8 @@ body > .container {
   width: 152px;
   height: 152px;
   background-repeat: no-repeat;
-  -webkit-background-size: 152px 152px;
-          background-size: 152px 152px;
+  -webkit-background-size: contain;
+          background-size: contain;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .apple-touch-icons .apple-touch-developer {
@@ -416,8 +416,8 @@ body > .container {
   width: 152px;
   height: 152px;
   background-repeat: no-repeat;
-  -webkit-background-size: 152px 152px;
-          background-size: 152px 152px;
+  -webkit-background-size: contain;
+          background-size: contain;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .apple-touch-icons .apple-touch-admin {
