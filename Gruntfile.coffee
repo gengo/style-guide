@@ -428,7 +428,7 @@ module.exports = (grunt) ->
     'clean'
     # html
     'jekyll'
-    'validation'
+    # 'validation' # not working at the moment
     # copy 3rd party resources
     'copy-3rd-party-resources'
     # preprocess scss into css

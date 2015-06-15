@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 @mixin navbar-base($bg-color, $hove-clolr) {
-  @media (max-width: $grid-float-breakpoint) {
+  @media (max-width: $grid-float-breakpoint-max) {
     background-color: $bg-color;
   }
   .nav {
@@ -13,7 +13,7 @@
     a:hover {
       border-bottom-color: $bg-color;
 
-      @media (max-width: $grid-float-breakpoint) {
+      @media (max-width: $grid-float-breakpoint-max) {
         background-color: $hove-clolr;
       }
     }
@@ -41,14 +41,18 @@ $hover-dark-gray: #413c38 !default;
   @include navbar-base($brand-customer, #199b71);
   border-bottom: 1px solid $table-border-color;
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $grid-float-breakpoint-max) {
     background-color: $navbar-background-color;
   }
 
   .navbar-brand {
-    padding: 16px 28px 10px 27px;
+    padding: 16px 18px 10px;
     margin-right: 14px;
     background-color: $brand-customer;
+
+    @media (min-width: $grid-float-breakpoint-max) {
+      padding: 16px 28px 10px;
+    }
 
     &:before {
       display: block;
@@ -85,7 +89,7 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 
-@media (min-width: $grid-float-breakpoint) {
+@media (min-width: $grid-float-breakpoint-max) {
   .navbar-collapse .navbar-nav > li > a {
     padding: 13px 0 10px;
     padding-bottom: $navbar-padding-vertical - $navbar-btn-border-bottom;
@@ -96,7 +100,7 @@ $hover-dark-gray: #413c38 !default;
   }
 }
 // On mobile/tablet
-@media (max-width: $grid-float-breakpoint) {
+@media (max-width: $grid-float-breakpoint-max) {
   .navbar-collapse {
     box-shadow: none;
 
@@ -144,7 +148,7 @@ $hover-dark-gray: #413c38 !default;
   .dropdown-menu > li > a {
     border-radius: 0;
 
-    @media (max-width: $grid-float-breakpoint) {
+    @media (max-width: $grid-float-breakpoint-max) {
       padding-left: 36px;
     }
   }
@@ -165,8 +169,13 @@ $hover-dark-gray: #413c38 !default;
 .developer .navbar,
 .admin .navbar {
   .navbar-brand {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 18px;
+    padding-left: 18px;
+
+    @media (min-width: $grid-float-breakpoint-max) {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
   }
 }
 
