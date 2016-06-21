@@ -6,6 +6,7 @@
 
   // Give the line between buttons some depth
   + .dropdown-toggle {
+    border-left-color: #000; // IE8 fallback
     border-left-color: rgba(0, 0, 0, .08);
   }
 }
