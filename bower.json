@@ -3,8 +3,8 @@
   "version": "0.0.5",
   "description": "Gengo style guide",
   "dependencies": {
-    "bootstrap-sass-official": "~3.2.0",
-    "bootstrap-multiselect": "~0.9.9",
+    "bootstrap-sass-official": "~3.3.6",
+    "bootstrap-multiselect": "~0.9.13",
     "x-editable": "~1.5.1",
     "typeahead.js": "~0.10.5",
     "select2": "~3.5.1",
