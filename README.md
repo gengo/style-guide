@@ -15,14 +15,14 @@ Gengo Style Guide
 
 ## Development
 
-- use `grunt dev`
+- use `npm run dev`
  - contents are generated into `./dev` directory
  - access [http://0.0.0.0:9001](http://0.0.0.0:9001) for preview
  - livereload is supported
 
 ## Build
 
-- use `grunt build`
+- use `npm run build`
  - contents are generated into `./dist` directory
 
 

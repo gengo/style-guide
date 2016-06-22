@@ -1,6 +1,6 @@
 {
   "name": "gengo",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Gengo style guide",
   "homepage": "https://github.com/gengo/style-guide",
   "author": "Gengo, Inc.",
@@ -18,7 +18,7 @@
     "grunt-contrib-csslint": "~0.4.0",
     "grunt-contrib-cssmin": "~0.12.2",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-csscomb": "~3.0.0",
+    "grunt-csscomb": "~3.1.0",
     "grunt-html-validation": "~0.1.18",
     "grunt-jekyll": "~0.4.2",
     "grunt-newer": "~1.1.0",
@@ -33,5 +33,9 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:gengo/style-guide.git"
+  },
+  "scripts": {
+    "dev": "grunt dev",
+    "build": "grunt build"
   }
 }
