@@ -8,6 +8,7 @@ module.exports = (grunt) ->
     usebanner: 'grunt-banner'
     scsslint: 'grunt-scss-lint'
     validation: 'grunt-html-validation'
+    bower: 'grunt-bower-task'
   })
 
   #path configuration
@@ -175,6 +176,11 @@ module.exports = (grunt) ->
           '<%= assets.css %>/vendor/**/*.css'
         ]
         dest:'<%= assets.css %>/vendor.css'
+
+    bower:
+      install:
+        options:
+          targetDir: '<%= assets.sass %>/third_party'
 
     copy:
       ##############################################
@@ -403,6 +409,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'dev', [
     'clean'
+    'bower:install'
     # html
     'jekyll'
     # copy 3rd party resources
@@ -426,6 +433,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build', [
     'clean'
+    'bower:install'
     # html
     'jekyll'
     # 'validation' # not working at the moment
