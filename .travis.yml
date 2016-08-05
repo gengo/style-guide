@@ -1,6 +1,13 @@
 language: node_js
+cache:
+  directories:
+    - vendor/bundle
+    - bower_components
+    - node_modules
+node_js:
+  - 4.4.3
 install: "./setup.sh"
-script: grunt build
+script: npm run build
 after_success: "./deploy.sh"
 env:
   global:
