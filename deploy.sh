@@ -25,9 +25,9 @@ echo "=== git status ==="
 git status
 
 echo "=== remove unnecessary files for deployment ==="
-rm -fr bower_components node_modules css fonts images js docs scss favicons dist
-rm -f .* *.*
-rm -fr .sass-cache
+rm -rf bower_components node_modules css fonts images js docs scss favicons dist
+rm -rf .* *.*
+rm -rf .sass-cache
 
 echo "=== move resources to the parent directory ==="
 cd _gh_pages
@@ -35,7 +35,7 @@ mv *.html ../
 mv assets ../
 mv downloads ../
 cd ..
-rm -fr _gh_pages
+rm -rf _gh_pages
 
 echo "=== check what files are remaining ==="
 ls -la
@@ -47,4 +47,4 @@ echo "=== git commit ==="
 echo "message :" $LAST_COMMIT
 git add -A .
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
-git push --force --quiet $REPO_URL gh-pages > /dev/null 2>&1
+git push --force $REPO_URL gh-pages > /dev/null 2>&1

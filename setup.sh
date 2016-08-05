@@ -1,4 +1,3 @@
-npm install -g grunt-cli bower
+npm install -g npm
 bundle install
 npm install
-bower install
