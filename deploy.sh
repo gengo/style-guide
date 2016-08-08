@@ -46,4 +46,6 @@ echo "=== git commit ==="
 echo "message :" $LAST_COMMIT
 git add -A .
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
-git push --force $REPO_URL gh-pages > /dev/null 2>&1
+
+echo "=== git push ==="
+git push --force $REPO_URL gh-pages
