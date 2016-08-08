@@ -1,14 +1,17 @@
 language: node_js
 cache:
   directories:
-    - vendor/bundle
-    - bower_components
-    - node_modules
+  - vendor/bundle
+  - bower_components
+  - node_modules
 node_js:
-  - 4.4.3
+- 4.4.3
 install: "./setup.sh"
 script: npm run build
 after_success: "./deploy.sh"
 env:
   global:
-  - secure: JEcQL/4CBVZXgU9fo/QVBUF7ILQVet6WY6wNpyRMYb0tmf+5G1s2jwJ74962C8mMqPAel5Fw5w74RfUVSCUzJUXe46Pvpk9HQFGXbYl+6UIx52Mv1poO2wf8B6jqY3gai52/OCU0UxwINfXs+Q+Ue3tnk0jBgg97egfDC6MBhfo=
+  - GIT_NAME=Travis-CI
+  - GIT_EMAIL=gengo+travis@github.com
+  - GIT_DOMAIN=github.com
+  - secure: ZRelWQOC60Dk+2wxyYQLGT/79wqgdtbzXqfD6fgGfAIDBAdf/+yvm6mFuhfCqz+ofdHW/VHsao+Mr9ua2ZMDHYeKfzzFmkaCIJeYJy//kepj5W3E0WuhKpSAWQs+rVEIGap2U6PMPJMVXL9SoIpXqRD2qf5oPzdrcVxkqEnAUH4=
