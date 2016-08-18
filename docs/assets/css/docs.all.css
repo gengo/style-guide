@@ -609,9 +609,6 @@ body > .container {
 .grid .container {
   margin-bottom: 36px;
 }
-.grid .ge-show-grid {
-  margin-bottom: 15px;
-}
 .grid .ge-show-grid p {
   background-color: #dbefc4;
   text-align: center;

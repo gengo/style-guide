@@ -1,3 +1,16 @@
+// centered columns styles
+.row-centered {
+  text-align: center;
+}
+.col-centered {
+  display: inline-block;
+  float: none;
+  // reset the text-align
+  text-align: left;
+  // inline-block space fix
+  margin-right: -4px;
+}
+
 .box {
   padding-right: ($grid-gutter-width / 2);
   padding-left: ($grid-gutter-width / 2);
@@ -5,7 +18,7 @@
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   background-color: $box-bg;
-  margin-bottom: 26px;
+  margin-bottom: 36px;
 
   @media (min-width: $screen-sm-min) {
     padding-right: $grid-gutter-width;
