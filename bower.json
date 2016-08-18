@@ -1,6 +1,6 @@
 {
   "name": "gengo-style-guide",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Gengo style guide",
   "dependencies": {
     "bootstrap-sass-official": "~3.3.6",

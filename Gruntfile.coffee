@@ -66,6 +66,7 @@ module.exports = (grunt) ->
         files: '<%= assets.docs %>/**/*.html'
         tasks: [
           'jekyll'
+          'copy:gh_pages'
         ]
       js:
         files: [
