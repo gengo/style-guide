@@ -30,7 +30,7 @@ js:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gengo Style Guide</title>
   <!-- CSS -->
-  {% for href in page.css %}<link rel="stylesheet" type="text/css" href="{{href}}" />
+  {% for href in layout.css %}<link rel="stylesheet" type="text/css" href="{{href}}" />
   {% endfor %}
   <!-- Favicons -->
   <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icons/gengo_c_app.png">
@@ -53,7 +53,7 @@ js:
           <li class="{% if page.name == 'index.html' %}active{% elsif page.name == 'style.html' %}active{% endif %}">
             <a href="style.html">Style</a>
           </li>
-        {% for link in page.navigation %}
+        {% for link in layout.navigation %}
           <li class="{% if page.name == link.url %}active{% endif %}">
             <a href="{{link.url}}">{{link.text}}</a>
           </li>
@@ -74,7 +74,7 @@ js:
   {{ content }}
 
   <!-- JS -->
-  {% for src in page.js %}<script src="{{src}}"></script>
+  {% for src in layout.js %}<script src="{{src}}"></script>
   {% endfor %}
 </body>
 </html>
