@@ -248,7 +248,8 @@ module.exports = (grunt) ->
         expand:true
         cwd:'<%= assets.bower %>/select2'
         src: [
-          'select2*.png'
+          'select2*.png',
+          'select2*.gif',
         ]
         dest: '<%= assets.css %>'
       'select2-js':
