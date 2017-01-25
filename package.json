@@ -1,6 +1,6 @@
 {
   "name": "gengo",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Gengo style guide",
   "homepage": "https://github.com/gengo/style-guide",
   "author": "Gengo, Inc.",
@@ -36,7 +36,7 @@
     "url": "git@github.com:gengo/style-guide.git"
   },
   "scripts": {
-    "dev": "grunt dev",
-    "build": "grunt build"
+    "dev": "bundle exec grunt dev",
+    "build": "bundle exec grunt build"
   }
 }
