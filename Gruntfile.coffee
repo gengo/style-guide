@@ -206,14 +206,14 @@ module.exports = (grunt) ->
           return dest + '/bootstrap-docs.min.css'
       'bootstrap-multiselect-css':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-multiselect/css'
+        cwd: '<%= assets.bower %>/bootstrap-multiselect/dist/css'
         src: [
           'bootstrap-multiselect.css'
         ]
         dest: '<%= assets.css %>/vendor'
       'bootstrap-multiselect-js':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-multiselect/js'
+        cwd: '<%= assets.bower %>/bootstrap-multiselect/dist/js'
         src: [
           'bootstrap-multiselect.js'
         ]
