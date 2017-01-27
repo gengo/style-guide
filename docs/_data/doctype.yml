@@ -1,6 +1,9 @@
  - class: doctype-def
    name: file
 
+ - class: doctype-tm
+   name: tm
+
  - class: doctype-txt
    name: text
 
