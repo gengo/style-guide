@@ -9,6 +9,10 @@ $doctype-path : "../images/doctype";
   @include get-image("#{$doctype-path}/file_def", "png", 20px, 25px);
 }
 
+.doctype-tm {
+  @include get-image("#{$doctype-path}/file_tm", "png", 20px, 25px);
+}
+
 .doctype-txt {
   @include get-image("#{$doctype-path}/file_txt", "png", 20px, 25px);
 }
