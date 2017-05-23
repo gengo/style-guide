@@ -41,14 +41,6 @@ $doctype-path : "../images/doctype";
   @include get-image("#{$doctype-path}/file_odt", "png", 20px, 25px);
 }
 
-.doctype-yt {
-  @include get-image("#{$doctype-path}/file_yt", "png", 20px, 25px);
-}
-
-.doctype-ggl {
-  @include get-image("#{$doctype-path}/file_ggl", "png", 20px, 25px);
-}
-
 .doctype-check {
   @include get-image("#{$doctype-path}/file_check", "png", 20px, 25px);
 }
