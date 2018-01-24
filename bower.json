@@ -8,7 +8,8 @@
     "x-editable": "~1.5.1",
     "typeahead.js": "~0.10.5",
     "select2": "~3.5.1",
-    "moment": "~2.8.2"
+    "moment": "~2.8.2",
+    "bootstrap": "~3.3.7"
   },
   "devDependencies": {
     "bootstrap-docs": "https://github.com/twbs/bootstrap.git#gh-pages"
