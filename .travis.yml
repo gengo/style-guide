@@ -7,7 +7,7 @@ cache:
 node_js:
 - 4.7.0
 install: "./setup.sh"
-script: npm run build
+script: yarn build
 after_success: "./deploy.sh"
 env:
   global:

@@ -1,3 +1,3 @@
-npm install -g npm
+npm install -g yarn
 bundle install
-npm install
+yarn install
