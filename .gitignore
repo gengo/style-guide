@@ -2,6 +2,7 @@
 
 *.sublime-project
 *.sublime-workspace
+*.log
 
 .sass-cache
 bower_components

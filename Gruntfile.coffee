@@ -8,7 +8,6 @@ module.exports = (grunt) ->
     usebanner: 'grunt-banner'
     scsslint: 'grunt-scss-lint'
     validation: 'grunt-html-validation'
-    bower: 'grunt-bower-task'
   })
 
   #path configuration
@@ -17,7 +16,7 @@ module.exports = (grunt) ->
     scripts : 'js'
     sass    : 'scss'
     css     : 'dist/css'
-    bower   : 'bower_components'
+    yarn    : 'node_modules'
     gh_pages: '_gh_pages'
     docs    : 'docs'
 
@@ -178,75 +177,70 @@ module.exports = (grunt) ->
         ]
         dest:'<%= assets.css %>/vendor.css'
 
-    bower:
-      install:
-        options:
-          targetDir: '<%= assets.sass %>/third_party'
-
     copy:
       ##############################################
       # Copy all vendor related assets
       ##############################################
       'bootstrap-sass':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-sass-official/assets/stylesheets'
+        cwd: '<%= assets.yarn %>/bootstrap-sass-official/assets/stylesheets'
         src: '**/*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party'
       'bootstrap-fonts':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-docs/dist/fonts'
+        cwd: '<%= assets.yarn %>/bootstrap/fonts'
         src: 'glyphicons-halflings-regular.*'
         dest: '<%= assets.css %>/bootstrap'
       'bootstrap-docs':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-docs/assets/css'
+        cwd: '<%= assets.yarn %>/bootstrap-docs/assets/css'
         src: 'docs.min.css'
         dest: '<%= assets.docs %>/assets/css'
         rename: (dest, src) ->
           return dest + '/bootstrap-docs.min.css'
       'bootstrap-multiselect-css':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-multiselect/dist/css'
+        cwd: '<%= assets.yarn %>/bootstrap-multiselect/dist/css'
         src: [
           'bootstrap-multiselect.css'
         ]
         dest: '<%= assets.css %>/vendor'
       'bootstrap-multiselect-js':
         expand: true
-        cwd: '<%= assets.bower %>/bootstrap-multiselect/dist/js'
+        cwd: '<%= assets.yarn %>/bootstrap-multiselect/dist/js'
         src: [
           'bootstrap-multiselect.js'
         ]
         dest: '<%= assets.scripts %>/vendor'
       'x-editable-css':
         expand: true
-        cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable/css'
+        cwd: '<%= assets.yarn %>/x-editable/dist/bootstrap3-editable/css'
         src: [
           'bootstrap-editable.css'
         ]
         dest: '<%= assets.css %>/vendor'
       'x-editable-js':
         expand: true
-        cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable/js'
+        cwd: '<%= assets.yarn %>/x-editable/dist/bootstrap3-editable/js'
         src: [
           'bootstrap-editable.min.js'
         ]
         dest: '<%= assets.scripts %>/vendor'
       'x-editable-img':
         expand: true
-        cwd: '<%= assets.bower %>/x-editable/dist/bootstrap3-editable/img'
+        cwd: '<%= assets.yarn %>/x-editable/dist/bootstrap3-editable/img'
         src: '*.*'
         dest: '<%= assets.images %>'
       'select2-css':
         expand:true
-        cwd:'<%= assets.bower %>/select2'
+        cwd:'<%= assets.yarn %>/select2'
         src: [
           'select2*.css'
         ]
         dest: '<%= assets.css %>/vendor'
       'select2-img':
         expand:true
-        cwd:'<%= assets.bower %>/select2'
+        cwd:'<%= assets.yarn %>/select2'
         src: [
           'select2*.png',
           'select2*.gif',
@@ -254,27 +248,27 @@ module.exports = (grunt) ->
         dest: '<%= assets.css %>'
       'select2-js':
         expand:true
-        cwd:'<%= assets.bower %>/select2'
+        cwd:'<%= assets.yarn %>/select2'
         src: 'select2.min.js'
         dest: '<%= assets.scripts %>/vendor'
       'address-css':
         expand:true
-        cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
+        cwd:'<%= assets.yarn %>/x-editable/dist/inputs-ext/address'
         src: '*.css'
         dest: '<%= assets.css %>/vendor'
       'address-js':
         expand:true
-        cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/address'
+        cwd:'<%= assets.yarn %>/x-editable/dist/inputs-ext/address'
         src: '*.js'
         dest: '<%= assets.scripts %>/vendor'
       'typeheadjs-css':
         expand:true
-        cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/lib'
+        cwd:'<%= assets.yarn %>/x-editable/dist/inputs-ext/typeaheadjs/lib'
         src: '*.css'
         dest: '<%= assets.css %>/vendor'
       'typeheadjs-js':
         expand:true
-        cwd:'<%= assets.bower %>/x-editable/dist/inputs-ext/typeaheadjs/'
+        cwd:'<%= assets.yarn %>/x-editable/dist/inputs-ext/typeaheadjs/'
         src: [
           'lib/*.js'
           '*.js'
@@ -283,7 +277,7 @@ module.exports = (grunt) ->
         dest: '<%= assets.scripts %>/vendor'
       'moment':
         expand:true
-        cwd:'<%= assets.bower %>/moment/min'
+        cwd:'<%= assets.yarn %>/moment/min'
         src: 'moment.min.js'
         dest: '<%= assets.scripts %>/vendor'
 
@@ -411,7 +405,6 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'dev', [
     'clean'
-    'bower:install'
     # html
     'jekyll'
     # copy 3rd party resources
@@ -435,7 +428,6 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build', [
     'clean'
-    'bower:install'
     # html
     'jekyll'
     # 'validation' # not working at the moment
