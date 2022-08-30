@@ -15,14 +15,14 @@ Gengo Style Guide
 
 ## Development
 
-- use `npm run dev`
+- use `yarn dev`
  - contents are generated into `./dev` directory
  - access [http://0.0.0.0:9001](http://0.0.0.0:9001) for preview
  - livereload is supported
 
 ## Build
 
-- use `npm run build`
+- use `yarn build`
  - contents are generated into `./dist` directory
 
 

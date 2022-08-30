@@ -1,18 +1,19 @@
 {
   "name": "gengo",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Gengo style guide",
   "homepage": "https://github.com/gengo/style-guide",
   "author": "Gengo, Inc.",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "bootstrap": "~3.3.7",
+    "bootstrap": "4",
     "bootstrap-docs": "^1.0.0",
     "bootstrap-multiselect": "0.9.13",
     "bootstrap-sass": "~3.3.6",
-    "jquery": "1.6",
+    "jquery": "1.9",
     "moment": "~2.8.2",
+    "popper.js": "1.16",
     "select2": "~3.5.1",
     "typeahead.js": "~0.10.5",
     "x-editable": "~1.5.1"
