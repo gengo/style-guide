@@ -13,7 +13,7 @@
     "bootstrap-sass": "~3.3.6",
     "jquery": "~1",
     "moment": "~2.8.2",
-    "popper.js": "~1.16",
+    "popper.js": "^1.16.1",
     "select2": "~3.5.1",
     "typeahead.js": "~0.10.5",
     "x-editable": "~1.5.1"
