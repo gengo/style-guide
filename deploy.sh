@@ -25,7 +25,7 @@ echo "=== git status ==="
 git status
 
 echo "=== remove unnecessary files for deployment ==="
-rm -rf bower_components node_modules css fonts images js docs scss favicons dist
+rm -rf node_modules css fonts images js docs scss favicons dist
 rm -rf .sass-cache
 
 echo "=== move resources to the parent directory ==="

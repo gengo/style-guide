@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "bootstrap": "4",
+    "bootstrap": "^4.6.0",
     "bootstrap-docs": "^1.0.0",
     "bootstrap-multiselect": "0.9.13",
     "bootstrap-sass": "~3.3.6",
