@@ -9,6 +9,7 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "bootstrap-docs": "^1.0.0",
+    "bootstrap-icons": "^1.9.1",
     "bootstrap-multiselect": "0.9.13",
     "bootstrap-sass": "~3.3.6",
     "jquery": "~1",

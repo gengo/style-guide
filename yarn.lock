@@ -191,6 +191,11 @@ bootstrap-docs@^1.0.0:
   resolved "https://registry.yarnpkg.com/bootstrap-docs/-/bootstrap-docs-1.0.0.tgz#e48bb636d0c4a892eca9544b417d0a8651a81d14"
   integrity sha1-5Iu2NtDEqJLsqVRLQX0KhlGoHRQ=
 
+bootstrap-icons@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.9.1.tgz#cf22d91a25447645e45c49ebde4e56eafdfe761b"
+  integrity sha512-d4ZkO30MIkAhQ2nNRJqKXJVEQorALGbLWTuRxyCTJF96lRIV6imcgMehWGJUiJMJhglN0o2tqLIeDnMdiQEE9g==
+
 bootstrap-multiselect@0.9.13:
   version "0.9.13"
   resolved "https://registry.yarnpkg.com/bootstrap-multiselect/-/bootstrap-multiselect-0.9.13.tgz#57b874511495393b23f866da6d2e866579fc27e5"
