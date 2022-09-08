@@ -76,8 +76,9 @@ module.exports = (grunt) ->
           'copy:docs-js'
         ]
 
-    compass:
+    sass:
       options:
+        implementation: 'sass'
         specify  : '<%= assets.sass %>/*.{scss,sass}'
         sassDir  : '<%= assets.sass %>'
         imagesDir: '<%= assets.images %>'
@@ -371,7 +372,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build-css', [
     'stylelint'
-    'compass'
+    'sass'
     'newer:csslint'
     'autoprefixer'
   ]

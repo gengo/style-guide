@@ -12,10 +12,10 @@
     "bootstrap-icons": "^1.9.1",
     "bootstrap-multiselect": "0.9.13",
     "coffeescript": "^2.7.0",
+    "grunt-sass": "^3.1.0",
     "grunt-stylelint": "0.18",
     "jquery": "1.6",
     "moment": "~2.8.2",
-    "sass": "^1.0",
     "select2": "~3.5.1",
     "stylelint": "^14.11",
     "stylelint-config-twbs-bootstrap": "^6.0.0",
@@ -52,7 +52,6 @@
   },
   "scripts": {
     "dev": "bundle exec grunt dev",
-    "clean": "bundle exec grunt clean",
     "build": "bundle exec grunt build"
   },
   "stylelint": {
