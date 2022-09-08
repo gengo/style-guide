@@ -13,10 +13,13 @@
     "bootstrap-multiselect": "0.9.13",
     "bootstrap-sass": "~3.3.6",
     "coffeescript": "^2.7.0",
+    "grunt-stylelint": "0.18",
     "jquery": "1.6",
     "moment": "~2.8.2",
     "sass": "^1.0",
     "select2": "~3.5.1",
+    "stylelint": "^14.11",
+    "stylelint-config-twbs-bootstrap": "^6.0.0",
     "typeahead.js": "~0.10.5",
     "x-editable": "~1.5.1"
   },
@@ -30,7 +33,6 @@
     "grunt-contrib-concat": "~0.5.1",
     "grunt-contrib-connect": "~0.10.1",
     "grunt-contrib-copy": "~0.8.0",
-    "grunt-contrib-csslint": "~0.4.0",
     "grunt-contrib-cssmin": "~0.12.2",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-csscomb": "~3.1.0",
@@ -38,7 +40,6 @@
     "grunt-jekyll": "~0.4.2",
     "grunt-newer": "~1.1.0",
     "grunt-notify": "^0.4.1",
-    "grunt-scss-lint": "^0.3.6",
     "jit-grunt": "^0.9.1",
     "time-grunt": "^1.1.1"
   },
@@ -52,6 +53,10 @@
   },
   "scripts": {
     "dev": "bundle exec grunt dev",
+    "clean": "bundle exec grunt clean",
     "build": "bundle exec grunt build"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-twbs-bootstrap"
   }
 }
