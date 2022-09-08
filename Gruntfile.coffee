@@ -6,7 +6,7 @@ module.exports = (grunt) ->
   # load all grunt tasks
   require('jit-grunt')(grunt, {
     usebanner: 'grunt-banner'
-    scsslint: 'grunt-scss-lint'
+    stylelint: 'grunt-stylelint'
     validation: 'grunt-html-validation'
   })
 
@@ -132,10 +132,8 @@ module.exports = (grunt) ->
       src:
         '<%= assets.css %>/<%= pkg.name %>.css'
 
-    scsslint:
-      allFiles: ['scss/*.scss']
-      options:
-        config: '.scss-lint.yml'
+    stylelint:
+      all: ['scss/*.scss']
 
     cssmin:
       options:
@@ -181,16 +179,11 @@ module.exports = (grunt) ->
       ##############################################
       # Copy all vendor related assets
       ##############################################
-      'bootstrap-sass':
+      'bootstrap-scss':
         expand: true
-        cwd: '<%= assets.yarn %>/bootstrap-sass-official/assets/stylesheets'
+        cwd: '<%= assets.yarn %>/bootstrap/scss'
         src: '**/*.{scss,sass}'
-        dest: '<%= assets.sass %>/third_party'
-      'bootstrap-fonts':
-        expand: true
-        cwd: '<%= assets.yarn %>/bootstrap/fonts'
-        src: 'glyphicons-halflings-regular.*'
-        dest: '<%= assets.css %>/bootstrap'
+        dest: '<%= assets.sass %>'
       'bootstrap-docs':
         expand: true
         cwd: '<%= assets.yarn %>/bootstrap-docs/assets/css'
@@ -212,6 +205,13 @@ module.exports = (grunt) ->
           'bootstrap-multiselect.js'
         ]
         dest: '<%= assets.scripts %>/vendor'
+      'bootstrap-icons-font-css':
+        expand:true
+        cwd: '<%= assets.yarn %>/bootstrap-icons/font'
+        src: [
+          'bootstrap-icons.css'
+        ]
+        dest: '<%= assets.css %>/vendor'
       'x-editable-css':
         expand: true
         cwd: '<%= assets.yarn %>/x-editable/dist/bootstrap3-editable/css'
@@ -370,7 +370,7 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'build-css', [
-    'scsslint'
+    'stylelint'
     'compass'
     'newer:csslint'
     'autoprefixer'
@@ -385,11 +385,11 @@ module.exports = (grunt) ->
   # in development:
   # all resources are generated into dev/
   grunt.registerTask 'copy-3rd-party-resources',[
-    'copy:bootstrap-sass'
-    'copy:bootstrap-fonts'
+    'copy:bootstrap-scss'
     'copy:bootstrap-docs'
     'copy:bootstrap-multiselect-css'
     'copy:bootstrap-multiselect-js'
+    'copy:bootstrap-icons-font-css'
     'copy:x-editable-css'
     'copy:x-editable-js'
     'copy:x-editable-img'
