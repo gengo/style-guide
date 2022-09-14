@@ -1,5 +1,7 @@
 'use strict';
 
+scss = require('sass');
+
 # Build configurations.
 module.exports = (grunt) ->
   require('time-grunt')(grunt)
@@ -7,6 +9,7 @@ module.exports = (grunt) ->
   require('jit-grunt')(grunt, {
     usebanner: 'grunt-banner'
     stylelint: 'grunt-stylelint'
+    sass: 'grunt-sass'
     validation: 'grunt-html-validation'
   })
 
@@ -78,17 +81,24 @@ module.exports = (grunt) ->
 
     sass:
       options:
-        implementation: 'sass'
-        specify  : '<%= assets.sass %>/*.{scss,sass}'
-        sassDir  : '<%= assets.sass %>'
-        imagesDir: '<%= assets.images %>'
-        cssDir   : '<%= assets.css %>'
-        relativeAssets: true
-      prod:
-        options:
-          debugInfo: false
-          outputStyle: 'expanded'
-          noLineComments: true
+        implementation: scss
+      compile:
+        files:
+          '<%= assets.css %>/docs.css': '<%= assets.sass %>/docs.scss'
+          '<%= assets.css %>/gengo.css': '<%= assets.sass %>/gengo.scss'
+          '<%= assets.css %>/gengo-bootstrap-theme.css': '<%= assets.sass %>/gengo-bootstrap-theme.scss'
+      #options:
+      #  implementation: 'scss'
+      #  specify  : '<%= assets.sass %>/*.{scss,sass}'
+      #  sassDir  : '<%= assets.sass %>'
+      #  imagesDir: '<%= assets.images %>'
+      #  cssDir   : '<%= assets.css %>'
+      #  relativeAssets: true
+      #prod:
+      #  options:
+      #    debugInfo: false
+      #    outputStyle: 'expanded'
+      #    noLineComments: true
 
     autoprefixer:
       options:
@@ -184,7 +194,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: '<%= assets.yarn %>/bootstrap/scss'
         src: '**/*.{scss,sass}'
-        dest: '<%= assets.sass %>'
+        dest: '<%= assets.sass %>/third_party/bootstrap'
       'bootstrap-docs':
         expand: true
         cwd: '<%= assets.yarn %>/bootstrap-docs/assets/css'
@@ -371,9 +381,9 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'build-css', [
-    'stylelint'
+    #'stylelint'
     'sass'
-    'newer:csslint'
+    #'newer:csslint'
     'autoprefixer'
   ]
 

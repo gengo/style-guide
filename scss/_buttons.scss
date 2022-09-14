@@ -1,3 +1,5 @@
+@import "third_party/mixins/buttons";
+
 //
 // Variables
 // --------------------------------------------------
@@ -35,7 +37,7 @@ $btn-darken-percent: 7%;
 
 // Common styles
 .btn {
-  font-weight: $font-semibold;
+  font-weight: $font-weight-semibold;
   // Buttons sizes
   padding: 6px 16px 7px;
   // Remove the gradient for the pressed/active state
@@ -46,13 +48,13 @@ $btn-darken-percent: 7%;
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    @include opacity(.6);
+    opacity: .8;
   }
 }
 
 .btn-lg {
   padding: 9px 16px 10px;
-  font-size: $font-size-large;
+  font-size: $font-size-lg;
 }
 
 .btn-sm {
@@ -62,7 +64,7 @@ $btn-darken-percent: 7%;
 
 .btn-xs {
   padding: 2px 9px;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
 
 .btn-block + .btn-block {
@@ -72,7 +74,7 @@ $btn-darken-percent: 7%;
 a,
 .btn-link {
   color: $link-color;
-  font-weight: $font-normal;
+  font-weight: $font-weight-normal;
   &:hover {
     color: $link-hover-color;
   }

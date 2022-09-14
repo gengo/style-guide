@@ -1,6 +1,6 @@
 @import "third_party/bootstrap/mixins";
-@import "compass";
 @import "mixins";
+@import "functions";
 @import "variables";
 
 // @import "fonts";
@@ -8,9 +8,10 @@
 @import "doctype-icons";
 @import "type";
 @import "grid";
-@import "buttons";
-@import "button-groups";
-@import "navs";
+//@import "buttons";
+//@import "button-groups";
+//@import "navs";
+/*
 @import "dropdowns";
 @import "tables";
 @import "editable-text";
@@ -23,10 +24,13 @@
 @import "forms";
 @import "breadcrumbs";
 @import "pagination";
+*/
 
 // customer & default
 $brand-color: $brand-customer;
+/*
 @import "navbar";
+*/
 
 // Designs for Developer pages
 // .developer {

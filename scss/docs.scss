@@ -1,8 +1,7 @@
 @import "third_party/bootstrap/mixins";
-@import "compass";
 @import "mixins";
+@import "functions";
 @import "variables";
-
 
 body > .container {
   margin-bottom: 60px;
@@ -13,7 +12,7 @@ body > .container {
   transition: bottom .2s ease;
 
   a {
-    color: $text-color;
+    color: $body-color;
     text-decoration: none;
     background-color: #fff;
     border-radius: 3px;
@@ -38,7 +37,7 @@ body > .container {
 }
 
 .colors {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 
   h3 {
     margin-bottom: 18px;
@@ -93,6 +92,7 @@ body > .container {
 }
 
 .bs-example {
+  position: relative;
   margin: 0;
   padding: 0;
   border: 0;
@@ -308,7 +308,7 @@ body > .container {
   hr { margin-bottom: 10px; }
 
   .item {
-    border-radius: $border-radius-base;
+    border-radius: $border-radius-lg;
     background-color: $body-bg;
     text-align: center;
   }
@@ -323,7 +323,7 @@ body > .container {
   [class^="icon-"],
   [class*=" icon-"] {
     display: block;
-    font-size: $font-size-large;
+    font-size: $font-size-lg;
     opacity: .3;
   }
   .item { padding: 30px 0 20px; }
@@ -430,16 +430,16 @@ body > .container {
     > div {
       display: inline-block;
       width: 49%;
-      font-size: $font-size-small;
+      font-size: $font-size-sm;
     }
 
     .title {
       color: #fff;
-      font-weight: $font-semibold;
+      font-weight: $font-weight-semibold;
       padding-left: 17%;
     }
     .txt {
-      color: $text-color;
+      color: $body-color;
       padding-left: 13%;
     }
   }
@@ -483,7 +483,7 @@ body > .container {
   .table {
     > thead > tr > th {
       color: $gengo-green;
-      font-size: $font-size-h3;
+      font-size: $h3-font-size;
       padding-bottom: 16px;
     }
     > tbody > tr > td {
@@ -551,7 +551,7 @@ body > .container {
     p {
       background-color: #dbefc4;
       text-align: center;
-      font-weight: $font-semibold;
+      font-weight: $font-weight-semibold;
       padding: 16px 0;
     }
   }
