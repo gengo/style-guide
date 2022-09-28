@@ -5,7 +5,6 @@ input[type="file"] {
 }
 
 .form-group {
-  margin-bottom: 12px;
 }
 
 .form-inline {
@@ -75,6 +74,6 @@ input[type="file"] {
     }
   }
   .form-category-title {
-    font-weight: $font-bold;
+    font-weight: $font-weight-bold;
   }
 }

@@ -1,12 +1,16 @@
+/*
+$navbar-padding-x:                 floor(calc($grid-gutter-width / 2)) !default;
+$navbar-padding-y:                 calc(($navbar-height - $line-height-computed) / 2) !default;
+*/
 body > .container {
   margin-bottom: 60px;
 }
 
 #back-to-top {
   bottom: -40px;
-  -webkit-transition: bottom .2s ease;
-       -o-transition: bottom .2s ease;
-          transition: bottom .2s ease;
+  -webkit-transition: bottom 0.2s ease;
+       -o-transition: bottom 0.2s ease;
+          transition: bottom 0.2s ease;
 }
 #back-to-top a {
   color: #4c4643;
@@ -31,7 +35,7 @@ body > .container {
 }
 
 .colors {
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .colors h3 {
   margin-bottom: 18px;
@@ -75,7 +79,7 @@ body > .container {
   background-color: #fff;
 }
 .colors .color-box.gengo-bg, .colors .color-box.gengo-white {
-  border: 1px solid #ddd;
+  border: 1px solid var(--bs-border-color);
 }
 
 .ge-nav-stacked.affix {
@@ -85,6 +89,7 @@ body > .container {
 }
 
 .bs-example {
+  position: relative;
   margin: 0;
   padding: 0;
   border: 0;
@@ -108,7 +113,7 @@ body > .container {
 }
 
 .navbar-styles .navbar {
-  border: 1px solid #ddd;
+  border: 1px solid var(--bs-border-color);
 }
 
 .highlight {
@@ -137,8 +142,9 @@ body > .container {
   margin-top: 15px;
   margin-bottom: 20px;
 }
-.ge-content h1[id] {
+.ge-content h1 {
   padding-top: 30px;
+  margin-top: 0;
 }
 .ge-content hr {
   margin-top: 16px;
@@ -160,7 +166,7 @@ body > .container {
   margin-right: 0;
 }
 
-.logo-usage [class^="col-"],
+.logo-usage [class^=col-],
 .logo-usage [class*=" col-"] {
   margin-bottom: 24px;
 }
@@ -229,7 +235,7 @@ body > .container {
 }
 .logo-usage .image-wrap.gengo-white {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid var(--bs-border-color);
 }
 .logo-usage .image-wrap.bg-image {
   background-color: transparent;
@@ -280,11 +286,11 @@ body > .container {
   max-width: 75%;
 }
 
-.icons [class^="col-"],
+.icons [class^=col-],
 .icons [class*=" col-"],
-.doctype [class^="col-"],
+.doctype [class^=col-],
 .doctype [class*=" col-"],
-.favicons [class^="col-"],
+.favicons [class^=col-],
 .favicons [class*=" col-"] {
   margin-bottom: 34px;
 }
@@ -301,7 +307,7 @@ body > .container {
 .icons .item,
 .doctype .item,
 .favicons .item {
-  border-radius: 3px;
+  border-radius: 0.25rem;
   background-color: #eee;
   text-align: center;
 }
@@ -312,11 +318,11 @@ body > .container {
   font-size: 10px;
 }
 
-.icons [class^="icon-"],
+.icons [class^=icon-],
 .icons [class*=" icon-"] {
   display: block;
-  font-size: 16px;
-  opacity: .3;
+  font-size: 1.25rem;
+  opacity: 0.3;
 }
 .icons .item {
   padding: 30px 0 20px;
@@ -351,70 +357,50 @@ body > .container {
 .apple-touch-icons .text {
   margin-top: 8px;
 }
-.apple-touch-icons [class^="apple-touch-"],
+.apple-touch-icons [class^=apple-touch-],
 .apple-touch-icons [class*=" apple-touch-"] {
   display: inline-block;
   border-radius: 34px;
 }
 .apple-touch-icons .apple-touch-customer {
-  background-image: url("../images/apple-touch-icons/gengo_c_app.png");
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 152px;
   height: 152px;
+  background-image: url("../images/apple-touch-icons/gengo_c_app.png");
   background-repeat: no-repeat;
   -webkit-background-size: 152px 152px;
           background-size: 152px 152px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .apple-touch-icons .apple-touch-customer {
-    background-image: url("../images/apple-touch-icons/gengo_c_app@2x.png");
-    -webkit-background-size: 152px 152px;
-            background-size: 152px 152px;
-  }
 }
 .apple-touch-icons .apple-touch-translator {
-  background-image: url("../images/apple-touch-icons/gengo_t_app.png");
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 152px;
   height: 152px;
+  background-image: url("../images/apple-touch-icons/gengo_t_app.png");
   background-repeat: no-repeat;
   -webkit-background-size: 152px 152px;
           background-size: 152px 152px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .apple-touch-icons .apple-touch-translator {
-    background-image: url("../images/apple-touch-icons/gengo_t_app@2x.png");
-    -webkit-background-size: 152px 152px;
-            background-size: 152px 152px;
-  }
 }
 .apple-touch-icons .apple-touch-developer {
-  background-image: url("../images/apple-touch-icons/gengo_d_app.png");
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 152px;
   height: 152px;
+  background-image: url("../images/apple-touch-icons/gengo_d_app.png");
   background-repeat: no-repeat;
   -webkit-background-size: 152px 152px;
           background-size: 152px 152px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .apple-touch-icons .apple-touch-developer {
-    background-image: url("../images/apple-touch-icons/gengo_d_app@2x.png");
-    -webkit-background-size: 152px 152px;
-            background-size: 152px 152px;
-  }
 }
 .apple-touch-icons .apple-touch-admin {
-  background-image: url("../images/apple-touch-icons/gengo_a_app.png");
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 152px;
   height: 152px;
+  background-image: url("../images/apple-touch-icons/gengo_a_app.png");
   background-repeat: no-repeat;
   -webkit-background-size: 152px 152px;
           background-size: 152px 152px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .apple-touch-icons .apple-touch-admin {
-    background-image: url("../images/apple-touch-icons/gengo_a_app@2x.png");
-    -webkit-background-size: 152px 152px;
-            background-size: 152px 152px;
-  }
 }
 
 .core-values h3,
@@ -479,7 +465,7 @@ body > .container {
 .brand-character ul > li > div {
   display: inline-block;
   width: 49%;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .brand-character ul > li .title {
   color: #fff;
@@ -577,7 +563,7 @@ body > .container {
 }
 
 .helper-classes .icon-close {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .grid .container {
@@ -596,4 +582,21 @@ body > .container {
   .grid .mobile-disable {
     display: none;
   }
+}
+
+.sticky-top {
+  top: 21px;
+}
+
+figure.highlight {
+  padding: 9px 14px;
+  border-radius: 4px;
+}
+
+figure.highlight > pre {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  word-break: normal;
+  border: 0;
 }

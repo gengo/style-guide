@@ -1,17 +1,18 @@
 @import "third_party/bootstrap/mixins";
 @import "mixins";
-@import "functions";
 @import "variables";
+
+@import "third_party/bootstrap/bootstrap";
 
 // @import "fonts";
 @import "icons";
 @import "doctype-icons";
+/*
 @import "type";
 @import "grid";
-//@import "buttons";
-//@import "button-groups";
-//@import "navs";
-/*
+@import "buttons";
+@import "button-groups";
+@import "nav";
 @import "dropdowns";
 @import "tables";
 @import "editable-text";
@@ -21,14 +22,16 @@
 @import "labels";
 @import "helper-classes";
 @import "modals";
+*/
 @import "forms";
+/*
 @import "breadcrumbs";
 @import "pagination";
 */
 
 // customer & default
-$brand-color: $brand-customer;
 /*
+$brand-color: $brand-customer;
 @import "navbar";
 */
 

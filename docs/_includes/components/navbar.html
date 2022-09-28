@@ -1,41 +1,42 @@
-<div class="box">
-  <h1 id="navbar">Navbar</h1>
+<div id="navbar" class="box">
+  <h1>Navbar</h1>
   <hr/>
 
   <h2>Default</h2>
+
   <div class="navbar-styles">
-    <header class="navbar navbar-static-top" role="banner">
+    <nav class="navbar navbar-expand-lg" role="banner">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"></a>
-        </div>
-        <nav class="collapse navbar-collapse" role="navigation">
+
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-content" role="navigation">
           <!-- Left nav -->
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="#">Orders</a>
+          <ul class="nav navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Orders</a>
             </li>
-            <li class="active">
-              <a href="#">Glossaries</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Glossaries</a>
             </li>
-            <li>
-              <a href="#">Translators</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Translators</a>
             </li>
-            <li>
-              <a href="#">String</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">String</a>
             </li>
-            <li>
-              <a href="#">Support</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Support</a>
             </li>
           </ul>
           <!-- Right nav -->
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
             <li>
               <a href="#"><i class="icon-create"></i></a>
             </li>
@@ -43,43 +44,54 @@
               <a href="#"><i class="icon-settings"></i></a>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
-    </header>
-  </div>
-{% highlight html %}
-<header class="navbar navbar-static-top" role="banner">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"></a>
-    </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#">Orders</a>
-        </li>
-        <li class="active">
-          <a href="#">Glossaries</a>
-        </li>
-        <li>
-          <a href="#">Translators</a>
-        </li>
-        <li>
-          <a href="#">String</a>
-        </li>
-        <li>
-          <a href="#">Support</a>
-        </li>
-      </ul>
     </nav>
   </div>
-</header>
+
+{% highlight html %}
+<nav class="navbar navbar-expand-lg" role="banner">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-content" role="navigation">
+      <!-- Left nav -->
+      <ul class="nav navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Orders</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Glossaries</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Translators</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">String</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Support</a>
+        </li>
+      </ul>
+      <!-- Right nav -->
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#"><i class="icon-create"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="icon-settings"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 {% endhighlight %}
 
   <p>Add <code>.navbar-fixed-top</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content. Create a full-width navbar that scrolls away with the page by adding .navbar-static-top and include a .container or <code>.container-fluid</code> to center and pad navbar content.</p>
@@ -87,48 +99,42 @@
 
   <h2>Forms</h2>
   <div class="navbar-styles">
-    <header class="navbar navbar-static-top" role="banner">
+    <nav class="navbar navbar-expand-lg" role="banner">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"></a>
-        </div>
-        <nav class="collapse navbar-collapse" role="navigation">
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group form-search">
-              <input type="text" class="form-control input-sm" placeholder="Search">
-            </div>
-          </form>
-        </nav>
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-forms">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <form class="d-flex" role="search">
+          <div class="form-group form-search align-middle">
+            <input type="text" class="form-control input-sm" placeholder="Search">
+          </div>
+        </form>
       </div>
-    </header>
-  </div>
-{% highlight html %}
-<header class="navbar navbar-static-top" role="banner">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"></a>
-    </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group form-search">
-          <input type="text" class="form-control form-search input-sm" placeholder="Search">
-        </div>
-      </form>
     </nav>
   </div>
-</header>
+{% highlight html %}
+<nav class="navbar navbar-expand-lg" role="banner">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-forms">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <form class="d-flex" role="search">
+      <div class="form-group form-search align-middle">
+        <input type="text" class="form-control input-sm" placeholder="Search">
+      </div>
+    </form>
+  </div>
+</nav>
 {% endhighlight %}
 
   <h2>Buttons</h2>

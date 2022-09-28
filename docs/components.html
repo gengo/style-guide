@@ -6,31 +6,31 @@ permalink: /components.html
 <div class="container">
   <div class="row">
     <div class="col-md-2 ge-nav" role="complementary">
-      <ul class="nav nav-pills nav-stacked ge-nav-stacked ge-dark hidden-print hidden-xs hidden-sm">
-        <li class="active"><a href="#navs">Navs</a></li>
-        <li><a href="#navbar">Navbar</a></li>
-        <li><a href="#breadcrumb">Breadcrumb</a></li>
-        <li><a href="#pagination">Pagination</a></li>
-        <li><a href="#dropdowns">Dropdowns</a></li>
-        <li><a href="#buttons">Buttons</a></li>
-        <li><a href="#buttons-groups">Buttons groups</a></li>
-        <li><a href="#buttons-dropdowns">Buttons dropdowns</a></li>
-        <li><a href="#tables">Tables</a></li>
-        <li><a href="#forms">Forms</a></li>
-        <li><a href="#editable-text">Editable text</a></li>
-        <li><a href="#supported-controls">Supported controls</a></li>
-        <li><a href="#validation-states">Validation states</a></li>
-        <li><a href="#control-sizing">Control sizing</a></li>
-        <li><a href="#labels">Labels</a></li>
-        <li><a href="#badges">Badges</a></li>
-        <li><a href="#alerts">Alerts</a></li>
-        <li><a href="#progress-bar">Progress bar</a></li>
-        <li><a href="#helper-classes">Helper classes</a></li>
+      <ul id="anchor-list" class="nav nav-pills ge-nav-fill nav-stacked ge-nav-stacked ge-dark hidden-print hidden-xs hidden-sm sticky-top list-group">
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action active" href="#navs">Navs</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#navbar">Navbar</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#breadcrumb">Breadcrumb</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#pagination">Pagination</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#dropdowns">Dropdowns</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#buttons">Buttons</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#buttons-groups">Buttons groups</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#buttons-dropdowns">Buttons dropdowns</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#tables">Tables</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#forms">Forms</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#editable-text">Editable text</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#supported-controls">Supported controls</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#validation-states">Validation states</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#control-sizing">Control sizing</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#labels">Labels</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#badges">Badges</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#alerts">Alerts</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#progress-bar">Progress bar</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#helper-classes">Helper classes</a></li>
       </ul>
       {% include _template/back-to-top-btn.html %}
     </div>
 
-    <div class="col-md-10 ge-content" role="main">
+    <div data-bs-spy="scroll" data-bs-target="#anchor-list" data-bs-smooth-scroll="true" class="col-md-10 ge-content" role="main">
       {% include components/navs.html %}
       {% include components/navbar.html %}
       {% include components/breadcrumb.html %}

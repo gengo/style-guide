@@ -374,11 +374,6 @@ bootstrap-icons@^1.9.1:
   resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.9.1.tgz#cf22d91a25447645e45c49ebde4e56eafdfe761b"
   integrity sha512-d4ZkO30MIkAhQ2nNRJqKXJVEQorALGbLWTuRxyCTJF96lRIV6imcgMehWGJUiJMJhglN0o2tqLIeDnMdiQEE9g==
 
-bootstrap-multiselect@0.9.13:
-  version "0.9.13"
-  resolved "https://registry.yarnpkg.com/bootstrap-multiselect/-/bootstrap-multiselect-0.9.13.tgz#57b874511495393b23f866da6d2e866579fc27e5"
-  integrity sha512-Ku7IB4yGGqz27s3SQUUz2tjZofhbkeMY5Qrt79oZKl5daeuRBx38S51kiOarnAyywzpI3PgER2eaRF3uBoNQtg==
-
 bootstrap@^5.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.1.tgz#45f97ff05cbe828bad807b014d8425f3aeb8ec3a"
@@ -3224,10 +3219,10 @@ saxes@^6.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-select2@~3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/select2/-/select2-3.5.1.tgz#f2819489bbc65fd6d328be72bbe2b95dd7e87cfe"
-  integrity sha512-IFX3UFPpPyK1I1Kuw1R1x+upMyNAZbMlkFhiTnRCRR7ii0KU1brmJMLa3GZcrMWCHiQlm0eKqb6i4XO4pqOrGQ==
+select2@^4.0:
+  version "4.0.13"
+  resolved "https://registry.yarnpkg.com/select2/-/select2-4.0.13.tgz#0dbe377df3f96167c4c1626033e924372d8ef44d"
+  integrity sha512-1JeB87s6oN/TDxQQYCvS5EFoQyvV6eYMZZ0AeA4tdFDYWN3BAGZ8npr17UBFddU0lgAt3H0yjX3X6/ekOj1yjw==
 
 semver-regex@^1.0.0:
   version "1.0.0"
@@ -4049,11 +4044,6 @@ ws@^8.8.0:
   version "8.8.1"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.8.1.tgz#5dbad0feb7ade8ecc99b830c1d77c913d4955ff0"
   integrity sha512-bGy2JzvzkPowEJV++hF07hAD6niYSr0JzBNo/J29WsB57A2r7Wlc1UFcTR9IzrPvuNVO4B8LGqF8qcpsVOhJCA==
-
-x-editable@~1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/x-editable/-/x-editable-1.5.1.tgz#2edbb8911ef2c5d61f63f06b0cf020be0fcc5849"
-  integrity sha512-eBP10/e6ETIx/TqRmwu6IR/BG0VpFyJzW+eCvAsa8ccJ+UqoYlIPslw7AulpOoym9nv04As8qROtjdU0ij8K2A==
 
 xml-name-validator@^4.0.0:
   version "4.0.0"

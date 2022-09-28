@@ -1,20 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col-md-2 ge-nav" role="complementary">
-      <ul class="nav nav-pills nav-stacked ge-nav-stacked ge-dark hidden-print hidden-xs hidden-sm">
-        <li class="active"><a href="#introduction">Introduction</a></li>
-        <li><a href="#logo-usage">Logo usage</a></li>
-        <li><a href="#colors">Colors</a></li>
-        <li><a href="#typography">Typography</a></li>
-        <li><a href="#favicons">Favicons</a></li>
-        <li><a href="#icons">Icons</a></li>
-        <li><a href="#doctype-icons">Doctype icons</a></li>
-        <li><a href="#apple-touch-icons">Apple touch icons</a></li>
+      <ul id="anchor-list" class="nav nav-pills ge-nav-fill nav-stacked ge-nav-stacked ge-dark hidden-print hidden-xs hidden-sm sticky-top list-group">
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action active" href="#introduction">Introduction</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#logo-usage">Logo usage</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#colors">Colors</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#typography">Typography</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#favicons">Favicons</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#icons">Icons</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#doctype-icons">Doctype icons</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#apple-touch-icons">Apple touch icons</a></li>
       </ul>
       {% include _template/back-to-top-btn.html %}
     </div>
 
-    <div class="col-md-10 ge-content" role="main">
+    <div data-bs-spy="scroll" data-bs-target="#anchor-list" data-bs-smooth-scroll="true" class="col-md-10 ge-content" role="main">
       {% include style/introduction.html %}
       {% include style/logo-usage.html %}
       {% include style/colors.html %}

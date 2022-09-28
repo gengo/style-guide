@@ -1,7 +1,10 @@
 @import "third_party/bootstrap/mixins";
 @import "mixins";
-@import "functions";
 @import "variables";
+
+@import "third_party/bootstrap/functions";
+@import "third_party/bootstrap/variables";
+
 
 body > .container {
   margin-bottom: 60px;
@@ -127,6 +130,7 @@ body > .container {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
 }
+
 .s { color: $gengo-red; }
 .na { color: #79b1a5; }
 .nt { color: $gengo-green; }
@@ -144,8 +148,9 @@ body > .container {
   margin-top: 15px;
   margin-bottom: 20px;
 
-  h1[id] {
+  h1 {
     padding-top: 30px;
+    margin-top: 0;
   }
   hr {
     margin-top: 16px;
@@ -308,7 +313,7 @@ body > .container {
   hr { margin-bottom: 10px; }
 
   .item {
-    border-radius: $border-radius-lg;
+    border-radius: $border-radius-sm;
     background-color: $body-bg;
     text-align: center;
   }
@@ -563,4 +568,24 @@ body > .container {
       display: none;
     }
   }
+}
+
+//
+// Misc
+// ------------------------------------------------
+.sticky-top {
+  top: 21px;
+}
+
+figure.highlight {
+  padding: 9px 14px;
+  border-radius: 4px;
+}
+
+figure.highlight > pre {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  word-break: normal;
+  border: 0;
 }

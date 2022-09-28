@@ -2,28 +2,10 @@
   $at1x-path: "#{$path}.#{$ext}";
   $at2x-path: "#{$path}@2x.#{$ext}";
 
-  @include img-retina("#{$at1x-path}", "#{$at2x-path}", $w, $h);
+  object-fit: contain;
   width: $w;
   height: $h;
+  background-image: url("#{$at1x-path}");
   background-repeat: no-repeat;
   background-size: $w $h;
-}
-
-// Retina image
-//
-// Short retina mixin for setting background-image and -size. Note that the
-// spelling of `min--moz-device-pixel-ratio` is intentional.
-@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
-  background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$file-1x}"), "#{$file-1x}"));
-
-  @media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (   min--moz-device-pixel-ratio: 2),
-  only screen and (     -o-min-device-pixel-ratio: 2/1),
-  only screen and (        min-device-pixel-ratio: 2),
-  only screen and (                min-resolution: 192dpi),
-  only screen and (                min-resolution: 2dppx) {
-    background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$file-2x}"), "#{$file-2x}"));
-    background-size: $width-1x $height-1x;
-  }
 }

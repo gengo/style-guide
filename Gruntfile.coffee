@@ -52,11 +52,13 @@ module.exports = (grunt) ->
         options:
           port: 9001
           base: '<%= assets.gh_pages %>'
-          livereload: true
+          # livereload: true
+          livereload: false
 
     watch:
       options:
-        livereload: true
+        # livereload: true
+        livereload: false
       sass:
         files: '<%= assets.sass %>/**/*.{scss,sass}'
         tasks: [
@@ -172,8 +174,6 @@ module.exports = (grunt) ->
       'vendor-js':
         src:[
           '<%= assets.scripts %>/vendor/moment.min.js'
-          '<%= assets.scripts %>/vendor/bootstrap-editable.min.js'
-          '<%= assets.scripts %>/vendor/bootstrap-multiselect.js'
           '<%= assets.scripts %>/vendor/select2.min.js'
           '<%= assets.scripts %>/vendor/typeaheadjs.js'
           '<%= assets.scripts %>/vendor/typeahead.js'
@@ -195,27 +195,6 @@ module.exports = (grunt) ->
         cwd: '<%= assets.yarn %>/bootstrap/scss'
         src: '**/*.{scss,sass}'
         dest: '<%= assets.sass %>/third_party/bootstrap'
-      'bootstrap-docs':
-        expand: true
-        cwd: '<%= assets.yarn %>/bootstrap-docs/assets/css'
-        src: 'docs.min.css'
-        dest: '<%= assets.docs %>/assets/css'
-        rename: (dest, src) ->
-          return dest + '/bootstrap-docs.min.css'
-      'bootstrap-multiselect-css':
-        expand: true
-        cwd: '<%= assets.yarn %>/bootstrap-multiselect/dist/css'
-        src: [
-          'bootstrap-multiselect.css'
-        ]
-        dest: '<%= assets.css %>/vendor'
-      'bootstrap-multiselect-js':
-        expand: true
-        cwd: '<%= assets.yarn %>/bootstrap-multiselect/dist/js'
-        src: [
-          'bootstrap-multiselect.js'
-        ]
-        dest: '<%= assets.scripts %>/vendor'
       'bootstrap-icons-font-css':
         expand:true
         cwd: '<%= assets.yarn %>/bootstrap-icons/font'
@@ -223,25 +202,6 @@ module.exports = (grunt) ->
           'bootstrap-icons.css'
         ]
         dest: '<%= assets.css %>/vendor'
-      'x-editable-css':
-        expand: true
-        cwd: '<%= assets.yarn %>/x-editable/dist/bootstrap3-editable/css'
-        src: [
-          'bootstrap-editable.css'
-        ]
-        dest: '<%= assets.css %>/vendor'
-      'x-editable-js':
-        expand: true
-        cwd: '<%= assets.yarn %>/x-editable/dist/bootstrap3-editable/js'
-        src: [
-          'bootstrap-editable.min.js'
-        ]
-        dest: '<%= assets.scripts %>/vendor'
-      'x-editable-img':
-        expand: true
-        cwd: '<%= assets.yarn %>/x-editable/dist/bootstrap3-editable/img'
-        src: '*.*'
-        dest: '<%= assets.images %>'
       'select2-css':
         expand:true
         cwd:'<%= assets.yarn %>/select2'
@@ -261,30 +221,6 @@ module.exports = (grunt) ->
         expand:true
         cwd:'<%= assets.yarn %>/select2'
         src: 'select2.min.js'
-        dest: '<%= assets.scripts %>/vendor'
-      'address-css':
-        expand:true
-        cwd:'<%= assets.yarn %>/x-editable/dist/inputs-ext/address'
-        src: '*.css'
-        dest: '<%= assets.css %>/vendor'
-      'address-js':
-        expand:true
-        cwd:'<%= assets.yarn %>/x-editable/dist/inputs-ext/address'
-        src: '*.js'
-        dest: '<%= assets.scripts %>/vendor'
-      'typeheadjs-css':
-        expand:true
-        cwd:'<%= assets.yarn %>/x-editable/dist/inputs-ext/typeaheadjs/lib'
-        src: '*.css'
-        dest: '<%= assets.css %>/vendor'
-      'typeheadjs-js':
-        expand:true
-        cwd:'<%= assets.yarn %>/x-editable/dist/inputs-ext/typeaheadjs/'
-        src: [
-          'lib/*.js'
-          '*.js'
-        ]
-        flatten:true
         dest: '<%= assets.scripts %>/vendor'
       'moment':
         expand:true
@@ -397,20 +333,10 @@ module.exports = (grunt) ->
   # all resources are generated into dev/
   grunt.registerTask 'copy-3rd-party-resources',[
     'copy:bootstrap-scss'
-    'copy:bootstrap-docs'
-    'copy:bootstrap-multiselect-css'
-    'copy:bootstrap-multiselect-js'
     'copy:bootstrap-icons-font-css'
-    'copy:x-editable-css'
-    'copy:x-editable-js'
-    'copy:x-editable-img'
     'copy:select2-css'
     'copy:select2-img'
     'copy:select2-js'
-    'copy:address-css'
-    'copy:address-js'
-    'copy:typeheadjs-css'
-    'copy:typeheadjs-js'
     'copy:moment'
   ]
 

@@ -6,18 +6,18 @@ permalink: /voice.html
 <div class="container">
   <div class="row">
     <div class="col-md-2 ge-nav" role="complementary">
-      <ul class="nav nav-pills nav-stacked ge-nav-stacked ge-dark hidden-print hidden-xs hidden-sm">
-        <li class="active"><a href="#core-values">Core values</a></li>
-        <li><a href="#brand-statements">Brand statements</a></li>
-        <li><a href="#brand-character">Brand character</a></li>
-        <li><a href="#voice-and-tone">Voice and tone</a></li>
-        <li><a href="#users">Users</a></li>
-        <li><a href="#style-guide">Style guide</a></li>
+      <ul id="anchor-list" class="nav nav-pills ge-nav-fill nav-stacked ge-nav-stacked ge-dark hidden-print hidden-xs hidden-sm sticky-top list-group">
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action active" href="#core-values">Core values</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#brand-statements">Brand statements</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#brand-character">Brand character</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#voice-and-tone">Voice and tone</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#users">Users</a></li>
+        <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="#style-guide">Style guide</a></li>
       </ul>
       {% include _template/back-to-top-btn.html %}
     </div>
 
-    <div class="col-md-10 ge-content" role="main">
+    <div data-bs-spy="scroll" data-bs-target="#anchor-list" data-bs-smooth-scroll="true" class="col-md-10 ge-content" role="main">
       {% include voice/core-values.html %}
       {% include voice/brand-statements.html %}
       {% include voice/brand-character.html %}

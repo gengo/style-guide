@@ -15,10 +15,7 @@ css:
 - assets/css/docs.all.css
 
 js:
-- http://code.jquery.com/jquery-1.9.0.js
-- http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js
-- http://vitalets.github.io/x-editable/assets/mockjax/jquery.mockjax.js
-- http://vitalets.github.io/x-editable/assets/demo-mock.js
+- https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js
 - assets/js/vendor.js
 - assets/js/docs.js
 ---
@@ -37,38 +34,34 @@ js:
   <link rel="icon" href="assets/favicons/gengo.ico" type="image/x-icon">
 </head>
 <body>
-  <header class="navbar navbar-static-top ge-navbar" role="banner">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".ge-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="./"></a>
-      </div>
-      <nav class="collapse navbar-collapse ge-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-          <li class="{% if page.name == 'index.html' %}active{% elsif page.name == 'style.html' %}active{% endif %}">
-            <a href="style.html">Style</a>
+  <header role="banner">
+    <nav class="navbar navbar-expand-lg bg-white"> <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item {% if page.name == 'index.html' %}active{% elsif page.name == 'style.html' %}active{% endif %}">
+            <a href="style.html" class="nav-link">Style</a>
           </li>
         {% for link in layout.navigation %}
-          <li class="{% if page.name == link.url %}active{% endif %}">
-            <a href="{{link.url}}">{{link.text}}</a>
+          <li class="nav-item {% if page.name == link.url %}active{% endif %}">
+            <a href="{{link.url}}" class="nav-link">{{link.text}}</a>
           </li>
         {% endfor %}
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Section <b class="caret"></b></a>
+          <li id="nav-dropdown" class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Section<b class="caret"></b></a>
             <ul class="change-brand dropdown-menu">
-              <li><a class="customer" href="#">Customer</a></li>
-              <li><a class="translator" href="#">Translator</a></li>
-              <li><a class="developer" href="#">Developer</a></li>
-              <li><a class="admin" href="#">Admin</a></li>
+              <li><a class="dropdown-item customer" href="#">Customer</a></li>
+              <li><a class="dropdown-item translator" href="#">Translator</a></li>
+              <li><a class="dropdown-item developer" href="#">Developer</a></li>
+              <li><a class="dropdown-item admin" href="#">Admin</a></li>
             </ul>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
   </header>
   {{ content }}
@@ -76,5 +69,6 @@ js:
   <!-- JS -->
   {% for src in layout.js %}<script src="{{src}}"></script>
   {% endfor %}
+</nav>
 </body>
 </html>

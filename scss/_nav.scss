@@ -1,30 +1,36 @@
+.ge-nav-fill {
+  .nav-item {
+    flex: 1 1 100%;
+    text-align: left;
+  }
+}
+
 // Pills
 // -------------------------
-.nav-pills.nav-stacked {
+.nav-pills.ge-nav-stacked {
   > li {
-    margin-bottom: -2px;
     // Links rendered as pills
     > a {
       display: inline-block;
-      padding: $padding-base-vertical $padding-base-horizontal;
+      padding: $padding-base-y $padding-base-x;
     }
   }
   &.ge-nav-stacked > li {
     > a {
-      display: block;
-      color: $list-group-link-color;
+      display: inline-block;
+      color: $list-group-color;
       &:hover,
       &:focus {
         color: $gengo-green;
       }
     }
     // Active state
-    &.active > a {
+    & > a.active {
       &,
       &:hover,
       &:focus {
-        color: $gengo-green;
-        background-color: $list-group-hover-bg;
+        color: $list-group-hover-bg;
+        background-color: $gengo-green;
       }
     }
     // Badge
@@ -32,9 +38,9 @@
     &.active .badge {
       padding: 4px;
       font-size: $list-group-badge-font-size;
-      font-weight: $font-normal;
+      font-weight: $font-weight-normal;
       line-height: $line-height-base;
-      color: $text-color;
+      color: $body-color;
       background-color: transparent;
       border-radius: 0;
     }
@@ -47,7 +53,7 @@
         background-color: transparent;
       }
     }
-    &.active > a {
+    & > a.active {
       &,
       &:hover,
       &:focus {
@@ -59,8 +65,7 @@
 
 .customer {
   .nav-pills {
-    > li.active {
-      a,
+    > li > a.active {
       a:hover,
       a:focus {
         background-color: $brand-customer;
@@ -71,8 +76,7 @@
 
 .translator {
   .nav-pills {
-    > li.active {
-      a,
+    > li > a.active {
       a:hover,
       a:focus {
         background-color: $brand-translator;
@@ -83,8 +87,7 @@
 
 .developer {
   .nav-pills {
-    > li.active {
-      a,
+    > li > a.active {
       a:hover,
       a:focus {
         background-color: $brand-developer;
@@ -95,8 +98,7 @@
 
 .admin {
   .nav-pills {
-    > li.active {
-      a,
+    > li > a.active {
       a:hover,
       a:focus {
         background-color: $brand-admin;
